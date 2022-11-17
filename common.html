@@ -65,7 +65,7 @@
       <!-- //header -->
       <!-- sub body -->
       <section id="sub-body">
-        <div class="subVisual-container">
+        <div class="subVisual-container sub-bg02">
           <div class="subVisual-wrapper">
             <h3 class="sub-title">진균류 버섯 DB검색</h3>
             <div class="sub-introText">
@@ -273,6 +273,78 @@
                       </tbody>
                     </table>
                   </div>
+                  
+                  <!-- board : status -->
+                  <div class="common-board-status">
+                    <div class="common-selectBox">                  
+                      <ul class="main-selecBox">
+                        <li><a href="#n" class="">게시글, 댓글</a>
+                          <ul class="sub-selectBox">
+                            <li><a href="#n">선택하세요1</a></li>
+                            <li><a href="#n">선택하세요2</a></li>
+                            <li><a href="#n">선택하세요3</a></li>
+                            <li><a href="#n">선택하세요4</a></li>
+                            <li><a href="#n">선택하세요5</a></li>
+                          </ul>
+                        </li>
+                      </ul>        
+                    </div>
+                    <div class="common-sub-search">
+                      <input type="search" class="input-type5" placeholder="찾고 싶은 데이터를 입력해 주세요." />
+                      <button class="btn gr small h32">검색</button>
+                    </div>
+                    <div class="short-area">
+                      <a href="" class="on">최신순</a>
+                      <span>|</span>
+                      <a href="">조회순</a>
+                    </div>
+                  </div>
+                  
+                  <!-- table : board -->                  
+                  <div class="common-table-wrapper">
+                    <table class="board horizen">
+                      <colgroup>
+                        <col width="10%" />
+                        <col width="*" />
+                        <col width="15%" />
+                        <col width="15%" />
+                        <col width="15%" />
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th scope="col">번호</th>
+                          <th scope="col">제목</th>
+                          <th scope="col">작성자</th>
+                          <th scope="col">작성일</th>
+                          <th scope="col">조회</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>0</td>
+                          <td class="left">제목이들어갑니다.</td>
+                          <td>홍길동</td>
+                          <td>2022.10.14</td>
+                          <td>123</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <!-- table : paging -->
+                  <div class="common-paging">
+                    <a href="#n"><<</a>
+                    <a href="#n"><</a>
+                    <a href="#n">1</a>
+                    <a href="#n">2</a>
+                    <a href="#n" class="on">3</a>
+                    <a href="#n">4</a>
+                    <a href="#n">5</a>
+                    <a href="#n">></a>
+                    <a href="#n">>></a>
+
+                  </div>
+
                 </dd>
               </dl>
               <dl>
@@ -283,7 +355,7 @@
                   <!-- Sub Search -->
                   <div class="common-sub-search">
                     <input type="search" class="input-type3" placeholder="찾고 싶은 데이터를 입력해 주세요." />
-                    <button class="btn br2">검색</button>
+                    <button class="btn br2 small h32">검색</button>
                   </div>
 
                 </dd>
@@ -389,8 +461,9 @@
             $(this).parent('li').toggleClass('on')
           });
         });
-        const subSelectBox = $('.common-selectBox .main-selecBox').height() - 1;
+        const subSelectBox = $('.common-board-status .common-selectBox .main-selecBox > li > a').height() - 1;
         $('.common-selectBox .main-selecBox > li .sub-selectBox').css('top', subSelectBox + 'px');
+        console.log(subSelectBox)
       });
     </script>
   </body>
