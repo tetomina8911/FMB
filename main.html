@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="stylesheet" href="./css/resset.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/layout.css" />
+    <!-- font-family:'Noto Sans KR', sans-serif; -->
+    <link
+      rel="stylesheet"
+      href="http://fonts.googleapis.com/earlyaccess/notosanskr.css"
+    />
+    <!-- Swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+
+    <!-- js -->
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/index.js"></script>
+
+    <!-- counter -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="./js/jquery.counterup.min.js.js"></script>
+
+    <!-- Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <title></title>
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- header -->
+      <header id="header">
+        <h1 id="logo">
+          <a href="./main.html"
+            ><img src="./images/main/main-logo.svg" alt=""
+          /></a>
+        </h1>
+        <nav id="gnb">
+          <ul>
+            <li><a href="./db_search.html">DB 검색</a></li>
+            <li><a href="">지식자료</a></li>
+            <li><a href="">커뮤니티</a></li>
+            <li><a href="">트랜드</a></li>
+            <li><a href="">제품정보</a></li>
+            <li><a href="">DB 등록</a></li>
+            <li><a href="">BIZ 상담</a></li>
+            <li><a href="">FMB 소개</a></li>
+          </ul>
+        </nav>
+        <section id="right-shortCut">
+          <a href="" class="btn_trendNew">트랜드 뉴스 구독</a>
+          <a href="" class="btn_login">로그인</a>
+          <a href="" class="btn_menu">
+            <span></span><span></span><span></span>
+          </a>
+        </section>
+      </header>
+      <!-- //header -->
+
+      <!-- Main Visual -->
+      <section id="mainVisual-container">
+        <div class="mainVisual-wrapper">
+          <p class="main_text">
+            <b>장흥군 버섯 산업연구원</b>은 <br />
+            진균버섯 자원연구 산업화의 길을 열어 드립니다.
+          </p>
+          <div class="common-main-search">
+            <div class="tab">
+              <a href="#n" class="current">통합검색</a>
+              <a href="#n">지식자료</a>
+            </div>
+            <div class="main-input_search">
+              <input
+                type="search"
+                placeholder="찾고 싶은 데이터를 입력해 주세요."
+              />
+              <button class="btn_search">검색</button>
+            </div>
+          </div>
+          <div class="statisticsGraph-container">
+            <ul>
+              <li>
+                <p>논문</p>
+                <span class="counter">1,324,315</span>
+              </li>
+              <li>
+                <p>특허</p>
+                <span class="counter">52,456</span>
+              </li>
+              <li>
+                <p>자원</p>
+                <span class="counter">120,000</span>
+              </li>
+              <li>
+                <p>산업</p>
+                <span class="counter">503,156</span>
+              </li>
+              <li>
+                <p>연구소</p>
+                <span class="counter">684</span>
+              </li>
+              <li>
+                <p>커뮤니티</p>
+                <span class="counter">1,255</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="mainVisual-img">
+          <img src="./images/main/mainVisual_bg.svg" alt="" />
+        </div>
+      </section>
+      <!-- //Main Visual -->
+
+      <!-- body -->
+      <main id="body">
+        <div class="boardList">
+          <div class="board board_popular">
+            <p class="title">인기검색어</p>
+            <ul>
+              <li>
+                <a href="#n"><p class="subject">표고버섯</p></a>
+              </li>
+              <li>
+                <a href="#n"><p class="subject">표고버섯</p></a>
+              </li>
+              <li>
+                <a href="#n"><p class="subject">표고버섯</p></a>
+              </li>
+              <li>
+                <a href="#n"><p class="subject">표고버섯</p></a>
+              </li>
+              <li>
+                <a href="#n"
+                  ><p class="subject">
+                    표고버섯표고버섯표고버섯표고버섯표고버섯
+                  </p></a
+                >
+              </li>
+            </ul>
+            <button class="btn_more">
+              <img src="./images/main/btn_more_gr.svg" width=19" alt="" />
+            </button>
+          </div>
+          <div class="board board_newTrend">
+            <p class="title">최신 동향</p>
+            <ul>
+              <li>
+                <a href="">
+                  <p class="subject">
+                    진균 버섯 연구 결과진균 버섯 연구 결과진균 버섯 연구
+                    결과진균 버섯 연구 결과
+                  </p>
+                  <span class="date">2022.09.23</span>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <p class="subject">진균 버섯 연구 결과</p>
+                  <span class="date">2022.09.23</span>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <p class="subject">진균 버섯 연구 결과</p>
+                  <span class="date">2022.09.23</span>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <p class="subject">진균 버섯 연구 결과</p>
+                  <span class="date">2022.09.23</span>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <p class="subject">진균 버섯 연구 결과</p>
+                  <span class="date">2022.09.23</span>
+                </a>
+              </li>
+            </ul>
+            <button class="btn_more">
+              <img src="./images/main/btn_more_gr.svg" width=19" alt="" />
+            </button>
+          </div>
+          <div class="board board_news">
+            <p class="title">최신뉴스</p>
+            <ul>
+              <li>
+                <a href="">
+                  <p class="subject">
+                    장흥군 버섯산업 공공기술 이전 사업화 장흥군 버섯산업
+                    공공기술 이전 사업화
+                  </p>
+                  <span class="date">2022.09.23</span>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <p class="subject">장흥군 버섯산업 공공기술 이전 사업화</p>
+                  <span class="date">2022.09.23</span>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <p class="subject">장흥군 버섯산업 공공기술 이전 사업화</p>
+                  <span class="date">2022.09.23</span>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <p class="subject">장흥군 버섯산업 공공기술 이전 사업화</p>
+                  <span class="date">2022.09.23</span>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <p class="subject">장흥군 버섯산업 공공기술 이전 사업화</p>
+                  <span class="date">2022.09.23</span>
+                </a>
+              </li>
+            </ul>
+            <button class="btn_more">
+              <img src="./images/main/btn_more_gr.svg" width=19" alt="" />
+            </button>
+          </div>
+        </div>
+      </main>
+      <!-- //body -->
+      <!-- family-site -->
+      <section id="family-site">
+        <div class="family-wrapper">
+          <div class="intro_text">
+            진균DB 플랫폼은 <br />파트너와 함께 성장합니다.
+          </div>
+          <div class="FamilyStie-Swiper swiper">
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">site 1</div>
+              <div class="swiper-slide">site 2</div>
+              <div class="swiper-slide">site 3</div>
+              <div class="swiper-slide">site 1</div>
+              <div class="swiper-slide">site 2</div>
+              <div class="swiper-slide">site 3</div>
+              <div class="swiper-slide">site 1</div>
+              <div class="swiper-slide">site 2</div>
+              <div class="swiper-slide">site 3</div>
+              <div class="swiper-slide">site 1</div>
+              <div class="swiper-slide">site 2</div>
+              <div class="swiper-slide">site 3</div>
+            </div>
+          </div>
+          <!-- navigation buttons -->
+          <div class="FamilyStie-button-prev"></div>
+          <div class="FamilyStie-button-next"></div>
+        </div>
+      </section>
+      <!-- //family-site -->
+
+      <!-- footer -->
+      <footer id="footer">
+        <h2><img src="./images/main/footer-logo.svg" alt="" /></h2>
+        <address>전남 장흥군 안양면 우드랜드길 288 ㅣ 061-862-8877</address>
+        <p class="copyright">Copyright © JMI All rights reserved</p>
+        <div class="foot-privacy">
+          <a href="">이용약관</a>
+          <span>|</span>
+          <a href="">개인정보처리방침</a>
+        </div>
+      </footer>
+      <!-- //footer -->
+    </div>
+    <script>
+      //counter
+      $(".counter").counterUp({
+        delay: 10,
+        time: 1000,
+      });
+    </script>
+  </body>
+</html>

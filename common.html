@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="stylesheet" href="./css/resset.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/layout.css" />
+    <link rel="stylesheet" href="./css/contents.css" />
+    <!-- font-family:'Noto Sans KR', sans-serif; -->
+    <link
+      rel="stylesheet"
+      href="http://fonts.googleapis.com/earlyaccess/notosanskr.css"
+    />
+    <!-- Swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <!-- js -->
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/index.js"></script>
+
+    <!-- Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <!-- Datepicker -->
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+    />
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+    <title></title>
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- header -->
+      <header id="header">
+        <h1 id="logo">
+          <a href="./main.html"><img src="./images/main/main-logo.svg" alt="" /></a>
+        </h1>
+        <nav id="gnb">
+          <ul>
+            <li class="current"><a href="./db_search.html">DB 검색</a></li>
+            <li><a href="">지식자료</a></li>
+            <li><a href="">커뮤니티</a></li>
+            <li><a href="">트랜드</a></li>
+            <li><a href="">제품정보</a></li>
+            <li><a href="">DB 등록</a></li>
+            <li><a href="">BIZ 상담</a></li>
+            <li><a href="">FMB 소개</a></li>
+          </ul>
+        </nav>
+        <section id="right-shortCut">
+          <a href="" class="btn_trendNew">트랜드 뉴스 구독</a>
+          <a href="" class="btn_login">로그인</a>
+          <a href="" class="btn_menu">
+            <span></span><span></span><span></span>
+          </a>
+        </section>
+      </header>
+      <!-- //header -->
+      <!-- sub body -->
+      <section id="sub-body">
+        <div class="subVisual-container">
+          <div class="subVisual-wrapper">
+            <h3 class="sub-title">진균류 버섯 DB검색</h3>
+            <div class="sub-introText">
+              진균류 버섯에 관련된 각종 논문, 특허, 상품 등 다양한 정보를 검색해
+              보세요.
+            </div>
+          </div>
+          <div class="subVisual-search">
+            <div class="common-main-search">
+              <div class="tab">
+                <a href="#n" class="current">통합검색</a>
+                <a href="#n">지식자료</a>
+              </div>
+              <div class="main-input_search">
+                <input
+                  type="search"
+                  placeholder="찾고 싶은 데이터를 입력해 주세요."
+                />
+                <button class="btn_search">검색</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <article id="sub-contents-container">
+          <h4 class="sub-contents-title">DB등록 승인</h4>
+          <div class="sub-contents-wrapper">
+            <div class="left-searchBar">
+              <dl>
+                <dt>결과내 키워드 검색</dt>
+                <dd>
+                  <div class="search-area">
+                    <input type="search" class="input-type" placeholder="키워드를 입력하세요." />
+                    <button class="btn_sub_search">검색</button>
+                  </div>
+                </dd>
+              </dl>
+              <dl>
+                <dt>검색 범위</dt>
+                <dd>
+                  <div class="common-datePicker small">
+                    <input type="text" id="datepicker" class="input-type icon-date" />
+                    <span>~</span>
+                    <input type="text" id="datepicker2" class="input-type icon-date" />
+                  </div>
+                </dd>
+              </dl>
+              <dl>
+                <dt><a href="#n">형태</a></a></dt>
+                <dd>
+                  <ul class="common-checkbox small">
+                    <li><input type="checkbox" name="" id="a1"> <label for="a1">원물</label>
+                      <div class="common-checkbox sub">
+                        <input type="checkbox" name="" id="a2"> <label for="a2">원물</label>
+                      </div>
+                    </li>
+                    <li><input type="checkbox" name="" id="a3"> <label for="a3">건물</label></li>
+                    <li><input type="checkbox" name="" id="a4"> <label for="a4">추출물</label></li>
+                    <li><input type="checkbox" name="" id="a5"> <label for="a5">건물</label></li>
+                    <li><input type="checkbox" name="" id="a6"> <label for="a6">추출물</label></li>
+                    
+                  </ul>
+                </dd>
+              </dl>
+              <dl>
+                <dt><a href="#n">기능성</a></dt>
+                <dd>
+                  <ul class="common-checkbox">
+                    <li><input type="checkbox" name="" id="b1"> <label for="b1">위랑 사이즈 다름</label></li>
+                    <li><input type="checkbox" name="" id="b3"> <label for="b3">항염</label></li>
+                    <li><input type="checkbox" name="" id="b4"> <label for="b4">항산</label></li>                  
+                  </ul>
+                </dd>
+              </dl>
+              <dl>
+                <dt><a href="#n">활용분야</a></dt>
+                <dd>준비중</dd>
+              </dl>
+            </div>
+
+            <div class="db_search_container common-container">
+              <dl>
+                <dt><a href="#n">형태 정보</a></dt>
+                <dd>
+                  <!-- button  -->
+                  <div class="common-btn">
+                    <button class="large2 h30 wh">논문정보 더 보기 (12,334건)</button>
+                  </div>
+                  <div class="common-btn">
+                    <button class="small h32 bl">+ 추가</button>
+                    <button class="small h32 red">- 삭제</button>
+                  </div>
+                  <div class="common-btn">
+                    <button class="small h32 gr">찾아보기</button>
+                  </div>
+                  <div class="common-btn">
+                    <button class="small h30 br">검색</button>
+                  </div>
+                  <div class="common-btn">
+                    <button class="small h32 gr2">글쓰기</button>
+                  </div>
+
+                  <!-- input: text  -->
+                  <p class=""><input type="text" class="input-type" placeholder="input-type"></p>
+                  <p class=""><input type="text" class="input-type2" placeholder="input-type2"></p>
+                  <p class=""><input type="text" class="input-type3" placeholder="input-type3"></p>
+                  <p class=""><input type="text" class="input-type4" placeholder="input-type4"></p>
+
+
+                  <!-- Select Box -->
+                  <div class="common-selectBox">                  
+                    <ul class="main-selecBox">
+                      <li><a href="#n" class="placeholder">선택하세요</a>
+                        <ul class="sub-selectBox">
+                          <li><a href="#n">선택하세요1</a></li>
+                          <li><a href="#n">선택하세요2</a></li>
+                          <li><a href="#n">선택하세요3</a></li>
+                          <li><a href="#n">선택하세요4</a></li>
+                          <li><a href="#n">선택하세요5</a></li>
+                        </ul>
+                      </li>
+                    </ul>        
+                  </div>
+
+                  <!-- input : file -->
+                  <div class="common-input-file">
+                    <input type="text" class="upload-name" placeholder="파일선택" disabled="disabled">                
+                    <label for="aa1" class="btn btn-small2 btn-grey2">찾아보기</label> 
+                    <input type="file" id="aa1" class="upload-hidden"> 
+                  </div>
+
+                  <!-- input : address  -->
+                  <div class="common-adress">
+
+                  </div>
+
+                  <!-- datePicker -->                
+                  <div class="common-datePicker" style="width:303px; height: 45px;">
+                    <input type="text" id="datepicker3" class="input-type4 icon-date" />
+                    <span>~</span>
+                    <input type="text" id="datepicker4" class="input-type4 icon-date" />
+                  </div>
+
+                  <!-- textarea -->
+                  <div class="common-textarea">
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                    <span>0 / 1000</span>
+                  </div>
+                </dd>
+              </dl>
+              <dl>
+                <dt><a href="#n">원물</a></dt>
+                <dd>
+                  <!-- table : vertical -->
+                  <div class="common-table-wrapper">
+                    <table class="basic vertical">
+                      <colgroup>
+                        <col width="20%" />
+                        <col width="*" />
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <th scope="row">식품</th>
+                          <td>생산자 5,260건</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">건강기능식품</th>
+                          <td>생산자 5,260건</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">화장품</th>
+                          <td>생산자 5,260건</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">식품</th>
+                          <td>생산자 5,260건</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+
+                  <!-- table : horizen -->
+                  <div class="common-table-wrapper">
+                    <table class="basic horizen">
+                      <colgroup>
+                        <col width="25%" />
+                        <col width="25%" />
+                        <col width="25%" />
+                        <col width="25%" />
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th scope="col">성명</th>
+                          <th scope="col">직책</th>
+                          <th scope="col">담당업무</th>
+                          <th scope="col">전화번호</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>a</td>
+                          <td>b</td>
+                          <td>cc</td>
+                          <td>ddd</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </dd>
+              </dl>
+              <dl>
+                <dt>
+                  <a href="#n">산연구 <span>(0건)</span></a>
+                </dt>
+                <dd>                
+                  <!-- Sub Search -->
+                  <div class="common-sub-search">
+                    <input type="search" class="input-type3" placeholder="찾고 싶은 데이터를 입력해 주세요." />
+                    <button class="btn br2">검색</button>
+                  </div>
+
+                </dd>
+              </dl>
+            </div>
+          </div>
+        </article>
+      </section>
+      <!-- //sub body -->
+      <!-- family-site -->
+      <section id="family-site">
+        <div class="family-wrapper">
+          <div class="intro_text">
+            진균DB 플랫폼은 <br />파트너와 함께 성장합니다.
+          </div>
+          <div class="FamilyStie-Swiper swiper">
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">site 1</div>
+              <div class="swiper-slide">site 2</div>
+              <div class="swiper-slide">site 3</div>
+              <div class="swiper-slide">site 1</div>
+              <div class="swiper-slide">site 2</div>
+              <div class="swiper-slide">site 3</div>
+              <div class="swiper-slide">site 1</div>
+              <div class="swiper-slide">site 2</div>
+              <div class="swiper-slide">site 3</div>
+              <div class="swiper-slide">site 1</div>
+              <div class="swiper-slide">site 2</div>
+              <div class="swiper-slide">site 3</div>
+            </div>
+          </div>
+          <!-- navigation buttons -->
+          <div class="FamilyStie-button-prev"></div>
+          <div class="FamilyStie-button-next"></div>
+        </div>
+      </section>
+      <!-- //family-site -->
+
+      <!-- footer -->
+      <footer id="footer">
+        <h2><img src="./images/main/footer-logo.svg" alt="" /></h2>
+        <address>전남 장흥군 안양면 우드랜드길 288 ㅣ 061-862-8877</address>
+        <p class="copyright">Copyright © JMI All rights reserved</p>
+        <div class="foot-privacy">
+          <a href="">이용약관</a>
+          <span>|</span>
+          <a href="">개인정보처리방침</a>
+        </div>
+      </footer>
+      <!-- //footer -->
+    </div>
+    <script>
+      $(function () {
+        //Date Picker
+        $("#datepicker").datepicker({
+          dateFormat: "yy.mm.dd", //달력 날짜 형태
+        });
+        $("#datepicker").datepicker("setDate", "today");
+        //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
+
+        $("#datepicker2").datepicker({
+          dateFormat: "yy.mm.dd", //달력 날짜 형태
+        });
+        $("#datepicker2").datepicker("setDate", "today");
+        //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
+
+        $("#datepicker3").datepicker({
+          dateFormat: "yy.mm.dd", //달력 날짜 형태
+        });
+        $("#datepicker3").datepicker("setDate", "today");
+        //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
+        
+        $("#datepicker4").datepicker({
+          dateFormat: "yy.mm.dd", //달력 날짜 형태
+        });
+        $("#datepicker4").datepicker("setDate", "today");
+        //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
+
+
+        //DB Search Click Event
+        //$(".db_search_container dl dd").hide();
+        $(".db_search_container dl dt").click(function () {
+          $(this)
+            .parent("dl")
+            .children("dd")
+            .stop()
+            .slideToggle(function () {
+              $(this).parent("dl").children("dt").toggleClass("down");
+            });
+        });
+
+        //Left SearchBar Click Event
+        $('.left-searchBar dl dt a').click(function(){
+          $(this).parents("dl").children("dd").stop().slideToggle(function () {
+              $(this).parent("dl").children("dt").toggleClass("down");
+            });            
+        });
+
+        //Select Box
+        $('.common-selectBox .main-selecBox > li > a').click(function() {
+          $(this).parent('li').children('.sub-selectBox').stop().slideToggle(function () {
+            $(this).parent('li').toggleClass('on')
+          });
+        });
+        const subSelectBox = $('.common-selectBox .main-selecBox').height() - 1;
+        $('.common-selectBox .main-selecBox > li .sub-selectBox').css('top', subSelectBox + 'px');
+      });
+    </script>
+  </body>
+</html>

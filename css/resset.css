@@ -1,0 +1,138 @@
+@charset "utf-8";
+
+/* basic */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans KR", sans-serif;
+}
+html {
+  overflow-y: scroll;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  font-family: "Noto Sans KR", sans-serif;
+  color: #000;
+}
+
+html,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+img {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+label,
+input,
+button,
+select {
+  vertical-align: middle;
+}
+input,
+button {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 1em;
+  border: none;
+  outline: 0;
+}
+button {
+  background: none;
+  cursor: pointer;
+}
+
+textarea,
+select {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* 제목태그설정 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+/* 시멘틱태그설정 */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+/* 링크 */
+a:link,
+a:visited {
+  color: #000;
+  text-decoration: none;
+}
+a:hover,
+a:focus,
+a:active {
+  color: #000;
+  text-decoration: none;
+}
+
+/* 기타설정 */
+img {
+  max-width: 100%;
+  vertical-align: top;
+}
+ul,
+ol,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+p {
+  word-break: keep-all;
+}
+
+address {
+  font-style: normal;
+}
+
+.hidden {
+  overflow: hidden;
+}
+
+input::placeholder {
+  font-weight: 400;
+  color: #b7b7b7;
+}
+
+.mt30 {
+  margin-top: 30px;
+}

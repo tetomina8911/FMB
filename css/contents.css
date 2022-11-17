@@ -1,0 +1,166 @@
+@charset "utf-8";
+
+#sub-body {
+  position: relative;
+  background: #f8f8f8;
+}
+
+/* sub visual*/
+.subVisual-container {
+  display: block;
+  height: 408px;
+  background: url("../images/sub/sub-visual02.png") no-repeat center top,
+    #171717;
+}
+.subVisual-container .subVisual-wrapper {
+  height: 220px;
+  color: #fff;
+  text-align: center;
+  background: linear-gradient(to right, #000 50%, rgba(0, 0, 0, 0));
+  box-sizing: border-box;
+}
+.subVisual-container .subVisual-wrapper .sub-title {
+  padding: 67px 0 10px;
+  font-size: 30px;
+  font-weight: 600;
+}
+.subVisual-container .subVisual-wrapper .sub-introText {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.subVisual-container .subVisual-search {
+  margin: 35px 0 0;
+}
+
+/* sub layout */
+#sub-contents-container {
+  position: relative;
+  width: 980px;
+  margin: 0 auto;
+  padding: 28px 0 60px;
+}
+#sub-contents-container .sub-contents-title {
+  margin: 0 0 17px;
+  font-size: 17px;
+  font-weight: 600;
+  color: #382205;
+}
+#sub-contents-container .sub-contents-title span {
+  font-size: 12px;
+  font-weight: 500;
+}
+#sub-contents-container .sub-contents-title span b.red {
+  color: #bf0000;
+}
+#sub-contents-container .sub-contents-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+#sub-contents-container .sub-contents-wrapper.bg {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+}
+
+/* ===== 버섯 DB 검색 ===== */
+/* 키워드 검색 바 */
+.left-searchBar {
+  flex: 0 1 264px;
+  padding: 16px 0;
+  background: #fff;
+  border: 1px solid #c1c1c1;
+  box-sizing: border-box;
+}
+.left-searchBar dl {
+  padding: 14px 20px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.left-searchBar dl dt,
+.left-searchBar dl dt a {
+  font-size: 16px;
+  font-weight: 600;
+  color: #382205;
+}
+.left-searchBar dl dt a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url("../images/icon/icon-toggle-up-border.png") no-repeat 98% 50%;
+}
+.left-searchBar dl dt.down a {
+  background: url("../images/icon/icon-toggle-down-border.png") no-repeat 98%
+    50%;
+}
+
+.left-searchBar dl dd {
+  padding: 10px 0 6px;
+}
+.left-searchBar dl dd .search-area {
+  height: 29px;
+}
+.left-searchBar dl dd .search-area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.left-searchBar dl dd .search-area input[type="search"] {
+  width: 73%;
+  height: 100%;
+  padding: 0 10px;
+  font-size: 12px;
+  font-weight: 500;
+  box-sizing: border-box;
+}
+.left-searchBar dl dd .search-area .btn_sub_search {
+  width: 24%;
+  height: 100%;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  background: #5c3807;
+  border: 1px solid #412704;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.left-searchBar dl dd .common-datePicker {
+  height: 32px;
+}
+
+.left-searchBar dl dd .common-checkbox li {
+  padding: 3px 0;
+}
+
+/* */
+.db_search_container {
+  flex: 1 1 700px;
+  margin: 0 0 0 20px;
+}
+.db_search_container dl {
+  margin: 0 0 4px;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+}
+.db_search_container dl dt a {
+  display: block;
+  padding: 16px 22px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #382205;
+  background: url("../images/icon/icon-toggle-up-gr.png") no-repeat 96% 50%;
+}
+.db_search_container dl dt.down a {
+  background: url("../images/icon/icon-toggle-down-gr.png") no-repeat 96% 50%;
+}
+.db_search_container dl dt a span {
+  font-size: 13px;
+}
+.db_search_container dl dd {
+  line-height: 1.88;
+  padding: 16px 22px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #555;
+  word-break: keep-all;
+  border-top: 1px solid #707070;
+}

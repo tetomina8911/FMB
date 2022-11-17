@@ -1,0 +1,419 @@
+@charset "utf-8";
+/* */
+.common-container dl > dd > div {
+  margin: 25px 0;
+}
+.common-container dl > dd > p {
+  margin: 25px 0;
+}
+
+/* 메인비쥬얼, 서브비쥬얼 내 공통 검색바 */
+.common-main-search {
+  width: 980px;
+  margin: 0 auto;
+}
+.common-main-search .tab {
+  width: 204px;
+  margin: 0 0 15px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.common-main-search .tab:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.common-main-search .tab a {
+  display: block;
+  float: left;
+  width: 102px;
+  height: 40px;
+  line-height: 38px;
+  font-size: 17px;
+  font-weight: 500;
+  color: #8d8d8d;
+  text-align: center;
+  background: #393939;
+}
+.common-main-search .tab a.current {
+  color: #000;
+  background: #f69412;
+}
+.common-main-search .main-input_search {
+  position: relative;
+}
+.common-main-search .main-input_search input[type="search"] {
+  width: 100%;
+  height: 56px;
+  padding: 0 21px;
+  font-size: 19px;
+  font-weight: 500;
+  background: #fff;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  box-sizing: border-box;
+  outline: 0;
+}
+.common-main-search .main-input_search .btn_search {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  display: inline-block;
+  width: 76px;
+  height: 40px;
+  font-size: 19px;
+  font-weight: 500;
+  color: #fff;
+  background: #464542;
+  border: 1px solid #363636;
+  border-radius: 4px;
+  transform: translateY(-50%);
+}
+
+/* date형식 검색 범위 */
+.common-datePicker {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.common-datePicker input[type="text"] {
+  width: 46%;
+  height: 100%;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+.common-datePicker input[type="text"].icon-date {
+  padding-left: 39px;
+  background-image: url("../images/icon/icon-date.png");
+  background-repeat: no-repeat;
+  background-position: 15px 52%;
+  background-size: 15px auto;
+}
+
+.common-datePicker.small input[type="text"] {
+  font-size: 12px;
+}
+.common-datePicker.small input[type="text"].icon-date {
+  padding-left: 25px;
+  background-position: 8px 52%;
+  background-size: 13px auto;
+}
+
+/* table : vertical */
+.common-table-wrapper table {
+  width: 100%;
+  font-size: 13px;
+  color: #555;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.common-table-wrapper table.basic th {
+  padding: 8px 17px;
+  background: #fcfcfc;
+  border: 1px solid #ddd;
+}
+.common-table-wrapper table.basic td {
+  padding: 8px 17px;
+  border: 1px solid #ddd;
+}
+
+.common-table-wrapper table.vertical tbody th {
+  text-align: left;
+}
+.common-table-wrapper table.vertical tbody td {
+  text-align: right;
+}
+
+.common-table-wrapper table.horizen tbody th {
+  text-align: center;
+}
+.common-table-wrapper table.horizen tbody td {
+  text-align: center;
+}
+
+/* input : text */
+input[type="text"] {
+  padding: 0 15px;
+}
+.input-type {
+  padding: 0 15px;
+  background: #fff;
+  border: 1px solid #d3d3d3;
+  border-radius: 4px;
+}
+.input-type2 {
+  background: #fff;
+  border: 1px solid #d6d6d6;
+  border-radius: 4px;
+}
+.input-type3 {
+  background: #fff;
+  border: 1px solid #8e8e8e;
+  border-radius: 6px;
+}
+.input-type4 {
+  background: #fcfcfc;
+  border: 1px solid #8e8e8e;
+  border-radius: 6px;
+}
+
+/* input : checkbox */
+.common-checkbox input[type="checkbox"] {
+  width: 22px;
+  height: 22px;
+  background: url("../images/icon/icon-check.png") no-repeat left 60%;
+  background-size: contain;
+  appearance: none;
+  vertical-align: middle;
+}
+.common-checkbox input[type="checkbox"]:checked {
+  background: url("../images/icon/icon-checked.png") no-repeat left 60%;
+  background-size: contain;
+}
+.common-checkbox label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+}
+
+.common-checkbox.small input[type="checkbox"] {
+  width: 14px;
+  height: 19px;
+}
+.common-checkbox.small label {
+  font-size: 13px;
+}
+
+.common-checkbox.sub {
+  margin: 0 0 0 21px;
+  padding: 0 0 0 16px;
+  background: url("../images/icon/icon-cate-line.png") no-repeat left 50%;
+}
+
+/* input: file */
+.common-input-file {
+  position: relative;
+  background: #fcfcfc;
+  border: 1px solid #8e8e8e;
+  border-radius: 6px;
+}
+.common-input-file .upload-name {
+  display: inline-block;
+  height: 32px;
+  line-height: 32px;
+  padding: 6px 0 6px 16px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.common-input-file label {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  display: inline-block;
+  height: 32px;
+  line-height: 30px;
+  padding: 0 15px;
+  font-size: 15px;
+  font-weight: 500;
+  background: #f4f4f4;
+  border: 1px solid #cecece;
+  border-radius: 4px;
+  transform: translateY(-50%);
+}
+.common-input-file input[type="file"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  border: 0;
+}
+
+/* input: search */
+.common-sub-search {
+  position: relative;
+}
+.common-sub-search input[type="search"] {
+  width: 100%;
+}
+.common-sub-search .btn {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Select Box */
+.common-selectBox .main-selecBox > li {
+  position: relative;
+}
+.common-selectBox .main-selecBox > li > a {
+  display: block;
+  height: inherit;
+  padding: 0 16px;
+  font-size: 14px;
+  font-weight: 500;
+  background: url("../images/icon/icon-toggle-down-gr.png") no-repeat 98% 50%,
+    #fcfcfc;
+  border: 1px solid #8e8e8e;
+  border-radius: 6px;
+}
+.common-selectBox .main-selecBox > li > a.placeholder {
+  color: #b7b7b7;
+}
+.common-selectBox .main-selecBox > li.on > a {
+  background: url("../images/icon/icon-toggle-up-gr.png") no-repeat 98% 50%,
+    #fcfcfc;
+  border-radius: 6px 6px 0 0;
+}
+.common-selectBox .main-selecBox > li .sub-selectBox {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+  width: 100%;
+  padding: 7px 0;
+  background: #fcfcfc;
+  border: 1px solid #8e8e8e;
+  border-radius: 0 0 6px 6px;
+  box-sizing: border-box;
+  z-index: 3;
+}
+.common-selectBox .main-selecBox > li .sub-selectBox li a {
+  display: block;
+  line-height: 2;
+  padding: 0 16px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* textarea */
+.common-textarea {
+  position: relative;
+  padding: 10px 18px;
+  background-color: #fcfcfc;
+  border: 1px solid #8e8e8e;
+  border-radius: 6px;
+}
+.common-textarea textarea {
+  width: 100%;
+  height: 100%;
+  background: none;
+  border: none;
+  resize: none;
+  outline: 0;
+  overflow: hidden;
+}
+.common-textarea span {
+  position: absolute;
+  right: 18px;
+  bottom: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #b7b7b7;
+  z-index: 2;
+}
+
+/* button : 설정 
+  - 모든 버튼은 되도록이면 common-btn 안에 넣어서 설정 처리합니다. (검색바 내 button스타일 제외)
+  - 사이즈가 새로 추가될경우 뒤에 넘버링 처리를 합니다. ex) .btn-large2, 3, 4 ...
+  - height추가시 line-height는 -2px값으로 설정합니다.
+  - 버튼설정값을 다른 태그에 절대로 사용하지 않습니다.
+*/
+.common-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.common-btn button {
+  margin: 0 3px;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 4px;
+}
+
+button.btn {
+  margin: 0 3px;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 4px;
+}
+
+/* button : 가로 사이즈 */
+button.large {
+  padding: 0 120px;
+  font-size: 15px;
+}
+button.large2 {
+  padding: 0 40px;
+}
+button.medium {
+  padding: 0 30px;
+}
+button.small {
+  padding: 0 15px;
+}
+button.small2 {
+  padding: 0 15px;
+  font-size: 15px;
+}
+
+/* button : 세로 사이즈 */
+button.h30 {
+  height: 30px;
+  line-height: 28px;
+}
+button.h32 {
+  height: 32px;
+  line-height: 30px;
+}
+button.h46 {
+  height: 46px;
+  line-height: 44px;
+}
+
+/* button : color */
+button.wh {
+  background: #fff;
+  border: 1px solid #ddd;
+}
+button.wh2 {
+  background: #f8f8f8;
+  border: 1px solid #646464;
+}
+
+button.bl {
+  background: #f0f5fd;
+  border: 1px solid #bec6d1;
+}
+
+button.red {
+  background: #f7e4e4;
+  border: 1px solid #d3c0c0;
+}
+
+button.gr {
+  background: #f4f4f4;
+  border: 1px solid #cecece;
+}
+button.gr2 {
+  color: #fff;
+  background: #464542;
+  border: 1px solid #363636;
+}
+
+button.br {
+  color: #fff;
+  background: #896b48;
+  border: 1px solid #573e21;
+}
+button.br2 {
+  color: #fff;
+  background: #5c3807;
+  border: 1px solid #412704;
+}

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="stylesheet" href="./css/resset.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/layout.css" />
+    <link rel="stylesheet" href="./css/contents.css" />
+    <!-- font-family:'Noto Sans KR', sans-serif; -->
+    <link
+      rel="stylesheet"
+      href="http://fonts.googleapis.com/earlyaccess/notosanskr.css"
+    />
+    <!-- Swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <!-- js -->
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/index.js"></script>
+
+    <!-- Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <!-- Datepicker -->
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+    />
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+    <title></title>
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- header -->
+      <header id="header">
+        <h1 id="logo">
+          <a href="./main.html"
+            ><img src="./images/main/main-logo.svg" alt=""
+          /></a>
+        </h1>
+        <nav id="gnb">
+          <ul>
+            <li class="current"><a href="./db_search.html">DB 검색</a></li>
+            <li><a href="">지식자료</a></li>
+            <li><a href="">커뮤니티</a></li>
+            <li><a href="">트랜드</a></li>
+            <li><a href="">제품정보</a></li>
+            <li><a href="">DB 등록</a></li>
+            <li><a href="">BIZ 상담</a></li>
+            <li><a href="">FMB 소개</a></li>
+          </ul>
+        </nav>
+        <section id="right-shortCut">
+          <a href="" class="btn_trendNew">트랜드 뉴스 구독</a>
+          <a href="" class="btn_login">로그인</a>
+          <a href="" class="btn_menu">
+            <span></span><span></span><span></span>
+          </a>
+        </section>
+      </header>
+      <!-- //header -->
+      <!-- sub body -->
+      <section id="sub-body">
+        <div class="subVisual-container">
+          <div class="subVisual-wrapper">
+            <h3 class="sub-title">진균류 버섯 DB검색</h3>
+            <div class="sub-introText">
+              진균류 버섯에 관련된 각종 논문, 특허, 상품 등 다양한 정보를 검색해
+              보세요.
+            </div>
+          </div>
+          <div class="subVisual-search">
+            <div class="common-main-search">
+              <div class="tab">
+                <a href="#n" class="current">통합검색</a>
+                <a href="#n">지식자료</a>
+              </div>
+              <div class="main-input_search">
+                <input
+                  type="search"
+                  placeholder="찾고 싶은 데이터를 입력해 주세요."
+                />
+                <button class="btn_search">검색</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <article id="sub-contents-container">
+          <h4 class="sub-contents-title">
+            DB등록 승인
+            <span
+              >필수( <b class="red">*</b> )를 제외한 항복은 선택 등록 가능
+              합니다.</span
+            >
+          </h4>
+          <div class="sub-contents-wrapper bg">
+            <div class="">컨텐츠</div>
+          </div>
+        </article>
+      </section>
+      <!-- //sub body -->
+      <!-- family-site -->
+      <section id="family-site">
+        <div class="family-wrapper">
+          <div class="intro_text">
+            진균DB 플랫폼은 <br />파트너와 함께 성장합니다.
+          </div>
+          <div class="FamilyStie-Swiper swiper">
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">site 1</div>
+              <div class="swiper-slide">site 2</div>
+              <div class="swiper-slide">site 3</div>
+              <div class="swiper-slide">site 1</div>
+              <div class="swiper-slide">site 2</div>
+              <div class="swiper-slide">site 3</div>
+              <div class="swiper-slide">site 1</div>
+              <div class="swiper-slide">site 2</div>
+              <div class="swiper-slide">site 3</div>
+              <div class="swiper-slide">site 1</div>
+              <div class="swiper-slide">site 2</div>
+              <div class="swiper-slide">site 3</div>
+            </div>
+          </div>
+          <!-- navigation buttons -->
+          <div class="FamilyStie-button-prev"></div>
+          <div class="FamilyStie-button-next"></div>
+        </div>
+      </section>
+      <!-- //family-site -->
+
+      <!-- footer -->
+      <footer id="footer">
+        <h2><img src="./images/main/footer-logo.svg" alt="" /></h2>
+        <address>전남 장흥군 안양면 우드랜드길 288 ㅣ 061-862-8877</address>
+        <p class="copyright">Copyright © JMI All rights reserved</p>
+        <div class="foot-privacy">
+          <a href="">이용약관</a>
+          <span>|</span>
+          <a href="">개인정보처리방침</a>
+        </div>
+      </footer>
+      <!-- //footer -->
+    </div>
+    <script>
+      $(function () {
+        //Date Picker
+        $("#datepicker").datepicker({
+          dateFormat: "yy.mm.dd", //달력 날짜 형태
+        });
+        $("#datepicker").datepicker("setDate", "today");
+        //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
+
+        $("#datepicker2").datepicker({
+          dateFormat: "yy.mm.dd", //달력 날짜 형태
+        });
+        $("#datepicker2").datepicker("setDate", "today");
+        //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
+
+        $("#datepicker3").datepicker({
+          dateFormat: "yy.mm.dd", //달력 날짜 형태
+        });
+        $("#datepicker3").datepicker("setDate", "today");
+        //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
+
+        $("#datepicker4").datepicker({
+          dateFormat: "yy.mm.dd", //달력 날짜 형태
+        });
+        $("#datepicker4").datepicker("setDate", "today");
+        //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
+
+        //DB Search Click Event
+        //$(".db_search_container dl dd").hide();
+        $(".db_search_container dl dt").click(function () {
+          $(this)
+            .parent("dl")
+            .children("dd")
+            .stop()
+            .slideToggle(function () {
+              $(this).parent("dl").children("dt").toggleClass("down");
+            });
+        });
+
+        //Left SearchBar Click Event
+        $(".left-searchBar dl dt a").click(function () {
+          $(this)
+            .parents("dl")
+            .children("dd")
+            .stop()
+            .slideToggle(function () {
+              $(this).parent("dl").children("dt").toggleClass("down");
+            });
+        });
+
+        //Select Box
+        $(".common-selectBox .main-selecBox > li > a").click(function () {
+          $(this)
+            .parent("li")
+            .children(".sub-selectBox")
+            .stop()
+            .slideToggle(function () {
+              $(this).parent("li").toggleClass("on");
+            });
+        });
+        const subSelectBox = $(".common-selectBox .main-selecBox").height() - 1;
+        $(".common-selectBox .main-selecBox > li .sub-selectBox").css(
+          "top",
+          subSelectBox + "px"
+        );
+      });
+    </script>
+  </body>
+</html>
