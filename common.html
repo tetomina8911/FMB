@@ -147,7 +147,7 @@
 
             <div class="db_search_container common-container">
               <dl>
-                <dt><a href="#n">형태 정보</a></dt>
+                <dt><a href="#n">버튼</a></dt>
                 <dd>
                   <!-- button  -->
                   <div class="common-btn">
@@ -166,28 +166,16 @@
                   <div class="common-btn">
                     <button class="small h32 gr2">글쓰기</button>
                   </div>
-
+                </dd>
+              </dl>
+              <dl>
+                <dt><a href="#n">Input</a></dt>                
+                <dd>
                   <!-- input: text  -->
                   <p class=""><input type="text" class="input-type" placeholder="input-type"></p>
                   <p class=""><input type="text" class="input-type2" placeholder="input-type2"></p>
                   <p class=""><input type="text" class="input-type3" placeholder="input-type3"></p>
                   <p class=""><input type="text" class="input-type4" placeholder="input-type4"></p>
-
-
-                  <!-- Select Box -->
-                  <div class="common-selectBox">                  
-                    <ul class="main-selecBox">
-                      <li><a href="#n" class="placeholder">선택하세요</a>
-                        <ul class="sub-selectBox">
-                          <li><a href="#n">선택하세요1</a></li>
-                          <li><a href="#n">선택하세요2</a></li>
-                          <li><a href="#n">선택하세요3</a></li>
-                          <li><a href="#n">선택하세요4</a></li>
-                          <li><a href="#n">선택하세요5</a></li>
-                        </ul>
-                      </li>
-                    </ul>        
-                  </div>
 
                   <!-- input : file -->
                   <div class="common-input-file">
@@ -208,15 +196,36 @@
                     <input type="text" id="datepicker4" class="input-type4 icon-date" />
                   </div>
 
+                </dd>
+              </dl>
+              <dl>
+                <dt><a href="">SelectBox, Textarea</a></dt>
+                <dd>
+                  <!-- Select Box -->
+                  <div class="common-selectBox">                  
+                    <ul class="main-selecBox">
+                      <li><a href="#n" class="placeholder">선택하세요</a>
+                        <ul class="sub-selectBox">
+                          <li><a href="#n">선택하세요1</a></li>
+                          <li><a href="#n">선택하세요2</a></li>
+                          <li><a href="#n">선택하세요3</a></li>
+                          <li><a href="#n">선택하세요4</a></li>
+                          <li><a href="#n">선택하세요5</a></li>
+                        </ul>
+                      </li>
+                    </ul>        
+                  </div>
+
                   <!-- textarea -->
                   <div class="common-textarea">
                     <textarea name="" id="" cols="30" rows="10"></textarea>
                     <span>0 / 1000</span>
                   </div>
+
                 </dd>
               </dl>
               <dl>
-                <dt><a href="#n">원물</a></dt>
+                <dt><a href="#n">Table</a></dt>
                 <dd>
                   <!-- table : vertical -->
                   <div class="common-table-wrapper">
@@ -349,15 +358,24 @@
               </dl>
               <dl>
                 <dt>
-                  <a href="#n">산연구 <span>(0건)</span></a>
+                  <a href="#n">검색바 <span>(0건)</span></a>
                 </dt>
                 <dd>                
                   <!-- Sub Search -->
-                  <div class="common-sub-search">
+                  <div class="common-sub-search br">
                     <input type="search" class="input-type3" placeholder="찾고 싶은 데이터를 입력해 주세요." />
                     <button class="btn br2 small h32">검색</button>
                   </div>
-
+                </dd>
+              </dl>
+              <dl>
+                <dt>
+                  <a href="#n">팝업</span></a>
+                </dt>
+                <dd>               
+                  <div class="common-btn" id="btn_pop">
+                    <button class="btn medium h32 br">팝업</button>
+                  </divc>
                 </dd>
               </dl>
             </div>
@@ -408,6 +426,10 @@
       </footer>
       <!-- //footer -->
     </div>
+    <div id="layerPop-container">
+      <div class="layerPop-wrapper"></div>
+    </div>
+    <div id="layerPop-bg"></div>
     <script>
       $(function () {
         //Date Picker
