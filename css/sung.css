@@ -1,1 +1,110 @@
-@charset "utf-8";
+@charset "UTF-8";
+/*--------------------------------------------------------------
+ * 1100_web_07_03_01_승인01~03-1 (PC)
+--------------------------------------------------------------*/
+/* 1100_web_07_03_01_승인01~03-1 */
+/* button: 설정 (시스템 버튼) */
+button.btn--system {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #f8f8f8;
+  border: 1px solid #646464;
+  border-radius: 4px;
+}
+
+/* title style */
+h2.db-approval__title {
+  font-size: 23px;
+  line-height: 2.348;
+}
+
+/* + contents.css :: sub layout */
+.sub-contents.contents-db-approval {
+  padding: 50px;
+  /* defined flex */
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -moz-box-orient: vertical;
+  -webkit-box-orient: vertical;
+  -moz-box-direction: normal;
+  -webkit-box-direction: normal;
+  -webkit-align-items: center;
+  align-items: center;
+  -moz-box-align: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  /* ~ defined flex */
+  width: 100%;
+  background-color: #fff;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: center;
+  /* button: 시스템 버튼 */
+  /* set elements margin in contents-db-approval */
+}
+.sub-contents.contents-db-approval .db-approval__state {
+  margin: 0;
+  padding: 7px 44px;
+  position: relative;
+  display: inline-block;
+  width: auto;
+  background-color: #000;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 27px;
+  font-size: 1.188em;
+  color: #fff;
+}
+.sub-contents.contents-db-approval .db-approval__state.state--wait {
+  background-color: #d9772f;
+}
+.sub-contents.contents-db-approval .db-approval__state.state--err {
+  background-color: #d92f2f;
+}
+.sub-contents.contents-db-approval .db-approval__state.state--done {
+  background-color: #11882d;
+}
+.sub-contents.contents-db-approval .db-approval__desc {
+  font-size: 0.938em;
+  line-height: 1.533;
+}
+.sub-contents.contents-db-approval .db-approval__desc p:not([class]) {
+  margin: 0;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+.sub-contents.contents-db-approval .btn--system {
+  position: relative;
+  margin-top: 25px;
+}
+.sub-contents.contents-db-approval .btn--system::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -25px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #b7b7b7;
+}
+.sub-contents.contents-db-approval h2.db-approval__title {
+  margin-bottom: 1rem;
+}
+.sub-contents.contents-db-approval .db-approval__state {
+  margin-bottom: 1.375rem;
+}
+.sub-contents.contents-db-approval .db-approval__desc {
+  margin-bottom: 1.75rem;
+}
+
+/*# sourceMappingURL=sung.css.map */
