@@ -96,7 +96,8 @@
 }
 .common-datePicker.small input[type="text"].icon-date {
   padding-left: 25px;
-  background-position: 8px 52%;
+  padding-right:6px;
+  background-position: 6px 52%;
   background-size: 13px auto;
 }
 
@@ -245,6 +246,28 @@ input[type="text"] {
   top: 7px;
 }
 
+/* input : email */
+.common-email {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+.common-email input[type="text"] {
+  width: 45%;
+}
+.common-email span {
+  width: 10%;
+  text-align: center;
+}
+.common-email .common-selectBox {
+  width: 45%;
+}
+.common-email .common-selectBox .main-selecBox > li > a {
+  width: 100%;
+  background-position: 90% 50%;
+}
+
 /* Select Box */
 .common-selectBox {
   height: 100%;
@@ -262,18 +285,17 @@ input[type="text"] {
   padding: 0 16px;
   font-size: 14px;
   font-weight: 500;
-  background: url("../images/icon/icon-toggle-down-gr.png") no-repeat 98% 50%,
-    #fcfcfc;
+  background: url("../images/icon/icon-toggle-down-gr.png") no-repeat 98% 50%, #fcfcfc;
   border: 1px solid #8e8e8e;
   border-radius: 6px;
   box-sizing: border-box;
 }
+
 .common-selectBox .main-selecBox > li > a.placeholder {
   color: #b7b7b7;
 }
 .common-selectBox .main-selecBox > li.on > a {
-  background: url("../images/icon/icon-toggle-up-gr.png") no-repeat 98% 50%,
-    #fcfcfc;
+  background: url("../images/icon/icon-toggle-up-gr.png") no-repeat 98% 50%, #fcfcfc;
   border-radius: 6px 6px 0 0;
 }
 .common-selectBox .main-selecBox > li .sub-selectBox {
@@ -295,6 +317,9 @@ input[type="text"] {
   padding: 0 16px;
   font-size: 14px;
   font-weight: 500;
+}
+.common-selectBox .main-selecBox > li .sub-selectBox li:hover a {
+  background: #d6d6d6;
 }
 
 /* textarea */
@@ -468,6 +493,7 @@ input[type="text"] {
 
 .common-btn.wide button {
   width: 100%;
+  margin: 0;
   box-sizing: border-box;
 }
 
