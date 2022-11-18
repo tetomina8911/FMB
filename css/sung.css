@@ -283,7 +283,6 @@ ul.info-note > li::before {
 }
 
 .contents-form.form-register {
-  /* form-box > form-ent (PC -> flex) */
   /*.form-box-wrapper {
     @include flex(
       $flex: flex, 
@@ -295,11 +294,20 @@ ul.info-note > li::before {
       // @include flex-items( 0 1 50% );
     }
   }*/
+  /* form-box > form-ent (PC -> flex) */
+  /* form-box ... form-ent-group (PC -> flex) */
+  /* required mark */
 }
 .contents-form.form-register .form-subtitle {
   margin-bottom: 20px;
   font-size: 0.938em;
   line-height: 1;
+}
+.contents-form.form-register .form-subtitle small {
+  padding-left: 1em;
+  color: #382205;
+  font-size: 12px;
+  font-weight: normal;
 }
 .contents-form.form-register .form-box {
   width: 100%;
@@ -318,9 +326,73 @@ ul.info-note > li::before {
 .contents-form.form-register .form-box .form-ent__head span::before {
   top: calc((24px - 4px) / 2);
 }
-.contents-form.form-register .form-box .form-ent input[type=text] {
+.contents-form.form-register .form-box .form-ent__input {
   width: 100%;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -moz-box-orient: horizontal;
+  -webkit-box-orient: horizontal;
+  -moz-box-direction: normal;
+  -webkit-box-direction: normal;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -ms-flex-wrap: none;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+}
+.contents-form.form-register .form-box .form-ent__input > *:not(input) {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+.contents-form.form-register .form-box .form-ent__input > .tagsinput,
+.contents-form.form-register .form-box .form-ent__input .common-input-file, .contents-form.form-register .form-box .form-ent__input .common-textarea, .contents-form.form-register .form-box .form-ent__input .common-selectBox,
+.contents-form.form-register .form-box .form-ent__input input[type=text] {
+  width: 100%;
+  -webkit-box-flex: 0;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+}
+.contents-form.form-register .form-box .form-ent__input > .tagsinput,
+.contents-form.form-register .form-box .form-ent__input .common-input-file, .contents-form.form-register .form-box .form-ent__input .common-selectBox,
+.contents-form.form-register .form-box .form-ent__input input[type=text] {
   height: 44px;
+}
+.contents-form.form-register .form-box .form-ent__input .common-input-file, .contents-form.form-register .form-box .form-ent__input .common-selectBox,
+.contents-form.form-register .form-box .form-ent__input input[type=text] {
+  line-height: 44px;
+}
+.contents-form.form-register .form-box .form-ent__input .common-input-file + *:not(.tagsinput), .contents-form.form-register .form-box .form-ent__input > input[type=text] + *:not(.tagsinput) {
+  margin-left: 12px;
+}
+.contents-form.form-register .form-box .form-ent__input .common-datePicker span {
+  margin: 0 12px;
+}
+.contents-form.form-register .form-box .group-inputs {
+  width: 100%;
+}
+.contents-form.form-register .form-box .group-inc {
+  width: 100%;
+}
+.contents-form.form-register .form-box .group-inc li.og {
+  display: none !important;
+}
+.contents-form.form-register .form-box .form-ent:not(:first-child),
+.contents-form.form-register .form-box .group-inputs > li:not(:first-child),
+.contents-form.form-register .form-box .group-inc > li:not(.og) {
+  margin-top: 25px;
+}
+.contents-form.form-register .form-box .group-inc > li:not(.og):nth-child(2) {
+  margin-top: 0;
+}
+.contents-form.form-register .form-box-submit {
+  margin-top: 50px;
 }
 .contents-form.form-register .form-box .form-ent {
   display: -ms-flexbox;
@@ -347,22 +419,111 @@ ul.info-note > li::before {
   -ms-flex-box: justify;
 }
 .contents-form.form-register .form-box .form-ent__head {
-  margin-right: 10px;
+  margin-right: 1rem;
   -webkit-box-flex: 0;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
+  -ms-flex: 0 0 120px;
+  flex: 0 0 120px;
 }
 .contents-form.form-register .form-box .form-ent__input {
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 88%;
-  flex: 0 0 88%;
+  -ms-flex: 1 1 88%;
+  flex: 1 1 88%;
 }
-.contents-form.form-register .form-box-submit {
-  margin-top: 50px;
+.contents-form.form-register .form-box .form-ent-group[class*=block-] {
+  position: relative;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -moz-box-orient: horizontal;
+  -webkit-box-orient: horizontal;
+  -moz-box-direction: normal;
+  -webkit-box-direction: normal;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -webkit-box-lines: single;
+  -moz-box-lines: single;
+}
+.contents-form.form-register .form-box .form-ent-group[class*=block-]::before {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 50%;
+  width: 1px;
+  height: 100%;
+  background-color: #ddd;
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.contents-form.form-register .form-box .form-ent-group[class*=block-].block-2 {
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -ms-flex-box: justify;
+}
+.contents-form.form-register .form-box .form-ent-group[class*=block-].block-2 .form-ent {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 45%;
+  flex: 0 0 45%;
+  width: 50%;
+}
+.contents-form.form-register .form-box .form-ent-group[class*=block-].block-2 .form-ent:nth-child(-n+2) {
+  margin-top: 0;
+}
+.contents-form.form-register .form-subtitle.required::after,
+.contents-form.form-register .form-ent.required .form-ent__head > span::after {
+  content: "*";
+  color: #d92f2f;
 }
 
 /*--------------------------------------------------------------
 * 1100_web_07_01_01_제조사 – 1 (PC)
 --------------------------------------------------------------*/
+/*--------------------------------------------------------------
+* 
+--------------------------------------------------------------*/
+.common-email {
+  width: 100%;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -moz-box-orient: horizontal;
+  -webkit-box-orient: horizontal;
+  -moz-box-direction: normal;
+  -webkit-box-direction: normal;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -ms-flex-wrap: none;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+}
+.common-email input[type=text] {
+  -webkit-box-flex: 0;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+}
+.common-email label {
+  margin: 0 1rem;
+}
+.common-email .common-selectBox {
+  margin-left: 8px;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 175px;
+  flex: 0 0 175px;
+}
 
 /*# sourceMappingURL=sung.css.map */

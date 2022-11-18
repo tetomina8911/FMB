@@ -324,8 +324,118 @@ $(document).on("input", "input.tel", function(e){
           .replace(/(\-{1,2})$/g, ""));
   }
 });
-})
 
+  /*
+   * FMB
+  */
+  // common-email 
+  var commonEmail = document.querySelectorAll('.common-email');
+  if ( commonEmail.length ) {
+    $(document).on('input', 'input.email-front, input.email-back', function(e) {
+      var target = this.parentNode.querySelector('input.email-avg'); 
+      if ( !target ) return;
+
+      var email = target.value.indexOf("@") !== -1 ? target.value : "@";
+      email = email.split('@');
+      var val = this.value;
+
+      if( this.classList.contains('email-front') ) email[0] = val; // email: front
+      else email[1] = val; // email: back
+
+      target.value = email.join('@');
+      console.log(target.value); /// 
+    });
+  }
+
+  // common-textarea <textarea> 초기화
+  var commonTextarea = document.querySelectorAll('.common-textarea')
+  if ( commonTextarea.length ) {
+    
+    Array.prototype.slice.call(commonTextarea).forEach(function(item) {
+      // item == .common-textarea
+      var textarea = item.querySelector('textarea');
+      var score = item.querySelector('span');
+    
+      if ( !textarea || !textarea.maxLength || !score ) return;
+      score.innerText = "0/" + String(textarea.maxLength);
+    });
+
+    // common-textarea <textarea>
+    $(document).on('input', '.common-textarea textarea', function() {
+      var maxLength = this.maxLength; 
+      if ( !maxLength ) return;
+
+      var valLength = this.value.length;
+      var score = $(this).next();
+      if( score.length ) score.text(String(valLength) + "/" + String(maxLength));
+    });
+  }
+
+  // 입력폼 그룹 추가 / 제거
+  if ( $('.group-inc').length ) {
+
+    // 파일추가(common-input-file) : (item) 추가
+    $('.group-inc .inc-add').on('click', function() {
+      var list = $(this).closest('.group-inc');
+
+      var count = list.children('li:not(.og)').length + 1;
+      var label = list.data('label');
+      if ( !label ) label = '';
+      label += "-" + String(count);
+
+      var target = $(this).closest('li'); // current
+      
+      var cloneItem = list.find('li.og').clone(true, true);
+      cloneItem.removeClass('og').addClass(label);
+
+      //cloneItem.appendTo(target);
+      cloneItem.insertAfter(target);
+    });
+    // 파일추가(common-input-file) : (item) 제거
+    $('.group-inc .inc-remove').on('click', function() {
+      var list = $(this).closest('.group-inc');
+
+      var count = list.children('li:not(.og)').length;
+      
+      var target = $(this).closest('li');
+      target.remove(); // remove item
+      if ( count <= 1 ) list.find('li.og button.inc-add').click(); // init item
+    });
+  }
+
+  if ( $('.common-input-file').length ) {
+    // 파일추가(common-input-file) : <label> onclick
+    $('.common-input-file .upload-for-file').on('click', function() {
+      var inputwrap = this.parentNode; // common-input-file
+      if ( !inputwrap ) return;
+
+      // inputfile 
+      var inputfile = inputwrap.querySelector('.upload-file');
+      if ( inputfile ) inputfile.click();
+    });
+
+    // 파일추가(common-input-file) : <file> onchange
+    $('.common-input-file input[type=file]').on('change', function(e){
+      // input "file" onchnage
+      // formData -> append
+      var file = this.files[0];
+      // filename
+
+      var inputwrap = this.parentNode; // common-input-file
+      if ( !inputwrap ) return;
+
+      // input text
+      var inputtext = inputwrap.querySelector('.upload-name');
+      if ( inputtext ) inputtext.value = file.name;
+    });
+  }
+  // ~ FMB
+});
+ /*
+  * FMB
+ */
+ 
+// ~ FMB
 
 
 // 날짜 몇분전, 며칠전 계산
