@@ -7,17 +7,62 @@
 
 /* sub visual*/
 .subVisual-container {
+  position: relative;
   display: block;
-  height: 408px;
-  background: url("../images/sub/sub-visual02.png") no-repeat center top,
-    #171717;
+  height: 220px;
+  overflow: hidden;
 }
+.subVisual-container:after {
+  position: absolute;
+  left: 50%;
+  top: -40px;
+  content: "";
+  width: 150%;
+  height: 150%;
+  transform: translateX(-50%) scale(0.85) skew(0deg, -2deg);
+  animation: ani-suvVisual 5s 0.4s forwards;
+  z-index: 1;
+  background-size: contain;
+}
+.subVisual-container.sub-bg02 {
+  height: 408px;
+}
+.subVisual-container.sub-bg02:after {
+  background: url("../images/sub/sub-visual02.png") no-repeat 50% top, #171717;
+}
+.subVisual-container.sub-bg02_1:after {
+  background: url("../images/sub/sub-visual02.png") no-repeat 50% top, #171717;
+}
+.subVisual-container.sub-bg03:after {
+  background: url("../images/sub/sub-visual03.png") no-repeat 50% 50%, #171717;
+}
+.subVisual-container.sub-bg04:after {
+  background: url("../images/sub/sub-visual04.png") no-repeat 50% 50%, #171717;
+}
+.subVisual-container.sub-bg05:after {
+  background: url("../images/sub/sub-visual05.png") no-repeat 50% 50%, #171717;
+}
+.subVisual-container.sub-bg06:after {
+  background: url("../images/sub/sub-visual06.png") no-repeat 50% 50%, #171717;
+}
+.subVisual-container.sub-bg07:after {
+  background: url("../images/sub/sub-visual07.png") no-repeat 50% 50%, #171717;
+}
+
+@keyframes ani-suvVisual {
+  100% {
+    transform: translateX(-50%) scale(0.9) skew(0deg, 0deg);
+  }
+}
+
 .subVisual-container .subVisual-wrapper {
+  position: relative;
   height: 220px;
   color: #fff;
   text-align: center;
   background: linear-gradient(to right, #000 50%, rgba(0, 0, 0, 0));
   box-sizing: border-box;
+  z-index: 2;
 }
 .subVisual-container .subVisual-wrapper .sub-title {
   padding: 67px 0 10px;
@@ -118,8 +163,7 @@
   background: url("../images/icon/icon-toggle-up-border.png") no-repeat 98% 50%;
 }
 .left-searchBar dl dt.down a {
-  background: url("../images/icon/icon-toggle-down-border.png") no-repeat 98%
-    50%;
+  background: url("../images/icon/icon-toggle-down-border.png") no-repeat 98% 50%;
 }
 
 .left-searchBar dl dd {
