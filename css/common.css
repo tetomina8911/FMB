@@ -96,7 +96,8 @@
 }
 .common-datePicker.small input[type="text"].icon-date {
   padding-left: 25px;
-  background-position: 8px 52%;
+  padding-right:6px;
+  background-position: 6px 52%;
   background-size: 13px auto;
 }
 
