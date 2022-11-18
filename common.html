@@ -21,18 +21,22 @@
     />
     <!-- js -->
     <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/ton_commons.js"></script>
     <script src="./js/index.js"></script>
 
     <!-- Swiper -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
     <!-- Datepicker -->
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
     />
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script> -->
+    <!-- bootstrap css 일부 -->
+    <link href="/js/bootstrap/datepicker_in_bootstrap.css" rel="stylesheet"> 
+    <link rel="stylesheet" href="/js/datepicker/bootstrap-datepicker3.css">
+    <script src="/js/datepicker/bootstrap-datepicker.js"></script>
     <title></title>
   </head>
   <body>
@@ -448,29 +452,37 @@
     <script>
       $(function () {
         //Date Picker
-        $("#datepicker").datepicker({
-          dateFormat: "yy.mm.dd", //달력 날짜 형태
-        });
-        $("#datepicker").datepicker("setDate", "today");
-        //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
+        // $("#datepicker").datepicker({
+        //   dateFormat: "yy.mm.dd", //달력 날짜 형태
+        // });
+        // $("#datepicker").datepicker("setDate", "today");
+        // //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
 
-        $("#datepicker2").datepicker({
-          dateFormat: "yy.mm.dd", //달력 날짜 형태
-        });
-        $("#datepicker2").datepicker("setDate", "today");
-        //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
+        // $("#datepicker2").datepicker({
+        //   dateFormat: "yy.mm.dd", //달력 날짜 형태
+        // });
+        // $("#datepicker2").datepicker("setDate", "today");
+        // //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
 
-        $("#datepicker3").datepicker({
-          dateFormat: "yy.mm.dd", //달력 날짜 형태
-        });
-        $("#datepicker3").datepicker("setDate", "today");
-        //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
+        // $("#datepicker3").datepicker({
+        //   dateFormat: "yy.mm.dd", //달력 날짜 형태
+        // });
+        // $("#datepicker3").datepicker("setDate", "today");
+        // //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
         
-        $("#datepicker4").datepicker({
-          dateFormat: "yy.mm.dd", //달력 날짜 형태
-        });
-        $("#datepicker4").datepicker("setDate", "today");
-        //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
+        // $("#datepicker4").datepicker({
+        //   dateFormat: "yy.mm.dd", //달력 날짜 형태
+        // });
+        // $("#datepicker4").datepicker("setDate", "today");
+        // //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
+
+        //-----bootstrap-datepicker 변경후
+        makeDatePicker('#datepicker', new Date());
+        makeDatePicker('#datepicker2', new Date());
+        makeDatePicker('#datepicker3', new Date());
+        makeDatePicker('#datepicker4', new Date());
+
+
 
 
         //DB Search Click Event
