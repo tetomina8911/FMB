@@ -1,11 +1,16 @@
 @charset "utf-8";
 
+/*--------------------------------------------------------------
+  sub Body
+--------------------------------------------------------------*/
 #sub-body {
   position: relative;
   background: #f8f8f8;
 }
 
-/* sub visual*/
+/*--------------------------------------------------------------
+  Sub Visual
+--------------------------------------------------------------*/
 .subVisual-container {
   position: relative;
   display: block;
@@ -78,7 +83,9 @@
   margin: 35px 0 0;
 }
 
-/* sub layout */
+/*--------------------------------------------------------------
+  Sub layout
+--------------------------------------------------------------*/
 #sub-contents-container {
   position: relative;
   width: 980px;
@@ -115,6 +122,9 @@
   border: 1px solid #e5e5e5;
 }
 
+/*--------------------------------------------------------------
+  Lnb
+--------------------------------------------------------------*/
 #lnb {
   width: 226px;
 }
@@ -145,8 +155,10 @@
   color: #2c2c2c;
 }
 
-/* ===== 버섯 DB 검색 ===== */
-/* 키워드 검색 바 */
+/*--------------------------------------------------------------
+* 1100_web_02_02_01_디비검색 – 1 (PC) 
+--------------------------------------------------------------*/
+/* 좌측 : 키워드 검색 바 */
 .left-searchBar {
   flex: 0 1 264px;
   padding: 16px 0;
@@ -213,46 +225,98 @@
   padding: 3px 0;
 }
 
-/* */
-.db_search_container {
-  flex: 1 1 700px;
-  margin: 0 0 0 20px;
-}
-.db_search_container dl {
-  margin: 0 0 4px;
-  background: #fff;
-  border: 1px solid #e5e5e5;
-}
-.db_search_container dl dt a {
-  display: block;
-  padding: 16px 22px;
+/* 우측 : DB 검색 컨텐츠 */
+.db_search_container dl > dd > .text-wrap p {
   font-size: 16px;
-  font-weight: 500;
-  color: #382205;
-  background: url("../images/icon/icon-toggle-up-gr.png") no-repeat 96% 50%;
+  line-height: 1.6;
 }
-.db_search_container dl dt.down a {
-  background: url("../images/icon/icon-toggle-down-gr.png") no-repeat 96% 50%;
+.db_search_container dl > dd > .link_list li:not(:last-child) {
+  border-bottom: 1px solid #cccccc;
 }
-.db_search_container dl dt a span {
-  font-size: 13px;
+.db_search_container dl > dd > .link_list li a {
+  padding: 21px 0;
+  display: block;
+  font-size: 16px;
+  color: #555555;
 }
-.db_search_container dl dd {
-  line-height: 1.88;
-  padding: 16px 22px;
-  font-size: 13px;
-  font-weight: 500;
-  color: #555;
-  word-break: keep-all;
-  border-top: 1px solid #707070;
+.db_search_container dl > dd > .link_list li:first-child a {
+  padding-top: 0;
+}
+.db_search_container dl > dd > .link_list li p {
+  font-size: 16px;
+}
+/* ellipsis line_2/line_3 */
+.db_search_container dl > dd > .link_list li p.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+}
+.db_search_container dl > dd > .link_list li p.ellipsis.line_1 {
+  -webkit-line-clamp: 1;
+}
+.db_search_container dl > dd > .link_list li p.ellipsis.line_2 {
+  -webkit-line-clamp: 2;
+}
+.db_search_container dl > dd > .link_list li p.ellipsis.line_3 {
+  -webkit-line-clamp: 3;
+}
+.db_search_container dl > dd > .link_list li a p span {
+  color: #000;
+}
+.db_search_container dl > dd > .link_list li a strong {
+  color: #1642b7;
+}
+.db_search_container dl > dd > .common-btn.more-btn {
+  margin: 0 0 22px 0;
+}
+.db_search_container dl > dd > .link_list.img_list li {
+  padding: 0 0 26px;
+}
+.db_search_container dl > dd > .link_list.img_list li:not(:first-child) {
+  padding: 26px 0 0;
+}
+.db_search_container dl > dd > .link_list.img_list .profile-wrap {
+  display: flex;
+  align-items: center;
+  margin: 0 0 18px;
+}
+.db_search_container dl > dd > .link_list.img_list .profile-wrap .img-wrap {
+  width: 96px;
+  height: 96px;
+  margin: 0 11px 0 0;
+}
+.db_search_container dl > dd > .link_list.img_list .profile-wrap .img-wrap img {
+  min-width: 96px;
+  min-height: 96px;
+}
+.db_search_container dl > dd > .link_list.img_list .profile-wrap .text-wrap {
+  width: calc(100% - (96px + 11px));
 }
 
-/* 커뮤니티 */
+.db_search_container dl > dd > .link_list.img_list .profile-wrap .text-wrap p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+.db_search_container dl > dd > .link_list.img_list .profile-wrap .text-wrap .common-btn {
+  justify-content: flex-start;
+  margin: 10px 0 0;
+}
+.db_search_container dl > dd > .link_list.img_list .profile-wrap .text-wrap .common-btn button {
+  margin: 0;
+}
+
+/*--------------------------------------------------------------
+* 1100_web_04_01_커뮤니티 – 1 (PC) 
+--------------------------------------------------------------*/
 .community-wrapper .common-board-status {
   margin: 0 0 10px;
 }
 
-/* 제품정보 */
+/*--------------------------------------------------------------
+* 1100_web_06_01_제품정보 – 1 (PC) 
+--------------------------------------------------------------*/
 .product-info-wrap {
   display: block;
   background: #fff;

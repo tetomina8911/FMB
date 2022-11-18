@@ -1,5 +1,7 @@
 @charset "utf-8";
-/* */
+/*--------------------------------------------------------------
+  common.html 설정 값
+--------------------------------------------------------------*/
 .common-container dl > dd > div {
   margin: 25px 0;
 }
@@ -7,7 +9,9 @@
   margin: 25px 0;
 }
 
-/* 메인비쥬얼, 서브비쥬얼 내 공통 검색바 */
+/*--------------------------------------------------------------
+  메인비쥬얼, 서브비쥬얼 내 공통 검색바
+--------------------------------------------------------------*/
 .common-main-search {
   width: 980px;
   margin: 0 auto;
@@ -70,8 +74,9 @@
   border-radius: 4px;
   transform: translateY(-50%);
 }
-
-/* date형식 검색 범위 */
+/*--------------------------------------------------------------
+  date형식 검색 범위
+--------------------------------------------------------------*/
 .common-datePicker {
   display: flex;
   align-items: center;
@@ -101,7 +106,9 @@
   background-size: 13px auto;
 }
 
-/* input : text */
+/*--------------------------------------------------------------
+  input : text
+--------------------------------------------------------------*/
 input[type="text"] {
   padding: 0 15px;
   box-sizing: border-box;
@@ -133,7 +140,9 @@ input[type="text"] {
   border-radius: 4px;
 }
 
-/* input : checkbox */
+/*--------------------------------------------------------------
+  input : checkbox
+--------------------------------------------------------------*/
 .common-checkbox input[type="checkbox"] {
   width: 22px;
   height: 22px;
@@ -166,7 +175,9 @@ input[type="text"] {
   background: url("../images/icon/icon-cate-line.png") no-repeat left 50%;
 }
 
-/* input: file */
+/*--------------------------------------------------------------
+  input : file
+--------------------------------------------------------------*/
 .common-input-file {
   position: relative;
   background: #fcfcfc;
@@ -207,7 +218,9 @@ input[type="text"] {
   border: 0;
 }
 
-/* input: search */
+/*--------------------------------------------------------------
+  input : serach
+--------------------------------------------------------------*/
 .common-sub-search {
   position: relative;
 }
@@ -227,7 +240,9 @@ input[type="text"] {
   transform: translateY(-50%);
 }
 
-/* input : 주소검색 */
+/*--------------------------------------------------------------
+  input : address : 주소검색
+--------------------------------------------------------------*/
 .common-adress {
   position: relative;
   width: 100%;
@@ -246,7 +261,9 @@ input[type="text"] {
   top: 7px;
 }
 
-/* input : email */
+/*--------------------------------------------------------------
+  input : eamil : eamil 폼
+--------------------------------------------------------------*/
 .common-email {
   display: flex;
   align-items: center;
@@ -268,7 +285,9 @@ input[type="text"] {
   background-position: 90% 50%;
 }
 
-/* Select Box */
+/*--------------------------------------------------------------
+  Select Box
+--------------------------------------------------------------*/
 .common-selectBox {
   height: 100%;
 }
@@ -322,7 +341,9 @@ input[type="text"] {
   background: #d6d6d6;
 }
 
-/* textarea */
+/*--------------------------------------------------------------
+  Textarea
+--------------------------------------------------------------*/
 .common-textarea {
   position: relative;
   padding: 10px 18px;
@@ -349,7 +370,9 @@ input[type="text"] {
   z-index: 2;
 }
 
-/* table : status */
+/*--------------------------------------------------------------
+  Table : status
+--------------------------------------------------------------*/
 .common-board-status {
   display: flex;
   align-items: center;
@@ -400,7 +423,9 @@ input[type="text"] {
   color: #d9d2c9;
 }
 
-/* ===== table : vertical ===== */
+/*--------------------------------------------------------------
+  Table : Basic, Vertical, Horizen, Board
+--------------------------------------------------------------*/
 .common-table-wrapper table {
   width: 100%;
   font-size: 13px;
@@ -455,7 +480,9 @@ input[type="text"] {
   text-align: left;
 }
 
-/* ===== board: paging ===== */
+/*--------------------------------------------------------------
+  Board : Paging
+--------------------------------------------------------------*/
 .common-paging {
   display: flex;
   align-items: center;
@@ -480,12 +507,13 @@ input[type="text"] {
   border: 1px solid #4a4a4a;
 }
 
-/* button : 설정 
+/*--------------------------------------------------------------
+  button : 설정 
   - 모든 버튼은 되도록이면 common-btn 안에 넣어서 설정 처리합니다. (검색바 내 button스타일 제외)
   - 사이즈가 새로 추가될경우 뒤에 넘버링 처리를 합니다. ex) .large2, 3, 4 ...
   - height추가시 line-height는 -2px값으로 설정합니다.
   - 버튼설정값을 다른 태그에 절대로 사용하지 않습니다.
-*/
+--------------------------------------------------------------*/
 .common-btn {
   display: flex;
   justify-content: center;
@@ -512,7 +540,9 @@ button.btn {
   border-radius: 4px;
 }
 
-/* button : 가로 사이즈 */
+/*--------------------------------------------------------------
+  button : 가로 사이즈
+--------------------------------------------------------------*/
 button.large {
   padding: 0 120px;
   font-size: 15px;
@@ -534,7 +564,9 @@ button.small2 {
   font-size: 15px;
 }
 
-/* button : 세로 사이즈 */
+/*--------------------------------------------------------------
+  button : 세로 사이즈
+--------------------------------------------------------------*/
 button.h30 {
   height: 30px;
   line-height: 28px;
@@ -548,7 +580,9 @@ button.h46 {
   line-height: 44px;
 }
 
-/* button : color */
+/*--------------------------------------------------------------
+  button : Color
+--------------------------------------------------------------*/
 button.wh {
   background: #fff;
   border: 1px solid #ddd;
