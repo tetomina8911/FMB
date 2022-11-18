@@ -287,24 +287,46 @@
           </a>
         </div>
 
-        <ul>
-          <li>
-            <label for="">이름 <span class="txt-red">*</span></label>
-            <input type="text" class="input-type4" name="" id="" />
-          </li>
-          <li>
-            <label for="">업체명 <span class="txt-red">*</span></label>
-            <input type="text" class="input-type4" name="" id="" />
-          </li>
-          <li>
-            <label for="">직위 <span class="txt-red">*</span></label>
-            <input type="text" class="input-type4" name="" id="" />
-          </li>
-          <li>
-            <label for="">이메일 <span class="txt-red">*</span></label>
-            <input type="text" class="input-type4" name="" id="" />
-          </li>
-        </ul>
+        <div class="layerPop-inner">
+          <ul>
+            <li>
+              <label for="">이름 <span class="txt-red">*</span></label>
+              <input type="text" class="input-type4" name="" id="" />
+            </li>
+            <li>
+              <label for="">업체명 <span class="txt-red">*</span></label>
+              <input type="text" class="input-type4" name="" id="" />
+            </li>
+            <li>
+              <label for="">직위 <span class="txt-red">*</span></label>
+              <input type="text" class="input-type4" name="" id="" />
+            </li>
+            <li>
+              <label for="">이메일 <span class="txt-red">*</span></label>
+              <div class="common-email">
+                <input type="text" class="input-type4" name="" id="" />
+                <span>@</span>
+                <div class="common-selectBox">
+                  <ul class="main-selecBox">
+                    <li>
+                      <a href="#n">직접입력</a>
+                      <ul class="sub-selectBox">
+                        <li><a href="#n">선택하세요1</a></li>
+                        <li><a href="#n">선택하세요2</a></li>
+                        <li><a href="#n">선택하세요3</a></li>
+                        <li><a href="#n">선택하세요4</a></li>
+                        <li><a href="#n">선택하세요5</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div class="common-btn wide">
+            <button class="btn br h46">구독 신청</button>
+          </div>
+        </div>
       </div>
     </div>
     <!-- layer Bg -->
@@ -316,6 +338,24 @@
         delay: 10,
         time: 1000,
       });
+      //Select Box
+      $(".common-selectBox .main-selecBox > li > a").click(function () {
+        $(this)
+          .parent("li")
+          .children(".sub-selectBox")
+          .stop()
+          .slideToggle(function () {
+            $(this).parent("li").toggleClass("on");
+          });
+      });
+      const subSelectBox =
+        $(
+          ".common-board-status .common-selectBox .main-selecBox > li > a"
+        ).height() - 1;
+      $(".common-selectBox .main-selecBox > li .sub-selectBox").css(
+        "top",
+        subSelectBox + "px"
+      );
     </script>
   </body>
 </html>

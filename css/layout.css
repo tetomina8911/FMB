@@ -353,6 +353,17 @@
  - 팝업의 사이즈는 wrapper에 이중class를 추가해서 사이즈를 조절 합니다.
  - ex-class-wrapper는 예제 class입니다.
 */
+#layerPop-bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 10;
+}
+
 #layerPop-container {
   position: fixed;
   left: 50%;
@@ -378,22 +389,31 @@
   right: 17px;
   top: 17px;
 }
+#layerPop-container .layerPop-wrapper .layerPop-inner {
+  padding: 22px;
+}
 #layerPop-container .ex-class-wrapper {
   width: 500px;
   height: 700px;
 }
+
+/* 트렌드 뉴스 구독 */
 #layerPop-container .trendNews-wrapper {
   width: 389px;
   height: 409px;
 }
-
-#layerPop-bg {
-  position: fixed;
-  left: 0;
-  top: 0;
-  display: none;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4);
-  z-index: 10;
+#layerPop-container .trendNews-wrapper ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 21px;
+}
+#layerPop-container .trendNews-wrapper ul li label {
+  width: 68px;
+  font-size: 15px;
+  font-weight: 500;
+}
+#layerPop-container .trendNews-wrapper ul li input[type="text"] {
+  flex-grow: 1;
+  height: 35px;
 }
