@@ -103,6 +103,7 @@
 /* input : text */
 input[type="text"] {
   padding: 0 15px;
+  box-sizing: border-box;
 }
 .input-type {
   padding: 0 15px;
