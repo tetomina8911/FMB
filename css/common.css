@@ -465,6 +465,11 @@ input[type="text"] {
   align-items: center;
 }
 
+.common-btn.wide button {
+  width: 100%;
+  box-sizing: border-box;
+}
+
 .common-btn button {
   margin: 0 3px;
   font-size: 13px;
