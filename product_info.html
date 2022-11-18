@@ -35,11 +35,11 @@
         </h1>
         <nav id="gnb">
           <ul>
-            <li class="current"><a href="./db_search.html">DB 검색</a></li>
+            <li><a href="./db_search.html">DB 검색</a></li>
             <li><a href="">지식자료</a></li>
-            <li><a href="">커뮤니티</a></li>
+            <li><a href="./community.html">커뮤니티</a></li>
             <li><a href="">트랜드</a></li>
-            <li><a href="">제품정보</a></li>
+            <li class="current"><a href="./product_info.html">제품정보</a></li>
             <li><a href="">DB 등록</a></li>
             <li><a href="">BIZ 상담</a></li>
             <li><a href="">FMB 소개</a></li>
@@ -54,42 +54,80 @@
       <!-- //header -->
       <!-- sub body -->
       <section id="sub-body">
-        <div class="subVisual-container sub-bg02">
+        <div class="subVisual-container sub-bg03">
           <div class="subVisual-wrapper">
-            <h3 class="sub-title">진균류 버섯 DB검색</h3>
-            <div class="sub-introText">진균류 버섯에 관련된 각종 논문, 특허, 상품 등 다양한 정보를 검색해 보세요.</div>
-          </div>
-          <div class="subVisual-search">
-            <div class="common-main-search">
-              <div class="tab">
-                <a href="#n" class="current">통합검색</a>
-                <a href="#n">지식자료</a>
-              </div>
-              <div class="main-input_search">
-                <input type="search" placeholder="찾고 싶은 데이터를 입력해 주세요." />
-                <button class="btn_search">검색</button>
-              </div>
-            </div>
+            <h3 class="sub-title">FMB 지식자료</h3>
+            <div class="sub-introText">FMB DB플랫폼에 등록된 전문적인 자료 검색이 가능합니다.</div>
           </div>
         </div>
         <article id="sub-contents-container">
-          <h4 class="sub-contents-title">DB등록 승인</h4>
           <div class="sub-contents-wrapper">
             <div id="lnb">
               <dl>
-                <dt>최신동향</dt>
-                <dd><a href="#n" class="current">• 정부안건</a></dd>
-                <dd><a href="#n">• 의료분야</a></dd>
-                <dd><a href="#n">• 소재분야</a></dd>
-              </dl>
-              <dl>
-                <dt>최신뉴스</dt>
-                <dd><a href="#n">• 국내뉴스</a></dd>
-                <dd><a href="#n">• 해외뉴스</a></dd>
-                <dd><a href="#n">• 성과뉴스</a></dd>
+                <dt>제품정보</dt>
+                <dd><a href="#n" class="current">• 식품
+                <dd><a href="#n">• 건강기능식품</a></dd>
+                <dd><a href="#n">• 의약품</a></dd>
+                <dd><a href="#n">• 화학품</a></dd>
+                <dd><a href="#n">• 사료</a></dd>
+                <dd><a href="#n">• 기능성소재</a></dd>
+                <dd><a href="#n">• 자원, 진균류</a></dd>
+                <dd><a href="#n">• 최신 신상품</a></dd>
               </dl>
             </div>
-            <div class="sub-right-contents">컨텐츠내용</div>
+            <div class="sub-right-contents bg">
+              <div class="product-info-wrap">
+                <!-- Sub Search -->
+                <div class="common-sub-search br">
+                  <input type="search" class="input-type3" placeholder="검색어를 입력하시고 자료를 찾으세요." />
+                  <button class="btn br2 small h32">검색</button>
+                </div>
+
+                <!-- board : gaellry -->
+                <div class="common-gallery-wrapper">
+                  <div class="gallery-title">식품</div>
+                  <ul>
+                    <li><a href="#n">
+                      <div class="gallery-img">
+                        <img src="./images/examples/product_info_example01.png" alt="">                      
+                      </div>
+                      <div class="gallery-list">
+                        <div class="subject">착한 농부들 진하고 맛있는 노루 궁뎅이버섯 궁디스틱</div>
+                        <div class="name">하진이네 버섯뜰에</div>
+                        <div class="date">
+                          <span>제품정보 > 식품</span> / <span>등록일: 2022.11.04</span>
+                        </div>
+                      </div>
+                    </a></li>
+                    <li><a href="#n">
+                      <div class="gallery-img">
+                        <img src="./images/examples/product_info_example01.png" alt="">                      
+                      </div>
+                      <div class="gallery-list">
+                        <div class="subject">착한 농부들 진하고 맛있는 노루 궁뎅이버섯 궁디스틱</div>
+                        <div class="name">하진이네 버섯뜰에</div>
+                        <div class="date">
+                          <span>제품정보 > 식품</span> / <span>등록일: 2022.11.04</span>
+                        </div>
+                      </div>
+                    </a></li>
+                  </ul>
+                </div>
+              </div>
+              
+              <!-- table : paging -->
+              <div class="common-paging">
+                <a href="#n"><<</a>
+                <a href="#n"><</a>
+                <a href="#n">1</a>
+                <a href="#n">2</a>
+                <a href="#n" class="on">3</a>
+                <a href="#n">4</a>
+                <a href="#n">5</a>
+                <a href="#n">></a>
+                <a href="#n">>></a>
+              </div>
+            </div>
           </div>
         </article>
       </section>

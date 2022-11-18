@@ -96,7 +96,7 @@
 }
 .common-datePicker.small input[type="text"].icon-date {
   padding-left: 25px;
-  padding-right:6px;
+  padding-right: 6px;
   background-position: 6px 52%;
   background-size: 13px auto;
 }
@@ -470,6 +470,7 @@ input[type="text"] {
   font-size: 15px;
   font-weight: 500;
   text-align: center;
+  background: #fff;
   border: 1px solid #cecece;
   border-radius: 4px;
 }
@@ -587,9 +588,6 @@ button.br2 {
   background: #5c3807;
   border: 1px solid #412704;
 }
-
-
-
 
 /*--------------------------------------------------------------
  * keywords
