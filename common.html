@@ -505,14 +505,16 @@
         });
 
         //Select Box
-        $('.common-selectBox .main-selecBox > li > a').click(function() {
-          $(this).parent('li').children('.sub-selectBox').stop().slideToggle(function () {
-            $(this).parent('li').toggleClass('on')
+        $(".common-selectBox .main-selecBox > li > a").click(function () {
+          $(this).parent("li").children(".sub-selectBox").stop().slideToggle(function () {
+            $(this).parent("li").toggleClass("on");
           });
         });
-        const subSelectBox = $('.common-board-status .common-selectBox .main-selecBox > li > a').height() - 1;
-        $('.common-selectBox .main-selecBox > li .sub-selectBox').css('top', subSelectBox + 'px');
-
+        const subSelectBox = $(".common-selectBox .main-selecBox > li > a").height() - 1;
+        $(".common-selectBox .main-selecBox > li .sub-selectBox").css("top", subSelectBox + "px");
+        const commonSelectBoxHeight = $(".common-selectBox").height();
+        $(".common-selectBox li a").css("line-height", commonSelectBoxHeight - 2 + "px");
+        
         //leyrPopup - Open
         $('#btn-ex-class-pop').click(function(){
           $('#layerPop-container .ex-class-wrapper').stop().fadeIn();
