@@ -31,7 +31,7 @@
 #header {
   display: flex;
   align-items: center;
-  width: 1100px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 71px 0 26px;
 }
@@ -41,6 +41,7 @@
   vertical-align: middle;
 }
 
+/* gnb */
 #gnb {
   display: flex;
   margin: 0 0 0 43px;
@@ -415,4 +416,25 @@
 }
 #layerPop-container .trendNews-wrapper ul li .common-email .main-selecBox > li .sub-selectBox {
   top: 34px;
+}
+
+/* 반응형 작업 : tab */
+@media screen and (max-width: 1100px) {
+  #wrap {
+    min-width: auto;
+  }
+
+  /* header */
+  #header {
+    padding: 71px 10px 26px;
+  }
+
+  /* gnb */
+  #gnb {
+    flex-grow: 1;
+    margin: 0 0 0 3.9091vw;
+  }
+  #gnb ul {
+    width: 100%;
+  }
 }
