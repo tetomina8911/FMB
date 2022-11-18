@@ -607,30 +607,33 @@ button.br2 {
   }
 });
 --------------------------------------------------------------*/
-.tagsinput {
-
-  .tag {
-      background-color: #ededed;
-      color: #b7b7b7;
-      border-radius: 1em;
-
-      .tag-remove:after,
-      .tag-remove:before { 
-        background-color:#d92f2f; 
-      }
-
-      .tag-text { 
-        padding-left: 1rem; 
-        @include transitions( color 150ms ease);
-      }
-
-      @include transitions( background-color 150ms ease);
+.tagsinput .tag {
+  background-color: #ededed;
+  color: #b7b7b7;
+  border-radius: 1em;
+  -o-transition: background-color 150ms ease;
+  -ms-transition: background-color 150ms ease;
+  -moz-transition: background-color 150ms ease;
+  -webkit-transition: background-color 150ms ease;
+  transition: background-color 150ms ease;
+}
+.tagsinput .tag .tag-remove:after,
+.tagsinput .tag .tag-remove:before {
+  background-color: #d92f2f;
+}
+.tagsinput .tag .tag-text {
+  padding-left: 1rem;
+  -o-transition: color 150ms ease;
+  -ms-transition: color 150ms ease;
+  -moz-transition: color 150ms ease;
+  -webkit-transition: color 150ms ease;
+  transition: color 150ms ease;
+}
+@media (hover: hover), (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .tagsinput:hover .tag:hover {
+    background-color: rgba(237, 237, 237, 0.5);
   }
-
-  @include mq-hover($exec:1) {
-    .tag:hover {
-      background-color: rgba(#ededed, .5);
-      .tag-text { color: #000; }
-    }
+  .tagsinput:hover .tag:hover .tag-text {
+    color: #000;
   }
 }

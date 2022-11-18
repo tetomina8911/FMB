@@ -30,7 +30,7 @@
     />
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 
-    <!-- Datepicker -->
+    <!-- TagsInput -->
     <link rel="stylesheet" href="js/tagsinput/jquery.tagsinput-revisited.min.css" />
     <script src="js/tagsinput/jquery.tagsinput-revisited.min.js"></script>
 
@@ -110,7 +110,9 @@
                     <div class="form-ent__head">
                       <span class="text-head--dot">키워드 입력</span>
                     </div>
-                    <div class="form-ent__input">INPUT</div>
+                    <div class="form-ent__input">
+                      <input type="text" class="input-type3 keywords" name="keywords" value="" placeholder="검색에 노출될 키워드를 작성 후 엔터키로 등록하세요. (최대 10개)">
+                    </div>
                   </div>
                 </div>
                 <!-- form box: 주요 키워드 -->
@@ -277,6 +279,21 @@
           "top",
           subSelectBox + "px"
         );
+        
+        $(document).ready(function() {
+          $('.keywords').tagsInput({
+            placeholder: "검색에 노출될 키워드를 작성 후 엔터키로 등록하세요. (최대 10개)",
+            unique: true,
+            limit: 10,
+            delimiter: ',',
+            removeWithBackspace: true,
+            trimValue: true,
+            onChange: function() {
+              console.log(this.value);
+            }
+          });
+        });
+      
       });
     </script>
   </body>
