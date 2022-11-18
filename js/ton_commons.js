@@ -1152,7 +1152,7 @@ if($(dateId).datepicker) {
 }
 
 $(dateId).datepicker({
-  format: "yyyy-mm-dd",
+  format: "yyyy.mm.dd",
   autoclose : true,
   calendarWeeks : false,
   clearBtn : false,

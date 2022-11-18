@@ -224,6 +224,7 @@ h2.db-approval__title {
 --------------------------------------------------------------*/
 ul.info-note > li,
 .text-head--dot {
+  position: relative;
   padding-left: 10px;
 }
 ul.info-note > li::before,
@@ -283,6 +284,17 @@ ul.info-note > li::before {
 
 .contents-form.form-register {
   /* form-box > form-ent (PC -> flex) */
+  /*.form-box-wrapper {
+    @include flex(
+      $flex: flex, 
+      $flex-direction: row, 
+      $flex-wrap: nowrap
+    );
+
+    & > .form-box {
+      // @include flex-items( 0 1 50% );
+    }
+  }*/
 }
 .contents-form.form-register .form-subtitle {
   margin-bottom: 20px;
@@ -297,11 +309,18 @@ ul.info-note > li::before {
   position: relative;
   width: 100%;
 }
+.contents-form.form-register .form-box .form-ent__head {
+  padding-top: 10px;
+}
 .contents-form.form-register .form-box .form-ent__head span {
   line-height: 24px;
 }
 .contents-form.form-register .form-box .form-ent__head span::before {
   top: calc((24px - 4px) / 2);
+}
+.contents-form.form-register .form-box .form-ent input[type=text] {
+  width: 100%;
+  height: 44px;
 }
 .contents-form.form-register .form-box .form-ent {
   display: -ms-flexbox;
@@ -321,25 +340,22 @@ ul.info-note > li::before {
   -ms-flex-wrap: none;
   -webkit-box-lines: multiple;
   -moz-box-lines: multiple;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -ms-flex-box: justify;
 }
-.contents-form.form-register .form-box-wrapper {
-  display: -ms-flexbox;
-  display: -moz-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: flex;
-  -ms-flex-direction: row;
-  -webkit-flex-direction: row;
-  flex-direction: row;
-  -moz-box-orient: horizontal;
-  -webkit-box-orient: horizontal;
-  -moz-box-direction: normal;
-  -webkit-box-direction: normal;
-  -webkit-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -ms-flex-wrap: none;
-  -webkit-box-lines: multiple;
-  -moz-box-lines: multiple;
+.contents-form.form-register .form-box .form-ent__head {
+  margin-right: 10px;
+  -webkit-box-flex: 0;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+.contents-form.form-register .form-box .form-ent__input {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 88%;
+  flex: 0 0 88%;
 }
 .contents-form.form-register .form-box-submit {
   margin-top: 50px;
