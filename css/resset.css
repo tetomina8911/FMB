@@ -124,15 +124,19 @@ address {
   font-style: normal;
 }
 
-.hidden {
-  overflow: hidden;
-}
-
 input::placeholder {
   font-weight: 400;
   color: #b7b7b7;
 }
 
+.hidden {
+  overflow: hidden;
+}
+
 .mt30 {
   margin-top: 30px;
+}
+
+.txt-red {
+  color: #bf0000;
 }

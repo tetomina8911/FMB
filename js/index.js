@@ -15,4 +15,20 @@ $(document).ready(function () {
       prevEl: ".FamilyStie-button-prev",
     },
   });
+
+  //leyrPopup - Open
+  $(".btn_trendNews").click(function () {
+    $("#layerPop-container .trendNews-wrapper").stop().fadeIn();
+    $("#layerPop-bg").stop().fadeIn();
+  });
+  //leyrPopup - Close
+  $("#btn-layerPop-close").click(function () {
+    $("#layerPop-container .layerPop-wrapper").stop().fadeOut("fast");
+    $("#layerPop-bg").stop().fadeOut("fast");
+  });
+  //leyrPopup - Close
+  $("#layerPop-bg").click(function () {
+    $("#layerPop-container .layerPop-wrapper").stop().fadeOut("fast");
+    $("#layerPop-bg").stop().fadeOut("fast");
+  });
 });

@@ -62,6 +62,36 @@
   border: 1px solid #e5e5e5;
 }
 
+#lnb {
+  width: 226px;
+}
+#lnb dl {
+  padding: 0 0 40px;
+  background: #fff;
+}
+#lnb dl dt {
+  line-height: 47px;
+  margin: 0 0 10px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  background: #524232;
+}
+#lnb dl dd a {
+  display: block;
+  line-height: 38px;
+  padding: 0 24px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #848484;
+}
+#lnb dl dd a.current {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2c2c2c;
+}
+
 /* ===== 버섯 DB 검색 ===== */
 /* 키워드 검색 바 */
 .left-searchBar {
