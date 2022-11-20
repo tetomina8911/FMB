@@ -342,8 +342,12 @@ $(document).on("input", "input.tel", function(e){
       if( this.classList.contains('email-front') ) email[0] = val; // email: front
       else email[1] = val; // email: back
 
-      target.value = email.join('@');
-      console.log(target.value); /// 
+      target.value = email.join('@'); // update value
+
+      if ( !checkEmail(target.value ) ) {
+        // email format == false
+        console.log('email format false ...');
+      }
     });
   }
 
