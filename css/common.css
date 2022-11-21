@@ -660,18 +660,22 @@ button.br2 {
   flex-wrap: nowrap;
   -ms-flex-wrap: none;
   -webkit-box-lines: multiple;
-  -moz-box-lines: multiple; }
-  .common-email input[type=text] {
-    -webkit-box-flex: 0;
-    -ms-flex: 1 1 100%;
-    flex: 1 1 100%; }
-  .common-email label {
-    margin: 0 1rem; }
-  .common-email .common-selectBox {
-    margin-left: 8px;
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 175px;
-    flex: 0 0 175px; }
+  -moz-box-lines: multiple;
+}
+.common-email input[type="text"] {
+  -webkit-box-flex: 0;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+}
+.common-email label {
+  margin: 0 1rem;
+}
+.common-email .common-selectBox {
+  margin-left: 8px;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 175px;
+  flex: 0 0 175px;
+}
 
 /*--------------------------------------------------------------
  * common-chb (체크박스)
@@ -693,34 +697,42 @@ button.br2 {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none; }
-  .common-chb input[type="checkbox"] {
-    position: absolute;
-    opacity: 0; }
-    .common-chb input[type="checkbox"]:focus ~ span {
-      border: 1px solid #482c06; }
-    .common-chb input[type="checkbox"]:focus:checked ~ span {
-      border: 1px solid #482c06; }
-    .common-chb input[type="checkbox"]:checked ~ span {
-      color: #fff;
-      background: #5c3807 url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMy40MjQiIGhlaWdodD0iMTEuNjAzIiB2aWV3Qm94PSIwIDAgMTMuNDI0IDExLjYwMyI+CiAgICA8ZyBkYXRhLW5hbWU9Iuq3uOujuSAyOTYiPgogICAgICAgIDxwYXRoIGRhdGEtbmFtZT0i7Yyo7IqkIDEyOTYiIGQ9Ik00MTAuNyA3NjUuNjE2YS41MzMuNTMzIDAgMCAxLS4zODUtLjE2NWwtMy41MjItMy43YS41MzIuNTMyIDAgMCAxIC43Ny0uNzMzbDMuMTA4IDMuMjYzIDcuMzkzLTkuMDE1YS41MzIuNTMyIDAgMSAxIC44MjIuNjc0bC03Ljc3NSA5LjQ4YS41MzIuNTMyIDAgMCAxLS4zOTEuMTk0eiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTQwNi4wOCAtNzU0LjUxMykiIHN0eWxlPSJmaWxsOiNmZmY7c3Ryb2tlOiNmZmYiLz4KICAgIDwvZz4KPC9zdmc+Cg==) 50% 40% no-repeat;
-      border: 1px solid #5c3807; }
-  .common-chb span {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 22px;
-    height: 22px;
-    background-color: transparent;
-    border: 1px solid #482c06;
-    pointer-events: none;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none; }
+  user-select: none;
+}
+.common-chb input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+}
+.common-chb input[type="checkbox"]:focus ~ span {
+  border: 1px solid #482c06;
+}
+.common-chb input[type="checkbox"]:focus:checked ~ span {
+  border: 1px solid #482c06;
+}
+.common-chb input[type="checkbox"]:checked ~ span {
+  color: #fff;
+  background: #5c3807
+    url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMy40MjQiIGhlaWdodD0iMTEuNjAzIiB2aWV3Qm94PSIwIDAgMTMuNDI0IDExLjYwMyI+CiAgICA8ZyBkYXRhLW5hbWU9Iuq3uOujuSAyOTYiPgogICAgICAgIDxwYXRoIGRhdGEtbmFtZT0i7Yyo7IqkIDEyOTYiIGQ9Ik00MTAuNyA3NjUuNjE2YS41MzMuNTMzIDAgMCAxLS4zODUtLjE2NWwtMy41MjItMy43YS41MzIuNTMyIDAgMCAxIC43Ny0uNzMzbDMuMTA4IDMuMjYzIDcuMzkzLTkuMDE1YS41MzIuNTMyIDAgMSAxIC44MjIuNjc0bC03Ljc3NSA5LjQ4YS41MzIuNTMyIDAgMCAxLS4zOTEuMTk0eiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTQwNi4wOCAtNzU0LjUxMykiIHN0eWxlPSJmaWxsOiNmZmY7c3Ryb2tlOiNmZmYiLz4KICAgIDwvZz4KPC9zdmc+Cg==)
+    50% 40% no-repeat;
+  border: 1px solid #5c3807;
+}
+.common-chb span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 22px;
+  height: 22px;
+  background-color: transparent;
+  border: 1px solid #482c06;
+  pointer-events: none;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 
 /*--------------------------------------------------------------
  * keywords
@@ -776,3 +788,40 @@ button.br2 {
   }
 }
 
+/*--------------------------------------------------------------
+  반응형 : MOBilE
+--------------------------------------------------------------*/
+@media screen and (max-width: 720px) {
+  /*--------------------------------------------------------------
+  메인비쥬얼, 서브비쥬얼 내 공통 검색바
+--------------------------------------------------------------*/
+  .common-main-search {
+    width: 100%;
+  }
+  .common-main-search .tab {
+    width: 50vw;
+    margin: 0 0 4.861vw;
+    border-radius: 0.833vw;
+  }
+  .common-main-search .tab a {
+    width: 25vw;
+    height: 9.722vw;
+    line-height: 9.444vw;
+    font-size: 4.167vw;
+    font-weight: 500;
+  }
+  .common-main-search .main-input_search input[type="search"] {
+    height: 10.972vw;
+    padding: 0 3.472vw;
+    font-size: 4.167vw;
+    border-radius: 0.833vw;
+    box-shadow: 0 0.417vw 0.833vw 0 rgba(0, 0, 0, 0.16);
+  }
+  .common-main-search .main-input_search .btn_search {
+    right: 1.389vw;
+    width: 13.333vw;
+    height: 8.472vw;
+    font-size: 3.611vw;
+    border-radius: 0.833vw;
+  }
+}

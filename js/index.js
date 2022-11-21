@@ -14,6 +14,20 @@ $(document).ready(function () {
       nextEl: ".FamilyStie-button-next",
       prevEl: ".FamilyStie-button-prev",
     },
+    breakpoints: {
+      // when window width is >= 480px
+      280: {
+        slidesPerView: 2,
+      },
+      // when window width is >= 360px
+      360: {
+        slidesPerView: 3,
+      },
+      // when window width is >= 640px
+      720: {
+        slidesPerView: 4,
+      },
+    },
   });
 
   //leyrPopup - Open
