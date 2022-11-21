@@ -1,7 +1,115 @@
 @charset "UTF-8";
-@use "sass:color";
-@use "sass:color";
+/*--------------------------------------------------------------
+ * READ MORE
+ *
+ * Update Version: 1.0.0 
+ * @ Built-In Modules: https://sass-lang.com/documentation/modules
+ *
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+ * @FUNCTION DEFAULT
+---------------------------------------------------------------- 
+ *
+ * value to percent: percentage(_VAL_) 
+ *   example. percentage(50px / 100px) // 50%
+ *
+ * round(소수점 반올림) / floor(소수점 제거) / abs(절대값)
+ * 
+ * get data unit: unit(_VAL_)
+ *   unitless(_VAL_) // @return true or false 
+ *
+ * append ["]: quote(_STR_) 
+ * remove ["]: unquote(_STR_)
+ *
+ * 
+ * for LIST
+ * length()
+ *  length(1px) // 1
+ *  length(1px 2px) // 2
+ * nth(_LIST_, IDX_)
+ * append(_LIST_, _VAL_)
+ *
+ * join() 
+ *   join(10px 20px, 30px 40px)  // 10px 20px 30px 40px
+ * zip() 
+ *   zip(1px 1px 3px, solid dashed solid, red green blue)
+ *   // 1px solid red, 1px dashed green, 3px solid blue
+ *
+ * map-get (_LIST_, _KEY_) 
+ *
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+ * @FUNCTION COLOR   
+---------------------------------------------------------------- 
+ *
+ * LINK: https://sass-lang.com/documentation/modules/color
+ * hsl: hsl(_COLOR_RGB_) => RGB to HEX
+ *
+ * hue: adjust-hue(_COLOR_HEX_, _DEG_ ) 
+ * saturation: saturate(_COLOR_HEX_, % )
+ *
+ * lightness: lighten(_COLOR_HEX_, %) / darken(_COLOR_RGB_, %)
+ *
+ * invert color: invert(_COLOR_HEX_)
+ * grayscale: grayscale(_COLOR_HEX_), desaturate(_COLOR_HEX_, %)
+ *
+ * complementary color: complement(_COLOR_HEX_)
+ *
+ * mix color: mix(_COLOR_1_, _COLOR_2_)
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+ * READ MORE
+ *
+ * Update Version: 1.0.0  
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+ * READ MORE
+ *
+ * Update Version: 2.0.0  
+ *
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+ # Global @MIXIN :: Default
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+ # Global @MIXIN :: Text
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+ # Global @MIXIN :: Container (Layout)
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# transition
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# animation
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+ * READ MORE
+ *
+ * Update Version: 1.0.0  
+ * @extend [] 
+ *
+ * B(lock), E(lements, __), M(odifier, --)
 
+ * Mobile(SP)
+ ① XS : 0 ~ 359px
+ ② S : 360 ~ 599px 
+ * Tablet
+ ① M : 600 ~ 904px 
+ * PC
+ ① L : 905 ~ 1279px 
+ ② XL : 1280 ~ 1439px
+ ③ XXL : 1440 ~
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+ # Breakpoints 
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+ # Basic Style's
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+ # Elements
+--------------------------------------------------------------*/
 /*--------------------------------------------------------------
  * 1100_web_07_03_01_승인01~03-1 (PC)
 --------------------------------------------------------------*/
@@ -12,12 +120,14 @@ button.btn--system {
   padding-bottom: 12px;
   background-color: #f8f8f8;
   border: 1px solid #646464;
-  border-radius: 4px; }
+  border-radius: 4px;
+}
 
 /* title style */
 h2.db-approval__title {
   font-size: 23px;
-  line-height: 2.348; }
+  line-height: 2.348;
+}
 
 /* + contents.css :: sub layout */
 .sub-contents.contents-db-approval {
@@ -48,53 +158,65 @@ h2.db-approval__title {
   box-sizing: border-box;
   text-align: center;
   /* button: 시스템 버튼 */
-  /* set elements margin in contents-db-approval */ }
-  .sub-contents.contents-db-approval .db-approval__state {
-    margin: 0;
-    padding: 7px 44px;
-    position: relative;
-    display: inline-block;
-    width: auto;
-    background-color: #000;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    border-radius: 27px;
-    font-size: 1.188em;
-    color: #fff; }
-    .sub-contents.contents-db-approval .db-approval__state.state--wait {
-      background-color: #d9772f; }
-    .sub-contents.contents-db-approval .db-approval__state.state--err {
-      background-color: #d92f2f; }
-    .sub-contents.contents-db-approval .db-approval__state.state--done {
-      background-color: #11882d; }
-  .sub-contents.contents-db-approval .db-approval__desc {
-    font-size: 0.938em;
-    line-height: 1.533; }
-    .sub-contents.contents-db-approval .db-approval__desc p:not([class]) {
-      margin: 0;
-      color: inherit;
-      font-size: inherit;
-      font-weight: inherit;
-      line-height: inherit; }
-  .sub-contents.contents-db-approval .btn--system {
-    position: relative;
-    margin-top: 25px; }
-    .sub-contents.contents-db-approval .btn--system::before {
-      content: '';
-      display: block;
-      position: absolute;
-      top: -25px;
-      left: 0;
-      width: 100%;
-      height: 1px;
-      background-color: #b7b7b7; }
-  .sub-contents.contents-db-approval h2.db-approval__title {
-    margin-bottom: 1rem; }
-  .sub-contents.contents-db-approval .db-approval__state {
-    margin-bottom: 1.375rem; }
-  .sub-contents.contents-db-approval .db-approval__desc {
-    margin-bottom: 1.75rem; }
+  /* set elements margin in contents-db-approval */
+}
+.sub-contents.contents-db-approval .db-approval__state {
+  margin: 0;
+  padding: 7px 44px;
+  position: relative;
+  display: inline-block;
+  width: auto;
+  background-color: #000;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: 27px;
+  font-size: 1.188em;
+  color: #fff;
+}
+.sub-contents.contents-db-approval .db-approval__state.state--wait {
+  background-color: #d9772f;
+}
+.sub-contents.contents-db-approval .db-approval__state.state--err {
+  background-color: #d92f2f;
+}
+.sub-contents.contents-db-approval .db-approval__state.state--done {
+  background-color: #11882d;
+}
+.sub-contents.contents-db-approval .db-approval__desc {
+  font-size: 0.938em;
+  line-height: 1.533;
+}
+.sub-contents.contents-db-approval .db-approval__desc p:not([class]) {
+  margin: 0;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+.sub-contents.contents-db-approval .btn--system {
+  position: relative;
+  margin-top: 25px;
+}
+.sub-contents.contents-db-approval .btn--system::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -25px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #b7b7b7;
+}
+.sub-contents.contents-db-approval h2.db-approval__title {
+  margin-bottom: 1rem;
+}
+.sub-contents.contents-db-approval .db-approval__state {
+  margin-bottom: 1.375rem;
+}
+.sub-contents.contents-db-approval .db-approval__desc {
+  margin-bottom: 1.75rem;
+}
 
 /*--------------------------------------------------------------
  * ul.info-note
@@ -103,20 +225,23 @@ h2.db-approval__title {
 ul.info-note > li,
 .text-head--dot {
   position: relative;
-  padding-left: 10px; }
-  ul.info-note > li::before,
-  .text-head--dot::before {
-    content: '';
-    position: absolute;
-    display: block;
-    left: 0;
-    width: 4px;
-    height: 4px;
-    background-color: #000;
-    border-radius: calc($--size / 2); }
+  padding-left: 10px;
+}
+ul.info-note > li::before,
+.text-head--dot::before {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 4px;
+  height: 4px;
+  background-color: #000;
+  border-radius: 2px;
+}
 
 span.text-head--dot {
-  display: inline-block; }
+  display: inline-block;
+}
 
 ul.info-note {
   padding: 1rem;
@@ -128,14 +253,17 @@ ul.info-note {
   list-style: none;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
-  ul.info-note > li {
-    position: relative;
-    font-size: 14px;
-    line-height: 24px; }
-  ul.info-note > li::before {
-    top: calc((24px - 4px) / 2);
-    background-color: #767676; }
+  box-sizing: border-box;
+}
+ul.info-note > li {
+  position: relative;
+  font-size: 14px;
+  line-height: 24px;
+}
+ul.info-note > li::before {
+  top: calc((24px - 4px) / 2);
+  background-color: #767676;
+}
 
 /*--------------------------------------------------------------
  * contents-form :: .subcontents-wrapper 내 여백(padding) 
@@ -146,147 +274,163 @@ ul.info-note {
 --------------------------------------------------------------*/
 .contents-form {
   color: #000;
-  font-size: 1rem; }
+  font-size: 1rem;
+}
 
 .contents-form .sub-contents-wrapper .sub-contents {
-  width: 100%; }
+  width: 100%;
+}
 
 .contents-form {
-  /* form-box > form-ent */
-  /* form-submit */
-  /* form-box > .form-ent (PC) */
-  /* required mark */ }
-  .contents-form .form-subtitle {
-    margin-bottom: 20px;
-    font-size: 0.938em;
-    line-height: 1; }
-    .contents-form .form-subtitle small {
-      padding-left: 1em;
-      color: #382205;
-      font-size: 12px;
-      font-weight: normal; }
-  .contents-form .form-box {
-    /* form-ent-group */
-    /* 추가/삭제 그룹 */ }
-    .contents-form .form-box .form-ent-group {
-      position: relative;
-      width: 100%; }
-      .contents-form .form-box .form-ent-group[class*="block-"] {
-        display: -ms-flexbox;
-        display: -moz-box;
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: flex;
-        -ms-flex-direction: row;
-        -webkit-flex-direction: row;
-        flex-direction: row;
-        -moz-box-orient: horizontal;
-        -webkit-box-orient: horizontal;
-        -moz-box-direction: normal;
-        -webkit-box-direction: normal;
-        -webkit-flex-wrap: wrap;
-        flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-        -webkit-box-lines: single;
-        -moz-box-lines: single; }
-        .contents-form .form-box .form-ent-group[class*="block-"]::before {
-          content: '';
-          position: absolute;
-          display: block;
-          left: 50%;
-          width: 1px;
-          height: 100%;
-          background-color: #ddd;
-          -ms-transform: translateX(-50%);
-          -o-transform: translateX(-50%);
-          -moz-transform: translateX(-50%);
-          -webkit-transform: translateX(-50%);
-          transform: translateX(-50%); }
-        .contents-form .form-box .form-ent-group[class*="block-"].block-2 {
-          -webkit-justify-content: space-between;
-          justify-content: space-between;
-          -webkit-box-pack: justify;
-          -moz-box-pack: justify;
-          -ms-flex-box: justify; }
-          .contents-form .form-box .form-ent-group[class*="block-"].block-2 > .form-ent {
-            -webkit-box-flex: 0;
-            -ms-flex: 0 0 45%;
-            flex: 0 0 45%;
-            width: 50%; }
-          .contents-form .form-box .form-ent-group[class*="block-"].block-2 > .form-ent:nth-child(-n+2) {
-            margin-top: 0; }
-    .contents-form .form-box .group-inc {
-      width: 100%; }
-      .contents-form .form-box .group-inc > li.og {
-        display: none !important; }
-  .contents-form .form-ent__head {
-    padding-top: calc((44px - 24px) / 2); }
-    .contents-form .form-ent__head span {
-      line-height: 24px; }
-    .contents-form .form-ent__head span::before {
-      top: calc((24px - 4px) / 2); }
-  .contents-form .form-ent__input {
-    /* form-ent__input > wrap */ }
-    .contents-form .form-ent__input [class^="info-"], .contents-form .form-ent__input p,
-    .contents-form .form-ent__input .common-textarea,
-    .contents-form .form-ent__input .common-input-file, .contents-form .form-ent__input .common-keyword, .contents-form .form-ent__input .common-email,
-    .contents-form .form-ent__input .common-selectBox,
-    .contents-form .form-ent__input input[type="text"] {
-      width: 100%; }
-    .contents-form .form-ent__input .common-selectBox,
-    .contents-form .form-ent__input input[type="text"] {
-      height: 44px; }
-    .contents-form .form-ent__input .common-selectBox {
-      line-height: 44px; }
-    .contents-form .form-ent__input .common-btn {
-      width: auto;
-      -webkit-justify-content: flex-start;
-      justify-content: flex-start;
-      -webkit-box-pack: start;
-      -moz-box-pack: start;
-      -ms-flex-box: start; }
-    .contents-form .form-ent__input .wrap {
-      width: 100%;
-      display: -ms-flexbox;
-      display: -moz-box;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: flex;
-      -ms-flex-direction: row;
-      -webkit-flex-direction: row;
-      flex-direction: row;
-      -moz-box-orient: horizontal;
-      -webkit-box-orient: horizontal;
-      -moz-box-direction: normal;
-      -webkit-box-direction: normal;
-      -webkit-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-      -ms-flex-wrap: none;
-      -webkit-box-lines: multiple;
-      -moz-box-lines: multiple; }
-      .contents-form .form-ent__input .wrap > * {
-        -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto;
-        flex: 0 0 auto; }
-      .contents-form .form-ent__input .wrap.wrap-input > input[type=text], .contents-form .form-ent__input .wrap.wrap-file > .common-input-file {
-        margin-right: 12px;
-        -webkit-box-flex: 0;
-        -ms-flex: 1 1 100%;
-        flex: 1 1 100%; }
-    .contents-form .form-ent__input *:not(p) + p {
-      margin-top: 20px; }
-  .contents-form .form-box + .form-box,
-  .contents-form .form-box .group-inc > li:not(.og) + li,
-  .contents-form .form-box .form-ent + .form-ent {
-    margin-top: 25px; }
-  .contents-form .form-box .form-ent__input .wrap + .wrap,
-  .contents-form .form-box .form-ent__input .group-inc > li:not(.og) + li {
-    margin-top: 8px; }
-  .contents-form .form-submit {
-    margin-top: 48px; }
-    .contents-form .form-submit .common-btn {
-      margin: 0 auto; }
-  .contents-form .form-box .form-ent {
+  /* form-subtitle (block title) */
+  /* form-box (form contents) */
+  /* .form-box > .form-ent : form-enters line */
+  /* required mark */
+  /*--------------------------------------------------------------
+    반응형 : Mobile 
+    * at-root :: .contents-form
+  --------------------------------------------------------------*/
+  /*--------------------------------------------------------------
+    반응형 : Tablet
+    * at-root :: .contents-form
+  --------------------------------------------------------------*/
+  /*--------------------------------------------------------------
+    반응형 : PC
+    * at-root :: .contents-form
+  --------------------------------------------------------------*/
+}
+.contents-form .form-subtitle {
+  margin-bottom: 20px;
+  font-size: 0.938em;
+  line-height: 1;
+}
+.contents-form .form-subtitle > small {
+  padding-left: 1em;
+  color: #382205;
+  font-size: 12px;
+  font-weight: normal;
+}
+.contents-form .form-box {
+  /* ul */
+  /* 복제 그룹(group--incs) */
+  /* nav */
+}
+.contents-form .form-box .group--incs,
+.contents-form .form-box .group--incs > li,
+.contents-form .form-box .form-box-ents,
+.contents-form .form-box .form-ent,
+.contents-form .form-box .form-ent .ent,
+.contents-form .form-box .form-submit {
+  position: relative;
+  display: block;
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.contents-form .form-box .group--incs > .options {
+  width: 100%;
+}
+.contents-form .form-box .group--incs > .options .option-ctrl {
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  -webkit-box-pack: end;
+  -moz-box-pack: end;
+  -ms-flex-box: end;
+}
+.contents-form .form-box .group--incs > li.origin {
+  display: none !important;
+}
+.contents-form .form-box .group--incs > .options,
+.contents-form .form-box .form-box-ents ~ .form-box-ents,
+.contents-form .form-box .form-ent,
+.contents-form .form-box .form-ent .ent:not(.origin) + .ent {
+  margin-top: 20px;
+}
+.contents-form .form-box .form-submit {
+  margin-top: 50px;
+}
+.contents-form .form-box .form-ent > p {
+  margin-top: 20px;
+}
+.contents-form .form-box .form-ent--head {
+  padding-top: calc((44px - 24px) / 2);
+}
+.contents-form .form-box .form-ent--head span.text-head--dot {
+  line-height: 24px;
+}
+.contents-form .form-box .form-ent--head .text-head--dot::before {
+  top: calc((24px - 4px) / 2);
+}
+.contents-form .form-box .form-ent--body {
+  /*
+   * defined .wrap's
+  */
+}
+.contents-form .form-box .form-ent--body .common-selectBox,
+.contents-form .form-box .form-ent--body input[type=text] {
+  height: 44px;
+}
+.contents-form .form-box .form-ent--body .common-selectBox {
+  line-height: 44px;
+}
+.contents-form .form-box .form-ent--body .common-email,
+.contents-form .form-box .form-ent--body .common-input-file,
+.contents-form .form-box .form-ent--body .common-input-file input[type=text],
+.contents-form .form-box .form-ent--body .common-selectBox, .contents-form .form-box .form-ent--body > input[type=text] {
+  width: 100%;
+}
+.contents-form .form-box .form-ent--body .ent {
+  width: 100%;
+}
+.contents-form .form-box .form-ent--body .wrap-ctrl {
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-direction: nowrap;
+  -webkit-flex-direction: nowrap;
+  flex-direction: nowrap;
+  -moz-box-orient: horizontal;
+  -webkit-box-orient: horizontal;
+  -moz-box-direction: normal;
+  -webkit-box-direction: normal;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -ms-flex-wrap: none;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -webkit-align-items: center;
+  align-items: center;
+  -moz-box-align: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+}
+.contents-form .form-box .form-ent--body .wrap-ctrl > *:not(:last-child) {
+  -webkit-box-flex: 0;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+}
+.contents-form .form-box .form-ent--body .wrap-ctrl > *:last-child {
+  margin-left: 10px;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+.contents-form .form-subtitle.required::after,
+.contents-form .form-ent.required .form-ent--head > span::after {
+  content: "*";
+  color: #d92f2f;
+}
+@media screen and (min-width: 1101px) {
+  .contents-form {
+    /* .form-box .form-box-ents, .form-box ... .form-ent flex  */
+    /* .form-box  */
+    /* .form-box > .form-ent : form-enters line */
+  }
+  .contents-form .form-box .form-box-ents[class*=type-],
+  .contents-form .form-box .form-ent:not(.not-flex) {
     display: -ms-flexbox;
     display: -moz-box;
     display: -webkit-box;
@@ -299,47 +443,359 @@ ul.info-note {
     -webkit-box-orient: horizontal;
     -moz-box-direction: normal;
     -webkit-box-direction: normal;
-    -webkit-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    -ms-flex-wrap: none;
-    -webkit-box-lines: multiple;
-    -moz-box-lines: multiple;
+  }
+  .contents-form .form-box .form-box-ents[class*=type-] {
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -webkit-box-lines: single;
+    -moz-box-lines: single;
     -webkit-justify-content: space-between;
     justify-content: space-between;
     -webkit-box-pack: justify;
     -moz-box-pack: justify;
-    -ms-flex-box: justify; }
-    .contents-form .form-box .form-ent__head {
-      margin-right: 1rem;
-      -webkit-box-flex: 0;
-      -ms-flex: 0 0 120px;
-      flex: 0 0 120px; }
-    .contents-form .form-box .form-ent__input {
-      -webkit-box-flex: 0;
-      -ms-flex: 1 1 100%;
-      flex: 1 1 100%;
-      display: -ms-flexbox;
-      display: -moz-box;
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-flex-wrap: wrap;
-      flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-      -webkit-box-lines: single;
-      -moz-box-lines: single; }
-  .contents-form .form-subtitle.required::after,
-  .contents-form .form-ent.required .form-ent__head > span::after {
-    content: '*';
-    color: #d92f2f; }
+    -ms-flex-box: justify;
+  }
+  .contents-form .form-box .form-box-ents.type-both .form-ent,
+  .contents-form .form-box .form-box-ents.type-2 .form-ent {
+    max-width: 50%;
+    -webkit-box-flex: 0;
+    -ms-flex: 1 1 50%;
+    flex: 1 1 50%;
+  }
+  .contents-form .form-box .form-box-ents.type-both .form-ent:nth-child(-n+2),
+  .contents-form .form-box .form-box-ents.type-2 .form-ent:nth-child(-n+2) {
+    margin-top: 0;
+  }
+  .contents-form .form-box .form-box-ents.type-both .form-ent:nth-child(1),
+  .contents-form .form-box .form-box-ents.type-both .form-ent:nth-child(2n+1),
+  .contents-form .form-box .form-box-ents.type-2 .form-ent:nth-child(1),
+  .contents-form .form-box .form-box-ents.type-2 .form-ent:nth-child(2n+1) {
+    padding-right: 30px;
+  }
+  .contents-form .form-box .form-box-ents.type-both .form-ent:nth-child(2n),
+  .contents-form .form-box .form-box-ents.type-2 .form-ent:nth-child(2n) {
+    padding-left: 30px;
+  }
+  .contents-form .form-box .form-box-ents.type-both::before,
+  .contents-form .form-box .form-box-ents.type-2::before {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 50%;
+    width: 1px;
+    height: 100%;
+    background-color: #ddd;
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+  .contents-form .form-box .form-ent:not(.not-flex) .form-ent--head {
+    padding-right: 1rem;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 120px;
+    flex: 0 0 120px;
+  }
+  .contents-form .form-box .form-ent:not(.not-flex) .form-ent--body {
+    -webkit-box-flex: 0;
+    -ms-flex: 1 1 100%;
+    flex: 1 1 100%;
+  }
+}
+
+.contents-form__ {
+  /* form-box > form-ent */
+  /* form-submit */
+  /* form-box > .form-ent (PC) */
+  /* required mark */
+}
+.contents-form__ .form-subtitle {
+  margin-bottom: 20px;
+  font-size: 0.938em;
+  line-height: 1;
+}
+.contents-form__ .form-subtitle small {
+  padding-left: 1em;
+  color: #382205;
+  font-size: 12px;
+  font-weight: normal;
+}
+.contents-form__ .form-box {
+  /* form-ent-group */
+  /* 추가/삭제 그룹 */
+}
+.contents-form__ .form-box .form-ent-group {
+  position: relative;
+  width: 100%;
+}
+.contents-form__ .form-box .form-ent-group[class*=block-] {
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -moz-box-orient: horizontal;
+  -webkit-box-orient: horizontal;
+  -moz-box-direction: normal;
+  -webkit-box-direction: normal;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -webkit-box-lines: single;
+  -moz-box-lines: single;
+}
+.contents-form__ .form-box .form-ent-group[class*=block-]::before {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 50%;
+  width: 1px;
+  height: 100%;
+  background-color: #ddd;
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.contents-form__ .form-box .form-ent-group[class*=block-].block-2 {
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -ms-flex-box: justify;
+}
+.contents-form__ .form-box .form-ent-group[class*=block-].block-2 > .form-ent {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 45%;
+  flex: 0 0 45%;
+  width: 50%;
+}
+.contents-form__ .form-box .form-ent-group[class*=block-].block-2 > .form-ent:nth-child(-n+2) {
+  margin-top: 0;
+}
+.contents-form__ .form-box .group-inc {
+  width: 100%;
+}
+.contents-form__ .form-box .group-inc > li.og {
+  display: none !important;
+}
+.contents-form__ .form-ent__head {
+  padding-top: calc((44px - 24px) / 2);
+}
+.contents-form__ .form-ent__head span {
+  line-height: 24px;
+}
+.contents-form__ .form-ent__head span::before {
+  top: calc((24px - 4px) / 2);
+}
+.contents-form__ .form-ent__input {
+  /* form-ent__input > wrap */
+}
+.contents-form__ .form-ent__input [class^=info-], .contents-form__ .form-ent__input p,
+.contents-form__ .form-ent__input .common-textarea,
+.contents-form__ .form-ent__input .common-input-file, .contents-form__ .form-ent__input .common-keyword, .contents-form__ .form-ent__input .common-email,
+.contents-form__ .form-ent__input .common-selectBox,
+.contents-form__ .form-ent__input input[type=text] {
+  width: 100%;
+}
+.contents-form__ .form-ent__input .common-selectBox,
+.contents-form__ .form-ent__input input[type=text] {
+  height: 44px;
+}
+.contents-form__ .form-ent__input .common-selectBox {
+  line-height: 44px;
+}
+.contents-form__ .form-ent__input .common-btn {
+  width: auto;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-box-pack: start;
+  -moz-box-pack: start;
+  -ms-flex-box: start;
+}
+.contents-form__ .form-ent__input .wrap {
+  width: 100%;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -moz-box-orient: horizontal;
+  -webkit-box-orient: horizontal;
+  -moz-box-direction: normal;
+  -webkit-box-direction: normal;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -ms-flex-wrap: none;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+}
+.contents-form__ .form-ent__input .wrap > * {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+.contents-form__ .form-ent__input .wrap.wrap-input > input[type=text], .contents-form__ .form-ent__input .wrap.wrap-file > .common-input-file {
+  margin-right: 12px;
+  -webkit-box-flex: 0;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+}
+.contents-form__ .form-ent__input *:not(p) + p {
+  margin-top: 20px;
+}
+.contents-form__ .form-box + .form-box,
+.contents-form__ .form-box .group-inc > li:not(.og) + li,
+.contents-form__ .form-box .form-ent + .form-ent {
+  margin-top: 25px;
+}
+.contents-form__ .form-box .form-ent__input .wrap + .wrap,
+.contents-form__ .form-box .form-ent__input .group-inc > li:not(.og) + li {
+  margin-top: 8px;
+}
+.contents-form__ .form-submit {
+  margin-top: 48px;
+}
+.contents-form__ .form-submit .common-btn {
+  margin: 0 auto;
+}
+.contents-form__ .form-box .form-ent {
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -moz-box-orient: horizontal;
+  -webkit-box-orient: horizontal;
+  -moz-box-direction: normal;
+  -webkit-box-direction: normal;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -ms-flex-wrap: none;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -ms-flex-box: justify;
+}
+.contents-form__ .form-box .form-ent__head {
+  margin-right: 1rem;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 120px;
+  flex: 0 0 120px;
+}
+.contents-form__ .form-box .form-ent__input {
+  -webkit-box-flex: 0;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -webkit-box-lines: single;
+  -moz-box-lines: single;
+}
+.contents-form__ .form-subtitle.required::after,
+.contents-form__ .form-ent.required .form-ent__head > span::after {
+  content: "*";
+  color: #d92f2f;
+}
 
 /* register form (등록 폼) */
 .contents-form.form-register .sub-contents-wrapper {
-  padding: 44px; }
+  padding: 44px;
+}
 
 /* PC -> sub-contents-wrapper 간 margin-top */
 .contents-form .sub-contents-wrapper + .sub-contents-wrapper {
-  margin-top: 20px; }
+  margin-top: 20px;
+}
 
+/*--------------------------------------------------------------
+* 1100_web_07_01_01_제조사 – 1 (PC)
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+ * common-email (이메일)
+ - ton_commons.js 스크립트 이벤트 바인드 :: 키 입력 시 .email-avg 에 값 저장
+  <div class="common-email">
+    <input type="text" class="input-type3 email-front" name="" value="" placeholder="">
+    <label>@</label>
+    <input type="text" class="input-type3 email-back" name="" value="" placeholder="">
+    <div class="common-selectBox">                  
+      <ul class="main-selecBox">
+        <li><a href="#n" class="placeholder">직접입력</a>
+          <ul class="sub-selectBox">
+            <li><a href="#n">선택하세요1</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <input type="hidden" class="email-avg" name="email" />
+  </div>
+--------------------------------------------------------------*/
+.common-email {
+  width: 100%;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -moz-box-orient: horizontal;
+  -webkit-box-orient: horizontal;
+  -moz-box-direction: normal;
+  -webkit-box-direction: normal;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -ms-flex-wrap: none;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+}
+.common-email input[type=text] {
+  -webkit-box-flex: 0;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+}
+.common-email label {
+  margin: 0 1rem;
+}
+.common-email .common-selectBox {
+  margin-left: 8px;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 175px;
+  flex: 0 0 175px;
+}
+
+/*--------------------------------------------------------------
+ * common-select
+  <label class="common-chb">
+    <input type="checkbox" name="agree" value="0">
+    <span class="indicator"></span>
+    위 항목에 동의합니다.
+  </label>
+--------------------------------------------------------------*/
+.common-selectBox select {
+  display: none;
+}
 
 /*# sourceMappingURL=sung.css.map */

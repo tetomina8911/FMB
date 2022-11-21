@@ -328,10 +328,15 @@ $(document).on("input", "input.tel", function(e){
   /*
    * FMB
   */
+
+  // common-SelectBox 
+  var commonSelectBoxs = document.querySelectorAll('.common-select');
+  if ( commonSelectBoxs.length ) initCommonSelect(commonSelectBoxs);
+  
   // common-email 
   var commonEmail = document.querySelectorAll('.common-email');
   if ( commonEmail.length ) {
-    $(document).on('input', 'input.email-front, input.email-back', function(e) {
+    $(document).on('change input', 'input.email-front, input.email-back', function(e) {
       var target = this.parentNode.querySelector('input.email-avg'); 
       if ( !target ) return;
 
@@ -348,6 +353,16 @@ $(document).on("input", "input.tel", function(e){
         // email format == false
         console.log('email format false ...');
       }
+    });
+
+    // common-email > select 
+    $(commonEmail).find('select').on('change', function() { 
+      var val = this.value;
+      var wrap = $(this).closest('.common-email');
+      
+      var input = wrap.find('input.email-back');
+      input.attr('readonly', val !== '' ? true : false);
+      input.val(val).change();
     });
   }
 
@@ -376,34 +391,55 @@ $(document).on("input", "input.tel", function(e){
   }
 
   // 입력폼 그룹 추가 / 제거
-  if ( $('.group-inc').length ) {
+  if ( $('.group--incs').length ) {
 
     // 파일추가(common-input-file) : (item) 추가
-    $('.group-inc .inc-add').on('click', function() {
-      var list = $(this).closest('.group-inc');
+    $('.group--incs .add').on('click', function() {
+      var list = $(this).closest('.group--incs');
 
-      var count = list.children('li:not(.og)').length + 1;
+      var count = list.children('li:not(.origin)').length + 1;
       var label = list.data('label');
       if ( !label ) label = '';
       label += "-" + String(count);
 
-      var target = $(this).closest('li'); // current
+      var target = null;
+
+      if ( !this.classList.contains('add-fixed') ) {        
+        target = $(this).closest('li'); // current
+        if ( target.hasClass('form-ent') ) {
+          target = $(this).closest('.form-box-ents'); // current
+          target = target.parent();
+        }
+      }
+
+      if ( !target || target.length == 0 ) target = list.children('li').last();
       
-      var cloneItem = list.find('li.og').clone(true, true);
-      cloneItem.removeClass('og').addClass(label);
+      var cloneItem = list.find('li.origin').clone(true, true);
+      cloneItem.removeClass('origin').addClass(label);
 
       //cloneItem.appendTo(target);
       cloneItem.insertAfter(target);
     });
     // 파일추가(common-input-file) : (item) 제거
-    $('.group-inc .inc-remove').on('click', function() {
-      var list = $(this).closest('.group-inc');
+    $('.group--incs .remove').on('click', function() {
+      var list = $(this).closest('.group--incs');
 
-      var count = list.children('li:not(.og)').length;
+      var count = list.children('li:not(.origin)').length;
       
       var target = $(this).closest('li');
+      if ( target.hasClass('form-ent') ) {
+        target = $(this).closest('.form-box-ents'); // current
+        target = target.parent();
+      }
+
       target.remove(); // remove item
-      if ( count <= 1 ) list.find('li.og button.inc-add').click(); // init item
+
+      if ( count <= 1 ) {
+        // init item
+        if ( list.find('li.origin button.add').length )
+          list.find('li.origin button.add').click();
+        else list.find('button.add.add-fixed').click();
+      }
     });
   }
 
@@ -433,12 +469,127 @@ $(document).on("input", "input.tel", function(e){
       if ( inputtext ) inputtext.value = file.name;
     });
   }
+
+  // 주소 찾기
+  // <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+  $('.common-adress .btn-find-address').off().on('click', function() {
+    console.log('ffff');
+    new daum.Postcode({
+      oncomplete: function(response) {
+        console.log(response); // -- address
+      }
+    }).open();
+  });
+
   // ~ FMB
 });
  /*
   * FMB
  */
- 
+// <select> common-select -> common-selectBox
+// param: <select>
+// * set options (after)
+function initCommonSelect(selects) {
+  $(selects).each(function(i) {
+    var select = $(this).clone(true).get(0); // copy original
+
+    // create .common-SelectBox 
+    var selectBox = document.createElement('div');
+    selectBox.className = "common-selectBox";
+    selectBox.appendChild(select);
+    this.parentNode.append(selectBox); // append 
+    this.remove();
+
+    setCommonSelect(selectBox.querySelector('select'));
+  });
+}
+function setCommonSelect(select) {
+  if ( typeof select.get !== 'undefined' ) select = select.get(0);
+
+  // <common-selectBox>
+  var selectBox = select.parentNode; 
+
+  // common-selectBox > main-selectBox
+  var main = selectBox.querySelector('.main-selecBox');
+  if ( main ) main.remove();
+
+  main = document.createElement('ul');
+  main.className = "main-selecBox"; // main-selectBox
+  main.appendChild( document.createElement('li') );
+
+  var holder = document.createElement('a');
+  holder.className = "placeholder";
+  holder.innerText = "-";
+  main.querySelector('li').appendChild(holder);
+
+  // common-selectBox > sub-selectBox
+  var sub = document.createElement('ul');
+  sub.className = "sub-selectBox";
+
+  Array.prototype.slice.call(select.options).forEach( function(option, i){
+    var _txt = option.innerText;
+    var _val = option.value;
+
+    if ( i == 0 ) {
+      holder.innerText=_txt; // init placholder text
+      if ( option.disabled ) return;
+    }
+
+    var _subItem = document.createElement('li');
+    var _contents = document.createElement('a');
+    _contents.className = "option";
+    if ( i == 0 ) _contents.classList.addClass = "selected";
+    _contents.href = '#' + _val;
+    _contents.innerText = _txt;
+
+    _subItem.appendChild(_contents);
+    sub.appendChild(_subItem); // append sub-selectBox
+  } );
+
+  main.querySelector('li').appendChild(sub); // append to main-selectBox > li
+  selectBox.append(main);
+
+  // init element(css, bind)
+  $(sub).css("top", String($(main).height()) + "px");
+
+  $(holder).off().on('click', function(){
+    $(this)
+    .parent("li")
+    .children(".sub-selectBox")
+    .stop()
+    .slideToggle(function () {
+      $(this).parent("li").toggleClass("on");
+    });
+    return false; // cancel href
+  });
+
+  $(sub).find('.option').off().on('click', function() {
+    var val = this.href.substring(this.href.indexOf('#') + 1);
+    if ( val ) val = decodeURI(val);
+    var select = $(selectBox).find('select');
+    if ( select ) {
+      select.val(val);
+      select.change();
+    }
+    $(holder).click(); // close select-menus
+    return false;// cancel href
+  });
+
+  $(select).on('change', function() {
+    // target == .sub-selectBox > li > a.option
+    var val = this.value;
+    
+    var target = $(selectBox).parent().find('.sub-selectBox a:not([href="#' + val + '"]).selected');
+    if ( target.length ) target.removeClass('selected');
+
+    target = $(selectBox).find('.sub-selectBox a[href="#' + val + '"]');
+    if( target.length  && !target.hasClass('selected')) target.addClass('selected');
+
+    holder.href = "#" + val;
+    holder.innerText = val ? val : target.text();
+  });
+
+}
 // ~ FMB
 
 
