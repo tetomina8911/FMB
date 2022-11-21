@@ -448,33 +448,6 @@
 
     <script>
       $(function () {
-        //Date Picker
-        // $("#datepicker").datepicker({
-        //   dateFormat: "yy.mm.dd", //달력 날짜 형태
-        // });
-        // $("#datepicker").datepicker("setDate", "today");
-        // //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
-        // $("#datepicker2").datepicker({
-        //   dateFormat: "yy.mm.dd", //달력 날짜 형태
-        // });
-        // $("#datepicker2").datepicker("setDate", "today");
-        // (-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
-
-        $("#datepicker3").datepicker({
-          dateFormat: "yy.mm.dd", //달력 날짜 형태
-        });
-        $("#datepicker3").datepicker("setDate", "today");
-        //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
-
-        $("#datepicker4").datepicker({
-          dateFormat: "yy.mm.dd", //달력 날짜 형태
-        });
-        $("#datepicker4").datepicker("setDate", "today");
-        //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
-
-        makeDatePicker("#datepicker1", new Date());
-        makeDatePicker("#datepicker2", new Date());
-
         //DB Search Click Event
         //$(".db_search_container dl dd").hide();
         $(".db_search_container dl dt").click(function () {
@@ -487,44 +460,9 @@
             });
         });
 
-        //Left SearchBar Click Event
-        $(".left-searchBar dl dt a").click(function () {
-          $(this)
-            .parents("dl")
-            .children("dd")
-            .stop()
-            .slideToggle(function () {
-              $(this).parent("dl").children("dt").toggleClass("down");
-            });
-        });
-
-        //Select Box
-        $(".common-selectBox .main-selecBox > li > a").click(function () {
-          $(this)
-            .parent("li")
-            .children(".sub-selectBox")
-            .stop()
-            .slideToggle(function () {
-              $(this).parent("li").toggleClass("on");
-            });
-        });
-        const subSelectBox = $(".common-board-status .common-selectBox .main-selecBox > li > a").height() - 1;
-        $(".common-selectBox .main-selecBox > li .sub-selectBox").css("top", subSelectBox + "px");
-
-        //leyrPopup - Open
-        $("#btn-ex-class-pop").click(function () {
-          $("#layerPop-container .ex-class-wrapper").stop().fadeIn();
-          $("#layerPop-bg").stop().fadeIn();
-        });
-        //leyrPopup - Close
-        $("#btn-layerPop-close").click(function () {
-          $("#layerPop-container .ex-class-wrapper").stop().fadeOut("fast");
-          $("#layerPop-bg").stop().fadeOut("fast");
-        });
-        //leyrPopup - Close
-        $("#layerPop-bg").click(function () {
-          $("#layerPop-container .ex-class-wrapper").stop().fadeOut("fast");
-          $("#layerPop-bg").stop().fadeOut("fast");
+        $(".right_resource_container .sub-contents-tab a").click(function () {
+          $(".right_resource_container .sub-contents-tab a").removeClass("current");
+          $(this).addClass("current");
         });
       });
     </script>

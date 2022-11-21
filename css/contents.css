@@ -488,11 +488,13 @@
 .right_resource_container .sub-contents-tab a {
   display: block;
   flex: 1 1 25%;
-  line-height: 34px;
+  height: 34px;
+  line-height: 30px;
   font-size: 13px;
   font-weight: 500;
   color: #382205;
   text-align: center;
+  border-top: 2px solid #fff;
   border-bottom: 2px solid #f69412;
   box-sizing: border-box;
 }
