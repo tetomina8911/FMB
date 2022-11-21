@@ -510,11 +510,11 @@ function setCommonSelect(select) {
   var selectBox = select.parentNode; 
 
   // common-selectBox > main-selectBox
-  var main = selectBox.querySelector('.main-selecBox');
+  var main = selectBox.querySelector('.main-selectBox');
   if ( main ) main.remove();
 
   main = document.createElement('ul');
-  main.className = "main-selecBox"; // main-selectBox
+  main.className = "main-selectBox"; // main-selectBox
   main.appendChild( document.createElement('li') );
 
   var holder = document.createElement('a');

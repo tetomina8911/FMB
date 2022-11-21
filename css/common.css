@@ -280,7 +280,7 @@ input[type="text"] {
 .common-email .common-selectBox {
   width: 45%;
 }
-.common-email .common-selectBox .main-selecBox > li > a {
+.common-email .common-selectBox .main-selectBox > li > a {
   width: 100%;
   background-position: 90% 50%;
 }
@@ -291,14 +291,14 @@ input[type="text"] {
 .common-selectBox {
   height: 100%;
 }
-.common-selectBox .main-selecBox {
+.common-selectBox .main-selectBox {
   height: 100%;
 }
-.common-selectBox .main-selecBox > li {
+.common-selectBox .main-selectBox > li {
   position: relative;
   height: 100%;
 }
-.common-selectBox .main-selecBox > li > a {
+.common-selectBox .main-selectBox > li > a {
   display: block;
   height: 100%;
   padding: 0 16px;
@@ -310,14 +310,14 @@ input[type="text"] {
   box-sizing: border-box;
 }
 
-.common-selectBox .main-selecBox > li > a.placeholder {
+.common-selectBox .main-selectBox > li > a.placeholder {
   color: #b7b7b7;
 }
-.common-selectBox .main-selecBox > li.on > a {
+.common-selectBox .main-selectBox > li.on > a {
   background: url("../images/icon/icon-toggle-up-gr.png") no-repeat 98% 50%, #fcfcfc;
   border-radius: 6px 6px 0 0;
 }
-.common-selectBox .main-selecBox > li .sub-selectBox {
+.common-selectBox .main-selectBox > li .sub-selectBox {
   position: absolute;
   left: 0;
   top: 0;
@@ -330,14 +330,14 @@ input[type="text"] {
   box-sizing: border-box;
   z-index: 3;
 }
-.common-selectBox .main-selecBox > li .sub-selectBox li a {
+.common-selectBox .main-selectBox > li .sub-selectBox li a {
   display: block;
   line-height: 2;
   padding: 0 16px;
   font-size: 14px;
   font-weight: 500;
 }
-.common-selectBox .main-selecBox > li .sub-selectBox li:hover a {
+.common-selectBox .main-selectBox > li .sub-selectBox li:hover a {
   background: #d6d6d6;
 }
 
@@ -384,15 +384,15 @@ input[type="text"] {
 .common-board-status .common-selectBox {
   width: 141px;
 }
-.common-board-status .common-selectBox .main-selecBox > li > a {
+.common-board-status .common-selectBox .main-selectBox > li > a {
   line-height: 43px;
   border-color: #d6d6d6;
   background-position: 90% 50%;
 }
-.common-board-status .common-selectBox .main-selecBox > li.on > a {
+.common-board-status .common-selectBox .main-selectBox > li.on > a {
   background-position: 90% 50%;
 }
-.common-board-status .common-selectBox .main-selecBox li .sub-selectBox {
+.common-board-status .common-selectBox .main-selectBox li .sub-selectBox {
   border-color: #d6d6d6;
 }
 .common-board-status .common-sub-search .input-type5 {
@@ -634,7 +634,7 @@ button.br2 {
     <label>@</label>
     <input type="text" class="input-type3 email-back" name="" value="" placeholder="">
     <div class="common-selectBox">                  
-      <ul class="main-selecBox">
+      <ul class="main-selectBox">
         <li><a href="#n" class="placeholder">직접입력</a>
           <ul class="sub-selectBox">
             <li><a href="#n">선택하세요1</a></li>
