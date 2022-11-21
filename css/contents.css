@@ -1,6 +1,20 @@
 @charset "utf-8";
 
 /*--------------------------------------------------------------
+< z-index 설정 >
+
+.subVisual-container:after {
+  z-index: 1;
+}
+.subVisual-container .subVisual-wrapper {
+  z-index: 2;
+}
+.subVisual-container .subVisual-search {
+  z-index: 2;
+}
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
   sub Body
 --------------------------------------------------------------*/
 #sub-body {
@@ -80,7 +94,9 @@
 }
 
 .subVisual-container .subVisual-search {
+  position: relative;
   margin: 35px 0 0;
+  z-index: 2;
 }
 
 /*--------------------------------------------------------------
@@ -127,6 +143,9 @@
 --------------------------------------------------------------*/
 #lnb {
   width: 226px;
+}
+#lnb .mb-progress-bar {
+  display: none;
 }
 #lnb dl {
   padding: 0 0 40px;
@@ -226,6 +245,37 @@
 }
 
 /* 우측 : DB 검색 컨텐츠 */
+.db_search_container {
+  width: 697px;
+}
+.db_search_container > dl {
+  margin: 0 0 4px;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+}
+.db_search_container > dl > dt > a {
+  display: block;
+  padding: 16px 22px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #382205;
+  background: url("../images/icon/icon-toggle-up-gr.png") no-repeat 96% 50%;
+}
+.db_search_container > dl > dt.down > a {
+  background: url("../images/icon/icon-toggle-down-gr.png") no-repeat 96% 50%;
+}
+.db_search_container > dl > dt > a > span {
+  font-size: 13px;
+}
+.db_search_container > dl > dd {
+  line-height: 1.88;
+  padding: 16px 22px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #555;
+  word-break: keep-all;
+  border-top: 1px solid #707070;
+}
 .db_search_container dl > dd > .text-wrap p {
   font-size: 16px;
   line-height: 1.6;
@@ -359,4 +409,137 @@
 .common-gallery-wrapper > ul > li > a .gallery-list .date {
   font-size: 14px;
   color: #626261;
+}
+
+/*--------------------------------------------------------------
+  반응형 : MOBilE : 720
+--------------------------------------------------------------*/
+@media screen and (max-width: 720px) {
+  /*--------------------------------------------------------------
+  Sub Visual
+--------------------------------------------------------------*/
+  .subVisual-container {
+    height: 40vw;
+  }
+  .subVisual-container.sub-bg02 {
+    height: 40vw;
+  }
+  .subVisual-container.sub-bg02:after {
+    background-position: 70% 50%;
+  }
+  .subVisual-container.sub-bg03:after {
+    background-position: 70% 50%;
+  }
+  .subVisual-container.sub-bg04:after {
+    background-position: 70% 50%;
+  }
+  .subVisual-container.sub-bg05:after {
+    background-position: 70% 50%;
+  }
+  .subVisual-container.sub-bg06:after {
+    background-position: 70% 50%;
+  }
+  .subVisual-container.sub-bg07:after {
+    background-position: 70% 50%;
+  }
+
+  .subVisual-container.sub-bg02 .subVisual-wrapper {
+    display: none;
+  }
+
+  .subVisual-container .subVisual-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  .subVisual-container .subVisual-wrapper .sub-title {
+    padding: 0 0 1.944vw;
+    font-size: 4.722vw;
+  }
+  .subVisual-container .subVisual-wrapper .sub-introText {
+    font-size: 3.333vw;
+  }
+
+  .subVisual-container .subVisual-search {
+    margin: 7.639vw 0 0;
+    padding: 0 6.111vw;
+  }
+
+  /*--------------------------------------------------------------
+  Sub layout
+--------------------------------------------------------------*/
+  #sub-contents-container {
+    width: 100%;
+    padding: 0;
+  }
+  #sub-contents-container .sub-contents-title {
+    display: none;
+  }
+  #sub-contents-container .sub-contents-wrapper {
+    display: block;
+  }
+  #sub-contents-container .sub-contents-wrapper.bg {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+  }
+  #sub-contents-container .sub-contents-wrapper .sub-right-contents {
+    width: 100%;
+    min-height: 500px;
+  }
+  #sub-contents-container .sub-contents-wrapper .sub-right-contentsbg {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+  }
+
+  /*--------------------------------------------------------------
+  Lnb
+--------------------------------------------------------------*/
+  #lnb {
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 1px solid red;
+    width: 100%;
+  }
+  #lnb .mb-progress-bar {
+    display: flex;
+    align-items: center;
+    height: 14.722vw;
+    padding: 0 6.111vw;
+    font-size: 3.889vw;
+    font-weight: 500;
+    color: #fff;
+    background: #2e2e2e;
+  }
+  #lnb .mb-progress-bar img {
+    width: 4.444vw;
+  }
+
+  #lnb dl {
+    padding: 0 0 40px;
+    background: #fff;
+  }
+  #lnb dl dt {
+    line-height: 47px;
+    margin: 0 0 10px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    background: #524232;
+  }
+  #lnb dl dd a {
+    display: block;
+    line-height: 38px;
+    padding: 0 24px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #848484;
+  }
+  #lnb dl dd a.current {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2c2c2c;
+  }
 }
