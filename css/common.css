@@ -563,6 +563,9 @@ button.small2 {
   padding: 0 15px;
   font-size: 15px;
 }
+button.small3 {
+  padding: 0 7px;
+}
 
 /*--------------------------------------------------------------
   button : 세로 사이즈

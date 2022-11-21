@@ -175,7 +175,7 @@
 }
 
 /*--------------------------------------------------------------
-* 1100_web_02_02_01_디비검색 – 1 (PC) 
+* 1100_web_02_01_디비검색 – 1 (PC) 
 --------------------------------------------------------------*/
 /* 좌측 : 키워드 검색 바 */
 .left-searchBar {
@@ -355,6 +355,176 @@
 }
 .db_search_container dl > dd > .link_list.img_list .profile-wrap .text-wrap .common-btn button {
   margin: 0;
+}
+
+/*--------------------------------------------------------------
+* 1100_web_02_02_디비검색 – 1 (PC) 
+--------------------------------------------------------------*/
+/* 좌측 기관 상세 */
+.left_resource_container {
+  width: 400px;
+  padding: 22px;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  box-sizing: border-box;
+}
+.left_resource_container .s-title {
+  padding: 0 0 7px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.left_resource_container .s-title span {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
+}
+.left_resource_container .introduce-agency {
+  margin: 0 0 17px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.left_resource_container .introduce-agency .img-area {
+  position: relative;
+}
+.left_resource_container .introduce-agency .img-area .btn-chat {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  display: inline-block;
+  width: 82px;
+  line-height: 25px;
+  padding: 0 0 0 19px;
+  font-size: 10px;
+  font-weight: 500;
+  color: #fff;
+  background: url("../images/icon/icon-tell.png") no-repeat 8px 50% rgba(0, 0, 0, 0.7);
+  border-radius: 4px;
+  box-sizing: border-box;
+  z-index: 2;
+}
+.left_resource_container .introduce-agency dl {
+  padding: 15px 18px 20px;
+  background: #fafafa;
+}
+.left_resource_container .introduce-agency dl dt {
+  padding: 0 0 11px;
+  font-size: 17px;
+  font-weight: 600;
+  color: #382205;
+}
+.left_resource_container .introduce-agency dl dd {
+  line-height: 23px;
+  font-size: 14px;
+}
+.left_resource_container .introduce-agency dl dd span {
+  font-weight: 500;
+  color: #382205;
+}
+
+.left_resource_container .introduce-text {
+  padding: 0 0 15px;
+}
+.left_resource_container .introduce-text dl {
+  margin: 0 0 10px;
+}
+.left_resource_container .introduce-text dl dt {
+  padding: 12px 0 7px;
+  font-size: 17px;
+  font-weight: 500;
+}
+.left_resource_container .introduce-text dl dd {
+  position: relative;
+  padding: 5px 0;
+  font-size: 15px;
+  font-weight: 500;
+  color: #555;
+  word-break: keep-all;
+}
+.left_resource_container .introduce-text.reference dl dd {
+  padding-right: 70px;
+}
+.left_resource_container .introduce-text dl dd .btn-viewData {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.left_resource_container .introduce-text .common-table-wrapper .horizen {
+  font-size: 10px;
+}
+.left_resource_container .introduce-text .common-table-wrapper .horizen tr td {
+  padding: 8px 0;
+}
+.left_resource_container .introduce-text > ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.left_resource_container .introduce-text > ul > li {
+  flex: 1 1 30%;
+  margin: 0 0 8px;
+  font-size: 10px;
+  font-weight: 500;
+  color: #555;
+  text-align: center;
+}
+.left_resource_container .introduce-text > ul > li p {
+  padding: 3px 0 0;
+}
+
+/* 우측 영역 및 탭 */
+.right_resource_container {
+  width: 571px;
+  padding: 22px;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  box-sizing: border-box;
+}
+.right_resource_container .sub-contents-tab {
+  display: flex;
+  align-items: center;
+  margin: 0 0 20px;
+}
+.right_resource_container .sub-contents-tab a {
+  display: block;
+  flex: 1 1 25%;
+  line-height: 34px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #382205;
+  text-align: center;
+  border-bottom: 2px solid #f69412;
+  box-sizing: border-box;
+}
+.right_resource_container .sub-contents-tab a.current {
+  font-weight: 600;
+  color: #f69412;
+  border: 2px solid #f69412;
+  border-bottom: none;
+}
+
+.right_resource_container .db_search_container {
+  width: 100%;
+}
+
+.common-gallery-wrapper.type2 > ul {
+  padding: 0;
+}
+.common-gallery-wrapper.type2 > ul > li > a .gallery-list {
+  line-height: 1.6;
+}
+.common-gallery-wrapper.type2 > ul > li > a .gallery-list .subject {
+  padding: 0;
+  color: #382205;
+}
+.common-gallery-wrapper.type2 > ul > li > a .gallery-list .name {
+  padding: 0;
+  font-weight: 400;
+  color: #382205;
+}
+.common-gallery-wrapper.type2 > ul > li > a .gallery-list .date {
+  font-weight: 400;
+  color: #382205;
 }
 
 /*--------------------------------------------------------------
