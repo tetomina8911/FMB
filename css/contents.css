@@ -253,16 +253,22 @@
   background: #fff;
   border: 1px solid #e5e5e5;
 }
-.db_search_container > dl > dt > a {
+.db_search_container > dl > dt {
   display: block;
   padding: 16px 22px;
   font-size: 16px;
   font-weight: 500;
   color: #382205;
-  background: url("../images/icon/icon-toggle-up-gr.png") no-repeat 96% 50%;
+}
+.db_search_container > dl > dt > a {
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  color: #382205;
+  background: url("../images/icon/icon-toggle-up-gr.png") no-repeat right 50%;
 }
 .db_search_container > dl > dt.down > a {
-  background: url("../images/icon/icon-toggle-down-gr.png") no-repeat 96% 50%;
+  background: url("../images/icon/icon-toggle-down-gr.png") no-repeat right 50%;
 }
 .db_search_container > dl > dt > a > span {
   font-size: 13px;
