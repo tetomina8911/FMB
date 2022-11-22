@@ -16,11 +16,6 @@
     <!-- Swiper -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
-    <!-- Datepicker : bootstrap css 일부-->
-    <link rel="stylesheet" href="./js/bootstrap/datepicker_in_bootstrap.css"> 
-    <link rel="stylesheet" href="./js/datepicker/bootstrap-datepicker3.css">
-    <script src="./js/datepicker/bootstrap-datepicker.js"></script>
-
     <!-- TagsInput -->
     <link rel="stylesheet" href="js/tagsinput/jquery.tagsinput-revisited.min.css" />
     <script src="js/tagsinput/jquery.tagsinput-revisited.min.js"></script>
@@ -43,7 +38,7 @@
             <li><a href="./product_info.html">제품정보</a></li>
             <li><a href="./db_approval.html">DB 등록</a></li>
             <li><a href="./biz_consulting .html">BIZ 상담</a></li>
-            <li><a href="./about.html">FMB 소개</a></li>
+            <li class="current"><a href="./about.html">FMB 소개</a></li>
           </ul>
         </nav>
         <section id="right-shortCut">
@@ -74,339 +69,392 @@
           </div>
         </div>
         <article id="sub-contents-container">
-          <h4 class="sub-contents-title form-title">
-            참여 업체 정보 등록&nbsp; &nbsp;<span>필수(<span class="color--red">*</span>)를 제외한 항복은 선택 등록 가능 합니다.</span>
+          <h4 class="sub-contents-title">
+            참여 업체 정보 등록&nbsp; &nbsp;<span>필수( * )를 제외한 항복은 선택 등록 가능 합니다.</span>
           </h4>
           <form class="contents-form form-register" id="" method="POST" action="">
-            
             <div class="sub-contents-wrapper bg">
               <div class="sub-contents">
                 <h4 class="form-subtitle required">1. 분야 선택</h4>
                 <div class="form-box">
-                  <ul class="form-box-ents">
-                    <li class="form-ent required">
-                      <div class="form-ent--body">
-                        <select class="common-select" id="">
-                          <option value="자원/진균업체" selected>자원/진균업체</option>
-                          <option value="제조/유통사">제조/유통사</option>
-                          <option value="연구R&D기관">연구R&D기관</option>
-                        </select>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>  <!-- sub-contents-wrapper :: 분야 선택  -->
-
-            <div class="sub-contents-wrapper bg">
-              <div class="sub-contents">
-                <h4 class="form-subtitle">2. 기업정보</h4>
-                <div class="form-box">
-                  <ul class="form-box-ents type-both">
-                    <li class="form-ent required">
-                      <div class="form-ent--head">
-                        <span class="text-head--dot">업체명</span>
-                      </div>
-                      <div class="form-ent--body">
-                        <input type="text" class="input-type4" name="" value="" placeholder=""> 
-                      </div>
-                    </li>
-                    <li class="form-ent required">
-                      <div class="form-ent--head">
-                        <span class="text-head--dot">대표자</span>
-                      </div>
-                      <div class="form-ent--body">
-                        <input type="text" class="input-type4" name="" value="" placeholder=""> 
-                      </div>
-                    </li>
-                    <li class="form-ent required">
-                      <div class="form-ent--head">
-                        <span class="text-head--dot">담당자</span>
-                      </div>
-                      <div class="form-ent--body">
-                        <input type="text" class="input-type4" name="" value="" placeholder=""> 
-                      </div>
-                    </li>
-                    <li class="form-ent">
-                      <div class="form-ent--head">
-                        <span class="text-head--dot">연락처</span>
-                      </div>
-                      <div class="form-ent--body">
-                        <div class="common-tel div-3">
-                          <input type="text" class="input-type4 tel" name="" value="" placeholder="" maxlength="3" pattern="[0-9]*" > 
-                          <input type="text" class="input-type4 tel" name="" value="" placeholder="" maxlength="4" pattern="[0-9]*" > 
-                          <input type="text" class="input-type4 tel" name="" value="" placeholder="" maxlength="4" pattern="[0-9]*" >
-                          <input type="hidden" class="tel-avg">
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                  <ul class="form-box-ents">
-                    <li class="form-ent required">
-                      <div class="form-ent--head">
-                        <span class="text-head--dot">담당자 이메일</span>
-                      </div>
-                      <div class="form-ent--body">
-                        <div class="common-email">
-                          <input type="text" class="input-type3 email-front" name="" value="" placeholder="">
-                          <label>@</label>
-                          <input type="text" class="input-type3 email-back" name="" value="" placeholder="">
-                          <select class="common-select" id="">
-                            <option value="" selected>직접입력</option>
-                            <option value="gmail.com">gmail.com</option>
-                          </select>
-                          <input type="hidden" class="email-avg" name="email" />
-                        </div>
-                      </div>
-                    </li>
-                    <li class="form-ent required">
-                      <div class="form-ent--head">
-                        <span class="text-head--dot">업체(기관)상세</span>
-                      </div>
-                      <div class="form-ent--body">
-                        <input type="text" class="input-type4" name="" value="" placeholder=""> 
-                      </div>
-                    </li>
-                    <li class="form-ent required">
-                      <div class="form-ent--head">
-                        <span class="text-head--dot">SNS 주소</span>
-                      </div>
-                      <div class="form-ent--body">
-                        <input type="text" class="input-type4" name="" value="" placeholder=""> 
-                      </div>
-                    </li>
-                    <li class="form-ent required">
-                      <div class="form-ent--head">
-                        <span class="text-head--dot">업체주소</span>
-                      </div>
-                      <div class="form-ent--body">
-                        <div class="common-adress">
-                          <div class="default-area">
-                            <input type="text" class="input-type4" disabled="" autocomplete="off">
-                            <button type="button" class="btn-find-address btn small h30 gr">주소검색</button>
-                          </div>
-                          <input type="text" class="input-type4" placeholder="상세 주소를 입력해 주세요." autocomplete="off">
-                        </div>
-                      </div>
-                    </li>
-                    <li class="form-ent">
-                      <div class="form-ent--head">
-                        <span class="text-head--dot">제품소개</span>
-                      </div>
-                      <div class="form-ent--body">
-                        <div class="common-textarea"> 
-                          <textarea name="" id="" cols="30" rows="4" maxlength="1000"></textarea>
-                          <span>0 / 1000</span>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="form-ent ">
-                      <div class="form-ent--head">
-                        <span class="text-head--dot">기업 CI 및 BI</span>
-                      </div>
-                      <div class="form-ent--body">
-                        <ul class="group--incs" data-label="img-ass">
-                          <li class="origin ent wrap-ctrl">
-                              <div class="common-input-file">
-                                <input type="text" class="upload-name format-images" placeholder="첨부된 이미지가 없습니다." disabled="disabled">                
-                                <label class="btn btn-small2 btn-grey2 upload-for-file">찾아보기</label> 
-                                <input type="file" class="upload-hidden upload-file" name="img-ass-file" accept="image/png, image/jpeg" > 
-                              </div>
-                              <div class="common-btn">
-                                <button type="button" class="small h32 bl add">+ <span>추가</span></button>
-                                <button type="button" class="small h32 red remove">- <span>삭제</span></button>
-                              </div>
+                  <div class="form-ent required">
+                    <div class="form-ent__input">
+                      <div class="common-selectBox">
+                        <ul class="main-selectBox">
+                          <li>
+                            <a href="#n" class="placeholder">자원/진균업체</a>
+                            <ul class="sub-selectBox">
+                              <li><a href="#n">선택하세요1</a></li>
+                            </ul>
                           </li>
                         </ul>
-                      </div>
-                    </li>
-                    <li class="form-ent ">
-                      <div class="form-ent--head">
-                        <span class="text-head--dot">기업건물 이미지</span>
-                      </div>
-                      <div class="form-ent--body">
-                        <ul class="group--incs" data-label="img-ass">
-                          <li class="origin ent wrap-ctrl">
-                              <div class="common-input-file">
-                                <input type="text" class="upload-name format-images" placeholder="첨부된 이미지가 없습니다." disabled="disabled">                
-                                <label class="btn btn-small2 btn-grey2 upload-for-file">찾아보기</label> 
-                                <input type="file" class="upload-hidden upload-file" name="img-ass-file" accept="image/png, image/jpeg" > 
-                              </div>
-                              <div class="common-btn">
-                                <button type="button" class="small h32 bl add">+ <span>추가</span></button>
-                                <button type="button" class="small h32 red remove">- <span>삭제</span></button>
-                              </div>
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>  <!-- sub-contents-wrapper :: 기업정보  -->
-
-            <div class="sub-contents-wrapper bg">
-              <div class="sub-contents">
-                <h4 class="form-subtitle">3. 기업소개</h4>
-                <div class="form-box">
-                  
-                    <ul class="form-box-ents"> 
-                      <li class="form-ent required">
-                        <div class="form-ent--head">
-                          <span class="text-head--dot">기업소개</span>
-                        </div>
-                        <div class="form-ent--body">
-                          <div class="common-textarea"> 
-                            <textarea name="company-intro" id="" cols="30" rows="4" maxlength="1000"></textarea>
-                            <span>0 / 1000</span>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="form-ent required">
-                        <div class="form-ent--head">
-                          <span class="text-head--dot">주요 생산물</span>
-                        </div>
-                        <div class="form-ent--body">
-                          <div class="common-textarea"> 
-                            <textarea name="company-intro" id="" cols="30" rows="4" maxlength="1000"></textarea>
-                            <span>0 / 1000</span>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="form-ent ">
-                        <div class="form-ent--head">
-                          <span class="text-head--dot">가공물</span>
-                        </div>
-                        <div class="form-ent--body">
-                          <input type="text" class="input-type4" name="" value="" placeholder="" autocomplete="off">
-                        </div>
-                      </li>
-                      <li class="form-ent">
-                        <div class="form-ent--head">
-                          <span class="text-head--dot">인증서</span>
-                        </div>
-                        <div class="form-ent--body">
-                          <ul class="group--incs" data-label="img-ass">
-                            <li class="origin ent wrap-ctrl">
-                              <div class="common-input-file">
-                                <input type="text" class="upload-name format-images" placeholder="첨부된 이미지가 없습니다." disabled="disabled">                
-                                <label class="btn btn-small2 btn-grey2 upload-for-file">찾아보기</label> 
-                                <input type="file" class="upload-hidden upload-file" name="img-ass-file" accept="image/png, image/jpeg" > 
-                              </div>
-                              <div class="common-btn">
-                                <button type="button" class="small h32 bl add">+ <span>추가</span></button>
-                                <button type="button" class="small h32 red remove">- <span>삭제</span></button>
-                              </div>
-                            </li>
-                          </ul>
-                        </div>
-                      </li>
-                    </ul>
-                </div>
-              </div>
-            </div>  <!-- sub-contents-wrapper :: 기업소개 -->
-
-            <div class="sub-contents-wrapper bg">
-              <div class="sub-contents">
-                <h4 class="form-subtitle">4. 이미지 자료<small>본사, 지사, 영업소, 연구소, 공장, 제품 이미지 등을 첨부해 주세요.</small></h4>
-                <div class="form-box">
-                  <ul class="group--incs" data-label="img-ass">
-                    <li class="origin">
-                      <ul class="form-box-ents"> 
-                        <li class="form-ent">
-                          <div class="form-ent--head">
-                            <span class="text-head--dot">이미지 제목</span>
-                          </div>
-                          <div class="form-ent--body">
-                            <div class="ent wrap-ctrl">
-                              <input type="text" class="input-type4 " name="img-ass-name" name="" value="" placeholder="">
-                              <div class="common-btn">
-                                <!--<button type="button" class="small h32 bl add">+ <span>추가</span></button>-->
-                                <button type="button" class="small h32 red remove">- <span>삭제</span></button>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="form-ent">
-                          <div class="form-ent--head">
-                            <span class="text-head--dot">이미지 첨부</span>
-                          </div>
-                          <div class="form-ent--body">
-                            <div class="common-input-file">
-                              <input type="text" class="upload-name format-images" placeholder="첨부된 이미지가 없습니다." disabled="disabled">                
-                              <label class="btn btn-small2 btn-grey2 upload-for-file">찾아보기</label> 
-                              <input type="file" class="upload-hidden upload-file" name="img-ass-file" accept="image/png, image/jpeg" > 
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                    </li>
-                    <nav class="options">
-                      <div class="common-btn option-ctrl">
-                        <button type="button" class="small h32 bl add add-fixed">+ <span>추가</span></button>
-                    </nav> <!-- group--incs > options(add button) -->
-                  </ul>
-                </div>
-              </div>
-            </div>  <!-- sub-contents-wrapper :: 이미지 자료 -->
-
-            <div class="sub-contents-wrapper bg">
-              <div class="sub-contents">
-                <h4 class="form-subtitle">5. 주요 키워드</h4>
-                <div class="form-box">
-                  <div class="form-ent">
-                    <div class="form-ent--head">
-                      <span class="text-head--dot">키워드 입력</span>
-                    </div>
-                    <div class="form-ent--body">
-                      <div class="common-keyword">
-                        <input type="text" class="input-type4 keywords" name="keywords" value="" placeholder="검색에 노출될 키워드를 작성 후 엔터키로 등록하세요. (최대 10개)"> 
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>  <!-- sub-contents-wrapper :: 주요 키워드  -->
-
+            </div>
+            <!-- sub-contents-wrapper :: 사업분야 -->
+            <div class="sub-contents-wrapper bg">
+              <div class="sub-contents">
+                <h4 class="form-subtitle">2. 기업정보</h4>
+                <div class="form-box">
+                  <div class="form-ent-group block-2">
+                    <div class="form-ent required">
+                      <div class="form-ent__head">
+                        <span class="text-head--dot">업체명</span>
+                      </div>
+                      <div class="form-ent__input">
+                        <input type="text" class="input-type3" name="" value="" placeholder="" />
+                      </div>
+                    </div>
+                    <div class="form-ent required">
+                      <div class="form-ent__head">
+                        <span class="text-head--dot">대표자</span>
+                      </div>
+                      <div class="form-ent__input">
+                        <input type="text" class="input-type3" name="" value="" placeholder="" />
+                      </div>
+                    </div>
+                    <div class="form-ent required">
+                      <div class="form-ent__head">
+                        <span class="text-head--dot">담당자</span>
+                      </div>
+                      <div class="form-ent__input">
+                        <input type="text" class="input-type3" name="" value="" placeholder="" />
+                      </div>
+                    </div>
+                    <div class="form-ent required">
+                      <div class="form-ent__head">
+                        <span class="text-head--dot">연락처</span>
+                      </div>
+                      <div class="form-ent__input">
+                        <input type="text" class="input-type3 tel" name="tel" value="" placeholder="" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-box">
+                  <div class="form-ent required">
+                    <div class="form-ent__head">
+                      <span class="text-head--dot">담당자 이메일</span>
+                    </div>
+                    <div class="form-ent__input">
+                      <div class="common-email">
+                        <input type="text" class="input-type3 email-front" name="" value="" placeholder="" />
+                        <label>@</label>
+                        <input type="text" class="input-type3 email-back" name="" value="" placeholder="" />
+                        <div class="common-selectBox">
+                          <ul class="main-selectBox">
+                            <li>
+                              <a href="#n" class="placeholder">직접입력</a>
+                              <ul class="sub-selectBox">
+                                <li><a href="#n">선택하세요1</a></li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </div>
+                        <input type="hidden" class="email-avg" name="email" />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-ent">
+                    <div class="form-ent__head">
+                      <span class="text-head--dot">업체(기관)상세</span>
+                    </div>
+                    <div class="form-ent__input">
+                      <input
+                        type="text"
+                        class="input-type3"
+                        name=""
+                        value=""
+                        placeholder="업체(기관) 소개 홈페이지 주소를 입력해주세요."
+                      />
+                    </div>
+                  </div>
+                  <div class="form-ent">
+                    <div class="form-ent__head">
+                      <span class="text-head--dot">SNS 주소</span>
+                    </div>
+                    <div class="form-ent__input">
+                      <input type="text" class="input-type3" name="" value="" placeholder="" />
+                    </div>
+                  </div>
+                  <div class="form-ent required">
+                    <div class="form-ent__head">
+                      <span class="text-head--dot">업체주소</span>
+                    </div>
+                    <div class="form-ent__input">
+                      <div class="common-adress">
+                        <div class="default-area">
+                          <input type="text" class="input-type4" disabled="" autocomplete="off" />
+                          <button type="button" class="btn-find-address btn small h30 gr">주소검색</button>
+                        </div>
+                        <input
+                          type="text"
+                          class="input-type4"
+                          placeholder="상세 주소를 입력해 주세요."
+                          autocomplete="off"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-ent required">
+                    <div class="form-ent__head">
+                      <span class="text-head--dot">제품소개</span>
+                    </div>
+                    <div class="form-ent__input">
+                      <div class="common-textarea">
+                        <textarea name="" id="" cols="30" rows="4" maxlength="1000"></textarea>
+                        <span>0 / 1000</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-ent">
+                    <div class="form-ent__head">
+                      <span class="text-head--dot">기업 CI 및 BI</span>
+                    </div>
+                    <div class="form-ent__input">
+                      <ul class="group-inc" data-label="file-certs">
+                        <li class="form-ent__input og">
+                          <div class="wrap wrap-file">
+                            <div class="common-input-file">
+                              <input
+                                type="text"
+                                class="upload-name"
+                                placeholder="첨부된 이미지가 없습니다."
+                                disabled="disabled"
+                              />
+                              <label class="btn btn-small2 btn-grey2 upload-for-file">찾아보기</label>
+                              <input type="file" class="upload-hidden upload-file" accept="image/png, image/jpeg" />
+                            </div>
+                            <div class="common-btn">
+                              <button type="button" class="small h32 bl inc-add">+ 추가</button>
+                              <button type="button" class="small h32 red inc-remove">- 삭제</button>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="form-ent">
+                    <div class="form-ent__head">
+                      <span class="text-head--dot">기업건물 이미지</span>
+                    </div>
+                    <div class="form-ent__input">
+                      <ul class="group-inc" data-label="file-certs">
+                        <li class="og">
+                          <div class="wrap wrap-file">
+                            <div class="common-input-file">
+                              <input
+                                type="text"
+                                class="upload-name"
+                                placeholder="첨부된 이미지가 없습니다."
+                                name=""
+                                disabled="disabled"
+                              />
+                              <label class="btn btn-small2 btn-grey2 upload-for-file">찾아보기</label>
+                              <input
+                                type="file"
+                                class="upload-hidden upload-file"
+                                accept="image/png, image/jpeg"
+                                name=""
+                              />
+                            </div>
+                            <div class="common-btn">
+                              <button type="button" class="small h32 bl inc-add">+ 추가</button>
+                              <button type="button" class="small h32 red inc-remove">- 삭제</button>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- sub-contents-wrapper :: 기업정보 -->
+            <div class="sub-contents-wrapper bg">
+              <div class="sub-contents">
+                <h4 class="form-subtitle">3. 기업소개</h4>
+                <div class="form-box">
+                  <div class="form-ent required">
+                    <div class="form-ent__head">
+                      <span class="text-head--dot">기업소개</span>
+                    </div>
+                    <div class="form-ent__input">
+                      <div class="common-textarea">
+                        <textarea name="" id="" cols="30" rows="4" maxlength="1000"></textarea>
+                        <span>0 / 1000</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-ent required">
+                    <div class="form-ent__head">
+                      <span class="text-head--dot">주요 생산물</span>
+                    </div>
+                    <div class="form-ent__input">
+                      <div class="common-textarea">
+                        <textarea name="" id="" cols="30" rows="4" maxlength="1000"></textarea>
+                        <span>0 / 1000</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-ent">
+                    <div class="form-ent__head">
+                      <span class="text-head--dot">가공물</span>
+                    </div>
+                    <div class="form-ent__input">
+                      <input type="text" class="input-type3" name="" value="" placeholder="" autocomplete="off" />
+                    </div>
+                  </div>
+                  <div class="form-ent">
+                    <div class="form-ent__head">
+                      <span class="text-head--dot">인증서</span>
+                    </div>
+                    <div class="form-ent__input">
+                      <ul class="group-inc" data-label="file-treatise">
+                        <li class="og">
+                          <div class="wrap wrap-file">
+                            <div class="common-input-file">
+                              <input
+                                type="text"
+                                class="upload-name"
+                                placeholder="첨부된 이미지가 없습니다."
+                                disabled="disabled"
+                                name=""
+                              />
+                              <label class="btn btn-small2 btn-grey2 upload-for-file">찾아보기</label>
+                              <input type="file" class="upload-hidden upload-file" accept="" name="" />
+                            </div>
+                            <div class="common-btn">
+                              <button type="button" class="small h32 bl inc-add">+ 추가</button>
+                              <button type="button" class="small h32 red inc-remove">- 삭제</button>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- sub-contents-wrapper :: 기업소개 -->
+            <div class="sub-contents-wrapper bg">
+              <div class="sub-contents">
+                <h4 class="form-subtitle">
+                  4. 이미지 자료<small>본사, 지사, 영업소, 연구소, 공장, 제품 이미지등을 첨부해주세요.</small>
+                </h4>
+                <div class="form-box">
+                  <ul class="group-inc" data-label="file-img-ass">
+                    <li class="og">
+                      <div class="form-ent-group">
+                        <div class="form-ent">
+                          <div class="form-ent__head">
+                            <span class="text-head--dot">이미지 제목</span>
+                          </div>
+                          <div class="form-ent__input">
+                            <div class="wrap wrap-input">
+                              <input type="text" class="input-type3" name="img-ass-name" value="" placeholder="" />
+                              <div class="common-btn">
+                                <button type="button" class="small h32 bl inc-add">+ 추가</button>
+                                <button type="button" class="small h32 red inc-remove">- 삭제</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-ent">
+                          <div class="form-ent__head">
+                            <span class="text-head--dot">이미지 첨부</span>
+                          </div>
+                          <div class="form-ent__input">
+                            <div class="common-input-file">
+                              <input
+                                type="text"
+                                class="upload-name"
+                                placeholder="첨부된 이미지가 없습니다."
+                                disabled="disabled"
+                              />
+                              <label class="btn btn-small2 btn-grey2 upload-for-file">찾아보기</label>
+                              <input
+                                type="file"
+                                class="upload-hidden upload-file"
+                                name="img-ass-file"
+                                accept="image/png, image/jpeg"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- sub-contents-wrapper :: 이미지 자료 -->
+            <div class="sub-contents-wrapper bg">
+              <div class="sub-contents">
+                <h4 class="form-subtitle">5. 주요 키워드</h4>
+                <div class="form-box">
+                  <div class="form-ent">
+                    <div class="form-ent__head">
+                      <span class="text-head--dot">키워드 입력</span>
+                    </div>
+                    <div class="form-ent__input">
+                      <div class="common-keyword">
+                        <input
+                          type="text"
+                          class="input-type3 keywords"
+                          name="keywords"
+                          value=""
+                          placeholder="검색에 노출될 키워드를 작성 후 엔터키로 등록하세요. (최대 10개)"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- sub-contents-wrapper :: 10. 주요 키워드 -->
             <div class="sub-contents-wrapper bg">
               <div class="sub-contents">
                 <h4 class="form-subtitle">유의사항</h4>
                 <div class="form-box">
-                  <ul class="form-box-ents">
-                    <li class="form-ent not-flex">
-                      <div class="form-ent--body">
-                        <ul class="info-note">
-                          <li>
-                            FMB에 접수하신 참여 처리를 위해 성함과 이메일 주소 등
-                            개인정보에 관련된 내용을 수집하고 있습니다.
-                          </li>
-                          <li>
-                            접수하신 정보는 참여 처리의 목적 및 업체소개로만
-                            활용되며, 참여 처리 용도 외에는 이용되지 않습니다.
-                          </li>
-                          <li>
-                            개인정보 수집 및 이용 동의를 거부할 권리가 있으나 동의
-                            거부 시 참여 접수가 어렵습니다.
-                          </li>
-                        </ul> <br>
-                        <div class="common-checkbox">
-                          <input type="checkbox" name="" id="b1" autocomplete="off"> 
-                          <label for="b1">위 항목에 동의합니다.</label>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="form-submit">
+                  <div class="form-ent">
+                    <div class="form-ent__input">
+                      <ul class="info-note">
+                        <li>
+                          FMB에 접수하신 참여 처리를 위해 성함과 이메일 주소 등 개인정보에 관련된 내용을 수집하고
+                          있습니다.
+                        </li>
+                        <li>
+                          접수하신 정보는 참여 처리의 목적 및 업체소개로만 활용되며, 참여 처리 용도 외에는 이용되지
+                          않습니다.
+                        </li>
+                        <li>개인정보 수집 및 이용 동의를 거부할 권리가 있으나 동의 거부 시 참여 접수가 어렵습니다.</li>
+                      </ul>
+                      <p>
+                        <label class="common-chb">
+                          <input type="checkbox" name="agree" value="1" />
+                          <span class="indicator"></span>
+                          위 항목에 동의합니다.
+                        </label>
+                      </p>
+                    </div>
+                  </div>
+                  <!-- 유의사항 -->
+                  <div class="form-submit">
+                    <div class="form-ent__input">
                       <div class="common-btn">
-                        <button type="submit" class="large large3 h46 br submit">
-                          참여신청
-                        </button>
+                        <button type="submit" class="large large3 h46 br submit">참여신청</button>
                       </div>
-                    </li>
-                  </ul> 
-                </div> <!-- form-box 1 -->
+                    </div>
+                  </div>
+                  <!-- Submit -->
+                </div>
               </div>
-            </div>  <!-- sub-contents-wrapper :: 유의사항 -->
-
+            </div>
+            <!-- sub-contents-wrapper :: 유의사항 -->
           </form>
           <!-- contents-form form-register -->
         </article>
@@ -465,30 +513,88 @@
 
     <script>
       $(function () {
-        
+        //Date Picker
+        $("#datepicker").datepicker({
+          dateFormat: "yy.mm.dd", //달력 날짜 형태
+        });
+        $("#datepicker").datepicker("setDate", "today");
+        //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
+
+        $("#datepicker2").datepicker({
+          dateFormat: "yy.mm.dd", //달력 날짜 형태
+        });
+        $("#datepicker2").datepicker("setDate", "today");
+        //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
+
+        $("#datepicker3").datepicker({
+          dateFormat: "yy.mm.dd", //달력 날짜 형태
+        });
+        $("#datepicker3").datepicker("setDate", "today");
+        //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
+
+        $("#datepicker4").datepicker({
+          dateFormat: "yy.mm.dd", //달력 날짜 형태
+        });
+        $("#datepicker4").datepicker("setDate", "today");
+        //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
+
+        //DB Search Click Event
+        //$(".db_search_container dl dd").hide();
+        $(".db_search_container dl dt").click(function () {
+          $(this)
+            .parent("dl")
+            .children("dd")
+            .stop()
+            .slideToggle(function () {
+              $(this).parent("dl").children("dt").toggleClass("down");
+            });
+        });
+
+        //Left SearchBar Click Event
+        $(".left-searchBar dl dt a").click(function () {
+          $(this)
+            .parents("dl")
+            .children("dd")
+            .stop()
+            .slideToggle(function () {
+              $(this).parent("dl").children("dt").toggleClass("down");
+            });
+        });
+
+        //Select Box
+        $(".common-selectBox .main-selectBox > li > a").click(function () {
+          $(this)
+            .parent("li")
+            .children(".sub-selectBox")
+            .stop()
+            .slideToggle(function () {
+              $(this).parent("li").toggleClass("on");
+            });
+        });
+        const subSelectBox = $(".common-selectBox .main-selectBox").height() - 1;
+        $(".common-selectBox .main-selectBox > li .sub-selectBox").css("top", subSelectBox + "px");
+
         /*
          * 초기화 영역
          */
         $(document).ready(function () {
-          $('.keywords').tagsInput({
+          $(".keywords").tagsInput({
             placeholder: "검색에 노출될 키워드를 작성 후 엔터키로 등록하세요. (최대 10개)",
             unique: true,
             limit: 10,
-            delimiter: ',',
+            delimiter: ",",
             removeWithBackspace: true,
             trimValue: true,
-            onChange: function() {}
+            onChange: function () {},
           });
 
-          $('.contents-form').on('submit', function() { 
-            console.log('form-submit');
-            return false;             
+          $(".contents-form").on("submit", function () {
+            console.log("form-submit");
+            return false;
           });
 
-          // 입력폼 추가 / 삭제 기능 초기화 (※)          
-          // $('.group--incs .add').click();
-          $('.group--incs .add.add-fixed').click();
-          $('.group--incs .add:not(.add-fixed)').click();
+          // 입력폼 추가 / 삭제 기능 초기화 (※)
+          $(".group-inc .inc-add").click();
         });
       });
     </script>
