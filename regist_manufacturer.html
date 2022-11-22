@@ -23,19 +23,10 @@
     <!-- Swiper -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
-    <!-- Datepicker 
-    <link
-      rel="stylesheet"
-      href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
-    />
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-    -->
-    <link rel="stylesheet" href="js/datepicker/jquery-ui.css"/>
-    <script src="js/datepicker/jquery-ui.js"></script>
-    <!--
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.min.js" integrity="sha512-L4qpL1ZotXZLLe8Oo0ZyHrj/SweV7CieswUODAAPN/tnqN3PA1P+4qPu5vIryNor6HQ5o22NujIcAZIfyVXwbQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>-->
-
+    <!-- Datepicker : bootstrap css 일부-->
+    <link rel="stylesheet" href="./js/bootstrap/datepicker_in_bootstrap.css"> 
+    <link rel="stylesheet" href="./js/datepicker/bootstrap-datepicker3.css">
+    <script src="./js/datepicker/bootstrap-datepicker.js"></script>
 
     <!-- TagsInput -->
     <link rel="stylesheet" href="js/tagsinput/jquery.tagsinput-revisited.min.css" />
@@ -57,14 +48,14 @@
         </h1>
         <nav id="gnb">
           <ul>
-            <li class="current"><a href="./db_search.html">DB 검색</a></li>
-            <li><a href="">지식자료</a></li>
-            <li><a href="">커뮤니티</a></li>
-            <li><a href="">트랜드</a></li>
-            <li><a href="">제품정보</a></li>
-            <li><a href="">DB 등록</a></li>
-            <li><a href="">BIZ 상담</a></li>
-            <li><a href="">FMB 소개</a></li>
+            <li><a href="./db_search.html">DB 검색</a></li>
+            <li><a href="./knowledge_data.html">지식자료</a></li>
+            <li><a href="./community.html">커뮤니티</a></li>
+            <li><a href="./trend.html">트랜드</a></li>
+            <li><a href="./product_info.html">제품정보</a></li>
+            <li><a href="./db_approval.html">DB 등록</a></li>
+            <li><a href="./biz_consulting .html">BIZ 상담</a></li>
+            <li><a href="./regist_company.html">FMB 소개</a></li>
           </ul>
         </nav>
         <section id="right-shortCut">
@@ -790,11 +781,8 @@
           $('.group--incs .add.add-fixed').click();
           $('.group--incs .add:not(.add-fixed)').click();
 
-          // DatePicker
-          $('#aaaaa').datepicker({
-            format: 'yyyy-mm-dd'
-          }); 
-
+          makeDatePicker('.common-datePicker input[type=text]', new Date());
+          
         });
       
       });
