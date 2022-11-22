@@ -331,7 +331,7 @@
                           <p><span>업체명:</span>돌산버섯농장</p>
                           <p><span>등록일/수정일:</span>2022.10.13 / 2022.10.23</p>
                           <div class="common-btn">
-                            <button class="small h32 gr">상세보기 ></button>
+                            <button class="small h32 gr" onclick="location.href='./db_search_result.html'">상세보기 ></button>
                           </div>
                         </div>
                       </div>
@@ -442,7 +442,6 @@
         makeDatePicker('#datepicker2', new Date());
 
         //DB Search Click Event
-        //$(".db_search_container dl dd").hide();
         $(".db_search_container dl dt").click(function () {
           $(this)
             .parent("dl")

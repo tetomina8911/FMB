@@ -84,7 +84,7 @@
                   <div class="form-ent required">
                     <div class="form-ent__input">
                       <div class="common-selectBox">
-                        <ul class="main-selecBox">
+                        <ul class="main-selectBox">
                           <li>
                             <a href="#n" class="placeholder">자원/진균업체</a>
                             <ul class="sub-selectBox">
@@ -149,7 +149,7 @@
                         <label>@</label>
                         <input type="text" class="input-type3 email-back" name="" value="" placeholder="" />
                         <div class="common-selectBox">
-                          <ul class="main-selecBox">
+                          <ul class="main-selectBox">
                             <li>
                               <a href="#n" class="placeholder">직접입력</a>
                               <ul class="sub-selectBox">
@@ -566,7 +566,7 @@
         });
 
         //Select Box
-        $(".common-selectBox .main-selecBox > li > a").click(function () {
+        $(".common-selectBox .main-selectBox > li > a").click(function () {
           $(this)
             .parent("li")
             .children(".sub-selectBox")
@@ -575,8 +575,8 @@
               $(this).parent("li").toggleClass("on");
             });
         });
-        const subSelectBox = $(".common-selectBox .main-selecBox").height() - 1;
-        $(".common-selectBox .main-selecBox > li .sub-selectBox").css("top", subSelectBox + "px");
+        const subSelectBox = $(".common-selectBox .main-selectBox").height() - 1;
+        $(".common-selectBox .main-selectBox > li .sub-selectBox").css("top", subSelectBox + "px");
 
         /*
          * 초기화 영역

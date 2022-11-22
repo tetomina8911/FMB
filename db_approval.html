@@ -222,7 +222,7 @@
         });
 
         //Select Box
-        $(".common-selectBox .main-selecBox > li > a").click(function () {
+        $(".common-selectBox .main-selectBox > li > a").click(function () {
           $(this)
             .parent("li")
             .children(".sub-selectBox")
@@ -231,8 +231,8 @@
               $(this).parent("li").toggleClass("on");
             });
         });
-        const subSelectBox = $(".common-selectBox .main-selecBox").height() - 1;
-        $(".common-selectBox .main-selecBox > li .sub-selectBox").css("top", subSelectBox + "px");
+        const subSelectBox = $(".common-selectBox .main-selectBox").height() - 1;
+        $(".common-selectBox .main-selectBox > li .sub-selectBox").css("top", subSelectBox + "px");
       });
     </script>
   </body>
