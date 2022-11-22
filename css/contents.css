@@ -135,6 +135,7 @@
 }
 #sub-contents-container .sub-contents-wrapper {
   display: flex;
+  align-items: flex-start;
   justify-content: space-between;
 }
 #sub-contents-container .sub-contents-wrapper.bg {
@@ -145,7 +146,7 @@
   width: 736px;
   min-height: 500px;
 }
-#sub-contents-container .sub-contents-wrapper .sub-right-contentsbg {
+#sub-contents-container .sub-contents-wrapper .sub-right-contents.bg {
   background: #fff;
   border: 1px solid #e5e5e5;
 }
@@ -200,6 +201,9 @@
 .left-searchBar dl {
   padding: 14px 20px;
   border-bottom: 1px solid #e5e5e5;
+}
+.left-searchBar dl:last-child {
+  border: none;
 }
 .left-searchBar dl dt,
 .left-searchBar dl dt a {
@@ -298,80 +302,80 @@
   font-size: 16px;
   line-height: 1.6;
 }
-.db_search_container dl > dd > .link_list li:not(:last-child) {
+.link_list li:not(:last-child) {
   border-bottom: 1px solid #cccccc;
 }
-.db_search_container dl > dd > .link_list li a {
+.link_list li a {
   padding: 21px 0;
   display: block;
   font-size: 16px;
   color: #555555;
 }
-.db_search_container dl > dd > .link_list li:first-child a {
+.link_list li:first-child a {
   padding-top: 0;
 }
-.db_search_container dl > dd > .link_list li p {
+.link_list li p {
   font-size: 16px;
 }
 /* ellipsis line_2/line_3 */
-.db_search_container dl > dd > .link_list li p.ellipsis {
+.link_list li p.ellipsis {
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   word-wrap: break-word;
 }
-.db_search_container dl > dd > .link_list li p.ellipsis.line_1 {
+.link_list li p.ellipsis.line_1 {
   -webkit-line-clamp: 1;
 }
-.db_search_container dl > dd > .link_list li p.ellipsis.line_2 {
+.link_list li p.ellipsis.line_2 {
   -webkit-line-clamp: 2;
 }
-.db_search_container dl > dd > .link_list li p.ellipsis.line_3 {
+.link_list li p.ellipsis.line_3 {
   -webkit-line-clamp: 3;
 }
-.db_search_container dl > dd > .link_list li a p span {
+.link_list li a p span {
   color: #000;
 }
-.db_search_container dl > dd > .link_list li a strong {
+.link_list li a strong {
   color: #1642b7;
 }
 .db_search_container dl > dd > .common-btn.more-btn {
   margin: 0 0 22px 0;
 }
-.db_search_container dl > dd > .link_list.img_list li {
+.link_list.img_list li {
   padding: 0 0 26px;
 }
-.db_search_container dl > dd > .link_list.img_list li:not(:first-child) {
+.link_list.img_list li:not(:first-child) {
   padding: 26px 0 0;
 }
-.db_search_container dl > dd > .link_list.img_list .profile-wrap {
+.link_list.img_list .profile-wrap {
   display: flex;
   align-items: center;
   margin: 0 0 18px;
 }
-.db_search_container dl > dd > .link_list.img_list .profile-wrap .img-wrap {
+.link_list.img_list .profile-wrap .img-wrap {
   width: 96px;
   height: 96px;
   margin: 0 11px 0 0;
 }
-.db_search_container dl > dd > .link_list.img_list .profile-wrap .img-wrap img {
+.link_list.img_list .profile-wrap .img-wrap img {
   min-width: 96px;
   min-height: 96px;
 }
-.db_search_container dl > dd > .link_list.img_list .profile-wrap .text-wrap {
+.link_list.img_list .profile-wrap .text-wrap {
   width: calc(100% - (96px + 11px));
 }
 
-.db_search_container dl > dd > .link_list.img_list .profile-wrap .text-wrap p {
+.link_list.img_list .profile-wrap .text-wrap p {
   font-size: 14px;
   line-height: 1.5;
 }
-.db_search_container dl > dd > .link_list.img_list .profile-wrap .text-wrap .common-btn {
+.link_list.img_list .profile-wrap .text-wrap .common-btn {
   justify-content: flex-start;
   margin: 10px 0 0;
 }
-.db_search_container dl > dd > .link_list.img_list .profile-wrap .text-wrap .common-btn button {
+.link_list.img_list .profile-wrap .text-wrap .common-btn button {
   margin: 0;
 }
 
@@ -548,10 +552,24 @@
 }
 
 /*--------------------------------------------------------------
+* 1100_web_03_01_지식자료 – 1 (PC) 
+--------------------------------------------------------------*/
+.knowlege_data_container {
+  width: 100%;
+}
+
+/*--------------------------------------------------------------
 * 1100_web_04_01_커뮤니티 – 1 (PC) 
 --------------------------------------------------------------*/
 .community-wrapper .common-board-status {
   margin: 0 0 10px;
+}
+
+/*--------------------------------------------------------------
+* 1100_web_05_01_트랜드 – 1 (PC) 
+--------------------------------------------------------------*/
+.trend-container {
+  padding: 22px;
 }
 
 /*--------------------------------------------------------------
