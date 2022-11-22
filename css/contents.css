@@ -570,7 +570,58 @@
 * 1100_web_05_01_트랜드 – 1 (PC) 
 --------------------------------------------------------------*/
 .trend-container {
-  padding: 22px;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+}
+.trend-container .total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 54px;
+  padding: 0 22px;
+  border-bottom: 1px solid #707070;
+}
+.trend-container .total p {
+  font-size: 14px;
+}
+.trend-container .total .num-view {
+  font-size: 12px;
+  font-weight: 500;
+  padding-right: 18px;
+  background: url("../images/icon/icon-toggle-down-br.png") no-repeat right 68%;
+}
+
+.trend-container ul {
+  padding: 0 22px;
+}
+.trend-container ul li {
+  padding: 22px 0;
+  border-bottom: 1px solid #e6e6e6;
+}
+.trend-container ul li:last-child {
+  border-bottom: none;
+}
+.trend-container ul li .subject {
+  font-size: 15px;
+  font-weight: 600;
+  color: #524232;
+}
+.trend-container ul li .content {
+  padding: 12px 0 20px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #626261;
+}
+.trend-container ul li .addition {
+  display: flex;
+  font-size: 12px;
+  color: #626261;
+}
+.trend-container ul li .addition span {
+  padding: 0 25px 0 0;
+}
+.trend-container ul li .addition span b {
+  font-weight: 500;
 }
 
 /*--------------------------------------------------------------
