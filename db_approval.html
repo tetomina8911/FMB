@@ -22,10 +22,6 @@
     <!-- Swiper -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
-    <!-- Datepicker -->
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-
     <title></title>
   </head>
   <body>
@@ -56,10 +52,15 @@
       <!-- //header -->
       <!-- sub body -->
       <section id="sub-body">
-        <div class="subVisual-container">
+        <div class="subVisual-container sub-bg08">
           <div class="subVisual-wrapper">
-            <h3 class="sub-title">진균류 버섯 DB검색</h3>
-            <div class="sub-introText">진균류 버섯에 관련된 각종 논문, 특허, 상품 등 다양한 정보를 검색해 보세요.</div>
+            <div>
+              <h3 class="sub-title">진균류 버섯 DB플랫폼 참여</h3>
+              <div class="sub-introText">
+                FMB 참여는 본 시스템을 통해 접수된 건에 한하여 정식으로 검토되며 관련자료는 참여 검토 목적으로만
+                이용됩니다.
+              </div>
+            </div>
           </div>
           <div class="subVisual-search">
             <div class="common-main-search">
@@ -172,68 +173,7 @@
       <!-- //footer -->
     </div>
     <script>
-      $(function () {
-        //Date Picker
-        $("#datepicker").datepicker({
-          dateFormat: "yy.mm.dd", //달력 날짜 형태
-        });
-        $("#datepicker").datepicker("setDate", "today");
-        //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
-
-        $("#datepicker2").datepicker({
-          dateFormat: "yy.mm.dd", //달력 날짜 형태
-        });
-        $("#datepicker2").datepicker("setDate", "today");
-        //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
-
-        $("#datepicker3").datepicker({
-          dateFormat: "yy.mm.dd", //달력 날짜 형태
-        });
-        $("#datepicker3").datepicker("setDate", "today");
-        //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
-
-        $("#datepicker4").datepicker({
-          dateFormat: "yy.mm.dd", //달력 날짜 형태
-        });
-        $("#datepicker4").datepicker("setDate", "today");
-        //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
-
-        //DB Search Click Event
-        //$(".db_search_container dl dd").hide();
-        $(".db_search_container dl dt").click(function () {
-          $(this)
-            .parent("dl")
-            .children("dd")
-            .stop()
-            .slideToggle(function () {
-              $(this).parent("dl").children("dt").toggleClass("down");
-            });
-        });
-
-        //Left SearchBar Click Event
-        $(".left-searchBar dl dt a").click(function () {
-          $(this)
-            .parents("dl")
-            .children("dd")
-            .stop()
-            .slideToggle(function () {
-              $(this).parent("dl").children("dt").toggleClass("down");
-            });
-        });
-
-        //Select Box
-        $(".common-selectBox .main-selectBox > li > a").click(function () {
-          $(this)
-            .parent("li")
-            .children(".sub-selectBox")
-            .stop()
-            .slideToggle(function () {
-              $(this).parent("li").toggleClass("on");
-            });
-        });
-        const subSelectBox = $(".common-selectBox .main-selectBox").height() - 1;
-        $(".common-selectBox .main-selectBox > li .sub-selectBox").css("top", subSelectBox + "px");
-      });
+      $(function () {});
     </script>
   </body>
 </html>

@@ -368,7 +368,7 @@ ul.info-note > li::before {
   */
 }
 .contents-form .form-box .form-ent--body .common-selectBox,
-.contents-form .form-box .form-ent--body input[type=text] {
+.contents-form .form-box .form-ent--body input[type="text"] {
   height: 44px;
 }
 .contents-form .form-box .form-ent--body .common-selectBox {
@@ -376,8 +376,9 @@ ul.info-note > li::before {
 }
 .contents-form .form-box .form-ent--body .common-email,
 .contents-form .form-box .form-ent--body .common-input-file,
-.contents-form .form-box .form-ent--body .common-input-file input[type=text],
-.contents-form .form-box .form-ent--body .common-selectBox, .contents-form .form-box .form-ent--body > input[type=text] {
+.contents-form .form-box .form-ent--body .common-input-file input[type="text"],
+.contents-form .form-box .form-ent--body .common-selectBox,
+.contents-form .form-box .form-ent--body > input[type="text"] {
   width: 100%;
 }
 .contents-form .form-box .form-ent--body .ent {
@@ -429,7 +430,7 @@ ul.info-note > li::before {
     /* .form-box  */
     /* .form-box > .form-ent : form-enters line */
   }
-  .contents-form .form-box .form-box-ents[class*=type-],
+  .contents-form .form-box .form-box-ents[class*="type-"],
   .contents-form .form-box .form-ent:not(.not-flex) {
     display: -ms-flexbox;
     display: -moz-box;
@@ -444,7 +445,7 @@ ul.info-note > li::before {
     -moz-box-direction: normal;
     -webkit-box-direction: normal;
   }
-  .contents-form .form-box .form-box-ents[class*=type-] {
+  .contents-form .form-box .form-box-ents[class*="type-"] {
     -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
     -ms-flex-wrap: wrap;
@@ -463,14 +464,14 @@ ul.info-note > li::before {
     -ms-flex: 1 1 50%;
     flex: 1 1 50%;
   }
-  .contents-form .form-box .form-box-ents.type-both .form-ent:nth-child(-n+2),
-  .contents-form .form-box .form-box-ents.type-2 .form-ent:nth-child(-n+2) {
+  .contents-form .form-box .form-box-ents.type-both .form-ent:nth-child(-n + 2),
+  .contents-form .form-box .form-box-ents.type-2 .form-ent:nth-child(-n + 2) {
     margin-top: 0;
   }
   .contents-form .form-box .form-box-ents.type-both .form-ent:nth-child(1),
-  .contents-form .form-box .form-box-ents.type-both .form-ent:nth-child(2n+1),
+  .contents-form .form-box .form-box-ents.type-both .form-ent:nth-child(2n + 1),
   .contents-form .form-box .form-box-ents.type-2 .form-ent:nth-child(1),
-  .contents-form .form-box .form-box-ents.type-2 .form-ent:nth-child(2n+1) {
+  .contents-form .form-box .form-box-ents.type-2 .form-ent:nth-child(2n + 1) {
     padding-right: 30px;
   }
   .contents-form .form-box .form-box-ents.type-both .form-ent:nth-child(2n),
@@ -530,7 +531,7 @@ ul.info-note > li::before {
   position: relative;
   width: 100%;
 }
-.contents-form__ .form-box .form-ent-group[class*=block-] {
+.contents-form__ .form-box .form-ent-group[class*="block-"] {
   display: -ms-flexbox;
   display: -moz-box;
   display: -webkit-box;
@@ -549,7 +550,7 @@ ul.info-note > li::before {
   -webkit-box-lines: single;
   -moz-box-lines: single;
 }
-.contents-form__ .form-box .form-ent-group[class*=block-]::before {
+.contents-form__ .form-box .form-ent-group[class*="block-"]::before {
   content: "";
   position: absolute;
   display: block;
@@ -563,20 +564,20 @@ ul.info-note > li::before {
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 }
-.contents-form__ .form-box .form-ent-group[class*=block-].block-2 {
+.contents-form__ .form-box .form-ent-group[class*="block-"].block-2 {
   -webkit-justify-content: space-between;
   justify-content: space-between;
   -webkit-box-pack: justify;
   -moz-box-pack: justify;
   -ms-flex-box: justify;
 }
-.contents-form__ .form-box .form-ent-group[class*=block-].block-2 > .form-ent {
+.contents-form__ .form-box .form-ent-group[class*="block-"].block-2 > .form-ent {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 45%;
   flex: 0 0 45%;
   width: 50%;
 }
-.contents-form__ .form-box .form-ent-group[class*=block-].block-2 > .form-ent:nth-child(-n+2) {
+.contents-form__ .form-box .form-ent-group[class*="block-"].block-2 > .form-ent:nth-child(-n + 2) {
   margin-top: 0;
 }
 .contents-form__ .form-box .group-inc {
@@ -597,15 +598,18 @@ ul.info-note > li::before {
 .contents-form__ .form-ent__input {
   /* form-ent__input > wrap */
 }
-.contents-form__ .form-ent__input [class^=info-], .contents-form__ .form-ent__input p,
+.contents-form__ .form-ent__input [class^="info-"],
+.contents-form__ .form-ent__input p,
 .contents-form__ .form-ent__input .common-textarea,
-.contents-form__ .form-ent__input .common-input-file, .contents-form__ .form-ent__input .common-keyword, .contents-form__ .form-ent__input .common-email,
+.contents-form__ .form-ent__input .common-input-file,
+.contents-form__ .form-ent__input .common-keyword,
+.contents-form__ .form-ent__input .common-email,
 .contents-form__ .form-ent__input .common-selectBox,
-.contents-form__ .form-ent__input input[type=text] {
+.contents-form__ .form-ent__input input[type="text"] {
   width: 100%;
 }
 .contents-form__ .form-ent__input .common-selectBox,
-.contents-form__ .form-ent__input input[type=text] {
+.contents-form__ .form-ent__input input[type="text"] {
   height: 44px;
 }
 .contents-form__ .form-ent__input .common-selectBox {
@@ -644,7 +648,8 @@ ul.info-note > li::before {
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
 }
-.contents-form__ .form-ent__input .wrap.wrap-input > input[type=text], .contents-form__ .form-ent__input .wrap.wrap-file > .common-input-file {
+.contents-form__ .form-ent__input .wrap.wrap-input > input[type="text"],
+.contents-form__ .form-ent__input .wrap.wrap-file > .common-input-file {
   margin-right: 12px;
   -webkit-box-flex: 0;
   -ms-flex: 1 1 100%;
@@ -740,7 +745,7 @@ ul.info-note > li::before {
     <label>@</label>
     <input type="text" class="input-type3 email-back" name="" value="" placeholder="">
     <div class="common-selectBox">                  
-      <ul class="main-selecBox">
+      <ul class="main-selectBox">
         <li><a href="#n" class="placeholder">직접입력</a>
           <ul class="sub-selectBox">
             <li><a href="#n">선택하세요1</a></li>
@@ -771,7 +776,7 @@ ul.info-note > li::before {
   -webkit-box-lines: multiple;
   -moz-box-lines: multiple;
 }
-.common-email input[type=text] {
+.common-email input[type="text"] {
   -webkit-box-flex: 0;
   -ms-flex: 1 1 100%;
   flex: 1 1 100%;

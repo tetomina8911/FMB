@@ -20,10 +20,6 @@
     <!-- Swiper -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
-    <!-- Datepicker -->
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-
     <title></title>
   </head>
   <body>
@@ -64,28 +60,9 @@
           <div class="community-wrapper">
             <!-- board : status -->
             <div class="common-board-status">
-              <div class="common-selectBox">
-                <ul class="main-selectBox">
-                  <li>
-                    <a href="#n" class="">게시글, 댓글</a>
-                    <ul class="sub-selectBox">
-                      <li><a href="#n">선택하세요1</a></li>
-                      <li><a href="#n">선택하세요2</a></li>
-                      <li><a href="#n">선택하세요3</a></li>
-                      <li><a href="#n">선택하세요4</a></li>
-                      <li><a href="#n">선택하세요5</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
               <div class="common-sub-search">
                 <input type="search" class="input-type5" placeholder="검색어를 입력해 주세요." />
                 <button class="btn gr small h32">검색</button>
-              </div>
-              <div class="short-area">
-                <a href="" class="on">최신순</a>
-                <span>|</span>
-                <a href="">조회순</a>
               </div>
             </div>
 
@@ -98,14 +75,16 @@
                   <col width="10%" />
                   <col width="10%" />
                   <col width="10%" />
+                  <col width="13%" />
                 </colgroup>
                 <thead>
                   <tr>
                     <th scope="col">번호</th>
-                    <th scope="col">제목</th>
-                    <th scope="col">작성자</th>
-                    <th scope="col">작성일</th>
-                    <th scope="col">조회</th>
+                    <th scope="col">문의업체</th>
+                    <th scope="col">담당자</th>
+                    <th scope="col">최초문의일</th>
+                    <th scope="col">상담갱신일</th>
+                    <th scope="col">상담</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -114,7 +93,8 @@
                     <td class="left">제목이들어갑니다.</td>
                     <td>홍길동</td>
                     <td>2022.10.14</td>
-                    <td>123</td>
+                    <td>2022.10.14</td>
+                    <td><button class="btn h26 small gr">상담하기</button></td>
                   </tr>
                 </tbody>
               </table>
@@ -181,68 +161,7 @@
     <script type="text/javascript" charset="UTF-8" src="js/ton_commons.js" defer></script>
 
     <script>
-      $(function () {
-        //Date Picker
-        $("#datepicker").datepicker({
-          dateFormat: "yy.mm.dd", //달력 날짜 형태
-        });
-        $("#datepicker").datepicker("setDate", "today");
-        //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
-
-        $("#datepicker2").datepicker({
-          dateFormat: "yy.mm.dd", //달력 날짜 형태
-        });
-        $("#datepicker2").datepicker("setDate", "today");
-        //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
-
-        $("#datepicker3").datepicker({
-          dateFormat: "yy.mm.dd", //달력 날짜 형태
-        });
-        $("#datepicker3").datepicker("setDate", "today");
-        //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
-
-        $("#datepicker4").datepicker({
-          dateFormat: "yy.mm.dd", //달력 날짜 형태
-        });
-        $("#datepicker4").datepicker("setDate", "today");
-        //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
-
-        //DB Search Click Event
-        //$(".db_search_container dl dd").hide();
-        $(".db_search_container dl dt").click(function () {
-          $(this)
-            .parent("dl")
-            .children("dd")
-            .stop()
-            .slideToggle(function () {
-              $(this).parent("dl").children("dt").toggleClass("down");
-            });
-        });
-
-        //Left SearchBar Click Event
-        $(".left-searchBar dl dt a").click(function () {
-          $(this)
-            .parents("dl")
-            .children("dd")
-            .stop()
-            .slideToggle(function () {
-              $(this).parent("dl").children("dt").toggleClass("down");
-            });
-        });
-
-        //Select Box
-        $(".common-selectBox .main-selectBox > li > a").click(function () {
-          $(this)
-            .parent("li")
-            .children(".sub-selectBox")
-            .stop()
-            .slideToggle(function () {
-              $(this).parent("li").toggleClass("on");
-            });
-        });
-        const subSelectBox = $(".common-selectBox .main-selectBox").height() - 1;
-        $(".common-selectBox .main-selectBox > li .sub-selectBox").css("top", subSelectBox + "px");
-      });
+      $(function () {});
     </script>
   </body>
 </html>

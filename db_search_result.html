@@ -22,17 +22,6 @@
     <!-- Swiper -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
-    <!-- Datepicker -->
-    <!-- <link
-      rel="stylesheet"
-      href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
-    />
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script> -->
-    <!-- bootstrap css 일부 -->
-    <link href="/js/bootstrap/datepicker_in_bootstrap.css" rel="stylesheet" />
-    <link rel="stylesheet" href="/js/datepicker/bootstrap-datepicker3.css" />
-    <script src="/js/datepicker/bootstrap-datepicker.js"></script>
-
     <title></title>
   </head>
   <body>
@@ -449,7 +438,6 @@
     <script>
       $(function () {
         //DB Search Click Event
-        //$(".db_search_container dl dd").hide();
         $(".db_search_container dl dt").click(function () {
           $(this)
             .parent("dl")
@@ -460,6 +448,7 @@
             });
         });
 
+        //TAB click Event
         $(".right_resource_container .sub-contents-tab a").click(function () {
           $(".right_resource_container .sub-contents-tab a").removeClass("current");
           $(this).addClass("current");

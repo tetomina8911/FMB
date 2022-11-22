@@ -20,10 +20,6 @@
     <!-- Swiper -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
-    <!-- Datepicker -->
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-
     <title></title>
   </head>
   <body>
@@ -54,7 +50,7 @@
       <!-- //header -->
       <!-- sub body -->
       <section id="sub-body">
-        <div class="subVisual-container sub-bg03">
+        <div class="subVisual-container sub-bg04">
           <div class="subVisual-wrapper">
             <h3 class="sub-title">FMB 지식자료</h3>
             <div class="sub-introText">FMB DB플랫폼에 등록된 전문적인 자료 검색이 가능합니다.</div>
@@ -181,42 +177,7 @@
     <script type="text/javascript" charset="UTF-8" src="js/ton_commons.js" defer></script>
 
     <script>
-      $(function () {
-        //DB Search Click Event
-        $(".db_search_container dl dt").click(function () {
-          $(this)
-            .parent("dl")
-            .children("dd")
-            .stop()
-            .slideToggle(function () {
-              $(this).parent("dl").children("dt").toggleClass("down");
-            });
-        });
-
-        //Left SearchBar Click Event
-        $(".left-searchBar dl dt a").click(function () {
-          $(this)
-            .parents("dl")
-            .children("dd")
-            .stop()
-            .slideToggle(function () {
-              $(this).parent("dl").children("dt").toggleClass("down");
-            });
-        });
-
-        //Select Box
-        $(".common-selectBox .main-selectBox > li > a").click(function () {
-          $(this)
-            .parent("li")
-            .children(".sub-selectBox")
-            .stop()
-            .slideToggle(function () {
-              $(this).parent("li").toggleClass("on");
-            });
-        });
-        const subSelectBox = $(".common-selectBox .main-selectBox").height() - 1;
-        $(".common-selectBox .main-selectBox > li .sub-selectBox").css("top", subSelectBox + "px");
-      });
+      $(function () {});
     </script>
   </body>
 </html>

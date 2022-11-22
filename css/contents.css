@@ -67,6 +67,12 @@
 .subVisual-container.sub-bg07:after {
   background: url("../images/sub/sub-visual07.png") no-repeat 50% 50%, #171717;
 }
+.subVisual-container.sub-bg08:after {
+  background: url("../images/sub/sub-visual07.png") no-repeat 50% 50%, #171717;
+}
+.subVisual-container.sub-bg09:after {
+  background: url("../images/sub/sub-visual07.png") no-repeat 50% 50%, #171717;
+}
 
 @keyframes ani-suvVisual {
   100% {
@@ -89,8 +95,11 @@
   font-weight: 600;
 }
 .subVisual-container .subVisual-wrapper .sub-introText {
+  max-width: 600px;
+  margin: 0 auto;
   font-size: 20px;
   font-weight: 500;
+  word-break: keep-all;
 }
 
 .subVisual-container .subVisual-search {

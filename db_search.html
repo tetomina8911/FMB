@@ -467,24 +467,7 @@
         });
         const subSelectBox = $('.common-board-status .common-selectBox .main-selecBox > li > a').height() - 1;
         $('.common-selectBox .main-selecBox > li .sub-selectBox').css('top', subSelectBox + 'px');
-
-        //leyrPopup - Open
-        $('#btn-ex-class-pop').click(function(){
-          $('#layerPop-container .ex-class-wrapper').stop().fadeIn();
-          $('#layerPop-bg').stop().fadeIn();
-        });
-        //leyrPopup - Close
-        $('#btn-layerPop-close').click(function(){
-          $('#layerPop-container .ex-class-wrapper').stop().fadeOut('fast');
-          $('#layerPop-bg').stop().fadeOut('fast');
-        });
-        //leyrPopup - Close
-        $('#layerPop-bg').click(function(){
-          $('#layerPop-container .ex-class-wrapper').stop().fadeOut('fast');
-          $('#layerPop-bg').stop().fadeOut('fast');
-        });
       });
-
     </script>
   </body>
 </html>
