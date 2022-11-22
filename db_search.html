@@ -28,17 +28,10 @@
     <!-- Swiper -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
-    <!-- Datepicker -->
-    <!-- <link
-      rel="stylesheet"
-      href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
-    />
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script> -->
-    <!-- bootstrap css 일부 -->
-    <link href="/js/bootstrap/datepicker_in_bootstrap.css" rel="stylesheet"> 
+    <!-- Datepicker : bootstrap css 일부-->
+    <link rel="stylesheet" href="/js/bootstrap/datepicker_in_bootstrap.css"> 
     <link rel="stylesheet" href="/js/datepicker/bootstrap-datepicker3.css">
     <script src="/js/datepicker/bootstrap-datepicker.js"></script>
-
 
     <title></title>
   </head>
@@ -52,13 +45,13 @@
         <nav id="gnb">
           <ul>
             <li class="current"><a href="./db_search.html">DB 검색</a></li>
-            <li><a href="">지식자료</a></li>
-            <li><a href="">커뮤니티</a></li>
-            <li><a href="">트랜드</a></li>
-            <li><a href="">제품정보</a></li>
-            <li><a href="">DB 등록</a></li>
-            <li><a href="">BIZ 상담</a></li>
-            <li><a href="">FMB 소개</a></li>
+            <li><a href="./knowledge_data.html">지식자료</a></li>
+            <li><a href="./community.html">커뮤니티</a></li>
+            <li><a href="./trend.html">트랜드</a></li>
+            <li><a href="./product_info.html">제품정보</a></li>
+            <li><a href="./db_approval.html">DB 등록</a></li>
+            <li><a href="./biz_consulting .html">BIZ 상담</a></li>
+            <li><a href="./regist_company.html">FMB 소개</a></li>
           </ul>
         </nav>
         <section id="right-shortCut">
@@ -114,10 +107,8 @@
                 <dd>
                   <div class="common-datePicker small">
                     <input type="text" id="datepicker1"class="form-control input-type icon-date">
-                    <!-- <input type="text" id="datepicker" class="input-type icon-date" /> -->
                     <span>~</span>
                     <input type="text" id="datepicker2"class="form-control input-type icon-date">
-                    <!-- <input type="text" id="datepicker2" class="input-type icon-date" /> -->
                   </div>
                 </dd>
               </dl>
@@ -340,7 +331,7 @@
                           <p><span>업체명:</span>돌산버섯농장</p>
                           <p><span>등록일/수정일:</span>2022.10.13 / 2022.10.23</p>
                           <div class="common-btn">
-                            <button class="small h32 gr">상세보기 ></button>
+                            <button class="small h32 gr" onclick="location.href='./db_search_result.html'">상세보기 ></button>
                           </div>
                         </div>
                       </div>
@@ -447,39 +438,10 @@
     <script>
       $(function () {
         //Date Picker
-        // $("#datepicker").datepicker({
-        //   dateFormat: "yy.mm.dd", //달력 날짜 형태
-        // });
-        // $("#datepicker").datepicker("setDate", "today");
-        // //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
-        // $("#datepicker2").datepicker({
-        //   dateFormat: "yy.mm.dd", //달력 날짜 형태
-        // });
-        // $("#datepicker2").datepicker("setDate", "today");
-        // (-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
-
-        $("#datepicker3").datepicker({
-          dateFormat: "yy.mm.dd", //달력 날짜 형태
-        });
-        $("#datepicker3").datepicker("setDate", "today");
-        //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
-        
-        $("#datepicker4").datepicker({
-          dateFormat: "yy.mm.dd", //달력 날짜 형태
-        });
-        $("#datepicker4").datepicker("setDate", "today");
-        //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
-
         makeDatePicker('#datepicker1', new Date());
         makeDatePicker('#datepicker2', new Date());
 
-
-
-
-
-
         //DB Search Click Event
-        //$(".db_search_container dl dd").hide();
         $(".db_search_container dl dt").click(function () {
           $(this)
             .parent("dl")
@@ -505,24 +467,7 @@
         });
         const subSelectBox = $('.common-board-status .common-selectBox .main-selecBox > li > a').height() - 1;
         $('.common-selectBox .main-selecBox > li .sub-selectBox').css('top', subSelectBox + 'px');
-
-        //leyrPopup - Open
-        $('#btn-ex-class-pop').click(function(){
-          $('#layerPop-container .ex-class-wrapper').stop().fadeIn();
-          $('#layerPop-bg').stop().fadeIn();
-        });
-        //leyrPopup - Close
-        $('#btn-layerPop-close').click(function(){
-          $('#layerPop-container .ex-class-wrapper').stop().fadeOut('fast');
-          $('#layerPop-bg').stop().fadeOut('fast');
-        });
-        //leyrPopup - Close
-        $('#layerPop-bg').click(function(){
-          $('#layerPop-container .ex-class-wrapper').stop().fadeOut('fast');
-          $('#layerPop-bg').stop().fadeOut('fast');
-        });
       });
-
     </script>
   </body>
 </html>

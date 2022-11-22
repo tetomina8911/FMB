@@ -20,10 +20,6 @@
     <!-- Swiper -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
-    <!-- Datepicker -->
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-
     <title></title>
   </head>
   <body>
@@ -36,13 +32,13 @@
         <nav id="gnb">
           <ul>
             <li><a href="./db_search.html">DB 검색</a></li>
-            <li><a href="">지식자료</a></li>
+            <li><a href="./knowledge_data.html">지식자료</a></li>
             <li class="current"><a href="./community.html">커뮤니티</a></li>
-            <li><a href="">트랜드</a></li>
+            <li><a href="./trend.html">트랜드</a></li>
             <li><a href="./product_info.html">제품정보</a></li>
-            <li><a href="">DB 등록</a></li>
-            <li><a href="">BIZ 상담</a></li>
-            <li><a href="">FMB 소개</a></li>
+            <li><a href="./db_approval.html">DB 등록</a></li>
+            <li><a href="./biz_consulting .html">BIZ 상담</a></li>
+            <li><a href="./regist_company.html">FMB 소개</a></li>
           </ul>
         </nav>
         <section id="right-shortCut">
@@ -54,7 +50,7 @@
       <!-- //header -->
       <!-- sub body -->
       <section id="sub-body">
-        <div class="subVisual-container sub-bg03">
+        <div class="subVisual-container sub-bg04">
           <div class="subVisual-wrapper">
             <h3 class="sub-title">FMB 지식자료</h3>
             <div class="sub-introText">FMB DB플랫폼에 등록된 전문적인 자료 검색이 가능합니다.</div>
@@ -65,7 +61,7 @@
             <!-- board : status -->
             <div class="common-board-status">
               <div class="common-selectBox">
-                <ul class="main-selecBox">
+                <ul class="main-selectBox">
                   <li>
                     <a href="#n" class="">게시글, 댓글</a>
                     <ul class="sub-selectBox">
@@ -181,68 +177,7 @@
     <script type="text/javascript" charset="UTF-8" src="js/ton_commons.js" defer></script>
 
     <script>
-      $(function () {
-        //Date Picker
-        $("#datepicker").datepicker({
-          dateFormat: "yy.mm.dd", //달력 날짜 형태
-        });
-        $("#datepicker").datepicker("setDate", "today");
-        //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
-
-        $("#datepicker2").datepicker({
-          dateFormat: "yy.mm.dd", //달력 날짜 형태
-        });
-        $("#datepicker2").datepicker("setDate", "today");
-        //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
-
-        $("#datepicker3").datepicker({
-          dateFormat: "yy.mm.dd", //달력 날짜 형태
-        });
-        $("#datepicker3").datepicker("setDate", "today");
-        //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
-
-        $("#datepicker4").datepicker({
-          dateFormat: "yy.mm.dd", //달력 날짜 형태
-        });
-        $("#datepicker4").datepicker("setDate", "today");
-        //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
-
-        //DB Search Click Event
-        //$(".db_search_container dl dd").hide();
-        $(".db_search_container dl dt").click(function () {
-          $(this)
-            .parent("dl")
-            .children("dd")
-            .stop()
-            .slideToggle(function () {
-              $(this).parent("dl").children("dt").toggleClass("down");
-            });
-        });
-
-        //Left SearchBar Click Event
-        $(".left-searchBar dl dt a").click(function () {
-          $(this)
-            .parents("dl")
-            .children("dd")
-            .stop()
-            .slideToggle(function () {
-              $(this).parent("dl").children("dt").toggleClass("down");
-            });
-        });
-
-        //Select Box
-        $(".common-selectBox .main-selecBox > li > a").click(function () {
-          $(this)
-            .parent("li")
-            .children(".sub-selectBox")
-            .stop()
-            .slideToggle(function () {
-              $(this).parent("li").toggleClass("on");
-            });
-        });
-        const subSelectBox = $(".common-selectBox .main-selecBox").height() - 1;
-        $(".common-selectBox .main-selecBox > li .sub-selectBox").css("top", subSelectBox + "px");
-      });
+      $(function () {});
     </script>
   </body>
 </html>

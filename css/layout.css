@@ -427,14 +427,14 @@
 #layerPop-container .trendNews-wrapper ul li .common-email {
   flex: 1 1 276px;
 }
-#layerPop-container .trendNews-wrapper ul li .common-email .main-selecBox {
+#layerPop-container .trendNews-wrapper ul li .common-email .main-selectBox {
   height: 35px;
   line-height: 33px;
 }
-#layerPop-container .trendNews-wrapper ul li .common-email .main-selecBox > li > a {
+#layerPop-container .trendNews-wrapper ul li .common-email .main-selectBox > li > a {
   background-position: 90% 50%;
 }
-#layerPop-container .trendNews-wrapper ul li .common-email .main-selecBox > li .sub-selectBox {
+#layerPop-container .trendNews-wrapper ul li .common-email .main-selectBox > li .sub-selectBox {
   top: 34px;
 }
 

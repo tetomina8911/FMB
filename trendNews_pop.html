@@ -44,14 +44,14 @@
         </h1>
         <nav id="gnb">
           <ul>
-            <li class="current"><a href="./db_search.html">DB 검색</a></li>
-            <li><a href="">지식자료</a></li>
-            <li><a href="">커뮤니티</a></li>
-            <li><a href="">트랜드</a></li>
-            <li><a href="">제품정보</a></li>
-            <li><a href="">DB 등록</a></li>
-            <li><a href="">BIZ 상담</a></li>
-            <li><a href="">FMB 소개</a></li>
+            <li><a href="./db_search.html">DB 검색</a></li>
+            <li><a href="./knowledge_data.html">지식자료</a></li>
+            <li><a href="./community.html">커뮤니티</a></li>
+            <li><a href="./trend.html">트랜드</a></li>
+            <li><a href="./product_info.html">제품정보</a></li>
+            <li><a href="./db_approval.html">DB 등록</a></li>
+            <li><a href="./biz_consulting .html">BIZ 상담</a></li>
+            <li><a href="./regist_company.html">FMB 소개</a></li>
           </ul>
         </nav>
         <section id="right-shortCut">
@@ -203,7 +203,7 @@
                 <dd>
                   <!-- Select Box -->
                   <div class="common-selectBox">                  
-                    <ul class="main-selecBox">
+                    <ul class="main-selectBox">
                       <li><a href="#n" class="placeholder">선택하세요</a>
                         <ul class="sub-selectBox">
                           <li><a href="#n">선택하세요1</a></li>
@@ -286,7 +286,7 @@
                   <!-- board : status -->
                   <div class="common-board-status">
                     <div class="common-selectBox">                  
-                      <ul class="main-selecBox">
+                      <ul class="main-selectBox">
                         <li><a href="#n" class="">게시글, 댓글</a>
                           <ul class="sub-selectBox">
                             <li><a href="#n">선택하세요1</a></li>
@@ -429,12 +429,10 @@
     <!-- layer PopUp -->
     <div id="layerPop-container">
       <div class="layerPop-wrapper ex-class-wrapper">
-        <div class="pop-title">FMB 트랜드 뉴스구독 <a href="#n" id="btn-layerPop-close"><img src="./images/icon/btn-layerPop-close.png" alt=""></a></div>
-        
+        <div class="pop-title">FMB 트랜드 뉴스구독 <a href="#n" id="btn-layerPop-close"><img src="./images/icon/btn-layerPop-close.png" alt=""></a></div>        
         <div>
           컨텐츠
-        </div>
-        
+        </div>        
       </div>      
     </div>
     <div id="layerPop-bg"></div>
@@ -486,13 +484,13 @@
         });
 
         //Select Box
-        $('.common-selectBox .main-selecBox > li > a').click(function() {
+        $('.common-selectBox .main-selectBox > li > a').click(function() {
           $(this).parent('li').children('.sub-selectBox').stop().slideToggle(function () {
             $(this).parent('li').toggleClass('on')
           });
         });
-        const subSelectBox = $('.common-board-status .common-selectBox .main-selecBox > li > a').height() - 1;
-        $('.common-selectBox .main-selecBox > li .sub-selectBox').css('top', subSelectBox + 'px');
+        const subSelectBox = $('.common-board-status .common-selectBox .main-selectBox > li > a').height() - 1;
+        $('.common-selectBox .main-selectBox > li .sub-selectBox').css('top', subSelectBox + 'px');
 
         //leyrPopup - Open
         $('#btn-ex-class-pop').click(function(){

@@ -35,9 +35,9 @@
             <li><a href="./knowledge_data.html">지식자료</a></li>
             <li><a href="./community.html">커뮤니티</a></li>
             <li><a href="./trend.html">트랜드</a></li>
-            <li class="current"><a href="./product_info.html">제품정보</a></li>
+            <li><a href="./product_info.html">제품정보</a></li>
             <li><a href="./db_approval.html">DB 등록</a></li>
-            <li><a href="./biz_consulting .html">BIZ 상담</a></li>
+            <li class="current"><a href="./biz_consulting .html">BIZ 상담</a></li>
             <li><a href="./regist_company.html">FMB 소개</a></li>
           </ul>
         </nav>
@@ -50,81 +50,68 @@
       <!-- //header -->
       <!-- sub body -->
       <section id="sub-body">
-        <div class="subVisual-container sub-bg06">
+        <div class="subVisual-container sub-bg03">
           <div class="subVisual-wrapper">
             <h3 class="sub-title">FMB 지식자료</h3>
             <div class="sub-introText">FMB DB플랫폼에 등록된 전문적인 자료 검색이 가능합니다.</div>
           </div>
         </div>
         <article id="sub-contents-container">
-          <div class="sub-contents-wrapper">
-            <div id="lnb">
-              <dl>
-                <dt>제품정보</dt>
-                <dd><a href="#n" class="current">• 식품
-                <dd><a href="#n">• 건강기능식품</a></dd>
-                <dd><a href="#n">• 의약품</a></dd>
-                <dd><a href="#n">• 화학품</a></dd>
-                <dd><a href="#n">• 사료</a></dd>
-                <dd><a href="#n">• 기능성소재</a></dd>
-                <dd><a href="#n">• 자원, 진균류</a></dd>
-                <dd><a href="#n">• 최신 신상품</a></dd>
-              </dl>
+          <div class="community-wrapper">
+            <!-- board : status -->
+            <div class="common-board-status">
+              <div class="common-sub-search">
+                <input type="search" class="input-type5" placeholder="검색어를 입력해 주세요." />
+                <button class="btn gr small h32">검색</button>
+              </div>
             </div>
-            <div class="sub-right-contents bg">
-              <div class="product-info-wrap">
-                <!-- Sub Search -->
-                <div class="common-sub-search br">
-                  <input type="search" class="input-type3" placeholder="검색어를 입력하시고 자료를 찾으세요." />
-                  <button class="btn br2 small h32">검색</button>
-                </div>
 
-                <!-- board : gaellry -->
-                <div class="common-gallery-wrapper">
-                  <div class="gallery-title">식품</div>
-                  <ul>
-                    <li><a href="#n">
-                      <div class="gallery-img">
-                        <img src="./images/examples/product_info_example01.png" alt="">                      
-                      </div>
-                      <div class="gallery-list">
-                        <div class="subject">착한 농부들 진하고 맛있는 노루 궁뎅이버섯 궁디스틱</div>
-                        <div class="name">하진이네 버섯뜰에</div>
-                        <div class="date">
-                          <span>제품정보 > 식품</span> / <span>등록일: 2022.11.04</span>
-                        </div>
-                      </div>
-                    </a></li>
-                    <li><a href="#n">
-                      <div class="gallery-img">
-                        <img src="./images/examples/product_info_example01.png" alt="">                      
-                      </div>
-                      <div class="gallery-list">
-                        <div class="subject">착한 농부들 진하고 맛있는 노루 궁뎅이버섯 궁디스틱</div>
-                        <div class="name">하진이네 버섯뜰에</div>
-                        <div class="date">
-                          <span>제품정보 > 식품</span> / <span>등록일: 2022.11.04</span>
-                        </div>
-                      </div>
-                    </a></li>
-                  </ul>
-                </div>
-              </div>
-              
-              <!-- table : paging -->
-              <div class="common-paging">
-                <a href="#n"><<</a>
-                <a href="#n"><</a>
-                <a href="#n">1</a>
-                <a href="#n">2</a>
-                <a href="#n" class="on">3</a>
-                <a href="#n">4</a>
-                <a href="#n">5</a>
-                <a href="#n">></a>
-                <a href="#n">>></a>
-              </div>
+            <!-- table : board -->
+            <div class="common-table-wrapper">
+              <table class="board horizen">
+                <colgroup>
+                  <col width="7%" />
+                  <col width="*" />
+                  <col width="10%" />
+                  <col width="10%" />
+                  <col width="10%" />
+                  <col width="13%" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col">번호</th>
+                    <th scope="col">문의업체</th>
+                    <th scope="col">담당자</th>
+                    <th scope="col">최초문의일</th>
+                    <th scope="col">상담갱신일</th>
+                    <th scope="col">상담</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>0</td>
+                    <td class="left">제목이들어갑니다.</td>
+                    <td>홍길동</td>
+                    <td>2022.10.14</td>
+                    <td>2022.10.14</td>
+                    <td><button class="btn h26 small gr">상담하기</button></td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-          </div>
+
+            <!-- table : paging -->
+            <div class="common-paging">
+              <a href="#n"><<</a>
+              <a href="#n"><</a>
+              <a href="#n">1</a>
+              <a href="#n">2</a>
+              <a href="#n" class="on">3</a>
+              <a href="#n">4</a>
+              <a href="#n">5</a>
+              <a href="#n">></a>
+              <a href="#n">>></a>
+            </div>
         </article>
       </section>
       <!-- //sub body -->
@@ -174,8 +161,7 @@
     <script type="text/javascript" charset="UTF-8" src="js/ton_commons.js" defer></script>
 
     <script>
-      $(function () {
-      });
+      $(function () {});
     </script>
   </body>
 </html>
