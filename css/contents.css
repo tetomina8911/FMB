@@ -68,10 +68,10 @@
   background: url("../images/sub/sub-visual07.png") no-repeat 50% 50%, #171717;
 }
 .subVisual-container.sub-bg08:after {
-  background: url("../images/sub/sub-visual07.png") no-repeat 50% 50%, #171717;
+  background: url("../images/sub/sub-visual08.png") no-repeat 50% 50%, #171717;
 }
 .subVisual-container.sub-bg09:after {
-  background: url("../images/sub/sub-visual07.png") no-repeat 50% 50%, #171717;
+  background: url("../images/sub/sub-visual09.png") no-repeat 50% 50%, #171717;
 }
 
 @keyframes ani-suvVisual {
@@ -82,6 +82,9 @@
 
 .subVisual-container .subVisual-wrapper {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 220px;
   color: #fff;
   text-align: center;
@@ -90,7 +93,7 @@
   z-index: 2;
 }
 .subVisual-container .subVisual-wrapper .sub-title {
-  padding: 67px 0 10px;
+  padding: 0 0 10px;
   font-size: 30px;
   font-weight: 600;
 }
