@@ -366,6 +366,15 @@ $(document).on("input", "input.tel", function(e){
     });
   }
 
+  // common-tel (type: div-3)
+  var commonTel = document.querySelectorAll('.common-tel.div-3');
+  if ( commonTel.length ) {
+    $(document).on('input', '.common-tel.div-3 input.tel', function(e) {
+      if ( this.value.length >= this.maxLength ) $(this).next().focus();
+    });
+  }
+  
+
   // common-textarea <textarea> 초기화
   var commonTextarea = document.querySelectorAll('.common-textarea')
   if ( commonTextarea.length ) {
@@ -473,10 +482,14 @@ $(document).on("input", "input.tel", function(e){
   // 주소 찾기
   // <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
   $('.common-adress .btn-find-address').off().on('click', function() {
-    console.log('ffff');
+    
+    var wrap = $(this).closest('.default-area');
+    var input = $(this).prev();
+
     new daum.Postcode({
       oncomplete: function(response) {
-        console.log(response); // -- address
+        input.val(response.roadAddress ? response.roadAddress : '');
+        if ( wrap.length ) $(wrap).next('input[type=text]').focus();
       }
     }).open();
   });

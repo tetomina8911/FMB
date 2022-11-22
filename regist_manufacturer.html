@@ -23,12 +23,19 @@
     <!-- Swiper -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
-    <!-- Datepicker -->
+    <!-- Datepicker 
     <link
       rel="stylesheet"
       href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
     />
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    -->
+    <link rel="stylesheet" href="js/datepicker/jquery-ui.css"/>
+    <script src="js/datepicker/jquery-ui.js"></script>
+    <!--
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/locales/bootstrap-datepicker.min.js" integrity="sha512-L4qpL1ZotXZLLe8Oo0ZyHrj/SweV7CieswUODAAPN/tnqN3PA1P+4qPu5vIryNor6HQ5o22NujIcAZIfyVXwbQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>-->
+
 
     <!-- TagsInput -->
     <link rel="stylesheet" href="js/tagsinput/jquery.tagsinput-revisited.min.css" />
@@ -96,7 +103,7 @@
           </div>
         </div>
         <article id="sub-contents-container">
-          <h4 class="sub-contents-title">
+          <h4 class="sub-contents-title form-title">
             참여 업체 정보 등록&nbsp; &nbsp;<span>필수( * )를 제외한 항복은 선택 등록 가능 합니다.</span>
           </h4>
           <form
@@ -190,10 +197,11 @@
                         <span class="text-head--dot">연락처</span>
                       </div>
                       <div class="form-ent--body">
-                        <div class="common-tel dev-3">
-                          <input type="text" class="input-type4" name="" value="" placeholder=""> 
-                          <input type="text" class="input-type4" name="" value="" placeholder=""> 
-                          <input type="text" class="input-type4" name="" value="" placeholder=""> 
+                        <div class="common-tel div-3">
+                          <input type="text" class="input-type4 tel" name="" value="" placeholder="" maxlength="3" pattern="[0-9]*" > 
+                          <input type="text" class="input-type4 tel" name="" value="" placeholder="" maxlength="4" pattern="[0-9]*" > 
+                          <input type="text" class="input-type4 tel" name="" value="" placeholder="" maxlength="4" pattern="[0-9]*" >
+                          <input type="hidden" class="tel-avg">
                         </div>
                       </div>
                     </li>
@@ -303,8 +311,8 @@
                                 <input type="file" class="upload-hidden upload-file" name="img-ass-file" accept="image/png, image/jpeg" > 
                               </div>
                               <div class="common-btn">
-                                <button type="button" class="small h32 bl add">+ 추가</button>
-                                <button type="button" class="small h32 red remove">- 삭제</button>
+                                <button type="button" class="small h32 bl add">+ <span>추가</span></button>
+                                <button type="button" class="small h32 red remove">- <span>삭제</span></button>
                               </div>
                           </li>
                         </ul>
@@ -323,8 +331,8 @@
                                 <input type="file" class="upload-hidden upload-file" name="img-ass-file" accept="image/png, image/jpeg" > 
                               </div>
                               <div class="common-btn">
-                                <button type="button" class="small h32 bl add">+ 추가</button>
-                                <button type="button" class="small h32 red remove">- 삭제</button>
+                                <button type="button" class="small h32 bl add">+ <span>추가</span></button>
+                                <button type="button" class="small h32 red remove">- <span>삭제</span></button>
                               </div>
                           </li>
                         </ul>
@@ -474,8 +482,8 @@
                                 <input type="file" class="upload-hidden upload-file" name="img-ass-file" accept="image/png, image/jpeg" > 
                               </div>
                               <div class="common-btn">
-                                <!--<button type="button" class="small h32 bl add">+ 추가</button>-->
-                                <button type="button" class="small h32 red remove">- 삭제</button>
+                                <!--<button type="button" class="small h32 bl add">+ <span>추가</span></button>-->
+                                <button type="button" class="small h32 red remove">- <span>삭제</span></button>
                               </div>
                             </div>
                           </div>
@@ -484,7 +492,7 @@
                     </li>
                     <nav class="options">
                       <div class="common-btn option-ctrl">
-                        <button type="button" class="small h32 bl add add-fixed">+ 추가</button>
+                        <button type="button" class="small h32 bl add add-fixed">+ <span>추가</span></button>
                     </nav> <!-- group--incs > options(add button) -->
                   </ul>
                 </div>
@@ -521,8 +529,8 @@
                                 <input type="file" class="upload-hidden upload-file" name="img-ass-file" accept="image/png, image/jpeg" > 
                               </div>
                               <div class="common-btn">
-                                <!--<button type="button" class="small h32 bl add">+ 추가</button>-->
-                                <button type="button" class="small h32 red remove">- 삭제</button>
+                                <!--<button type="button" class="small h32 bl add">+ <span>추가</span></button>-->
+                                <button type="button" class="small h32 red remove">- <span>삭제</span></button>
                               </div>
                             </div>
                           </div>
@@ -531,7 +539,7 @@
                     </li>
                     <nav class="options">
                       <div class="common-btn option-ctrl">
-                        <button type="button" class="small h32 bl add add-fixed">+ 추가</button>
+                        <button type="button" class="small h32 bl add add-fixed">+ <span>추가</span></button>
                     </nav> <!-- group--incs > options(add button) -->
                   </ul>
                 </div>
@@ -567,7 +575,7 @@
                       </div>
                       <div class="form-ent--body">
                         <!-- datapicker * -->
-                        <div class="common-datePicker" style="width:303px; height: 45px;">
+                        <div class="common-datePicker">
                           <input type="text" id="" class="input-type4 icon-date hasDatepicker" name="">
                           &nbsp;<span>~</span>&nbsp;
                           <input type="text" id="" class="input-type4 icon-date hasDatepicker" name="">
@@ -594,8 +602,8 @@
                             <div class="ent wrap-ctrl">
                               <input type="text" class="input-type4 " name="img-ass-name" name="" value="" placeholder="">
                               <div class="common-btn">
-                                <!--<button type="button" class="small h32 bl add">+ 추가</button>-->
-                                <button type="button" class="small h32 red remove">- 삭제</button>
+                                <!--<button type="button" class="small h32 bl add">+ <span>추가</span></button>-->
+                                <button type="button" class="small h32 red remove">- <span>삭제</span></button>
                               </div>
                             </div>
                           </div>
@@ -616,7 +624,7 @@
                     </li>
                     <nav class="options">
                       <div class="common-btn option-ctrl">
-                        <button type="button" class="small h32 bl add add-fixed">+ 추가</button>
+                        <button type="button" class="small h32 bl add add-fixed">+ <span>추가</span></button>
                     </nav> <!-- group--incs > options(add button) -->
                   </ul>
                 </div>
@@ -661,13 +669,11 @@
                             개인정보 수집 및 이용 동의를 거부할 권리가 있으나 동의
                             거부 시 참여 접수가 어렵습니다.
                           </li>
-                        </ul>
-                        <p>
-                          <div class="common-checkbox">
-                            <input type="checkbox" name="" id="b1" autocomplete="off"> 
-                            <label for="b1">위 항목에 동의합니다.</label>
-                          </div>
-                        </p>
+                        </ul> <br>
+                        <div class="common-checkbox">
+                          <input type="checkbox" name="" id="b1" autocomplete="off"> 
+                          <label for="b1">위 항목에 동의합니다.</label>
+                        </div>
                       </div>
                     </li>
                     <li class="form-submit">
@@ -747,30 +753,6 @@
 
     <script>
       $(function () {
-        //Date Picker
-        $("#datepicker").datepicker({
-          dateFormat: "yy.mm.dd", //달력 날짜 형태
-        });
-        $("#datepicker").datepicker("setDate", "today");
-        //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
-
-        $("#datepicker2").datepicker({
-          dateFormat: "yy.mm.dd", //달력 날짜 형태
-        });
-        $("#datepicker2").datepicker("setDate", "today");
-        //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
-
-        $("#datepicker3").datepicker({
-          dateFormat: "yy.mm.dd", //달력 날짜 형태
-        });
-        $("#datepicker3").datepicker("setDate", "today");
-        //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
-
-        $("#datepicker4").datepicker({
-          dateFormat: "yy.mm.dd", //달력 날짜 형태
-        });
-        $("#datepicker4").datepicker("setDate", "today");
-        //(-1D:하루전, -1M:한달전, -1Y:일년전), (+1D:하루후, -1M:한달후, -1Y:일년후)
 
         //DB Search Click Event
         //$(".db_search_container dl dd").hide();
@@ -783,34 +765,7 @@
               $(this).parent("dl").children("dt").toggleClass("down");
             });
         });
-
-        //Left SearchBar Click Event
-        $(".left-searchBar dl dt a").click(function () {
-          $(this)
-            .parents("dl")
-            .children("dd")
-            .stop()
-            .slideToggle(function () {
-              $(this).parent("dl").children("dt").toggleClass("down");
-            });
-        });
-
-        //Select Box
-        $(".common-selectBox .main-selectBox > li > a").click(function () {
-          $(this)
-            .parent("li")
-            .children(".sub-selectBox")
-            .stop()
-            .slideToggle(function () {
-              $(this).parent("li").toggleClass("on");
-            });
-        });
-        const subSelectBox = $(".common-selectBox .main-selectBox").height() - 1;
-        $(".common-selectBox .main-selectBox > li .sub-selectBox").css(
-          "top",
-          subSelectBox + "px"
-        );
-        
+       
         /*
          * 초기화 영역
         */
@@ -834,6 +789,11 @@
           // $('.group--incs .add').click();
           $('.group--incs .add.add-fixed').click();
           $('.group--incs .add:not(.add-fixed)').click();
+
+          // DatePicker
+          $('#aaaaa').datepicker({
+            format: 'yyyy-mm-dd'
+          }); 
 
         });
       
