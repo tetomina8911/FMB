@@ -1,5 +1,27 @@
 @charset "UTF-8";
 /*--------------------------------------------------------------
+ * 1100_web_09_01_FMB소개 – 1
+--------------------------------------------------------------*/
+.contents-about {
+  padding: 35px 40px;
+}
+.contents-about .contents {
+  width: 100%;
+}
+.contents-about .contents > p {
+  font-size: 1em;
+}
+.contents-about .contents image {
+  margin-top: 20px;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.contents-about .contents + .contents {
+  margin-top: 100px;
+}
+
+/*--------------------------------------------------------------
  * 1100_web_07_03_01_승인01~03-1 (PC)
 --------------------------------------------------------------*/
 /* 1100_web_07_03_01_승인01~03-1 */
