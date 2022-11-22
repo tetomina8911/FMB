@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 /*--------------------------------------------------------------
  * 1100_web_09_01_FMB소개 – 1
 --------------------------------------------------------------*/
@@ -269,6 +268,9 @@ ul.info-note > li::before {
 .contents-form .form-box .form-ent > p {
   margin-top: 20px;
 }
+.contents-form .form-box .group--incs > li .ent + .ent {
+  margin-top: 8px !important;
+}
 .contents-form .form-box .form-ent--head {
   padding-top: calc((44px - 24px) / 2);
 }
@@ -282,7 +284,11 @@ ul.info-note > li::before {
   /*
    * defined .wrap's
   */
+  /* .wrap-info :: custom type(인력정보) 
+  mobile, pc
+  .wrap-info.type-person {} */
 }
+.contents-form .form-box .form-ent--body .common-btn,
 .contents-form .form-box .form-ent--body .common-selectBox,
 .contents-form .form-box .form-ent--body input[type=text] {
   height: 44px;
@@ -307,9 +313,9 @@ ul.info-note > li::before {
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
-  -ms-flex-direction: nowrap;
-  -webkit-flex-direction: nowrap;
-  flex-direction: nowrap;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-direction: row;
   -moz-box-orient: horizontal;
   -webkit-box-orient: horizontal;
   -moz-box-direction: normal;
@@ -373,10 +379,52 @@ ul.info-note > li::before {
   }
   .contents-form .form-box .form-ent .form-ent--body {
     /* common-btn only display '+'  */
+    /* .wrap-info :: custom type(인력정보) */
   }
   .contents-form .form-box .form-ent .form-ent--body .common-btn button.add span,
   .contents-form .form-box .form-ent .form-ent--body .common-btn button.remove span {
     display: none;
+  }
+  .contents-form .form-box .form-ent .form-ent--body .wrap-info.type-person {
+    display: -ms-flexbox;
+    display: -moz-box;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -moz-box-orient: horizontal;
+    -webkit-box-orient: horizontal;
+    -moz-box-direction: normal;
+    -webkit-box-direction: normal;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -webkit-box-lines: single;
+    -moz-box-lines: single;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -ms-flex-box: justify;
+  }
+  .contents-form .form-box .form-ent .form-ent--body .wrap-info.type-person input[type=text]:nth-of-type(1) {
+    width: 25.694vw;
+  }
+  .contents-form .form-box .form-ent .form-ent--body .wrap-info.type-person input[type=text]:nth-of-type(2) {
+    width: 38.889vw;
+  }
+  .contents-form .form-box .form-ent .form-ent--body .wrap-info.type-person input[type=text]:nth-of-type(3) {
+    margin-top: 2.778vw;
+    width: 42.778vw;
+  }
+  .contents-form .form-box .form-ent .form-ent--body .wrap-info.type-person input[type=text]:nth-of-type(4) {
+    margin-top: 2.778vw;
+    width: 42.778vw;
+  }
+  .contents-form .form-box .form-ent .form-ent--body .wrap-info.type-person .common-btn {
+    width: auto;
   }
 }
 @media screen and (min-width: 721px) {
@@ -458,9 +506,49 @@ ul.info-note > li::before {
     -webkit-box-flex: 0;
     -ms-flex: 1 1 100%;
     flex: 1 1 100%;
+    /*
+    * defined .wrap's
+    */
+    /* .wrap-info :: custom type(인력정보) */
   }
   .contents-form .form-box .form-ent:not(.not-flex) .form-ent--body .common-datePicker {
     max-width: 300px;
+  }
+  .contents-form .form-box .form-ent:not(.not-flex) .form-ent--body .wrap-info.type-person {
+    padding-right: 150px;
+    display: -ms-flexbox;
+    display: -moz-box;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -moz-box-orient: horizontal;
+    -webkit-box-orient: horizontal;
+    -moz-box-direction: normal;
+    -webkit-box-direction: normal;
+    -webkit-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -ms-flex-wrap: none;
+    -webkit-box-lines: multiple;
+    -moz-box-lines: multiple;
+  }
+  .contents-form .form-box .form-ent:not(.not-flex) .form-ent--body .wrap-info.type-person input[type=text] {
+    -webkit-box-flex: 0;
+    -ms-flex: 1 1 100%;
+    flex: 1 1 100%;
+  }
+  .contents-form .form-box .form-ent:not(.not-flex) .form-ent--body .wrap-info.type-person input[type=text]:not(:first-child) {
+    margin-left: 8px;
+  }
+  .contents-form .form-box .form-ent:not(.not-flex) .form-ent--body .wrap-info.type-person .common-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
   }
 }
 
