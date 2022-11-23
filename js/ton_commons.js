@@ -402,53 +402,78 @@ $(document).on("input", "input.tel", function(e){
   // 입력폼 그룹 추가 / 제거
   if ( $('.group--incs').length ) {
 
-    // 파일추가(common-input-file) : (item) 추가
-    $('.group--incs .add').on('click', function() {
-      var list = $(this).closest('.group--incs');
+    // list is 'ul.group--incs' (jQuery Object)
+    // currentItem is 'ul.group--incs > li' (target)
+    function add_group_incs (list, currentItem) {
+      if ( typeof list.length == 'undefined' ) list = $(list);
+      if ( typeof currentItem == 'undefined' || !currentItem ) currentItem = list.children('li').last(); // last <li>(fixed)
+      
+      var count = list.children('li:not(.origin)').length; // current count (ext li.origin)
+      var label = (list.data('label') ? list.data('label') : '') + String((count + 1));
 
-      var count = list.children('li:not(.origin)').length + 1;
-      var label = list.data('label');
-      if ( !label ) label = '';
-      label += "-" + String(count);
+      // clone li.origin
+      var cloneItem = list.children('li.origin').clone(true, true); // copy-deep(event all)
 
-      var target = null;
+      // clear class, append to cloneItem
+      cloneItem.removeClass('origin').addClass(label).insertAfter(currentItem); 
 
-      if ( !this.classList.contains('add-fixed') ) {        
-        target = $(this).closest('li'); // current
-        if ( target.hasClass('form-ent') ) {
-          target = $(this).closest('.form-box-ents'); // current
-          target = target.parent();
-        }
+      // * unbind (clear) common-* elements events 
+      // - select
+      $.each( cloneItem.find('.common-select'), function(i, elem){
+        $(elem).removeClass('bind-done');
+        setCommonSelect(elem);
+      } );
+
+      // - common-datePicker
+      $.each( cloneItem.find('.common-datePicker'), function(i, elem){
+        var input = $(elem).children('input[type=text]');
+        makeDatePicker($(input), new Date());
+        $(input).addClass('hasDatepicker');
+      } );
+      
+    }
+    function remove_group_incs(list, currentItem) {
+      if ( typeof list.length == 'undefined' ) list = $(list);
+      if ( typeof currentItem == 'undefined' || !currentItem ) currentItem = list.children('li').last(); // last <li>(fixed)
+      
+      var count = list.children('li:not(.origin)').length; // current count (ext li.origin)
+
+      if ( count > 0 ) {
+        currentItem.remove();
       }
 
-      if ( !target || target.length == 0 ) target = list.children('li').last();
-      
-      var cloneItem = list.find('li.origin').clone(true, true);
-      cloneItem.removeClass('origin').addClass(label);
+      if ( count <= 1 ) add_group_incs(list, null);
+    }
+    function get_group_incs__item (target) {
+      var currentItem = $(target).closest('li');
+      var count = 1;
+      while( true ) {
+        if ( currentItem.parent().hasClass('group--incs') ) break;
+        currentItem = $(currentItem).parent().closest('li');
+        if ( !currentItem.length ) break;
+      }
+      return currentItem && currentItem.length ? currentItem : null;
+    }
 
-      //cloneItem.appendTo(target);
-      cloneItem.insertAfter(target);
+
+    // 파일추가(common-input-file) : (item) 추가
+    $('.group--incs .add').off().on('click', function() {
+      add_group_incs( $(this).closest('.group--incs'), get_group_incs__item(this));
     });
     // 파일추가(common-input-file) : (item) 제거
-    $('.group--incs .remove').on('click', function() {
-      var list = $(this).closest('.group--incs');
+    $('.group--incs .remove').off().on('click', function() {
+      remove_group_incs( $(this).closest('.group--incs'), get_group_incs__item(this));
+    });
 
-      var count = list.children('li:not(.origin)').length;
-      
-      var target = $(this).closest('li');
-      if ( target.hasClass('form-ent') ) {
-        target = $(this).closest('.form-box-ents'); // current
-        target = target.parent();
-      }
-
-      target.remove(); // remove item
-
-      if ( count <= 1 ) {
-        // init item
-        if ( list.find('li.origin button.add').length )
-          list.find('li.origin button.add').click();
-        else list.find('button.add.add-fixed').click();
-      }
+    $('.add.add--form-box').off().on('click', function() {
+      var wrap = $(this).closest('.foot');
+      var list = $(wrap).prev('.sub-contents').find('.form-box.group--incs');
+      add_group_incs(list, null);
+    });
+    $('.remove.remove--form-box').off().on('click', function() {
+      var wrap = $(this).closest('.foot');
+      var list = $(wrap).prev('.sub-contents').find('.form-box.group--incs');
+      remove_group_incs(list, null);
     });
   }
 
@@ -563,7 +588,8 @@ function setCommonSelect(select) {
   selectBox.append(main);
 
   // init element(css, bind)
-  $(sub).css("top", String($(main).height()) + "px");
+  // $(sub).css("top", String($(main).height()) + "px");
+  $(sub).css("top", String($(selectBox).height()) + "px");
 
   $(holder).off().on('click', function(){
     $(this)
@@ -573,6 +599,7 @@ function setCommonSelect(select) {
     .slideToggle(function () {
       $(this).parent("li").toggleClass("on");
     });
+      
     return false; // cancel href
   });
 
@@ -588,20 +615,21 @@ function setCommonSelect(select) {
     return false;// cancel href
   });
 
-  $(select).on('change', function() {
+  $(select).off().on('change', function() {
     // target == .sub-selectBox > li > a.option
     var val = this.value;
-    
-    var target = $(selectBox).parent().find('.sub-selectBox a:not([href="#' + val + '"]).selected');
+
+    var target = $(selectBox).find('.sub-selectBox a:not([href="#' + val + '"]).selected');
     if ( target.length ) target.removeClass('selected');
 
     target = $(selectBox).find('.sub-selectBox a[href="#' + val + '"]');
     if( target.length  && !target.hasClass('selected')) target.addClass('selected');
-
+    
     holder.href = "#" + val;
-    holder.innerText = val ? val : target.text();
-  });
-
+    // holder.innerText = val ? val : target.text();
+    holder.innerText = target.text();
+    
+  }).change();
 }
 // ~ FMB
 
