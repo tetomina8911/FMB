@@ -527,6 +527,15 @@ input[type="text"] {
   box-sizing: border-box;
 }
 
+.common-btn.two {
+  justify-content: space-between;
+}
+.common-btn.two button {
+  flex: 0 1 49%;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .common-btn button {
   margin: 0 3px;
   font-size: 13px;
@@ -583,6 +592,10 @@ button.h32 {
   height: 32px;
   line-height: 30px;
 }
+button.h38 {
+  height: 38px;
+  line-height: 36px;
+}
 button.h46 {
   height: 46px;
   line-height: 44px;
@@ -598,6 +611,10 @@ button.wh {
 button.wh2 {
   background: #f8f8f8;
   border: 1px solid #646464;
+}
+button.wh3 {
+  background: #fff;
+  border: 1px solid #cecece;
 }
 
 button.bl {
@@ -782,8 +799,8 @@ button.br2 {
 .tagsinput .tag .tag-remove {
   background-color: transparent;
   top: 50%;
-  right: .5rem;
-  width: 1rem; 
+  right: 0.5rem;
+  width: 1rem;
   height: 1rem;
   border: 1px solid #989898;
   transform: translateY(-50%);

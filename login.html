@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="stylesheet" href="./css/resset.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/layout.css" />
+    <link rel="stylesheet" href="./css/contents.css" />
+    <!-- font-family:'Noto Sans KR', sans-serif; -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosanskr.css" />
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <!-- js -->
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/index.js"></script>
+
+    <!-- Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <!-- Datepicker -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+    <title></title>
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- header -->
+      <header id="header">
+        <h1 id="logo">
+          <a href="./index.html"><img src="./images/main/main-logo.svg" alt="" /></a>
+        </h1>
+        <nav id="gnb">
+          <ul>
+            <li><a href="./db_search.html">DB 검색</a></li>
+            <li><a href="./knowledge_data.html">지식자료</a></li>
+            <li><a href="./community.html">커뮤니티</a></li>
+            <li><a href="./trend.html">트랜드</a></li>
+            <li><a href="./product_info.html">제품정보</a></li>
+            <li><a href="./db_approval.html">DB 등록</a></li>
+            <li><a href="./biz_consulting .html">BIZ 상담</a></li>
+            <li><a href="./about.html">FMB 소개</a></li>
+          </ul>
+        </nav>
+        <section id="right-shortCut">
+          <a href="" class="btn_trendNews">트랜드 뉴스 구독</a>
+          <a href="./login.html" class="btn_login">로그인</a>
+          <a href="" class="btn_menu"> <span></span><span></span><span></span> </a>
+        </section>
+      </header>
+      <!-- //header -->
+      <!-- sub body -->
+      <section id="sub-body">
+        <div class="subVisual-container sub-bg02">
+          <div class="subVisual-wrapper">
+            <h3 class="sub-title">진균류 버섯 DB검색</h3>
+            <div class="sub-introText">진균류 버섯에 관련된 각종 논문, 특허, 상품 등 다양한 정보를 검색해 보세요.</div>
+          </div>
+          <div class="subVisual-search">
+            <div class="common-main-search">
+              <div class="tab">
+                <a href="#n" class="current">통합검색</a>
+                <a href="#n">지식자료</a>
+              </div>
+              <div class="main-input_search">
+                <input type="search" placeholder="찾고 싶은 데이터를 입력해 주세요." />
+                <button class="btn_search">검색</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <article id="sub-login-container">
+          <div class="login-wrapper">
+            <!-- 로그인 -->
+            <dl>
+              <dt>진균류 DB플랫폼 로그인</dt>
+              <dd>가입하신 DB플랫폼 아이디와 비밀번호를 입력해 주세요.</dd>
+            </dl>
+            <ul>
+              <li>
+                <label for="">• 아이디를 입력하세요.</label>
+                <input type="text" class="input-type4" />
+              </li>
+              <li>
+                <label for="">• 비밀번호를 입력하세요.</label>
+                <input type="text" class="input-type4" />
+              </li>
+            </ul>
+            <div class="common-btn wide">
+              <button class="h46 br large btn-findID-pop">로그인</button>
+            </div>
+            <div class="common-btn two">
+              <button class="h38 wh3">아이디/비밀번호 찾기</button>
+              <button class="h38 wh3">회원가입</button>
+            </div>
+            <p class="copy">Copyright © JMI All rights reserved</p>
+            <!-- //로그인 -->
+
+            <!-- 아이디찾기 -/->
+            <dl>
+              <dt>아이디 찾기</dt>
+              <dd>이름과 이메일로 아이디를 찾을 수 있습니다.</dd>
+            </dl>
+            <ul>
+              <li>
+                <label for="">• 사용자 이름을 입력해주세요.</label>
+                <input type="text" class="input-type4" />
+              </li>
+              <li>
+                <label for="">• 가입시 입력한 이메일을 입력하세요.</label>
+                <input type="text" class="input-type4" />
+              </li>
+            </ul>
+            <div class="common-btn wide">
+              <button class="h46 br large">아이디 찾기</button>
+            </div>
+            </!-- //아이디찾기 -->
+
+            <!-- 비밀번호찾기 -/->
+            <dl>
+              <dt>아이디 찾기</dt>
+              <dd>이름과 이메일로 아이디를 찾을 수 있습니다.</dd>
+            </dl>
+            <ul>
+              <li>
+                <label for="">• 사용자 아이디을 입력해주세요.</label>
+                <input type="text" class="input-type4" />
+              </li>
+              <li>
+                <label for="">• 사용자 이름을 입력해주세요.</label>
+                <input type="text" class="input-type4" />
+              </li>
+              <li>
+                <label for="">• 가입시 입력한 이메일을 입력하세요.</label>
+                <input type="text" class="input-type4" />
+              </li>
+            </ul>
+            <div class="common-btn wide">
+              <button class="h46 br large">아이디 찾기</button>
+            </div>
+            <!/-- //비밀번호찾기 -->
+          </div>
+        </article>
+      </section>
+      <!-- //sub body -->
+      <!-- family-site -->
+      <section id="family-site">
+        <div class="family-wrapper">
+          <div class="intro_text">진균DB 플랫폼은 <br />파트너와 함께 성장합니다.</div>
+          <div class="FamilyStie-Swiper swiper">
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">site 1</div>
+              <div class="swiper-slide">site 2</div>
+              <div class="swiper-slide">site 3</div>
+              <div class="swiper-slide">site 1</div>
+              <div class="swiper-slide">site 2</div>
+              <div class="swiper-slide">site 3</div>
+              <div class="swiper-slide">site 1</div>
+              <div class="swiper-slide">site 2</div>
+              <div class="swiper-slide">site 3</div>
+              <div class="swiper-slide">site 1</div>
+              <div class="swiper-slide">site 2</div>
+              <div class="swiper-slide">site 3</div>
+            </div>
+          </div>
+          <!-- navigation buttons -->
+          <div class="FamilyStie-button-prev"></div>
+          <div class="FamilyStie-button-next"></div>
+        </div>
+      </section>
+      <!-- //family-site -->
+
+      <!-- footer -->
+      <footer id="footer">
+        <h2><img src="./images/main/footer-logo.svg" alt="" /></h2>
+        <address>전남 장흥군 안양면 우드랜드길 288 ㅣ 061-862-8877</address>
+        <p class="copyright">Copyright © JMI All rights reserved</p>
+        <div class="foot-privacy">
+          <a href="">이용약관</a>
+          <span>|</span>
+          <a href="">개인정보처리방침</a>
+        </div>
+      </footer>
+      <!-- //footer -->
+    </div>
+    <!-- layer PopUp -->
+    <div id="layerPop-container">
+      <div class="layerPop-wrapper findID-wrapper">
+        <div class="pop-title">
+          아이디 찾기
+          <a href="#n" id="btn-layerPop-close"><img src="./images/icon/btn-layerPop-close.png" alt="" /></a>
+        </div>
+        <div>
+          <div class="common-btn wide"><button class="br h46">확인</button></div>
+        </div>
+      </div>
+    </div>
+    <div id="layerPop-bg"></div>
+
+    <!-- + ton_commons.js -->
+    <script type="text/javascript" charset="UTF-8" src="js/ton_commons.js" defer></script>
+
+    <script>
+      $(function () {
+        //leyrPopup - Open
+        $(".btn-findID-pop").click(function () {
+          $("#layerPop-container .findID-wrapper").stop().fadeIn();
+          $("#layerPop-bg").stop().fadeIn();
+        });
+      });
+    </script>
+  </body>
+</html>

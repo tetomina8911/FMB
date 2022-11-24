@@ -1,0 +1,2 @@
+[1122/170009.335:ERROR:registration_protocol_win.cc(106)] CreateFile: 지정된 파일을 찾을 수 없습니다. (0x2)
+[1122/170011.497:ERROR:registration_protocol_win.cc(106)] CreateFile: 지정된 파일을 찾을 수 없습니다. (0x2)
