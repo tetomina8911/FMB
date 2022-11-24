@@ -431,6 +431,10 @@ $(document).on("input", "input.tel", function(e){
         $(input).addClass('hasDatepicker');
       } );
       
+      // # before. add 버튼 비활성화
+      if ( count > 0 && currentItem.length ) {
+        currentItem.find('.common-btn .add').attr('disabled', true);
+      }
     }
     function remove_group_incs(list, currentItem) {
       if ( typeof list.length == 'undefined' ) list = $(list);
@@ -442,7 +446,13 @@ $(document).on("input", "input.tel", function(e){
         currentItem.remove();
       }
 
-      if ( count <= 1 ) add_group_incs(list, null);
+      if ( count <= 1 ) {
+        add_group_incs(list, null);
+      }
+      else {
+        // # last. add 버튼 활성화
+        list.find('li:not(.origin)').last().find('.common-btn .add').attr('disabled', false);
+      }
     }
     function get_group_incs__item (target) {
       var currentItem = $(target).closest('li');
