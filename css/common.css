@@ -111,6 +111,12 @@
 --------------------------------------------------------------*/
 input[type="text"] {
   padding: 0 15px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+input[type="password"] {
+  padding: 0 15px;
+  font-size: 14px;
   box-sizing: border-box;
 }
 .input-type {
