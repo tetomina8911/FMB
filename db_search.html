@@ -444,6 +444,8 @@
         makeDatePicker('#datepicker2', new Date());
 
         //DB Search Click Event
+        $('.db_search_container > dl > dt > a').parents('dl').children('dd').hide();
+        $('.db_search_container > dl > dt').addClass('down');
         $(".db_search_container dl dt").click(function () {
           $(this)
             .parent("dl")

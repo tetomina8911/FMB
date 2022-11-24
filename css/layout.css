@@ -288,6 +288,7 @@
   line-height: 1.5;
   font-size: 19px;
   font-weight: 500;
+  word-break: keep-all;
 }
 
 #family-site .family-wrapper .FamilyStie-Swiper {
@@ -298,6 +299,7 @@
 }
 
 #family-site .family-wrapper .FamilyStie-Swiper .swiper-wrapper {
+  line-height: 57px;
   text-align: center;
 }
 
@@ -336,9 +338,6 @@
   background: #464542;
   border: 1px solid #707070;
   box-sizing: border-box;
-}
-#footer h2 img {
-  max-width: 80%;
 }
 #footer address {
   padding: 12px 0 3px;
@@ -444,6 +443,19 @@
 #layerPop-container .findID-wrapper {
   width: 389px;
   height: 320px;
+}
+#layerPop-container .findID-wrapper .inner {
+  padding: 0 58px;
+}
+#layerPop-container .findID-wrapper .inner .text {
+  line-height: 30px;
+  padding: 41px 0 38px;
+  font-size: 15px;
+  font-weight: 500;
+  text-align: center;
+}
+#layerPop-container .findID-wrapper .inner .text p {
+  font-size: 20px;
 }
 
 /*--------------------------------------------------------------

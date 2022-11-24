@@ -111,6 +111,18 @@ a:active {
   text-decoration: none;
 }
 
+button:link,
+button:visited {
+  color: #000;
+  text-decoration: none;
+}
+button:hover,
+button:focus,
+button:active {
+  color: #000;
+  text-decoration: none;
+}
+
 /*--------------------------------------------------------------
   기타설정
 --------------------------------------------------------------*/

@@ -73,10 +73,14 @@
 .subVisual-container.sub-bg09:after {
   background: url("../images/sub/sub-visual09.png") no-repeat 50% 50%, #171717;
 }
+.subVisual-container.sub-bg15:after {
+  background: url("../images/sub/sub-visual15.png") no-repeat 50% 50%, #171717;
+  background-size: cover;
+}
 
 @keyframes ani-suvVisual {
   100% {
-    transform: translateX(-50%) scale(0.9) skew(0deg, 0deg);
+    transform: translateX(-60%) scale(0.9) skew(0deg, 0deg);
   }
 }
 
@@ -297,7 +301,7 @@
   font-weight: 500;
   color: #555;
   word-break: keep-all;
-  border-top: 1px solid #707070;
+  border-top: 1px solid #ccc;
 }
 .db_search_container dl > dd > .text-wrap p {
   font-size: 16px;
@@ -392,15 +396,15 @@
   box-sizing: border-box;
 }
 .left_resource_container .s-title {
-  padding: 0 0 7px;
+  padding: 0 0 10px;
   font-size: 18px;
   font-weight: 600;
 }
 .left_resource_container .s-title span {
   display: block;
-  font-size: 14px;
-  font-weight: 500;
-  color: #555;
+  font-size: 13px;
+  font-weight: 400;
+  color: #fd7e14;
 }
 .left_resource_container .introduce-agency {
   margin: 0 0 17px;
@@ -437,7 +441,7 @@
   color: #382205;
 }
 .left_resource_container .introduce-agency dl dd {
-  line-height: 23px;
+  line-height: 27px;
   font-size: 14px;
 }
 .left_resource_container .introduce-agency dl dd span {
@@ -446,31 +450,41 @@
 }
 
 .left_resource_container .introduce-text {
-  padding: 0 0 15px;
+  padding: 0 0 17px;
 }
 .left_resource_container .introduce-text dl {
-  margin: 0 0 10px;
+  margin: 0 0 7px 10px;
 }
 .left_resource_container .introduce-text dl dt {
-  padding: 12px 0 7px;
-  font-size: 17px;
+  padding: 0 0 3px;
+  font-size: 16px;
   font-weight: 500;
 }
 .left_resource_container .introduce-text dl dd {
   position: relative;
-  padding: 5px 0;
-  font-size: 15px;
+  line-height: 25px;
+  padding: 0 0 0 10px;
+  font-size: 14px;
   font-weight: 500;
   color: #555;
   word-break: keep-all;
 }
-.left_resource_container .introduce-text.reference dl dd {
-  padding-right: 70px;
+.left_resource_container .introduce-text dl dd::before {
+  position: absolute;
+  left: 0;
+  top: 0px;
+  content: "- ";
+}
+.left_resource_container .introduce-text dl dd.no-hipen::before {
+  content: "";
 }
 .left_resource_container .introduce-text dl dd .btn-viewData {
   position: absolute;
   right: 0;
   top: 0;
+}
+.left_resource_container .introduce-text dl dd a {
+  color: #1642b7;
 }
 .left_resource_container .introduce-text .common-table-wrapper .horizen {
   font-size: 10px;
@@ -607,6 +621,7 @@
   color: #524232;
 }
 .trend-container ul li .content {
+  line-height: 1.6;
   padding: 12px 0 20px;
   font-size: 16px;
   font-weight: 500;
@@ -656,7 +671,7 @@
 }
 .common-gallery-wrapper > ul > li > a .gallery-list .subject {
   padding: 0 0 12px;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
   color: #171717;
 }
@@ -677,8 +692,8 @@
 #sub-login-container {
   position: relative;
   height: 713px;
-  background: url("../images/sub/login-bg.png") no-repeat 50% top, linear-gradient(to left, #231917, #241e20);
-  background-size: contain;
+  background: url("../images/sub/login-bg.png") no-repeat 50% 65%;
+  background-size: auto;
   border-top: 6px solid #000;
 }
 .login-wrapper {
