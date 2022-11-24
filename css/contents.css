@@ -41,46 +41,56 @@
   transform: translateX(-50%) scale(0.85) skew(0deg, -2deg);
   animation: ani-suvVisual 5s 0.4s forwards;
   z-index: 1;
-  background-size: contain;
+  background-size: 1300px auto !important;
+  border: 1px solid red;
 }
 .subVisual-container.sub-bg02 {
   height: 408px;
 }
+.subVisual-container.sub-bg02:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #000 30%, rgba(23, 23, 23, 0.2));
+  z-index: 2;
+}
 .subVisual-container.sub-bg02:after {
-  background: url("../images/sub/sub-visual02.png") no-repeat 50% top, #171717;
+  background: url("../images/sub/sub-visual02.png") no-repeat 77.5% 50%;
 }
 .subVisual-container.sub-bg02_1:after {
-  background: url("../images/sub/sub-visual02.png") no-repeat 50% top, #171717;
+  background: url("../images/sub/sub-visual02.png") no-repeat 77.5% 50%;
 }
 .subVisual-container.sub-bg03:after {
-  background: url("../images/sub/sub-visual03.png") no-repeat 50% 50%, #171717;
+  background: url("../images/sub/sub-visual03.png") no-repeat 77.5% 50%;
 }
 .subVisual-container.sub-bg04:after {
-  background: url("../images/sub/sub-visual04.png") no-repeat 50% 50%, #171717;
+  background: url("../images/sub/sub-visual04.png") no-repeat 77.5% 50%;
 }
 .subVisual-container.sub-bg05:after {
-  background: url("../images/sub/sub-visual05.png") no-repeat 50% 50%, #171717;
+  background: url("../images/sub/sub-visual05.png") no-repeat 77.5% 50%;
 }
 .subVisual-container.sub-bg06:after {
-  background: url("../images/sub/sub-visual06.png") no-repeat 50% 50%, #171717;
+  background: url("../images/sub/sub-visual06.png") no-repeat 77.5% 50%;
 }
 .subVisual-container.sub-bg07:after {
-  background: url("../images/sub/sub-visual07.png") no-repeat 50% 50%, #171717;
+  background: url("../images/sub/sub-visual07.png") no-repeat 77.5% 50%;
 }
 .subVisual-container.sub-bg08:after {
-  background: url("../images/sub/sub-visual08.png") no-repeat 50% 50%, #171717;
+  background: url("../images/sub/sub-visual08.png") no-repeat 77.5% 50%;
 }
 .subVisual-container.sub-bg09:after {
-  background: url("../images/sub/sub-visual09.png") no-repeat 50% 50%, #171717;
+  background: url("../images/sub/sub-visual09.png") no-repeat 77.5% 50%;
 }
-.subVisual-container.sub-bg15:after {
-  background: url("../images/sub/sub-visual15.png") no-repeat 50% 50%, #171717;
-  background-size: cover;
+.subVisual-container.sub-bg10:after {
+  background: url("../images/sub/sub-visual10.png") no-repeat 77.5% 50%;
 }
 
 @keyframes ani-suvVisual {
   100% {
-    transform: translateX(-60%) scale(0.9) skew(0deg, 0deg);
+    transform: translateX(-50%) scale(0.9) skew(0deg, 0deg);
   }
 }
 
@@ -92,7 +102,7 @@
   height: 220px;
   color: #fff;
   text-align: center;
-  background: linear-gradient(to right, #000 50%, rgba(0, 0, 0, 0));
+  background: linear-gradient(to right, #000 50%, rgba(0, 0, 0, 0.1));
   box-sizing: border-box;
   z-index: 2;
 }
