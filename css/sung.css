@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 /*--------------------------------------------------------------
  * 1100_web_09_01_FMB소개 – 1
 --------------------------------------------------------------*/
@@ -638,10 +637,18 @@ ul.info-note > li::before {
   /* form-box (form contents) */
   /* .form-box > .form-ent : form-enters line */
   /* form submit */
+  /*--------------------------------------------------------------
+    반응형 : Mobile 
+    * at-root :: .contents-form
+  --------------------------------------------------------------*/
+  /*--------------------------------------------------------------
+    반응형 : Tablet + PC
+    * at-root :: .contents-form
+  --------------------------------------------------------------*/
 }
 #sub-contents-container .form-register.form-user .sub-contents-wrapper.bg {
   border-top-color: #707070;
-  border-top-width: 2px;
+  border-top-width: 2px !important;
   padding: 0;
 }
 #sub-contents-container .form-register.form-user .form-box .form-ent {
@@ -658,22 +665,36 @@ ul.info-note > li::before {
 #sub-contents-container .form-register.form-user .form-box .form-ent--body {
   padding: 16px 25px 16px 12.5px;
 }
-#sub-contents-container .form-register.form-user .form-box .form-ent--body .wrap > input[type=number],
-#sub-contents-container .form-register.form-user .form-box .form-ent--body .wrap > input[type=text],
-#sub-contents-container .form-register.form-user .form-box .form-ent--body .wrap > input[type=password],
-#sub-contents-container .form-register.form-user .form-box .form-ent--body .wrap > input[type=number],
-#sub-contents-container .form-register.form-user .form-box .form-ent--body .wrap > input[type=text],
-#sub-contents-container .form-register.form-user .form-box .form-ent--body .wrap > input[type=password], #sub-contents-container .form-register.form-user .form-box .form-ent--body > input[type=text], #sub-contents-container .form-register.form-user .form-box .form-ent--body > input[type=number], #sub-contents-container .form-register.form-user .form-box .form-ent--body > input[type=password] {
-  max-width: 50%;
-}
-#sub-contents-container .form-register.form-user .form-box .form-ent--body .common-tel {
-  width: 300px;
-}
 #sub-contents-container .form-register.form-user .form-box .form-ent + .form-ent {
   border-top: 1px solid #d3d3d3;
 }
 #sub-contents-container .form-register.form-user .form-submit.form-submit--external button[type=submit] {
+  padding-left: 0;
+  padding-right: 0;
   width: 505px;
+}
+@media screen and (min-width: 721px) {
+  #sub-contents-container .form-register.form-user {
+    /* .form-box > .form-ent : form-enters line */
+  }
+  #sub-contents-container .form-register.form-user .form-box .form-ent--head {
+    padding: 26px 12.5px 16px 25px;
+    border-right: 1px solid #d3d3d3;
+  }
+  #sub-contents-container .form-register.form-user .form-box .form-ent--body {
+    padding: 16px 25px 16px 12.5px;
+  }
+  #sub-contents-container .form-register.form-user .form-box .form-ent--body .wrap > input[type=number],
+  #sub-contents-container .form-register.form-user .form-box .form-ent--body .wrap > input[type=text],
+  #sub-contents-container .form-register.form-user .form-box .form-ent--body .wrap > input[type=password],
+  #sub-contents-container .form-register.form-user .form-box .form-ent--body .wrap > input[type=number],
+  #sub-contents-container .form-register.form-user .form-box .form-ent--body .wrap > input[type=text],
+  #sub-contents-container .form-register.form-user .form-box .form-ent--body .wrap > input[type=password], #sub-contents-container .form-register.form-user .form-box .form-ent--body > input[type=text], #sub-contents-container .form-register.form-user .form-box .form-ent--body > input[type=number], #sub-contents-container .form-register.form-user .form-box .form-ent--body > input[type=password] {
+    max-width: 50%;
+  }
+  #sub-contents-container .form-register.form-user .form-box .form-ent--body .common-tel {
+    width: 300px;
+  }
 }
 
 /*--------------------------------------------------------------
