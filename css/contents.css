@@ -42,7 +42,7 @@
   animation: ani-suvVisual 5s 0.4s forwards;
   z-index: 1;
   background-size: 1300px auto !important;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 .subVisual-container.sub-bg02 {
   height: 408px;

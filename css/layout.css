@@ -30,6 +30,7 @@
   header
 --------------------------------------------------------------*/
 #header {
+  position: relative;
   display: flex;
   align-items: center;
   max-width: 1100px;
@@ -109,6 +110,52 @@
   height: 2px;
   margin: 3px 0;
   background: #000;
+}
+
+/*--------------------------------------------------------------
+  myMenu
+--------------------------------------------------------------*/
+#myMenu {
+  position: absolute;
+  right: 22px;
+  top: 90%;
+  width: 214px;
+  background: #fff;
+  border: 1px solid #707070;
+  z-index: 3;
+}
+#myMenu .myMenu-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 49px;
+  padding: 0 12px 0 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  background: #464542;
+}
+#myMenu ul li {
+  display: flex;
+  align-items: center;
+  line-height: 46px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #896b48;
+  text-indent: 32px;
+  border-top: 1px solid #ededed;
+}
+#myMenu ul li:first-child {
+  background: url("../images/main/icon-norock.svg") no-repeat 17px 50%;
+}
+#myMenu ul li a {
+  display: block;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 500;
+  text-indent: 17px;
+  background: url("../images/main/btn_next.svg") no-repeat 95% 50%;
+  background-size: 20px auto;
 }
 
 /*--------------------------------------------------------------
