@@ -286,6 +286,7 @@ ul.info-note > li::before {
 .contents-form .form-box .form-ent > p {
   margin-top: 20px;
 }
+.contents-form .form-box .group--incs.incs-single > li:not(.origin) + li,
 .contents-form .form-box .group--incs > li .ent + .ent {
   margin-top: 8px !important;
 }
@@ -589,10 +590,15 @@ ul.info-note > li::before {
   }
 }
 
-/* register form (등록 폼) */
 /* PC -> sub-contents-wrapper 간 margin-top */
 .contents-form .sub-contents-wrapper + .sub-contents-wrapper {
   margin-top: 20px;
+}
+
+/* register form (등록 폼) */
+/* register form (등록폼) : 사용자(user) */
+.contents-form.form-user .sub-contents-wrapper.bg {
+  border-top-color: #f00;
 }
 
 /*--------------------------------------------------------------
