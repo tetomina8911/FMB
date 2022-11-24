@@ -214,6 +214,7 @@ ul.info-note > li::before {
   /* form-box (form contents) */
   /* form-box.group--incs  (+ 디자인 수정(221123)) */
   /* .form-box > .form-ent : form-enters line */
+  /* form submit */
   /* required mark */
   /*--------------------------------------------------------------
     반응형 : Mobile 
@@ -252,8 +253,7 @@ ul.info-note > li::before {
 .contents-form .form-box .group--incs > li,
 .contents-form .form-box .form-box-ents,
 .contents-form .form-box .form-ent,
-.contents-form .form-box .form-ent .ent,
-.contents-form .form-box .form-submit {
+.contents-form .form-box .form-ent .ent {
   position: relative;
   display: block;
   width: 100%;
@@ -311,6 +311,8 @@ ul.info-note > li::before {
 }
 .contents-form .form-box .form-ent--head {
   padding-top: calc((44px - 24px) / 2);
+  font-weight: bold;
+  word-break: keep-all;
 }
 .contents-form .form-box .form-ent--head span.text-head--dot {
   line-height: 24px;
@@ -322,13 +324,12 @@ ul.info-note > li::before {
   /*
    * defined .wrap's
   */
-  /* .wrap-info :: custom type(인력정보) 
-  mobile, pc
-  .wrap-info.type-person {} */
 }
 .contents-form .form-box .form-ent--body .common-btn,
+.contents-form .form-box .form-ent--body .common-btn > button,
 .contents-form .form-box .form-ent--body .common-selectBox,
-.contents-form .form-box .form-ent--body input[type=text] {
+.contents-form .form-box .form-ent--body input[type=text],
+.contents-form .form-box .form-ent--body input[type=password] {
   height: 44px;
 }
 .contents-form .form-box .form-ent--body .common-selectBox {
@@ -339,8 +340,29 @@ ul.info-note > li::before {
 .contents-form .form-box .form-ent--body .common-input-file input[type=text],
 .contents-form .form-box .form-ent--body .common-selectBox,
 .contents-form .form-box .form-ent--body .ent > input[type=number],
-.contents-form .form-box .form-ent--body .ent > input[type=text], .contents-form .form-box .form-ent--body > input[type=text], .contents-form .form-box .form-ent--body > input[type=number] {
+.contents-form .form-box .form-ent--body .ent > input[type=text],
+.contents-form .form-box .form-ent--body .ent > input[type=password], .contents-form .form-box .form-ent--body > input[type=text], .contents-form .form-box .form-ent--body > input[type=number], .contents-form .form-box .form-ent--body > input[type=password] {
   width: 100%;
+}
+.contents-form .form-box .form-ent--body p.note {
+  position: relative;
+  padding-left: 1em;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.contents-form .form-box .form-ent--body p.note::before {
+  content: "!";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #bf0000;
+  font-weight: 500;
+  font-size: inherit;
+  line-height: inherit;
+}
+.contents-form .form-box .form-ent--body p.note:not(:first-child),
+.contents-form .form-box .form-ent--body .common-checkbox:not(:first-child) {
+  margin-top: 8px;
 }
 .contents-form .form-box .form-ent--body .ent {
   width: 100%;
@@ -379,6 +401,21 @@ ul.info-note > li::before {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
+}
+.contents-form .form-submit {
+  position: relative;
+  display: block;
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.contents-form .form-submit.form-submit--external {
+  margin-top: 30px;
+}
+.contents-form .form-submit.form-submit--external .common-btn,
+.contents-form .form-submit.form-submit--external .common-btn button {
+  height: 56px;
 }
 .contents-form .form-subtitle.required::after,
 .contents-form .form-ent.required .form-ent--head > span::after {
@@ -597,8 +634,46 @@ ul.info-note > li::before {
 
 /* register form (등록 폼) */
 /* register form (등록폼) : 사용자(user) */
-.contents-form.form-user .sub-contents-wrapper.bg {
-  border-top-color: #f00;
+#sub-contents-container .form-register.form-user {
+  /* form-box (form contents) */
+  /* .form-box > .form-ent : form-enters line */
+  /* form submit */
+}
+#sub-contents-container .form-register.form-user .sub-contents-wrapper.bg {
+  border-top-color: #707070;
+  border-top-width: 2px;
+  padding: 0;
+}
+#sub-contents-container .form-register.form-user .form-box .form-ent {
+  margin: 0;
+}
+#sub-contents-container .form-register.form-user .form-box .form-ent--head, #sub-contents-container .form-register.form-user .form-box .form-ent--body {
+  padding-bottom: 16px;
+}
+#sub-contents-container .form-register.form-user .form-box .form-ent--head {
+  padding: 26px 12.5px 16px 25px;
+  background-color: #f8f8f8;
+  border-right: 1px solid #d3d3d3;
+}
+#sub-contents-container .form-register.form-user .form-box .form-ent--body {
+  padding: 16px 25px 16px 12.5px;
+}
+#sub-contents-container .form-register.form-user .form-box .form-ent--body .wrap > input[type=number],
+#sub-contents-container .form-register.form-user .form-box .form-ent--body .wrap > input[type=text],
+#sub-contents-container .form-register.form-user .form-box .form-ent--body .wrap > input[type=password],
+#sub-contents-container .form-register.form-user .form-box .form-ent--body .wrap > input[type=number],
+#sub-contents-container .form-register.form-user .form-box .form-ent--body .wrap > input[type=text],
+#sub-contents-container .form-register.form-user .form-box .form-ent--body .wrap > input[type=password], #sub-contents-container .form-register.form-user .form-box .form-ent--body > input[type=text], #sub-contents-container .form-register.form-user .form-box .form-ent--body > input[type=number], #sub-contents-container .form-register.form-user .form-box .form-ent--body > input[type=password] {
+  max-width: 50%;
+}
+#sub-contents-container .form-register.form-user .form-box .form-ent--body .common-tel {
+  width: 300px;
+}
+#sub-contents-container .form-register.form-user .form-box .form-ent + .form-ent {
+  border-top: 1px solid #d3d3d3;
+}
+#sub-contents-container .form-register.form-user .form-submit.form-submit--external button[type=submit] {
+  width: 505px;
 }
 
 /*--------------------------------------------------------------
@@ -676,6 +751,11 @@ ul.info-note > li::before {
 --------------------------------------------------------------*/
 .color--red {
   color: #bf0000;
+}
+
+.common-textarea textarea:not([maxlength]) + span,
+.common-textarea textarea:read-only + span {
+  display: none;
 }
 
 /*--------------------------------------------------------------
@@ -781,16 +861,24 @@ ul.info-note > li::before {
   -webkit-box-pack: justify;
   -moz-box-pack: justify;
   -ms-flex-box: justify;
+  -webkit-align-items: center;
+  align-items: center;
+  -moz-box-align: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
 }
-.common-tel.div-3 input[type=text]:nth-child(1) {
+.common-tel.div-3 input[type=text]:nth-of-type(1) {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 24%;
   flex: 0 0 24%;
 }
-.common-tel.div-3 input[type=text]:nth-child(2), .common-tel.div-3 input[type=text]:nth-child(3) {
+.common-tel.div-3 input[type=text]:nth-of-type(2), .common-tel.div-3 input[type=text]:nth-of-type(3) {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 35%;
   flex: 0 0 35%;
+}
+.common-tel.div-3 span {
+  margin: 0 5px;
 }
 
 /*# sourceMappingURL=sung.css.map */

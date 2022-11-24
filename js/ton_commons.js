@@ -370,7 +370,7 @@ $(document).on("input", "input.tel", function(e){
   var commonTel = document.querySelectorAll('.common-tel.div-3');
   if ( commonTel.length ) {
     $(document).on('input', '.common-tel.div-3 input.tel', function(e) {
-      if ( this.value.length >= this.maxLength ) $(this).next().focus();
+      if ( this.value.length >= this.maxLength ) $(this).nextAll('input').first().focus();
     });
   }
   
@@ -383,7 +383,7 @@ $(document).on("input", "input.tel", function(e){
       // item == .common-textarea
       var textarea = item.querySelector('textarea');
       var score = item.querySelector('span');
-    
+
       if ( !textarea || !textarea.maxLength || !score ) return;
       score.innerText = "0/" + String(textarea.maxLength);
     });
