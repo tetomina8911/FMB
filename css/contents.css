@@ -587,10 +587,74 @@
 }
 
 /*--------------------------------------------------------------
-* 1100_web_04_01_커뮤니티 – 1 (PC) 
+* 1100_web_04_01_커뮤니티  (PC) 
 --------------------------------------------------------------*/
 .community-wrapper .common-board-status {
   margin: 0 0 10px;
+}
+
+/*--------------------------------------------------------------
+* 1100_web_04_01_커뮤니티 – View (PC) 
+--------------------------------------------------------------*/
+.community-view-wrapper {
+  width: 100%;
+}
+.community-view-wrapper .header-wrap {
+  width: 100%;
+  padding: 30px 44px;
+  box-sizing: border-box;
+  background-color: #ded6cf;
+}
+.community-view-wrapper .header-wrap h4 {
+  font-size: 18px;
+  color: #382205;
+  margin: 0 0 7px;
+}
+.community-view-wrapper .header-wrap .info-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #382205;
+}
+.community-view-wrapper .header-wrap .info-wrap p {
+  font-size: 14px;
+}
+.community-view-wrapper .header-wrap .info-wrap ul {
+  display: flex;
+  font-size: 14px;
+}
+.community-view-wrapper .header-wrap .info-wrap ul li {
+  position: relative;
+  margin: 0 20px 0 0;
+}
+.community-view-wrapper .header-wrap .info-wrap ul li:last-child {
+  margin: 0;
+}
+.community-view-wrapper .header-wrap .info-wrap ul li:not(:last-child):after {
+  position: absolute;
+  top: 50%;
+  right: -10px;
+  transform: translateY(-50%);
+  display: block;
+  content: "";
+  width: 1px;
+  height: 13px;
+  background-color: #382205;
+}
+
+.community-view-wrapper .content-detail-wrap .community-main {
+  padding: 45px 45px 35px;
+}
+.community-view-wrapper .content-detail-wrap .community-main h5 {
+  font-size: 25px;
+  color: #000;
+}
+.community-view-wrapper .content-detail-wrap .community-main .text-wrap {
+  padding: 26px 0 34px 0;
+}
+.community-view-wrapper .content-detail-wrap .community-main .text-wrap img {
+  width: 100%;
+  margin: 34px 0;
 }
 
 /*--------------------------------------------------------------
@@ -846,8 +910,8 @@
     position: absolute;
     left: 0;
     top: 0;
-    border: 1px solid red;
     width: 100%;
+    z-index: 2;
   }
   #lnb .mb-progress-bar {
     display: flex;
@@ -857,15 +921,19 @@
     font-size: 3.889vw;
     font-weight: 500;
     color: #fff;
-    background: #2e2e2e;
+    background: url("../images/icon/icon-toggle-up-gr.png") no-repeat 90.417vw 55%, #2e2e2e;
   }
   #lnb .mb-progress-bar img {
     width: 4.444vw;
   }
+  #lnb .mb-progress-bar p {
+    padding: 0 7px;
+  }
 
   #lnb dl {
-    padding: 0 0 40px;
-    background: #fff;
+    padding: 5.556vw 0 9.722vw;
+    background: rgba(65, 65, 65, 0.97);
+    border: none;
   }
   #lnb dl dt {
     line-height: 47px;
@@ -875,18 +943,17 @@
     color: #fff;
     text-align: center;
     background: #524232;
+    display: none;
   }
   #lnb dl dd a {
     display: block;
-    line-height: 38px;
-    padding: 0 24px;
-    font-size: 14px;
-    font-weight: 500;
-    color: #848484;
+    line-height: 12.5vw;
+    padding: 0 7.222vw;
+    font-size: 3.889vw;
+    color: #afafaf;
   }
   #lnb dl dd a.current {
-    font-size: 18px;
-    font-weight: 600;
-    color: #2c2c2c;
+    font-size: 4.167vw;
+    color: #fff;
   }
 }
