@@ -317,7 +317,10 @@
   font-size: 16px;
   line-height: 1.6;
 }
-.link_list li:not(:last-child) {
+.link_list {
+  margin: 0 0 27px;
+}
+.link_list li {
   border-bottom: 1px solid #cccccc;
 }
 .link_list li a {

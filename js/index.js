@@ -45,4 +45,22 @@ $(document).ready(function () {
     $("#layerPop-container .layerPop-wrapper").stop().fadeOut("fast");
     $("#layerPop-bg").stop().fadeOut("fast");
   });
+
+  //MyMenu
+  $(".btn_menu").click(function () {
+    $("#myMenu .myMenu-wrapper").animate(
+      {
+        left: 0,
+      },
+      500
+    );
+  });
+  $(".btn_myMenu-close").click(function () {
+    $("#myMenu .myMenu-wrapper").animate(
+      {
+        left: "100%",
+      },
+      500
+    );
+  });
 });
