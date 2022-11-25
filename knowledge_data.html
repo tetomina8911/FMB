@@ -217,7 +217,12 @@
     <div id="layerPop-bg"></div>
 
     <script>
-      $(function () {});
+      $(function () {
+        $("#lnb .mb-progress-bar").click(function () {
+          $(this).parent().children("dl").slideToggle();
+          $(this).toggleClass("on");
+        });
+      });
     </script>
   </body>
 </html>
