@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- font-family:'Noto Sans KR', sans-serif; -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosanskr.css" />
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <!-- js -->
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/index.js"></script>
+
+    <!-- Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <!-- Datepicker -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="js/bootstrap/bootstrap.min.css" />
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <!-- summernote -->
+    <link rel="stylesheet" href="js/summernote/summernote.min.css" />
+    <script src="js/summernote/summernote.min.js"></script>
+    <script src="js/summernote/lang/summernote-ko-KR.min.js"></script>
+
+    <title></title>
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- header -->
+      <header id="header">
+        <h1 id="logo">
+          <a href="./index.html"><img src="./images/main/main-logo.svg" alt="" /></a>
+        </h1>
+        <nav id="gnb">
+          <ul>
+            <li><a href="./db_search.html">DB 검색</a></li>
+            <li><a href="./knowledge_data.html">지식자료</a></li>
+            <li><a href="./community.html">커뮤니티</a></li>
+            <li><a href="./trend.html">트랜드</a></li>
+            <li><a href="./product_info.html">제품정보</a></li>
+            <li><a href="./db_approval.html">DB 등록</a></li>
+            <li><a href="./biz_consulting .html">BIZ 상담</a></li>
+            <li><a href="./about.html">FMB 소개</a></li>
+          </ul>
+        </nav>
+        <section id="right-shortCut">
+          <a href="" class="btn_trendNews">트랜드 뉴스 구독</a>
+          <a href="./login.html" class="btn_login">로그인</a>
+          <a href="" class="btn_menu"> <span></span><span></span><span></span> </a>
+        </section>
+      </header>
+      <!-- //header -->
+      <!-- sub body -->
+      <section id="sub-body">
+        <div class="subVisual-container">
+          <div class="subVisual-wrapper">
+            <h3 class="sub-title">진균류 버섯 DB검색</h3>
+            <div class="sub-introText">진균류 버섯에 관련된 각종 논문, 특허, 상품 등 다양한 정보를 검색해 보세요.</div>
+          </div>
+          <div class="subVisual-search">
+            <div class="common-main-search">
+              <div class="tab">
+                <a href="#n" class="current">통합검색</a>
+                <a href="#n">지식자료</a>
+              </div>
+              <div class="main-input_search">
+                <input type="search" placeholder="찾고 싶은 데이터를 입력해 주세요." />
+                <button class="btn_search">검색</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <article id="sub-contents-container">
+          <h4 class="sub-contents-title form-title">
+            커뮤니티 글쓰기&nbsp; &nbsp;
+          </h4>
+          <form class="contents-form form-register form-post edit" id="" method="POST" action="">
+          
+            <div class="sub-contents-wrapper bg">
+              <div class="sub-contents">
+                <div class="form-box">
+                  <ul class="form-box-ents">
+                    <li class="form-ent required">
+                      <div class="form-ent--body">
+                        <input type="text" class="input-type4" name="" value="" placeholder="타이틀 입력하세요"> 
+                    </li>
+                    <li class="form-ent required">
+                      <div class="form-ent--body">
+                        <div class="wrap-edit">
+                          <div class="editor"></div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>  <!-- sub-contents-wrapper :: 기업정보  -->
+
+            <div class="form-submit form-submit--external">
+              <div class="common-btn ">
+                <button type="button" class="large2 h46 wh cancel">
+                  취소
+                </button>
+                <button type="submit" class="large large3 h46 br submit">
+                  등록
+                </button>
+              </div>
+            </div> <!-- form-submit :: (external) -->
+
+          </form>
+          <!-- contents-form form-register -->
+
+        </article>
+      </section>
+      <!-- //sub body -->
+      <!-- family-site -->
+      <section id="family-site">
+        <div class="family-wrapper">
+          <div class="intro_text">진균DB 플랫폼은 <br />파트너와 함께 성장합니다.</div>
+          <div class="FamilyStie-Swiper swiper">
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">site 1</div>
+              <div class="swiper-slide">site 2</div>
+              <div class="swiper-slide">site 3</div>
+              <div class="swiper-slide">site 1</div>
+              <div class="swiper-slide">site 2</div>
+              <div class="swiper-slide">site 3</div>
+              <div class="swiper-slide">site 1</div>
+              <div class="swiper-slide">site 2</div>
+              <div class="swiper-slide">site 3</div>
+              <div class="swiper-slide">site 1</div>
+              <div class="swiper-slide">site 2</div>
+              <div class="swiper-slide">site 3</div>
+            </div>
+          </div>
+          <!-- navigation buttons -->
+          <div class="FamilyStie-button-prev"></div>
+          <div class="FamilyStie-button-next"></div>
+        </div>
+      </section>
+      <!-- //family-site -->
+
+      <!-- footer -->
+      <footer id="footer">
+        <h2><img src="./images/main/footer-logo.svg" alt="" /></h2>
+        <address>전남 장흥군 안양면 우드랜드길 288 ㅣ 061-862-8877</address>
+        <p class="copyright">Copyright © JMI All rights reserved</p>
+        <div class="foot-privacy">
+          <a href="">이용약관</a>
+          <span>|</span>
+          <a href="">개인정보처리방침</a>
+        </div>
+      </footer>
+      <!-- //footer -->
+    </div>
+    
+  </div>
+
+    <!-- + custom style  -->
+    <link rel="stylesheet" href="./css/resset.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/layout.css" />
+    <link rel="stylesheet" href="./css/contents.css" />
+    <link rel="stylesheet" href="./css/sung.css" />
+    <!-- + ton_commons.js -->
+    <script type="text/javascript" charset="UTF-8" src="js/ton_commons.js" defer></script>
+
+    <script>
+      $(function () {
+        /*
+         * 초기화 영역
+         */
+        $(document).ready(function () {
+
+          $('.contents-form').on('submit', function() { 
+            console.log('form-submit');
+            return false;             
+          });
+
+          $('button.withdrawal').on('click', function() { 
+            console.log('withdrawal');
+          });
+
+          $('.editor').summernote(summernote_option);
+        });
+      });
+    </script>
+  </body>
+</html>
