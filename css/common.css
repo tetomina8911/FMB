@@ -412,42 +412,40 @@ input[type="password"] {
   width: 100%;
   font-size: 13px;
   color: #555;
+  text-align: center;
   border-spacing: 0;
   border-collapse: collapse;
 }
 
-.common-table-wrapper table.basic th {
+.common-table-wrapper table th {
+  font-weight: 500;
+  color: #000;
   padding: 8px 17px;
   background: #fcfcfc;
   border: 1px solid #ddd;
 }
-.common-table-wrapper table.basic td {
+.common-table-wrapper table td {
   padding: 8px 17px;
   border: 1px solid #ddd;
 }
+.common-table-wrapper table td a {
+  display: block;
+}
+.common-table-wrapper table td.left {
+  text-align: left;
+}
 
 .common-table-wrapper table.vertical tbody th {
+  color: #555;
   text-align: left;
 }
 .common-table-wrapper table.vertical tbody td {
   text-align: right;
 }
 
-.common-table-wrapper table.horizen tbody th {
-  text-align: center;
-}
-.common-table-wrapper table.horizen tbody td {
-  text-align: center;
-}
-
-.common-table-wrapper table.board {
-  font-size: 15px;
-}
 .common-table-wrapper table.board th {
-  padding: 8px 17px;
   font-size: 15px;
   font-weight: 600;
-  color: #000;
   background: #ded6cf;
   border: 1px solid #c9c1b8;
 }
@@ -458,9 +456,6 @@ input[type="password"] {
   color: #4e4e4e;
   background: #fff;
   border: 1px solid #d6d6d6;
-}
-.common-table-wrapper table.board td.left {
-  text-align: left;
 }
 
 /*--------------------------------------------------------------
