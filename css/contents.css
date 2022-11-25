@@ -599,38 +599,39 @@
 .community-view-wrapper {
   width: 100%;
 }
-.community-view-wrapper .header-wrap {
+.community-view-wrapper .board-view-top {
   width: 100%;
   padding: 30px 44px;
   box-sizing: border-box;
   background-color: #ded6cf;
 }
-.community-view-wrapper .header-wrap h4 {
+.community-view-wrapper .board-view-top .subject {
   font-size: 18px;
+  font-weight: 600;
   color: #382205;
   margin: 0 0 7px;
 }
-.community-view-wrapper .header-wrap .info-wrap {
+.community-view-wrapper .board-view-top .view-info {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: 14px;
+  font-weight: 500;
   color: #382205;
 }
-.community-view-wrapper .header-wrap .info-wrap p {
-  font-size: 14px;
-}
-.community-view-wrapper .header-wrap .info-wrap ul {
+.community-view-wrapper .board-view-top .view-info ul {
   display: flex;
+  align-items: center;
   font-size: 14px;
 }
-.community-view-wrapper .header-wrap .info-wrap ul li {
+.community-view-wrapper .board-view-top .view-info ul li {
   position: relative;
   margin: 0 20px 0 0;
 }
-.community-view-wrapper .header-wrap .info-wrap ul li:last-child {
+.community-view-wrapper .board-view-top .view-info ul li:last-child {
   margin: 0;
 }
-.community-view-wrapper .header-wrap .info-wrap ul li:not(:last-child):after {
+.community-view-wrapper .board-view-top .view-info ul li:not(:last-child):after {
   position: absolute;
   top: 50%;
   right: -10px;
@@ -642,21 +643,128 @@
   background-color: #382205;
 }
 
-.community-view-wrapper .content-detail-wrap .community-main {
-  padding: 45px 45px 35px;
+.community-view-wrapper .board-view-middle .view-content {
+  padding: 44px;
 }
-.community-view-wrapper .content-detail-wrap .community-main h5 {
-  font-size: 25px;
-  color: #000;
+.community-view-wrapper .board-view-middle .view-comment .comment-total {
+  padding: 40px 44px 20px;
+  font-size: 15px;
+  font-weight: 500;
+  text-align: right;
 }
-.community-view-wrapper .content-detail-wrap .community-main .text-wrap {
-  padding: 26px 0 34px 0;
+.community-view-wrapper .board-view-middle .view-comment .comment-area {
+  padding: 0 50px;
+  border-top: 1px solid #d3d3d3;
 }
-.community-view-wrapper .content-detail-wrap .community-main .text-wrap img {
-  width: 100%;
-  margin: 34px 0;
+.community-view-wrapper .board-view-middle .view-comment .comment-area > li {
+  position: relative;
+  padding: 40px 0;
+  border-bottom: 1px solid #d3d3d3;
+}
+.community-view-wrapper .board-view-middle .view-comment .comment-area > li > .name {
+  padding: 0 0 20px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.community-view-wrapper .board-view-middle .view-comment .comment-area > li > .name span {
+  font-size: 15px;
+  font-weight: 500;
+  color: #717171;
+}
+.community-view-wrapper .board-view-middle .view-comment .comment-area > li > .content {
+  line-height: 26px;
+  font-size: 15px;
+}
+.community-view-wrapper .board-view-middle .view-comment .comment-area > li > button {
+  position: absolute;
+  right: 0;
+  top: 40px;
+}
+.community-view-wrapper .board-view-middle .view-comment .comment-area > li .recomment-area {
+  padding: 0 0 0 16px;
+}
+.community-view-wrapper .board-view-middle .view-comment .comment-area > li .recomment-area > li {
+  padding: 20px 0 0 20px;
+  background: url("../images/icon/icon-cate-line.png") no-repeat left 20px;
+}
+.community-view-wrapper .board-view-middle .view-comment .comment-area > li .recomment-area > li .name {
+  font-size: 15px;
+  font-weight: 600;
+}
+.community-view-wrapper .board-view-middle .view-comment .comment-area > li .recomment-area > li .name span {
+  font-weight: 500;
+  color: #717171;
 }
 
+.community-view-wrapper .board-view-middle .view-comment .comment-area > li .write-recomment {
+  position: relative;
+  margin: 30px 0 0;
+  padding: 25px 30px;
+  border: 1px solid #ddd;
+}
+.community-view-wrapper .board-view-middle .view-comment .comment-area > li .write-recomment .name {
+  padding: 0 0 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.community-view-wrapper .board-view-middle .view-comment .comment-area > li .write-recomment textarea {
+  border: none;
+  border-bottom: 1px solid #ddd;
+  font-size: 15px;
+  resize: none;
+  outline: 0;
+}
+.community-view-wrapper .board-view-middle .view-comment .comment-area > li .write-recomment .txt-num {
+  position: absolute;
+  right: 30px;
+  top: 25px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #b4b4b4;
+}
+.community-view-wrapper .board-view-middle .view-comment .comment-area > li .write-recomment .common-btn {
+  margin: 15px 0 0;
+  justify-content: flex-end;
+}
+.community-view-wrapper .board-view-middle .view-comment > .common-btn {
+  margin: 30px 0;
+}
+
+.community-view-wrapper .board-view-bottom {
+  position: relative;
+  padding: 35px 44px;
+  background: #ebebeb;
+}
+.community-view-wrapper .board-view-bottom textarea {
+  padding: 24px;
+  font-size: 15px;
+  font-weight: 500;
+  background: #fff;
+  border: 1px solid #b7b7b7;
+  resize: none;
+  outline: 0;
+}
+.community-view-wrapper .board-view-bottom .txt-num {
+  position: absolute;
+  right: 70px;
+  top: 60px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #b4b4b4;
+}
+.community-view-wrapper .board-view-bottom .common-btn {
+  position: absolute;
+  right: 70px;
+  bottom: 55px;
+}
+
+.table-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 980px;
+  margin: 33px auto 0;
+}
 /*--------------------------------------------------------------
 * 1100_web_05_01_트랜드 – 1 (PC) 
 --------------------------------------------------------------*/
@@ -719,7 +827,7 @@
 /*--------------------------------------------------------------
 * 1100_web_06_01_제품정보 – 1 (PC) 
 --------------------------------------------------------------*/
-.product-info-wrap {
+.product-view-info {
   display: block;
   background: #fff;
   border: 1px solid #e5e5e5;
