@@ -76,7 +76,7 @@
           <h4 class="sub-contents-title form-title">
             정보 수정&nbsp; &nbsp;<span>필수(<span class="color--red">*</span>)를 제외한 항복은 선택 등록 가능 합니다.</span>
           </h4>
-          <form class="contents-form form-register form-user" id="" method="POST" action="">
+          <form class="contents-form form-register form-user edit" id="" method="POST" action="">
           
             <div class="sub-contents-wrapper bg">
               <div class="sub-contents">
@@ -195,7 +195,10 @@
             </div>  <!-- sub-contents-wrapper :: 기업정보  -->
 
             <div class="form-submit form-submit--external">
-              <div class="common-btn">
+              <div class="common-btn ">
+                <button type="button" class="large2 h46 wh withdrawal">
+                  회원탈퇴
+                </button>
                 <button type="submit" class="large large3 h46 br submit">
                   내 정보 변경 <!-- ** -->
                 </button>
@@ -277,6 +280,10 @@
           $('.contents-form').on('submit', function() { 
             console.log('form-submit');
             return false;             
+          });
+
+          $('button.withdrawal').on('click', function() { 
+            console.log('withdrawal');
           });
         });
       });
