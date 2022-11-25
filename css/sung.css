@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 /*--------------------------------------------------------------
  * 1100_web_09_01_FMB소개 – 1
 --------------------------------------------------------------*/
@@ -401,6 +402,28 @@ ul.info-note > li::before {
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
 }
+.contents-form .form-box .form-ent--body .wrap-answer {
+  width: 100%;
+}
+.contents-form .form-box .form-ent--body .wrap-answer p.answer {
+  position: relative;
+  display: block;
+  font-size: 12px;
+  line-height: 1.5;
+  word-break: keep-all;
+}
+.contents-form .form-box .form-ent--body .wrap-answer p.answer[data-state=error] {
+  color: #bf0000;
+}
+.contents-form .form-box .form-ent--body .wrap-answer p.answer.answer-asterisk[data-state]:not([data-state=""]) {
+  padding-left: 1em;
+}
+.contents-form .form-box .form-ent--body .wrap-answer p.answer.answer-asterisk[data-state]:not([data-state=""])::before {
+  content: "*";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
 .contents-form .form-submit {
   position: relative;
   display: block;
@@ -453,11 +476,17 @@ ul.info-note > li::before {
   }
   .contents-form .form-box .form-ent .form-ent--body {
     /* common-btn only display '+'  */
+    /*
+     * defined .wrap's
+    */
     /* .wrap-info :: custom type(인력정보) */
   }
   .contents-form .form-box .form-ent .form-ent--body .common-btn button.add span,
   .contents-form .form-box .form-ent .form-ent--body .common-btn button.remove span {
     display: none;
+  }
+  .contents-form .form-box .form-ent .form-ent--body .wrap-answer p.answer {
+    width: 100%;
   }
   .contents-form .form-box .form-ent .form-ent--body .wrap-info.type-person {
     display: -ms-flexbox;
@@ -581,12 +610,42 @@ ul.info-note > li::before {
     -ms-flex: 1 1 100%;
     flex: 1 1 100%;
     /*
-    * defined .wrap's
+     * defined .wrap's
     */
     /* .wrap-info :: custom type(인력정보) */
   }
   .contents-form .form-box .form-ent:not(.not-flex) .form-ent--body .common-datePicker {
     max-width: 300px;
+  }
+  .contents-form .form-box .form-ent:not(.not-flex) .form-ent--body .wrap-answer {
+    display: -ms-flexbox;
+    display: -moz-box;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -moz-box-orient: horizontal;
+    -webkit-box-orient: horizontal;
+    -moz-box-direction: normal;
+    -webkit-box-direction: normal;
+    -webkit-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -ms-flex-wrap: none;
+    -webkit-box-lines: multiple;
+    -moz-box-lines: multiple;
+    -webkit-align-items: center;
+    align-items: center;
+    -moz-box-align: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+  }
+  .contents-form .form-box .form-ent:not(.not-flex) .form-ent--body .wrap-answer p.answer {
+    margin-left: 1em;
+    -webkit-box-flex: 0;
+    -ms-flex: 1 1 100%;
+    flex: 1 1 100%;
   }
   .contents-form .form-box .form-ent:not(.not-flex) .form-ent--body .wrap-info.type-person {
     padding-right: 150px;
@@ -639,11 +698,11 @@ ul.info-note > li::before {
   /* form submit */
   /*--------------------------------------------------------------
     반응형 : Mobile 
-    * at-root :: .contents-form
+    * at-root :: .contents-form (form-user)
   --------------------------------------------------------------*/
   /*--------------------------------------------------------------
     반응형 : Tablet + PC
-    * at-root :: .contents-form
+    * at-root :: .contents-form (form-user)
   --------------------------------------------------------------*/
 }
 #sub-contents-container .form-register.form-user .sub-contents-wrapper.bg {
@@ -664,6 +723,11 @@ ul.info-note > li::before {
 }
 #sub-contents-container .form-register.form-user .form-box .form-ent--body {
   padding: 16px 25px 16px 12.5px;
+  /* .common-toggle */
+}
+#sub-contents-container .form-register.form-user .form-box .form-ent--body .toggle-subscribe input[type=radio] + label {
+  width: 97px;
+  line-height: 44px;
 }
 #sub-contents-container .form-register.form-user .form-box .form-ent + .form-ent {
   border-top: 1px solid #d3d3d3;
@@ -690,7 +754,8 @@ ul.info-note > li::before {
   #sub-contents-container .form-register.form-user .form-box .form-ent--body .wrap > input[type=number],
   #sub-contents-container .form-register.form-user .form-box .form-ent--body .wrap > input[type=text],
   #sub-contents-container .form-register.form-user .form-box .form-ent--body .wrap > input[type=password], #sub-contents-container .form-register.form-user .form-box .form-ent--body > input[type=text], #sub-contents-container .form-register.form-user .form-box .form-ent--body > input[type=number], #sub-contents-container .form-register.form-user .form-box .form-ent--body > input[type=password] {
-    max-width: 50%;
+    max-width: 398px;
+    min-width: 398px;
   }
   #sub-contents-container .form-register.form-user .form-box .form-ent--body .common-tel {
     width: 300px;
@@ -780,61 +845,6 @@ ul.info-note > li::before {
 }
 
 /*--------------------------------------------------------------
- * common-email (이메일)
- - ton_commons.js 스크립트 이벤트 바인드 :: 키 입력 시 .email-avg 에 값 저장
-  <div class="common-email">
-    <input type="text" class="input-type3 email-front" name="" value="" placeholder="">
-    <label>@</label>
-    <input type="text" class="input-type3 email-back" name="" value="" placeholder="">
-    <input type="hidden" class="email-avg" name="email" />
-    <select class="common-select" id="">
-    <option value="" selected>직접입력</option>
-    <option value="gmail.com">gmail.com</option>
-    </select>
-  </div>
---------------------------------------------------------------*/
-.common-email {
-  width: 100%;
-  display: -ms-flexbox;
-  display: -moz-box;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: flex;
-  -ms-flex-direction: row;
-  -webkit-flex-direction: row;
-  flex-direction: row;
-  -moz-box-orient: horizontal;
-  -webkit-box-orient: horizontal;
-  -moz-box-direction: normal;
-  -webkit-box-direction: normal;
-  -webkit-flex-wrap: nowrap;
-  flex-wrap: nowrap;
-  -ms-flex-wrap: none;
-  -webkit-box-lines: multiple;
-  -moz-box-lines: multiple;
-}
-.common-email input[type=text] {
-  -webkit-box-flex: 0;
-  -ms-flex: 1 1 100%;
-  flex: 1 1 100%;
-}
-.common-email label {
-  margin: 0 1rem;
-}
-.common-email .common-selectBox {
-  margin-left: 8px;
-  max-width: 175px;
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 175px;
-  flex: 0 0 175px;
-}
-@media screen and (max-width: 720px) {
-  .common-email .common-selectBox {
-    max-width: 21.944vw;
-  }
-}
-
-/*--------------------------------------------------------------
  * common-select
   + ton_commons.js
   <select class="common-select" id="">
@@ -900,6 +910,63 @@ ul.info-note > li::before {
 }
 .common-tel.div-3 span {
   margin: 0 5px;
+}
+
+/*--------------------------------------------------------------
+ * common-toggle 
+ - example
+  <div class="common-toggle">
+    <input type="radio" id="subscribe-on" name="subscribe" value="on" checked>
+    <label for="subscribe-on">ON</label>
+    <input type="radio" id="subscribe-off" name="subscribe" value="off" >
+    <label for="subscribe-off">OFF</label>
+  </div>
+--------------------------------------------------------------*/
+.common-toggle {
+  margin-bottom: -8px;
+  width: 100%;
+  display: -ms-flexbox;
+  display: -moz-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-direction: row;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -moz-box-orient: horizontal;
+  -webkit-box-orient: horizontal;
+  -moz-box-direction: normal;
+  -webkit-box-direction: normal;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -webkit-box-lines: single;
+  -moz-box-lines: single;
+  text-align: center;
+}
+.common-toggle input[type=radio] {
+  display: none;
+}
+.common-toggle input[type=radio] + label {
+  margin: 0 8px 8px 0;
+  position: relative;
+  display: block;
+  color: #5f5f5f;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #f2f2f2;
+  border: 1px solid #c1c1c1;
+  border-radius: 6px;
+  -o-transition: all 300ms ease;
+  -ms-transition: all 300ms ease;
+  -moz-transition: all 300ms ease;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+.common-toggle input[type=radio]:checked + label {
+  color: #fff;
+  background-color: #486ccc;
+  border-color: #263d79;
 }
 
 /*# sourceMappingURL=sung.css.map */
