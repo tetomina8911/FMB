@@ -1307,19 +1307,205 @@
     margin: 0;
   }
 
+  /* 1100_web_02_02_디비검색 – 1 (PC) */
+  /* 좌측 기관 상세 */
+  .mobile-tab {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #c7770c;
+  }
+  .mobile-tab a {
+    flex: 1 0 50%;
+    line-height: 12.5vw;
+    font-size: 4.167vw;
+    font-weight: 500;
+    color: #382205;
+    text-align: center;
+    background: #f7f7f7;
+    border: 1px solid #e5e5e5;
+  }
+  .mobile-tab a.on {
+    font-weight: 600;
+    background: #f69412;
+    border: 1px solid #c7770c;
+  }
+  .left_resource_container {
+    width: 100%;
+    padding: 6.111vw;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    box-sizing: border-box;
+  }
+  .left_resource_container .s-title {
+    padding: 0 0 2.083vw;
+    font-size: 4.444vw;
+  }
+  .left_resource_container .s-title span {
+    font-size: 20px;
+    color: #fd7e14;
+  }
+  .left_resource_container .introduce-agency {
+    margin: 0 0 25px;
+    border-radius: 0.556vw;
+    border-bottom: 1px solid #707070;
+  }
+  .left_resource_container .introduce-agency .img-area img {
+    width: 100%;
+  }
+  .left_resource_container .introduce-agency .img-area .btn-chat {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    display: block;
+    width: 100%;
+    line-height: 8.056vw;
+    margin: 1.667vw 0 0;
+    padding: 0 0 0 3.472vw;
+    font-size: 3.472vw;
+    text-align: center;
+    background: url("../images/icon/icon-tell.png") no-repeat 33.889vw 50% rgba(0, 0, 0, 0.7);
+    border-radius: 0.556vw;
+  }
+  .left_resource_container .introduce-agency dl {
+    padding: 5.139vw 0 6.25vw;
+    background: none;
+  }
+  .left_resource_container .introduce-agency dl dt {
+    padding: 0 0 3.194vw;
+    font-size: 4.167vw;
+  }
+  .left_resource_container .introduce-agency dl dd {
+    line-height: 6.389vw;
+    font-size: 3.889vw;
+  }
+
+  .left_resource_container .introduce-text {
+    padding: 0 0 6.111vw;
+  }
+  .left_resource_container .introduce-text dl {
+    margin: 0 0 1.944vw 0;
+  }
+  .left_resource_container .introduce-text dl dt {
+    padding: 0 0 0.972vw;
+    font-size: 3.889vw;
+  }
+  .left_resource_container .introduce-text dl dd {
+    line-height: 6.389vw;
+    padding: 0 0 0 10px;
+    font-size: 3.333vw;
+  }
+  .left_resource_container .introduce-text .common-table-wrapper .horizen {
+    font-size: 3.333vw;
+  }
+  .left_resource_container .introduce-text .common-table-wrapper .horizen tr td {
+    padding: 2.361vw 0;
+    font-size: 2.778vw;
+  }
+  .left_resource_container .introduce-text > ul > li {
+    margin: 0 0 2.083vw;
+    font-size: 3.333vw;
+  }
+  .left_resource_container .introduce-text > ul > li p {
+    padding: 1.389vw 0 0;
+  }
+
+  /* 우측 영역 및 탭 */
+  .right_resource_container {
+    display: none;
+    width: 100%;
+    padding: 22px 6.111vw;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    box-sizing: border-box;
+  }
+  .right_resource_container .sub-contents-tab {
+    display: flex;
+    align-items: center;
+    margin: 0 0 20px;
+  }
+  .right_resource_container .sub-contents-tab a {
+    display: block;
+    flex: 1 1 25%;
+    height: 34px;
+    line-height: 30px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #382205;
+    text-align: center;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #f69412;
+    box-sizing: border-box;
+  }
+  .right_resource_container .sub-contents-tab a.current {
+    font-weight: 600;
+    color: #f69412;
+    border: 2px solid #f69412;
+    border-bottom: none;
+  }
+
+  .right_resource_container .db_search_container {
+    padding: 0 0 8.75vw;
+  }
+
+  .common-gallery-wrapper.type2 > ul {
+    padding: 0;
+  }
+  .common-gallery-wrapper.type2 > ul > li > a .gallery-list {
+    line-height: 1.6;
+  }
+  .common-gallery-wrapper.type2 > ul > li > a .gallery-list .subject {
+    padding: 0;
+    color: #382205;
+  }
+  .common-gallery-wrapper.type2 > ul > li > a .gallery-list .name {
+    padding: 0;
+    font-weight: 400;
+    color: #382205;
+  }
+  .common-gallery-wrapper.type2 > ul > li > a .gallery-list .date {
+    font-weight: 400;
+    color: #382205;
+  }
+
   /* 1100_web_03_01_지식자료 – 1 (PC) */
   .knowlege_data_container {
     padding: 14.722vw 0 0;
   }
-
   .knowlege_data_container dl {
     padding: 0 6.111vw;
+    border: none;
   }
   .knowlege_data_container dl dt {
     padding: 6.111vw 0 3.472vw;
   }
   .knowlege_data_container dl dd {
     padding: 16px 0;
+  }
+
+  /* 1100_web_04_01_커뮤니티  (PC)  */
+  .community-wrapper .common-board-status {
+    margin: 0 0 10px;
+  }
+  .community-wrapper .common-board-status .common-selectBox .main-selectBox > li .sub-selectBox {
+    top: 10.972vw;
+  }
+
+  .community-wrapper .common-table-wrapper .board colgroup col:nth-child(1),
+  .community-wrapper .common-table-wrapper .board colgroup col:nth-child(3),
+  .community-wrapper .common-table-wrapper .board colgroup col:nth-child(4) {
+    display: none;
+  }
+  .community-wrapper .common-table-wrapper .board colgroup col:nth-child(5) {
+    width: 20%;
+  }
+
+  .community-wrapper .common-table-wrapper .board tr th:nth-child(1),
+  .community-wrapper .common-table-wrapper .board tr th:nth-child(3),
+  .community-wrapper .common-table-wrapper .board tr th:nth-child(4),
+  .community-wrapper .common-table-wrapper .board tr td:nth-child(1),
+  .community-wrapper .common-table-wrapper .board tr td:nth-child(3),
+  .community-wrapper .common-table-wrapper .board tr td:nth-child(4) {
+    display: none;
   }
 
   /**/

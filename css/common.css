@@ -74,6 +74,7 @@
   border-radius: 4px;
   transform: translateY(-50%);
 }
+
 /*--------------------------------------------------------------
   date형식 검색 범위
 --------------------------------------------------------------*/
@@ -714,7 +715,9 @@ button.br2 {
 }
 
 /*--------------------------------------------------------------
+  --------------------------------------------------------------
   반응형 : MOBilE : 720
+  --------------------------------------------------------------
 --------------------------------------------------------------*/
 @media screen and (max-width: 720px) {
   /* 메인비쥬얼, 서브비쥬얼 내 공통 검색바 */
@@ -749,6 +752,470 @@ button.br2 {
   }
 
   /*--------------------------------------------------------------
+  date형식 검색 범위
+--------------------------------------------------------------*/
+  .common-datePicker {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .common-datePicker input[type="text"] {
+    width: 46%;
+    height: 100%;
+    font-size: 15px;
+    box-sizing: border-box;
+  }
+  .common-datePicker input[type="text"].icon-date {
+    padding-left: 39px;
+    background-image: url("../images/icon/icon-date.png");
+    background-repeat: no-repeat;
+    background-position: 15px 52%;
+    background-size: 15px auto;
+  }
+
+  .common-datePicker.small input[type="text"] {
+    font-size: 12px;
+  }
+  .common-datePicker.small input[type="text"].icon-date {
+    padding-left: 25px;
+    padding-right: 6px;
+    background-position: 6px 52%;
+    background-size: 13px auto;
+  }
+
+  /*--------------------------------------------------------------
+  input : text
+--------------------------------------------------------------*/
+  input[type="text"] {
+    padding: 0 15px;
+    font-size: 14px;
+    box-sizing: border-box;
+  }
+  input[type="password"] {
+    padding: 0 15px;
+    font-size: 14px;
+    box-sizing: border-box;
+  }
+  .input-type {
+    padding: 0 15px;
+    background: #fff;
+    border: 1px solid #d3d3d3;
+    border-radius: 4px;
+  }
+  .input-type2 {
+    background: #fff;
+    border: 1px solid #d6d6d6;
+    border-radius: 4px;
+  }
+  .input-type3 {
+    background: #fff;
+    border: 1px solid #8e8e8e;
+    border-radius: 6px;
+  }
+  .input-type4 {
+    background: #fcfcfc;
+    border: 1px solid #8e8e8e;
+    border-radius: 6px;
+  }
+  .input-type5 {
+    background: #fcfcfc;
+    border: 1px solid #d6d6d6;
+    border-radius: 4px;
+  }
+
+  /*--------------------------------------------------------------
+  input : checkbox
+--------------------------------------------------------------*/
+  .common-checkbox input[type="checkbox"] {
+    width: 22px;
+    height: 22px;
+    background: url("../images/icon/icon-check.png") no-repeat left 60%;
+    background-size: contain;
+    appearance: none;
+    vertical-align: middle;
+  }
+  .common-checkbox input[type="checkbox"]:checked {
+    background: url("../images/icon/icon-checked.png") no-repeat left 60%;
+    background-size: contain;
+  }
+  .common-checkbox label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+  }
+
+  .common-checkbox.small input[type="checkbox"] {
+    width: 14px;
+    height: 19px;
+  }
+  .common-checkbox.small label {
+    font-size: 13px;
+  }
+
+  .common-checkbox.sub {
+    margin: 0 0 0 21px;
+    padding: 0 0 0 16px;
+    background: url("../images/icon/icon-cate-line.png") no-repeat left 50%;
+  }
+
+  /*--------------------------------------------------------------
+  input : file
+--------------------------------------------------------------*/
+  .common-input-file {
+    position: relative;
+    background: #fcfcfc;
+    border: 1px solid #8e8e8e;
+    border-radius: 6px;
+  }
+  .common-input-file .upload-name {
+    display: inline-block;
+    height: 32px;
+    line-height: 32px;
+    padding: 6px 0 6px 16px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .common-input-file label {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    display: inline-block;
+    height: 32px;
+    line-height: 30px;
+    padding: 0 15px;
+    font-size: 15px;
+    font-weight: 500;
+    background: #f4f4f4;
+    border: 1px solid #cecece;
+    border-radius: 4px;
+    transform: translateY(-50%);
+  }
+  .common-input-file input[type="file"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    border: 0;
+  }
+
+  /*--------------------------------------------------------------
+  input : serach
+--------------------------------------------------------------*/
+  .common-sub-search {
+    position: relative;
+  }
+  .common-sub-search.br {
+    padding: 20px 22px;
+    background: #ded6cf;
+  }
+  .common-sub-search input[type="search"] {
+    width: 100%;
+    height: 44px;
+    padding: 19px 17px;
+  }
+  .common-sub-search .btn {
+    position: absolute;
+    right: 28px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  /*--------------------------------------------------------------
+  input : address : 주소검색
+--------------------------------------------------------------*/
+  .common-adress {
+    position: relative;
+    width: 100%;
+  }
+  .common-adress input[type="text"] {
+    width: 100%;
+    height: 45px;
+    box-sizing: border-box;
+  }
+  .common-adress .default-area {
+    margin: 0 0 7px;
+  }
+  .common-adress .default-area .btn-find-address {
+    position: absolute;
+    right: 7px;
+    top: 7px;
+  }
+
+  /*--------------------------------------------------------------
+  Select Box
+--------------------------------------------------------------*/
+  .common-selectBox {
+    height: 100%;
+  }
+  .common-selectBox .main-selectBox {
+    height: 100%;
+  }
+  .common-selectBox .main-selectBox > li {
+    position: relative;
+    height: 100%;
+  }
+  .common-selectBox .main-selectBox > li > a {
+    display: block;
+    height: 100%;
+    padding: 0 16px;
+    font-size: 14px;
+    font-weight: 500;
+    background: url("../images/icon/icon-toggle-down-gr.png") no-repeat 98% 50%, #fcfcfc;
+    border: 1px solid #8e8e8e;
+    border-radius: 6px;
+    box-sizing: border-box;
+  }
+
+  .common-selectBox .main-selectBox > li > a.placeholder {
+    color: #b7b7b7;
+  }
+  .common-selectBox .main-selectBox > li.on > a {
+    background: url("../images/icon/icon-toggle-up-gr.png") no-repeat 98% 50%, #fcfcfc;
+    border-radius: 6px 6px 0 0;
+  }
+  .common-selectBox .main-selectBox > li .sub-selectBox {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+    width: 100%;
+    padding: 7px 0;
+    background: #fcfcfc;
+    border: 1px solid #8e8e8e;
+    border-radius: 0 0 6px 6px;
+    box-sizing: border-box;
+    z-index: 3;
+  }
+  .common-selectBox .main-selectBox > li .sub-selectBox li a {
+    display: block;
+    line-height: 2;
+    padding: 0 16px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .common-selectBox .main-selectBox > li .sub-selectBox li:hover a {
+    background: #d6d6d6;
+  }
+
+  /*--------------------------------------------------------------
+  Textarea
+--------------------------------------------------------------*/
+  .common-textarea {
+    position: relative;
+    padding: 10px 18px;
+    background-color: #fcfcfc;
+    border: 1px solid #8e8e8e;
+    border-radius: 6px;
+  }
+  .common-textarea textarea {
+    width: 100%;
+    height: 100%;
+    background: none;
+    border: none;
+    resize: none;
+    outline: 0;
+    overflow: hidden;
+  }
+  .common-textarea span {
+    position: absolute;
+    right: 18px;
+    bottom: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #b7b7b7;
+    z-index: 2;
+  }
+
+  /* Table : status */
+  .common-board-status {
+    flex-wrap: wrap;
+    height: 34.167vw;
+    background: #f5f5f5;
+  }
+  .common-board-status > div {
+    margin: 0;
+  }
+  .common-board-status .common-selectBox {
+    width: 34.861vw;
+    height: 10.972vw;
+  }
+  .common-board-status .common-selectBox .main-selectBox > li > a {
+    line-height: 10.694vw;
+    border-color: #f5f5f5;
+    background-color: #f5f5f5;
+    background-position: 80% 50%;
+  }
+  .common-board-status .common-selectBox .main-selectBox > li.on > a {
+    background-position: 80% 50%;
+  }
+  .common-board-status .common-selectBox .main-selectBox li .sub-selectBox {
+    border-color: #d6d6d6;
+  }
+  .common-board-status .common-sub-search .input-type5 {
+    width: 59.028vw;
+  }
+  .common-board-status .common-sub-search .btn {
+    right: 1.389vw;
+  }
+  .common-board-status .short-area {
+    justify-content: flex-start;
+    padding: 0 6.111vw;
+    font-size: 3.611vw;
+  }
+  .common-board-status .short-area a {
+    font-size: 3.611vw;
+  }
+  .common-board-status .short-area span {
+    margin: 0 1.389vw;
+  }
+
+  /*--------------------------------------------------------------
+  Table : Basic, Vertical, Horizen, Board
+--------------------------------------------------------------*/
+  .common-table-wrapper table {
+    width: 100%;
+    font-size: 13px;
+    color: #555;
+    text-align: center;
+    border-spacing: 0;
+    border-collapse: collapse;
+  }
+
+  .common-table-wrapper table th {
+    font-weight: 500;
+    color: #000;
+    padding: 8px 17px;
+    background: #fcfcfc;
+    border: 1px solid #ddd;
+  }
+  .common-table-wrapper table td {
+    padding: 8px 17px;
+    border: 1px solid #ddd;
+  }
+  .common-table-wrapper table td a {
+    display: block;
+  }
+  .common-table-wrapper table td.left {
+    text-align: left;
+  }
+
+  .common-table-wrapper table.vertical tbody th {
+    color: #555;
+    text-align: left;
+  }
+  .common-table-wrapper table.vertical tbody td {
+    text-align: right;
+  }
+
+  .common-table-wrapper table.board th {
+    font-size: 15px;
+    font-weight: 600;
+    background: #ded6cf;
+    border: 1px solid #c9c1b8;
+  }
+  .common-table-wrapper table.board td {
+    padding: 8px 17px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #4e4e4e;
+    background: #fff;
+    border: 1px solid #d6d6d6;
+  }
+
+  /*--------------------------------------------------------------
+  Board : Paging
+--------------------------------------------------------------*/
+  .common-paging {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 34px 0 0;
+  }
+  .common-paging a {
+    display: block;
+    width: 32px;
+    line-height: 30px;
+    margin: 0 8px;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #cecece;
+    border-radius: 4px;
+  }
+  .common-paging a.on {
+    color: #fff;
+    background: #5f5f5f;
+    border: 1px solid #4a4a4a;
+  }
+
+  /* Button */
+  .common-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .common-btn.wide button {
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  .common-btn.two {
+    justify-content: space-between;
+  }
+  .common-btn.two button {
+    flex: 0 1 49%;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  .common-btn button {
+    margin: 0 3px;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 4px;
+  }
+
+  button.btn {
+    margin: 0 3px;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 4px;
+  }
+
+  /*--------------------------------------------------------------
+  button : 가로 사이즈
+--------------------------------------------------------------*/
+  button.large {
+    padding: 0 120px;
+    font-size: 15px;
+  }
+  button.large2 {
+    padding: 0 40px;
+  }
+  button.large3 {
+    padding: 0 195px;
+  }
+  button.medium {
+    padding: 0 30px;
+  }
+  button.small {
+    padding: 0 15px;
+  }
+  button.small2 {
+    padding: 0 15px;
+    font-size: 15px;
+  }
+  button.small3 {
+    padding: 0 7px;
+  }
+
+  /*--------------------------------------------------------------
   button : 세로 사이즈
 --------------------------------------------------------------*/
   button.h26 {
@@ -774,5 +1241,84 @@ button.br2 {
   button.h58 {
     height: 8.056vw;
     line-height: 7.778vw;
+  }
+
+  /*--------------------------------------------------------------
+ * keywords
+ 
+ - 다른 엘리멘트 간 margin / padding 조절을 위해 common-keyword 등으로 묶어 사용
+ example.
+ <div class="common-keyword">
+  <input type="text" class="input-type3 keywords" name="keywords" value="" placeholder="">
+ </div>
+
+ - jQuery Bind
+ $('.keywords').tagsInput({
+  placeholder: "검색에 노출될 키워드를 작성 후 엔터키로 등록하세요. (최대 10개)",
+  unique: true,
+  limit: 10,
+  delimiter: ',',
+  maxChars: _INT_,
+  removeWithBackspace: true,
+  trimValue: true,
+  onChange: function() {
+    console.log(this.value);
+  }
+}); 
+--------------------------------------------------------------*/
+  .tagsinput {
+    border-color: #8e8e8e;
+    border-radius: 6px;
+  }
+  .tagsinput .tag {
+    background-color: transparent;
+    border-radius: 1em;
+    -o-transition: background-color 150ms ease;
+    -ms-transition: background-color 150ms ease;
+    -moz-transition: background-color 150ms ease;
+    -webkit-transition: background-color 150ms ease;
+    transition: background-color 150ms ease;
+    cursor: pointer;
+  }
+  .tagsinput .tag .tag-remove {
+    background-color: transparent;
+    top: 50%;
+    right: 0.5rem;
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid #989898;
+    transform: translateY(-50%);
+    line-height: 1rem;
+  }
+  .tagsinput .tag .tag-remove:after,
+  .tagsinput .tag .tag-remove:before {
+    background-color: #989898;
+    top: 6px;
+    left: 2px;
+  }
+  .tagsinput .tag .tag-text {
+    padding: 0;
+    color: #000;
+    font-size: 14px;
+    -o-transition: color 150ms ease;
+    -ms-transition: color 150ms ease;
+    -moz-transition: color 150ms ease;
+    -webkit-transition: color 150ms ease;
+    transition: color 150ms ease;
+  }
+  @media (hover: hover), (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    /*.tagsinput:hover .tag:hover {
+    background-color: rgba(237, 237, 237, 0.5);
+  }
+  .tagsinput:hover .tag:hover .tag-text {
+    color: #000;
+  }*/
+    .tagsinput .tag .tag-remove:hover {
+      background-color: #bf0000;
+    }
+    .tagsinput .tag .tag-remove:hover:after,
+    .tagsinput .tag .tag-remove:hover:before {
+      background-color: #fff;
+    }
   }
 }

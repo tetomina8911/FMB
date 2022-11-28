@@ -193,7 +193,18 @@
     <script type="text/javascript" charset="UTF-8" src="js/ton_commons.js" defer></script>
 
     <script>
-      $(function () {});
+      $(function () {        
+        //Select Box
+        $('.common-selectBox .main-selectBox > li > a').click(function() {
+          $(this).parent('li').children('.sub-selectBox').stop().slideToggle(function () {
+            $(this).parent('li').toggleClass('on')
+          });
+        });
+        const subSelectBox = $('.common-board-status .common-selectBox .main-selectBox > li > a').height() - 1;
+        $('.common-selectBox .main-seletcBox > li .sub-selectBox').css('top', subSelectBox + 'px');
+        console.log(subSelectBox);
+
+      });
     </script>
   </body>
 </html>

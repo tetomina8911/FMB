@@ -65,8 +65,8 @@
         <article id="sub-contents-container">
           <h4 class="sub-contents-title">자원 상세보기</h4>
           <div class="sub-contents-wrapper">
-            <div class="mb-only mobile-table">
-              <a href="#n" class="">자원 상세보기</a>
+            <div class="mb-only mobile-tab">
+              <a href="#n" class="on">자원 상세보기</a>
               <a href="#n" class="">정보</a>
             </div>
             <div class="left_resource_container">
@@ -445,6 +445,13 @@
         $(".right_resource_container .sub-contents-tab a").click(function () {
           $(".right_resource_container .sub-contents-tab a").removeClass("current");
           $(this).addClass("current");
+        });
+
+        $(".mobile-tab a").click(function () {
+          $(".mobile-tab a").removeClass("on");
+          $(this).addClass("on");
+          $(".left_resource_container").toggle();
+          $(".right_resource_container").toggle();
         });
       });
     </script>
