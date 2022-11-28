@@ -150,16 +150,7 @@
                         <span class="text-head--dot">담당자 이메일</span>
                       </div>
                       <div class="form-ent--body">
-                        <div class="common-email">
-                          <input type="text" class="input-type3 email-front" name="" value="" placeholder="">
-                          <label>@</label>
-                          <input type="text" class="input-type3 email-back" name="" value="" placeholder="">
-                          <select class="common-select" id="">
-                            <option value="" selected>직접입력</option>
-                            <option value="gmail.com">gmail.com</option>
-                          </select>
-                          <input type="hidden" class="email-avg" name="email" />
-                        </div>
+                        <input type="text" class="input-type3 email" name="email" value="" placeholder="">
                       </div>
                     </li>
                     <li class="form-ent required">
@@ -469,7 +460,7 @@
         $(document).ready(function () {
           // 1. 분야선택 
           $('select[name="department"]').on('change', function() {
-            var val = this.val;
+            var val = this.value;
             var linkto = "";
 
             if ( val == "제조/유통사" ) linkto = "./regist_company.html";
