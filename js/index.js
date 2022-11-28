@@ -34,16 +34,19 @@ $(document).ready(function () {
   $(".btn_trendNews").click(function () {
     $("#layerPop-container .trendNews-wrapper").stop().fadeIn();
     $("#layerPop-bg").stop().fadeIn();
+    $("html, body").addClass("hidden");
   });
   //leyrPopup - Close
   $("#btn-layerPop-close").click(function () {
     $("#layerPop-container .layerPop-wrapper").stop().fadeOut("fast");
     $("#layerPop-bg").stop().fadeOut("fast");
+    $("html, body").removeClass("hidden");
   });
   //leyrPopup - Close
   $("#layerPop-bg").click(function () {
     $("#layerPop-container .layerPop-wrapper").stop().fadeOut("fast");
     $("#layerPop-bg").stop().fadeOut("fast");
+    $("html, body").removeClass("hidden");
   });
 
   //MyMenu

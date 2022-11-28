@@ -206,8 +206,10 @@
 * 1100_web_02_01_디비검색 – 1 (PC) 
 --------------------------------------------------------------*/
 /* 좌측 : 키워드 검색 바 */
-.left-searchBar {
+.left-searchBar-container {
   flex: 0 1 264px;
+}
+.left-searchBar {
   padding: 16px 0;
   background: #fff;
   border: 1px solid #c1c1c1;
@@ -278,6 +280,9 @@
 /* 우측 : DB 검색 컨텐츠 */
 .db_search_container {
   width: 697px;
+}
+.db_search_container .mb_db_search_top {
+  display: none;
 }
 .db_search_container > dl {
   margin: 0 0 4px;
@@ -930,6 +935,10 @@
   font-weight: 500;
   text-align: center;
 }
+
+.mb-only {
+  display: none;
+}
 /*--------------------------------------------------------------
   반응형 : MOBilE : 720
 --------------------------------------------------------------*/
@@ -1074,14 +1083,61 @@
 
   /* 1100_web_02_01_디비검색 – 1 (PC) */
   /* 좌측 : 키워드 검색 바 */
-  .left-searchBar {
+
+  .left-searchBar-container {
     position: fixed;
     left: 6.111vw;
     top: 23.472vw;
     display: none;
     width: 87.778vw;
-    padding: 4.167vw 0;
-    z-index: 3;
+    padding: 10.139vw 0 22.361vw;
+    z-index: 11;
+  }
+  .left-searchBar-container .btnClose_left_searchBar {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    padding-left: 4.583vw;
+    font-size: 4.167vw;
+    font-weight: 500;
+    color: #fff;
+    z-index: 11;
+    background: url("../images/icon/btnClose_left_searchBar.png") no-repeat left 50%;
+    background-size: 3.75vw auto;
+  }
+  .left-searchBar-container .btnClose_left_searchBar:link,
+  .left-searchBar-container .btnClose_left_searchBar:visited {
+    color: #fff;
+  }
+
+  .left-searchBar-container .btn_Complete {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 22.361vw;
+    padding: 4.861vw 3.056vw;
+    background: #fff;
+    box-sizing: border-box;
+    z-index: 11;
+  }
+  .left-searchBar-container .btn_Complete p {
+    width: 81.806vw;
+    line-height: 12.639vw;
+    font-size: 4.167vw;
+    font-weight: 600;
+    color: #000;
+    text-align: center;
+    background: #f69412;
+    border: 1px solid #965b0c;
+    border-radius: 0.556vw;
+  }
+
+  .left-searchBar {
+    height: 116vw;
+    overflow-y: auto;
   }
   .left-searchBar dl {
     padding: 3.472vw 6.111vw;
@@ -1135,8 +1191,19 @@
   /* 우측 : DB 검색 컨텐츠 */
   .db_search_container {
     width: 100%;
-    padding: 16.389vw 6.111vw 8.75vw;
+    padding: 5.972vw 6.111vw 8.75vw;
     box-sizing: border-box;
+  }
+  .db_search_container .mb_db_search_top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 2.361vw;
+  }
+  .db_search_container .mb_db_search_top p {
+    font-size: 4.444vw;
+    font-weight: 600;
+    color: #382205;
   }
   .db_search_container > dl {
     margin: 0 0 1.25vw;

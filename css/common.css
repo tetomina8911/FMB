@@ -577,6 +577,10 @@ button.h46 {
   height: 46px;
   line-height: 44px;
 }
+button.h58 {
+  height: 58px;
+  line-height: 56px;
+}
 
 /*--------------------------------------------------------------
   button : Color
@@ -612,6 +616,11 @@ button.gr2 {
   color: #fff;
   background: #464542;
   border: 1px solid #363636;
+}
+button.gr3 {
+  color: #fff;
+  background: #393939;
+  border: 1px solid #393939;
 }
 
 button.br {
@@ -737,5 +746,33 @@ button.br2 {
     height: 8.472vw;
     font-size: 3.611vw;
     border-radius: 0.833vw;
+  }
+
+  /*--------------------------------------------------------------
+  button : 세로 사이즈
+--------------------------------------------------------------*/
+  button.h26 {
+    height: 26px;
+    line-height: 24px;
+  }
+  button.h30 {
+    height: 30px;
+    line-height: 28px;
+  }
+  button.h32 {
+    height: 32px;
+    line-height: 30px;
+  }
+  button.h38 {
+    height: 38px;
+    line-height: 36px;
+  }
+  button.h46 {
+    height: 46px;
+    line-height: 44px;
+  }
+  button.h58 {
+    height: 8.056vw;
+    line-height: 7.778vw;
   }
 }
