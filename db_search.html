@@ -486,6 +486,11 @@
           $('#layerPop-bg').stop().fadeIn();
           $('html, body').addClass('hidden');
         });
+        $('.btnClose_left_searchBar').click(function() {
+          $('.left-searchBar-container').stop().fadeOut();
+          $('#layerPop-bg').stop().fadeOut();
+          $('html, body').removeClass('hidden');
+        });
       });
     </script>
   </body>
