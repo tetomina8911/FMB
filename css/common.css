@@ -1251,7 +1251,7 @@ button.br2 {
   button.h46 {
     /* height: 92px; */
     height: 12.778vw;
-    line-height: 90px;
+    line-height: 12.778vw; /* 90px */
   }
   button.h58 {
     height: 8.056vw;
