@@ -69,13 +69,15 @@
                 <span>></span>
                 <p>부처보도자료</p>
               </div>
-              <dl>
-                <dt>자료검색</dt>
-                <dd><a href="#n" class="current">• 논문</a></dd>
-                <dd><a href="#n">• 특허</a></dd>
-                <dd><a href="#n">• 기술자료</a></dd>
-                <dd><a href="#n">• 기타 (연구원 등록자료)</a></dd>
-              </dl>
+              <div class="mb-lnb-bg">
+                <dl>
+                  <dt>자료검색</dt>
+                  <dd><a href="#n" class="current">• 논문</a></dd>
+                  <dd><a href="#n">• 특허</a></dd>
+                  <dd><a href="#n">• 기술자료</a></dd>
+                  <dd><a href="#n">• 기타 (연구원 등록자료)</a></dd>
+                </dl>
+              </div>
             </div>
 
             <div class="sub-right-contents">
@@ -220,7 +222,7 @@
       $(function () {
         //lnb progress bar Click Event
         $("#lnb .mb-progress-bar").click(function () {
-          $(this).parent().children("dl").slideToggle();
+          $(this).parent().children(".mb-lnb-bg").slideToggle();
           $(this).toggleClass("on");
         });
       });
