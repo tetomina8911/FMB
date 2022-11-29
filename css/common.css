@@ -574,10 +574,20 @@ button.small2 {
 button.small3 {
   padding: 0 7px;
 }
+button.small4 {
+  width: 16px;
+}
+button > img {
+  width: 100%;
+}
 
 /*--------------------------------------------------------------
   button : 세로 사이즈
 --------------------------------------------------------------*/
+button.h16 {
+  height: 16px;
+  line-height: 14px;
+}
 button.h26 {
   height: 26px;
   line-height: 24px;
@@ -1176,27 +1186,6 @@ button.br2 {
   /*--------------------------------------------------------------
     button 
   --------------------------------------------------------------*/
-  .common-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .common-btn.wide button {
-    width: 100%;
-    margin: 0;
-    box-sizing: border-box;
-  }
-
-  .common-btn.two {
-    justify-content: space-between;
-  }
-  .common-btn.two button {
-    flex: 0 1 49%;
-    margin: 0;
-    box-sizing: border-box;
-  }
-
   .common-btn button {
     margin: 0 0.972vw;
     font-size: 3.333vw;
@@ -1205,9 +1194,8 @@ button.br2 {
 
   button.btn {
     margin: 0 3px;
-    font-size: 13px;
-    font-weight: 500;
-    border-radius: 4px;
+    font-size: 3.333vw;
+    border-radius: 0.556vw;
   }
 
   /*--------------------------------------------------------------
@@ -1215,7 +1203,7 @@ button.br2 {
 --------------------------------------------------------------*/
   button.large {
     padding: 0 120px;
-    font-size: 15px;
+    font-size: 3.611vw;
   }
   button.large2 {
     padding: 0 40px;
@@ -1230,8 +1218,8 @@ button.br2 {
     padding: 0 1.389vw;
   }
   button.small2 {
-    padding: 0 15px;
-    font-size: 15px;
+    padding: 0 2.083vw;
+    font-size: 3.611vw;
   }
   button.small3 {
     padding: 0 7px;
@@ -1241,12 +1229,12 @@ button.br2 {
   button : 세로 사이즈
 --------------------------------------------------------------*/
   button.h26 {
-    /* height: 52px */
+    /* height: 5px */
     height: 7.222vw;
     line-height: 6.944vw;
   }
   button.h30 {
-    /* height: 60px */
+    /* height: 54px */
     height: 7.778vw;
     line-height: 7.5vw;
   }

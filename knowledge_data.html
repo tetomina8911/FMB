@@ -61,7 +61,7 @@
           </div>
         </div>
         <article id="sub-contents-container">
-          <div class="sub-contents-wrapper">
+          <div class="sub-contents-wrapper hasLnb">
             <div id="lnb">
               <div class="mb-progress-bar">
                 <img src="./images/mobile/icon-progress-bar.png" alt="" />
@@ -218,6 +218,7 @@
 
     <script>
       $(function () {
+        //lnb progress bar Click Event
         $("#lnb .mb-progress-bar").click(function () {
           $(this).parent().children("dl").slideToggle();
           $(this).toggleClass("on");

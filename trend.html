@@ -61,7 +61,7 @@
           </div>
         </div>
         <article id="sub-contents-container">
-          <div class="sub-contents-wrapper">
+          <div class="sub-contents-wrapper hasLnb">
             <div id="lnb">
               <div class="mb-progress-bar">
                 <img src="./images/mobile/icon-progress-bar.png" alt="" />
@@ -69,6 +69,12 @@
                 <span>></span>
                 <p>부처보도자료</p>
               </div>
+              <dl>
+                <dt>최신동향</dt>
+                <dd><a href="#n" class="current">• 정부안건</a></dd>
+                <dd><a href="#n">• 의료분야</a></dd>
+                <dd><a href="#n">• 소재분야</a></dd>
+              </dl>
               <dl>
                 <dt>최신동향</dt>
                 <dd><a href="#n" class="current">• 정부안건</a></dd>
@@ -121,15 +127,15 @@
 
               <!-- table : paging -->
               <div class="common-paging">
-                <a href="#n"><<</a>
-                <a href="#n"><</a>
+                <a href="#n" class="bd-bg"><img src="./images/icon/icon-paging-first.png" alt=""></a>
+                <a href="#n" class="bd-bg"><img src="./images/icon/icon-paging-prev.png" alt=""></a>
                 <a href="#n">1</a>
                 <a href="#n">2</a>
                 <a href="#n" class="on">3</a>
                 <a href="#n">4</a>
                 <a href="#n">5</a>
-                <a href="#n">></a>
-                <a href="#n">>></a>
+                <a href="#n"" class="bd-bg"><img src="./images/icon/icon-paging-next.png" alt=""></a>
+                <a href="#n"" class="bd-bg"><img src="./images/icon/icon-paging-last.png" alt=""></a>
               </div>
             </div>
           </div>
@@ -193,7 +199,13 @@
     <div id="layerPop-bg"></div>
 
     <script>
-      $(function () {});
+      $(function () {
+        //lnb progress bar Click Event        
+        $("#lnb .mb-progress-bar").click(function () {
+          $(this).parent().children("dl").slideToggle();
+          $(this).toggleClass("on");
+        });
+      });
     </script>
   </body>
 </html>

@@ -680,7 +680,7 @@
   line-height: 26px;
   font-size: 15px;
 }
-.community-view-wrapper .board-view-middle .view-comment .comment-area > li > button {
+.community-view-wrapper .board-view-middle .view-comment .comment-area > li > .common-btn {
   position: absolute;
   right: 0;
   top: 40px;
@@ -1008,6 +1008,10 @@
     background: #fff;
     border: 1px solid #e5e5e5;
   }
+  #sub-contents-container .sub-contents-wrapper.hasLnb {
+    padding: 14.722vw 0 0;
+  }
+
   #sub-contents-container .sub-contents-wrapper .sub-right-contents {
     width: 100%;
     min-height: 500px;
@@ -1474,7 +1478,7 @@
     1100_web_03_01_지식자료 – 1 (PC) 
   -------------------------------------------------------------- */
   .knowlege_data_container {
-    padding: 14.722vw 0 0;
+    padding: 0;
   }
   .knowlege_data_container dl {
     padding: 0 6.111vw;
@@ -1653,7 +1657,155 @@
     bottom: 9.722vw;
   }
 
-  /**/
-  /**/
-  /**/
+  /*--------------------------------------------------------------
+    * 1100_web_05_01_트랜드 – 1 (PC) 
+  --------------------------------------------------------------*/
+  .trend-container {
+    border: 1px solid #e5e5e5;
+  }
+  .trend-container .total {
+    height: 15.278vw;
+    padding: 0 6.111vw;
+  }
+  .trend-container .total p {
+    font-size: 4.028vw;
+  }
+  .trend-container .total .num-view {
+    font-size: 3.333vw;
+    padding-right: 4.167vw;
+  }
+
+  .trend-container ul {
+    padding: 0 6.111vw;
+  }
+  .trend-container ul li {
+    padding: 5.556vw 0;
+  }
+  .trend-container ul li .subject {
+    padding: 0 0 2.778vw;
+    font-size: 4.167vw;
+    border-bottom: 1px solid #f3f3f3;
+  }
+  .trend-container ul li .content {
+    padding: 4.167vw 0 2.778vw;
+    font-size: 3.889vw;
+  }
+  .trend-container ul li .addition {
+    display: block;
+    font-size: 3.611vw;
+  }
+  .trend-container ul li .addition span {
+    display: block;
+    padding: 0.972vw 3.472vw 0 0;
+  }
+  .trend-container ul li .addition span b {
+    font-weight: 500;
+  }
+
+  /*--------------------------------------------------------------
+* 1100_web_06_01_제품정보 – 1 (PC) 
+--------------------------------------------------------------*/
+  .product-view-info {
+    display: block;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+  }
+
+  .common-gallery-wrapper .gallery-title {
+    line-height: 53px;
+    padding: 0 22px;
+    font-size: 15px;
+    font-weight: 600;
+    border-bottom: 1px solid #707070;
+  }
+  .common-gallery-wrapper > ul {
+    padding: 22px;
+  }
+
+  .common-gallery-wrapper > ul > li {
+    margin: 0 0 27px;
+  }
+  .common-gallery-wrapper > ul > li > a {
+    display: flex;
+    align-items: center;
+  }
+  .common-gallery-wrapper > ul > li > a .gallery-img {
+    margin: 0 18px 0 0;
+  }
+  .common-gallery-wrapper > ul > li > a .gallery-list .subject {
+    padding: 0 0 12px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #171717;
+  }
+  .common-gallery-wrapper > ul > li > a .gallery-list .name {
+    padding: 0 0 2px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #626261;
+  }
+  .common-gallery-wrapper > ul > li > a .gallery-list .date {
+    font-size: 14px;
+    color: #626261;
+  }
+
+  /*--------------------------------------------------------------
+* 1100_web_11_01_로그인 (PC) 
+--------------------------------------------------------------*/
+  #sub-login-container {
+    position: relative;
+    height: 713px;
+    background: url("../images/sub/login-bg.png") no-repeat 50% 65%;
+    background-size: auto;
+    border-top: 6px solid #000;
+  }
+  .login-wrapper {
+    position: absolute;
+    left: 50%;
+    top: 60px;
+    width: 493px;
+    height: 553px;
+    padding: 65px 83px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-sizing: border-box;
+    transform: translateX(-50%);
+  }
+  .login-wrapper dl {
+    text-align: center;
+  }
+  .login-wrapper dl dt {
+    padding: 0 0 9px;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  .login-wrapper dl dd {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .login-wrapper ul {
+    padding: 45px 0 0;
+  }
+  .login-wrapper ul li {
+    margin: 0 0 20px;
+  }
+  .login-wrapper ul li label {
+    display: inline-block;
+    padding: 0 0 7px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .login-wrapper ul li input[type="text"],
+  .login-wrapper ul li input[type="password"] {
+    width: 100%;
+    height: 37px;
+  }
+  .login-wrapper .common-btn.two {
+    margin: 14px 0 50px;
+  }
+  .login-wrapper .copy {
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+  }
 }
