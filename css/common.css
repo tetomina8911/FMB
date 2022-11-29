@@ -1160,7 +1160,22 @@ button.br2 {
     border: 1px solid #dbdbdb;
   }
 
-  /* Button */
+  /*--------------------------------------------------------------
+  Board : bottom button
+  --------------------------------------------------------------*/
+  .table-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 4.583vw auto;
+    padding: 0 6.111vw;
+    box-sizing: border-box;
+  }
+
+  /*--------------------------------------------------------------
+    button 
+  --------------------------------------------------------------*/
   .common-btn {
     display: flex;
     justify-content: center;
@@ -1183,10 +1198,9 @@ button.br2 {
   }
 
   .common-btn button {
-    margin: 0 3px;
-    font-size: 13px;
-    font-weight: 500;
-    border-radius: 4px;
+    margin: 0 0.972vw;
+    font-size: 3.333vw;
+    border-radius: 0.556vw;
   }
 
   button.btn {
@@ -1213,7 +1227,7 @@ button.br2 {
     padding: 0 30px;
   }
   button.small {
-    padding: 0 15px;
+    padding: 0 1.389vw;
   }
   button.small2 {
     padding: 0 15px;
@@ -1227,24 +1241,29 @@ button.br2 {
   button : 세로 사이즈
 --------------------------------------------------------------*/
   button.h26 {
-    height: 26px;
-    line-height: 24px;
+    /* height: 52px */
+    height: 7.222vw;
+    line-height: 6.944vw;
   }
   button.h30 {
-    height: 30px;
-    line-height: 28px;
+    /* height: 60px */
+    height: 7.778vw;
+    line-height: 7.5vw;
   }
   button.h32 {
-    height: 32px;
-    line-height: 30px;
+    /* height: 64px */
+    height: 8.889vw;
+    line-height: 8.611vw;
   }
   button.h38 {
-    height: 38px;
-    line-height: 36px;
+    /* height: 76px; */
+    height: 10.556vw;
+    line-height: 10.278vw;
   }
   button.h46 {
-    height: 46px;
-    line-height: 44px;
+    /* height: 92px; */
+    height: 12.778vw;
+    line-height: 90px;
   }
   button.h58 {
     height: 8.056vw;

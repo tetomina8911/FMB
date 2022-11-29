@@ -937,7 +937,9 @@
   반응형 : MOBilE : 720
 --------------------------------------------------------------*/
 @media screen and (max-width: 720px) {
-  /* Sub Visual */
+  /*--------------------------------------------------------------
+    Sub Visual
+--------------------------------------------------------------*/
   .subVisual-container {
     height: 40vw;
   }
@@ -989,7 +991,9 @@
     padding: 0 6.111vw;
   }
 
-  /* Sub layout */
+  /* --------------------------------------------------------------
+    Sub layout 
+  --------------------------------------------------------------*/
   #sub-contents-container {
     width: 100%;
     padding: 0;
@@ -1013,7 +1017,9 @@
     border: 1px solid #e5e5e5;
   }
 
-  /* Lnb */
+  /* --------------------------------------------------------------
+    Lnb 
+  --------------------------------------------------------------*/
   #lnb {
     position: absolute;
     left: 0;
@@ -1069,7 +1075,9 @@
     color: #fff;
   }
 
-  /* 1100_web_02_01_디비검색 – 1 (PC) */
+  /* --------------------------------------------------------------
+    1100_web_02_01_디비검색 – 1 (PC) 
+    -------------------------------------------------------------- */
   /* 좌측 : 키워드 검색 바 */
   .left-searchBar-container {
     position: fixed;
@@ -1300,7 +1308,9 @@
     margin: 0;
   }
 
-  /* 1100_web_02_02_디비검색 – 1 (PC) */
+  /* --------------------------------------------------------------
+    1100_web_02_02_디비검색 – 1 (PC) 
+  --------------------------------------------------------------*/
   /* 좌측 기관 상세 */
   .mobile-tab {
     display: flex;
@@ -1460,7 +1470,9 @@
     color: #382205;
   }
 
-  /* 1100_web_03_01_지식자료 – 1 (PC) */
+  /* --------------------------------------------------------------
+    1100_web_03_01_지식자료 – 1 (PC) 
+  -------------------------------------------------------------- */
   .knowlege_data_container {
     padding: 14.722vw 0 0;
   }
@@ -1475,7 +1487,9 @@
     padding: 16px 0;
   }
 
-  /* 1100_web_04_01_커뮤니티  (PC)  */
+  /* --------------------------------------------------------------
+    1100_web_04_01_커뮤니티  (PC)  
+  -------------------------------------------------------------- */
   .community-wrapper {
     background: #fff;
   }
@@ -1509,6 +1523,134 @@
   .community-wrapper .common-table-wrapper .board tr th:nth-child(2),
   .community-wrapper .common-table-wrapper .board tr td:nth-child(2) {
     border-left: none;
+  }
+
+  .community-wrapper .table-bottom {
+    position: absolute;
+    left: 0;
+    padding: 0 6.111vw;
+    top: 18.75vw;
+    box-sizing: border-box;
+  }
+
+  /*--------------------------------------------------------------
+    * 1100_web_04_01_커뮤니티 – View (PC) 
+  --------------------------------------------------------------*/
+  .community-view-wrapper .board-view-top {
+    padding: 5.556vw 6.111vw;
+  }
+  .community-view-wrapper .board-view-top .subject {
+    font-size: 4.028vw;
+    margin: 0 0 3.472vw;
+  }
+  .community-view-wrapper .board-view-top .view-info {
+    justify-content: flex-start;
+  }
+  .community-view-wrapper .board-view-top .view-info > p {
+    display: none;
+  }
+  .community-view-wrapper .board-view-top .view-info ul {
+    font-size: 3.333vw;
+  }
+  .community-view-wrapper .board-view-top .view-info ul li {
+    margin: 0 4.167vw 0 0;
+  }
+  .community-view-wrapper .board-view-top .view-info ul li:not(:last-child):after {
+    right: -2.361vw;
+    height: 3.333vw;
+  }
+
+  .community-view-wrapper .board-view-middle .view-content {
+    padding: 6.111vw;
+  }
+  .community-view-wrapper .board-view-middle .view-comment .comment-total {
+    padding: 5.556vw 6.111vw 2.778vw;
+    font-size: 3.333vw;
+  }
+  .community-view-wrapper .board-view-middle .view-comment .comment-area {
+    padding: 0 6.111vw;
+  }
+  .community-view-wrapper .board-view-middle .view-comment .comment-area > li {
+    padding: 5.556vw 0;
+  }
+  .community-view-wrapper .board-view-middle .view-comment .comment-area > li > .name {
+    padding: 0 0 3.472vw;
+    font-size: 4.028vw;
+  }
+  .community-view-wrapper .board-view-middle .view-comment .comment-area > li > .name span {
+    font-size: 3.056vw;
+  }
+  .community-view-wrapper .board-view-middle .view-comment .comment-area > li > .content {
+    line-height: 6.389vw;
+    font-size: 4.028vw;
+  }
+  .community-view-wrapper .board-view-middle .view-comment .comment-area > li > button {
+    position: relative;
+    right: auto;
+    top: auto;
+    margin: 2.778vw 0 0;
+  }
+  .community-view-wrapper .board-view-middle .view-comment .comment-area > li .recomment-area {
+    padding: 0 0 0 1.389vw;
+  }
+  .community-view-wrapper .board-view-middle .view-comment .comment-area > li .recomment-area > li {
+    padding: 5.556vw 0 0 4.861vw;
+    background-position: left 5.556vw;
+  }
+  .community-view-wrapper .board-view-middle .view-comment .comment-area > li .recomment-area > li .name {
+    font-size: 4.028vw;
+  }
+  .community-view-wrapper .board-view-middle .view-comment .comment-area > li .recomment-area > li .name span {
+    font-size: 3.056vw;
+  }
+
+  .community-view-wrapper .board-view-middle .view-comment .comment-area > li .write-recomment {
+    margin: 4.167vw 0 0;
+    padding: 3.472vw 4.167vw;
+  }
+  .community-view-wrapper .board-view-middle .view-comment .comment-area > li .write-recomment .name {
+    padding: 0 0 1.389vw;
+    font-size: 4.028vw;
+  }
+  .community-view-wrapper .board-view-middle .view-comment .comment-area > li .write-recomment textarea {
+    font-size: 4.028vw;
+    border-bottom: none;
+  }
+  .community-view-wrapper .board-view-middle .view-comment .comment-area > li .write-recomment .txt-num {
+    right: auto;
+    top: auto;
+    left: 6.111vw;
+    bottom: 4.167vw;
+    font-size: 3.333vw;
+  }
+  .community-view-wrapper .board-view-middle .view-comment .comment-area > li .write-recomment .common-btn {
+    margin: 2.778vw 0 0;
+  }
+  .community-view-wrapper .board-view-middle .view-comment > .common-btn {
+    margin: 4.167vw 0;
+  }
+  .community-view-wrapper .board-view-middle .view-comment > .common-btn button {
+    width: calc(100vw - 12.222vw);
+  }
+
+  .community-view-wrapper .board-view-bottom {
+    padding: 4.861vw 6.111vw;
+  }
+  .community-view-wrapper .board-view-bottom textarea {
+    padding: 3.333vw;
+    font-size: 4.028vw;
+  }
+  .community-view-wrapper .board-view-bottom .txt-num {
+    right: auto;
+    top: auto;
+    left: 10.278vw;
+    bottom: 10.972vw;
+    font-size: 3.333vw;
+  }
+  .community-view-wrapper .board-view-bottom .common-btn {
+    position: absolute;
+    right: 10.278vw;
+    bottom: 9.722vw;
   }
 
   /**/

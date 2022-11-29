@@ -788,6 +788,9 @@
     text-align: center;
     color: #535353;
   }
+  #family-site .family-wrapper .intro_text br {
+    display: none;
+  }
 
   #family-site .family-wrapper .FamilyStie-Swiper {
     line-height: 14.028vw;
