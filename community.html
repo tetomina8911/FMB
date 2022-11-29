@@ -132,17 +132,20 @@
               </table>
             </div>
 
+            <div class="table-bottom right">
+              <button class="btn small gr h32">글쓰기</button>
+            </div>
             <!-- table : paging -->
             <div class="common-paging">
-              <a href="#n"><<</a>
-              <a href="#n"><</a>
+              <a href="#n" class="bd-bg"><img src="./images/icon/icon-paging-first.png" alt=""></a>
+              <a href="#n" class="bd-bg"><img src="./images/icon/icon-paging-prev.png" alt=""></a>
               <a href="#n">1</a>
               <a href="#n">2</a>
               <a href="#n" class="on">3</a>
               <a href="#n">4</a>
               <a href="#n">5</a>
-              <a href="#n">></a>
-              <a href="#n">>></a>
+              <a href="#n"" class="bd-bg"><img src="./images/icon/icon-paging-next.png" alt=""></a>
+              <a href="#n"" class="bd-bg"><img src="./images/icon/icon-paging-last.png" alt=""></a>
             </div>
         </article>
       </section>
@@ -200,9 +203,6 @@
             $(this).parent('li').toggleClass('on')
           });
         });
-        const subSelectBox = $('.common-board-status .common-selectBox .main-selectBox > li > a').height() - 1;
-        $('.common-selectBox .main-seletcBox > li .sub-selectBox').css('top', subSelectBox + 'px');
-        console.log(subSelectBox);
 
       });
     </script>

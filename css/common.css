@@ -226,7 +226,7 @@ input[type="password"] {
 }
 
 /*--------------------------------------------------------------
-  input : serach
+  input : search
 --------------------------------------------------------------*/
 .common-sub-search {
   position: relative;
@@ -239,6 +239,7 @@ input[type="password"] {
   width: 100%;
   height: 44px;
   padding: 19px 17px;
+  font-size: 14px;
 }
 .common-sub-search .btn {
   position: absolute;
@@ -469,9 +470,11 @@ input[type="password"] {
   margin: 34px 0 0;
 }
 .common-paging a {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 32px;
-  line-height: 30px;
+  height: 32px;
   margin: 0 8px;
   font-size: 15px;
   font-weight: 500;
@@ -480,10 +483,27 @@ input[type="password"] {
   border: 1px solid #cecece;
   border-radius: 4px;
 }
+.common-paging a > img {
+  height: 15px;
+}
 .common-paging a.on {
   color: #fff;
   background: #5f5f5f;
   border: 1px solid #4a4a4a;
+}
+
+/*--------------------------------------------------------------
+Board : bottom button
+--------------------------------------------------------------*/
+.table-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 980px;
+  margin: 33px auto 0;
+}
+.table-bottom.right {
+  justify-content: flex-end;
 }
 
 /*--------------------------------------------------------------
@@ -902,7 +922,7 @@ button.br2 {
   }
 
   /*--------------------------------------------------------------
-  input : serach
+  input : search
 --------------------------------------------------------------*/
   .common-sub-search {
     position: relative;
@@ -914,7 +934,8 @@ button.br2 {
   .common-sub-search input[type="search"] {
     width: 100%;
     height: 44px;
-    padding: 19px 17px;
+    padding: 2.361vw 2.778vw;
+    font-size: 3.472vw;
   }
   .common-sub-search .btn {
     position: absolute;
@@ -1029,11 +1050,25 @@ button.br2 {
     z-index: 2;
   }
 
-  /* Table : status */
+  /*--------------------------------------------------------------
+    Table : status
+  --------------------------------------------------------------*/
   .common-board-status {
+    position: relative;
     flex-wrap: wrap;
-    height: 34.167vw;
+    height: 30.278vw;
+    padding: 3.889vw 0 0;
     background: #f5f5f5;
+    border-bottom: 1px solid #808080;
+  }
+  .common-board-status::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    width: 100%;
+    height: 18.75vw;
+    box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.16);
   }
   .common-board-status > div {
     margin: 0;
@@ -1062,8 +1097,11 @@ button.br2 {
   }
   .common-board-status .short-area {
     justify-content: flex-start;
+    height: 15.417vw;
+    margin: 3.889vw 0 0;
     padding: 0 6.111vw;
     font-size: 3.611vw;
+    background: #fff;
   }
   .common-board-status .short-area a {
     font-size: 3.611vw;
@@ -1076,80 +1114,50 @@ button.br2 {
   Table : Basic, Vertical, Horizen, Board
 --------------------------------------------------------------*/
   .common-table-wrapper table {
-    width: 100%;
     font-size: 13px;
-    color: #555;
-    text-align: center;
-    border-spacing: 0;
-    border-collapse: collapse;
   }
 
   .common-table-wrapper table th {
-    font-weight: 500;
-    color: #000;
-    padding: 8px 17px;
-    background: #fcfcfc;
-    border: 1px solid #ddd;
+    padding: 3.611vw 4.167vw;
   }
   .common-table-wrapper table td {
     padding: 8px 17px;
-    border: 1px solid #ddd;
-  }
-  .common-table-wrapper table td a {
-    display: block;
-  }
-  .common-table-wrapper table td.left {
-    text-align: left;
-  }
-
-  .common-table-wrapper table.vertical tbody th {
-    color: #555;
-    text-align: left;
-  }
-  .common-table-wrapper table.vertical tbody td {
-    text-align: right;
   }
 
   .common-table-wrapper table.board th {
-    font-size: 15px;
+    font-size: 3.611vw;
     font-weight: 600;
-    background: #ded6cf;
-    border: 1px solid #c9c1b8;
+    border-right: none;
   }
+
   .common-table-wrapper table.board td {
-    padding: 8px 17px;
-    font-size: 14px;
-    font-weight: 500;
-    color: #4e4e4e;
-    background: #fff;
-    border: 1px solid #d6d6d6;
+    padding: 3.611vw 4.167vw;
+    font-size: 3.611vw;
+    border-right: none;
   }
 
   /*--------------------------------------------------------------
   Board : Paging
 --------------------------------------------------------------*/
   .common-paging {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 34px 0 0;
+    justify-content: space-between;
+    margin: 8.333vw 6.111vw;
   }
   .common-paging a {
-    display: block;
-    width: 32px;
-    line-height: 30px;
-    margin: 0 8px;
-    font-size: 15px;
-    font-weight: 500;
-    text-align: center;
-    background: #fff;
-    border: 1px solid #cecece;
-    border-radius: 4px;
+    width: auto;
+    margin: 0;
+    padding: 0 2.778vw;
+    font-size: 4.167vw;
+    border: none;
   }
   .common-paging a.on {
-    color: #fff;
-    background: #5f5f5f;
-    border: 1px solid #4a4a4a;
+    color: #f69412;
+    background: none;
+    border: none;
+  }
+  .common-paging a.bd-bg {
+    background: #f4f4f4;
+    border: 1px solid #dbdbdb;
   }
 
   /* Button */

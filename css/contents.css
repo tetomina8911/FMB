@@ -763,13 +763,6 @@
   bottom: 55px;
 }
 
-.table-bottom {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 980px;
-  margin: 33px auto 0;
-}
 /*--------------------------------------------------------------
 * 1100_web_05_01_트랜드 – 1 (PC) 
 --------------------------------------------------------------*/
@@ -1483,13 +1476,18 @@
   }
 
   /* 1100_web_04_01_커뮤니티  (PC)  */
+  .community-wrapper {
+    background: #fff;
+  }
   .community-wrapper .common-board-status {
-    margin: 0 0 10px;
+    margin: 0;
   }
   .community-wrapper .common-board-status .common-selectBox .main-selectBox > li .sub-selectBox {
     top: 10.972vw;
   }
-
+  .community-wrapper .common-table-wrapper {
+    padding: 4.306vw 6.111vw;
+  }
   .community-wrapper .common-table-wrapper .board colgroup col:nth-child(1),
   .community-wrapper .common-table-wrapper .board colgroup col:nth-child(3),
   .community-wrapper .common-table-wrapper .board colgroup col:nth-child(4) {
@@ -1506,6 +1504,11 @@
   .community-wrapper .common-table-wrapper .board tr td:nth-child(3),
   .community-wrapper .common-table-wrapper .board tr td:nth-child(4) {
     display: none;
+  }
+
+  .community-wrapper .common-table-wrapper .board tr th:nth-child(2),
+  .community-wrapper .common-table-wrapper .board tr td:nth-child(2) {
+    border-left: none;
   }
 
   /**/
