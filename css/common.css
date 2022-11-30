@@ -240,6 +240,7 @@ input[type="password"] {
   height: 44px;
   padding: 19px 17px;
   font-size: 14px;
+  background: #fff;
 }
 .common-sub-search .btn {
   position: absolute;
@@ -1120,6 +1121,19 @@ button.br2 {
     margin: 0 1.389vw;
   }
 
+  .common-board-status.one {
+    height: 18.75vw;
+    padding: 3.889vw 6.111vw;
+    border-bottom: none;
+    box-sizing: border-box;
+  }
+  .common-board-status.one > div {
+    width: 100%;
+  }
+  .common-board-status.one .common-sub-search .input-type5 {
+    width: 100%;
+  }
+
   /*--------------------------------------------------------------
   Table : Basic, Vertical, Horizen, Board
 --------------------------------------------------------------*/
@@ -1239,9 +1253,9 @@ button.br2 {
     line-height: 7.5vw;
   }
   button.h32 {
-    /* height: 64px */
-    height: 8.889vw;
-    line-height: 8.611vw;
+    /* height: 61px */
+    height: 8.472vw;
+    line-height: 8.194vw;
   }
   button.h38 {
     /* height: 76px; */
