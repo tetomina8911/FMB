@@ -403,7 +403,7 @@
 }
 
 /*--------------------------------------------------------------
-* 1100_web_02_02_디비검색 – 1 (PC) 
+* 1100_web_02_02_디비검색 : 상세 – 1 (PC) 
 --------------------------------------------------------------*/
 /* 좌측 기관 상세 */
 .left_resource_container {
@@ -448,6 +448,14 @@
   box-sizing: border-box;
   z-index: 2;
 }
+.left_resource_container .introduce-agency .img-area .logo-area {
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  width: 76px;
+  z-index: 2;
+}
+
 .left_resource_container .introduce-agency dl {
   padding: 15px 18px 20px;
   background: #fafafa;
@@ -1327,7 +1335,7 @@
   }
 
   /* --------------------------------------------------------------
-    1100_web_02_02_디비검색 – 1 (PC) 
+    1100_web_02_02_디비검색 : 상세 – 1 (PC) 
   --------------------------------------------------------------*/
   /* 좌측 기관 상세 */
   .mobile-tab {
@@ -1387,6 +1395,14 @@
     background: url("../images/icon/icon-tell.png") no-repeat 33.889vw 50% rgba(0, 0, 0, 0.7);
     border-radius: 0.556vw;
   }
+  .left_resource_container .introduce-agency .img-area .logo-area {
+    position: absolute;
+    left: 1.944vw;
+    top: 1.944vw;
+    width: 14.667vw;
+    z-index: 2;
+  }
+
   .left_resource_container .introduce-agency dl {
     padding: 5.139vw 0 6.25vw;
     background: none;
