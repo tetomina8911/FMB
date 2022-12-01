@@ -543,11 +543,11 @@
             var val = this.value;
             var linkto = "";
 
-            if (val == "제조/유통사") linkto = "./regist_company.html";
-            else if (val == "자원/진균업체") linkto = "./regist_manufacturer.html";
+            if (val == "제조/유통사") linkto = "./regist_manufacturer.html";
+            else if (val == "자원/진균업체") linkto = "";
             else if (val == "연구R&D기관") linkto = "./regist_rd.html";
 
-            console.log("move to ... linkto");
+            if( linkto ) window.location.replace(linkto);
             return;
           });
 
