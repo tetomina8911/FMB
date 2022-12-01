@@ -1,8 +1,10 @@
 //index.js
 $(document).ready(function () {
   // GNB 스크롤위치 조절
-  const gnbScroll = $("#gnb ul li.current").offset().left;
-  $("#gnb ul").scrollLeft(gnbScroll);
+  if ($("#gnb ul li").hasClass("current")) {
+    const gnbScroll = $("#gnb ul li.current").offset().left;
+    $("#gnb ul").scrollLeft(gnbScroll);
+  }
 
   //
   $(".common-main-search .tab a").click(function () {
@@ -54,7 +56,11 @@ $(document).ready(function () {
   });
 
   //MyMenu
+  const winW = $(window).width();
   $(".btn_menu").click(function () {
+    if (winW < 721) {
+      $("#myMenu").stop().fadeIn("fast");
+    }
     $("#myMenu .myMenu-wrapper").animate(
       {
         left: 0,
@@ -67,7 +73,12 @@ $(document).ready(function () {
       {
         left: "100%",
       },
-      500
+      500,
+      function () {
+        if (winW < 721) {
+          $("#myMenu").stop().fadeOut("fast");
+        }
+      }
     );
   });
 });
