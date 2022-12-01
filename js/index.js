@@ -1,5 +1,9 @@
 //index.js
 $(document).ready(function () {
+  // GNB 스크롤위치 조절
+  const gnbScroll = $("#gnb ul li.current").offset().left;
+  $("#gnb ul").scrollLeft(gnbScroll);
+
   //
   $(".common-main-search .tab a").click(function () {
     $(".common-main-search .tab a").removeClass("current");

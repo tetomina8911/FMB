@@ -252,19 +252,19 @@ input[type="password"] {
 /*--------------------------------------------------------------
   input : address : 주소검색
 --------------------------------------------------------------*/
-.common-adress {
+.common-address {
   position: relative;
   width: 100%;
 }
-.common-adress input[type="text"] {
+.common-address input[type="text"] {
   width: 100%;
   height: 45px;
   box-sizing: border-box;
 }
-.common-adress .default-area {
+.common-address .default-area {
   margin: 0 0 7px;
 }
-.common-adress .default-area .btn-find-address {
+.common-address .default-area .btn-find-address {
   position: absolute;
   right: 7px;
   top: 7px;
@@ -785,16 +785,8 @@ button.br2 {
   /*--------------------------------------------------------------
   date형식 검색 범위
 --------------------------------------------------------------*/
-  .common-datePicker {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
   .common-datePicker input[type="text"] {
-    width: 46%;
-    height: 100%;
-    font-size: 15px;
-    box-sizing: border-box;
+    font-size: 3.889vw;
   }
   .common-datePicker input[type="text"].icon-date {
     padding-left: 39px;
@@ -805,131 +797,87 @@ button.br2 {
   }
 
   .common-datePicker.small input[type="text"] {
-    font-size: 12px;
+    font-size: 3.889vw;
   }
   .common-datePicker.small input[type="text"].icon-date {
-    padding-left: 25px;
-    padding-right: 6px;
-    background-position: 6px 52%;
-    background-size: 13px auto;
+    padding-left: 10.417vw;
+    padding-right: 2.778vw;
+    background-position: 2.639vw 52%;
+    background-size: 4.583vw auto;
   }
 
   /*--------------------------------------------------------------
   input : text
 --------------------------------------------------------------*/
   input[type="text"] {
-    padding: 0 15px;
-    font-size: 14px;
-    box-sizing: border-box;
+    padding: 0 2.778vw;
+    font-size: 3.611vw;
   }
   input[type="password"] {
-    padding: 0 15px;
-    font-size: 14px;
-    box-sizing: border-box;
+    padding: 0 2.778vw;
+    font-size: 3.611vw;
   }
   .input-type {
-    padding: 0 15px;
-    background: #fff;
-    border: 1px solid #d3d3d3;
-    border-radius: 4px;
+    padding: 0 2.778vw;
+    border-radius: 0.556vw;
   }
   .input-type2 {
-    background: #fff;
-    border: 1px solid #d6d6d6;
-    border-radius: 4px;
+    border-radius: 0.556vw;
   }
   .input-type3 {
-    background: #fff;
-    border: 1px solid #8e8e8e;
-    border-radius: 6px;
+    border-radius: 0.833vw;
   }
   .input-type4 {
-    background: #fcfcfc;
-    border: 1px solid #8e8e8e;
-    border-radius: 6px;
+    border-radius: 0.833vw;
   }
   .input-type5 {
-    background: #fcfcfc;
-    border: 1px solid #d6d6d6;
-    border-radius: 4px;
+    border-radius: 0.556vw;
   }
 
   /*--------------------------------------------------------------
   input : checkbox
 --------------------------------------------------------------*/
   .common-checkbox input[type="checkbox"] {
-    width: 22px;
-    height: 22px;
-    background: url("../images/icon/icon-check.png") no-repeat left 60%;
-    background-size: contain;
-    appearance: none;
-    vertical-align: middle;
-  }
-  .common-checkbox input[type="checkbox"]:checked {
-    background: url("../images/icon/icon-checked.png") no-repeat left 60%;
-    background-size: contain;
+    width: 5.556vw;
+    height: 5.556vw;
   }
   .common-checkbox label {
-    font-size: 14px;
-    font-weight: 500;
-    color: #555;
+    margin: 0 0 0 0.972vw;
+    font-size: 4.167vw;
   }
 
   .common-checkbox.small input[type="checkbox"] {
-    width: 14px;
-    height: 19px;
+    width: 5.556vw;
+    height: 5.556vw;
   }
   .common-checkbox.small label {
-    font-size: 13px;
+    font-size: 3.889vw;
   }
 
   .common-checkbox.sub {
-    margin: 0 0 0 21px;
-    padding: 0 0 0 16px;
-    background: url("../images/icon/icon-cate-line.png") no-repeat left 50%;
+    margin: 0 0 0 8.333vw;
+    padding: 1.389vw 0 0 4.167vw;
   }
 
   /*--------------------------------------------------------------
   input : file
 --------------------------------------------------------------*/
   .common-input-file {
-    position: relative;
-    background: #fcfcfc;
-    border: 1px solid #8e8e8e;
-    border-radius: 6px;
+    border-radius: 0.833vw;
   }
   .common-input-file .upload-name {
-    display: inline-block;
-    height: 32px;
-    line-height: 32px;
-    padding: 6px 0 6px 16px;
-    font-size: 14px;
-    font-weight: 500;
+    height: 10.972vw;
+    line-height: 10.972vw;
+    padding: 2.778vw 0 2.778vw 2.778vw;
+    font-size: 3.611vw;
   }
 
   .common-input-file label {
-    position: absolute;
-    right: 5px;
-    top: 50%;
-    display: inline-block;
-    height: 32px;
-    line-height: 30px;
-    padding: 0 15px;
-    font-size: 15px;
-    font-weight: 500;
-    background: #f4f4f4;
-    border: 1px solid #cecece;
-    border-radius: 4px;
-    transform: translateY(-50%);
-  }
-  .common-input-file input[type="file"] {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    border: 0;
+    height: 8.333vw;
+    line-height: 8.056vw;
+    padding: 0 2.083vw;
+    font-size: 3.611vw;
+    border-radius: 0.556vw;
   }
 
   /*--------------------------------------------------------------
@@ -939,126 +887,69 @@ button.br2 {
     position: relative;
   }
   .common-sub-search.br {
-    padding: 20px 22px;
-    background: #ded6cf;
+    padding: 3.889vw 4.167vw;
   }
   .common-sub-search input[type="search"] {
-    width: 100%;
-    height: 44px;
+    height: 10.972vw;
     padding: 2.361vw 2.778vw;
     font-size: 3.472vw;
   }
   .common-sub-search .btn {
-    position: absolute;
-    right: 28px;
-    top: 50%;
-    transform: translateY(-50%);
+    right: 4.583vw;
   }
 
   /*--------------------------------------------------------------
   input : address : 주소검색
 --------------------------------------------------------------*/
-  .common-adress {
-    position: relative;
-    width: 100%;
+  .common-address input[type="text"] {
+    height: 10.972vw;
   }
-  .common-adress input[type="text"] {
-    width: 100%;
-    height: 45px;
-    box-sizing: border-box;
+  .common-address .default-area {
+    margin: 0 0 2.778vw;
   }
-  .common-adress .default-area {
-    margin: 0 0 7px;
-  }
-  .common-adress .default-area .btn-find-address {
-    position: absolute;
-    right: 7px;
-    top: 7px;
+  .common-address .default-area .btn-find-address {
+    right: 0.694vw;
+    top: 1.25vw;
   }
 
   /*--------------------------------------------------------------
   Select Box
 --------------------------------------------------------------*/
-  .common-selectBox {
-    height: 100%;
-  }
-  .common-selectBox .main-selectBox {
-    height: 100%;
-  }
-  .common-selectBox .main-selectBox > li {
-    position: relative;
-    height: 100%;
-  }
   .common-selectBox .main-selectBox > li > a {
-    display: block;
-    height: 100%;
-    padding: 0 16px;
-    font-size: 14px;
-    font-weight: 500;
-    background: url("../images/icon/icon-toggle-down-gr.png") no-repeat 98% 50%, #fcfcfc;
-    border: 1px solid #8e8e8e;
-    border-radius: 6px;
-    box-sizing: border-box;
+    padding: 0 2.778vw;
+    font-size: 3.889vw;
+    background-position: 80.833vw 50%;
+    background-size: 3.472vw auto;
+    border-radius: 0.833vw;
   }
 
-  .common-selectBox .main-selectBox > li > a.placeholder {
-    color: #b7b7b7;
-  }
   .common-selectBox .main-selectBox > li.on > a {
-    background: url("../images/icon/icon-toggle-up-gr.png") no-repeat 98% 50%, #fcfcfc;
-    border-radius: 6px 6px 0 0;
+    background-position: 80.833vw 50%;
+    background-size: 3.472vw auto;
+    border-radius: 0.833vw 0.833vw 0 0;
   }
   .common-selectBox .main-selectBox > li .sub-selectBox {
-    position: absolute;
-    left: 0;
-    top: 0;
-    display: none;
-    width: 100%;
-    padding: 7px 0;
-    background: #fcfcfc;
-    border: 1px solid #8e8e8e;
-    border-radius: 0 0 6px 6px;
-    box-sizing: border-box;
-    z-index: 3;
+    padding: 2.083vw 0;
+    border-radius: 0 0 0.833vw 0.833vw;
   }
   .common-selectBox .main-selectBox > li .sub-selectBox li a {
     display: block;
     line-height: 2;
-    padding: 0 16px;
-    font-size: 14px;
-    font-weight: 500;
-  }
-  .common-selectBox .main-selectBox > li .sub-selectBox li:hover a {
-    background: #d6d6d6;
+    padding: 0 2.778vw;
+    font-size: 3.889vw;
   }
 
   /*--------------------------------------------------------------
   Textarea
 --------------------------------------------------------------*/
   .common-textarea {
-    position: relative;
-    padding: 10px 18px;
-    background-color: #fcfcfc;
-    border: 1px solid #8e8e8e;
-    border-radius: 6px;
-  }
-  .common-textarea textarea {
-    width: 100%;
-    height: 100%;
-    background: none;
-    border: none;
-    resize: none;
-    outline: 0;
-    overflow: hidden;
+    padding: 2.361vw 4.167vw;
+    border-radius: 0.833vw;
   }
   .common-textarea span {
-    position: absolute;
-    right: 18px;
-    bottom: 10px;
-    font-size: 14px;
-    font-weight: 500;
-    color: #b7b7b7;
-    z-index: 2;
+    right: 2.778vw;
+    bottom: 2.083vw;
+    font-size: 3.333vw;
   }
 
   /*--------------------------------------------------------------
@@ -1138,14 +1029,14 @@ button.br2 {
   Table : Basic, Vertical, Horizen, Board
 --------------------------------------------------------------*/
   .common-table-wrapper table {
-    font-size: 13px;
+    font-size: 2.778vw;
   }
 
   .common-table-wrapper table th {
     padding: 3.611vw 4.167vw;
   }
   .common-table-wrapper table td {
-    padding: 8px 17px;
+    padding: 2.778vw 2.778vw;
   }
 
   .common-table-wrapper table.board th {
@@ -1188,18 +1079,19 @@ button.br2 {
   Board : bottom button
   --------------------------------------------------------------*/
   .table-bottom {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     width: 100%;
     margin: 4.583vw auto;
     padding: 0 6.111vw;
-    box-sizing: border-box;
   }
 
   /*--------------------------------------------------------------
     button 
   --------------------------------------------------------------*/
+  .common-btn.wide button {
+    margin: 0;
+    padding: 0;
+  }
+
   .common-btn button {
     margin: 0 0.972vw;
     font-size: 3.333vw;
@@ -1216,34 +1108,34 @@ button.br2 {
   button : 가로 사이즈
 --------------------------------------------------------------*/
   button.large {
-    padding: 0 120px;
+    padding: 0 149.998px;
     font-size: 3.611vw;
   }
   button.large2 {
-    padding: 0 40px;
+    padding: 0 4.583vw;
   }
   button.large3 {
-    padding: 0 195px;
+    padding: 0 20.833vw;
   }
   button.medium {
-    padding: 0 30px;
+    padding: 0 4.583vw;
   }
   button.small {
-    padding: 0 1.389vw;
+    padding: 0 2.083vw;
   }
   button.small2 {
     padding: 0 2.083vw;
     font-size: 3.611vw;
   }
   button.small3 {
-    padding: 0 7px;
+    padding: 0 1.389vw;
   }
 
   /*--------------------------------------------------------------
   button : 세로 사이즈
 --------------------------------------------------------------*/
   button.h26 {
-    /* height: 5px */
+    /* height: 51px */
     height: 7.222vw;
     line-height: 6.944vw;
   }
@@ -1268,8 +1160,9 @@ button.br2 {
     line-height: 12.778vw; /* 90px */
   }
   button.h58 {
-    height: 8.056vw;
-    line-height: 7.778vw;
+    /* height: 100px */
+    height: 13.889vw;
+    line-height: 13.611vw;
   }
 
   /*--------------------------------------------------------------
@@ -1296,8 +1189,7 @@ button.br2 {
 }); 
 --------------------------------------------------------------*/
   .tagsinput {
-    border-color: #8e8e8e;
-    border-radius: 6px;
+    border-radius: 0.833vw;
   }
   .tagsinput .tag {
     background-color: transparent;
@@ -1312,9 +1204,9 @@ button.br2 {
   .tagsinput .tag .tag-remove {
     background-color: transparent;
     top: 50%;
-    right: 0.5rem;
-    width: 1rem;
-    height: 1rem;
+    right: 0.2rem;
+    width: 5.556vw;
+    height: 5.556vw;
     border: 1px solid #989898;
     transform: translateY(-50%);
     line-height: 1rem;
@@ -1322,8 +1214,9 @@ button.br2 {
   .tagsinput .tag .tag-remove:after,
   .tagsinput .tag .tag-remove:before {
     background-color: #989898;
-    top: 6px;
-    left: 2px;
+    top: 2.361vw;
+    left: 1.25vw;
+    width: 2.778vw;
   }
   .tagsinput .tag .tag-text {
     padding: 0;
