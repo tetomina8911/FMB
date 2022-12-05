@@ -165,5 +165,9 @@ input::placeholder {
 }
 
 .txt-red {
-  color: #bf0000;
+  color: #d60000;
+}
+
+.txt-bl {
+  color: #0175cb;
 }

@@ -1082,6 +1082,7 @@ button.br2 {
     width: 100%;
     margin: 4.583vw auto;
     padding: 0 6.111vw;
+    box-sizing: border-box;
   }
 
   /*--------------------------------------------------------------

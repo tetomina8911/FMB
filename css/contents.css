@@ -688,10 +688,29 @@
   line-height: 26px;
   font-size: 15px;
 }
-.community-view-wrapper .board-view-middle .view-comment .comment-area > li > .common-btn {
+.community-view-wrapper .board-view-middle .view-comment .comment-area > li > .view-btn {
   position: absolute;
   right: 0;
   top: 40px;
+}
+.community-view-wrapper .board-view-middle .view-comment .comment-area > li .view-btn button {
+  position: relative;
+  padding: 0 7px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #868686;
+}
+.community-view-wrapper .board-view-middle .view-comment .comment-area > li .view-btn button:first-child {
+  padding-left: 0;
+}
+.community-view-wrapper .board-view-middle .view-comment .comment-area > li .view-btn button:not(:first-child)::before {
+  position: absolute;
+  left: -2px;
+  top: 6px;
+  content: "";
+  width: 2px;
+  height: 12px;
+  background: #d5d5d5;
 }
 .community-view-wrapper .board-view-middle .view-comment .comment-area > li .recomment-area {
   padding: 0 0 0 16px;
@@ -707,6 +726,9 @@
 .community-view-wrapper .board-view-middle .view-comment .comment-area > li .recomment-area > li .name span {
   font-weight: 500;
   color: #717171;
+}
+.community-view-wrapper .board-view-middle .view-comment .comment-area > li .recomment-area > li .view-btn {
+  padding: 7px 0 0;
 }
 
 .community-view-wrapper .board-view-middle .view-comment .comment-area > li .write-recomment {
@@ -1370,8 +1392,7 @@
     font-size: 4.444vw;
   }
   .left_resource_container .s-title span {
-    font-size: 20px;
-    color: #fd7e14;
+    font-size: 3.056vw;
   }
   .left_resource_container .introduce-agency {
     margin: 0 0 25px;
@@ -1618,11 +1639,30 @@
     line-height: 6.389vw;
     font-size: 4.028vw;
   }
-  .community-view-wrapper .board-view-middle .view-comment .comment-area > li > button {
+  .community-view-wrapper .board-view-middle .view-comment .comment-area > li > .view-btn {
     position: relative;
     right: auto;
     top: auto;
-    margin: 2.778vw 0 0;
+  }
+  .community-view-wrapper .board-view-middle .view-comment .comment-area > li .view-btn {
+    padding: 1.389vw 0 0;
+  }
+  .community-view-wrapper .board-view-middle .view-comment .comment-area > li .view-btn button {
+    position: relative;
+    padding: 0 1.667vw;
+    font-size: 3.611vw;
+  }
+  .community-view-wrapper
+    .board-view-middle
+    .view-comment
+    .comment-area
+    > li
+    .view-btn
+    button:not(:first-child)::before {
+    left: -0.694vw;
+    top: 1.389vw;
+    width: 2px;
+    height: 3.333vw;
   }
   .community-view-wrapper .board-view-middle .view-comment .comment-area > li .recomment-area {
     padding: 0 0 0 1.389vw;
@@ -1636,6 +1676,9 @@
   }
   .community-view-wrapper .board-view-middle .view-comment .comment-area > li .recomment-area > li .name span {
     font-size: 3.056vw;
+  }
+  .community-view-wrapper .board-view-middle .view-comment .comment-area > li .recomment-area > li .view-btn {
+    padding: 1.389vw 0 0;
   }
 
   .community-view-wrapper .board-view-middle .view-comment .comment-area > li .write-recomment {
