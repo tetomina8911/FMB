@@ -32,93 +32,33 @@
   background: #171717;
   overflow: hidden;
 }
-.subVisual-container:after {
+.subVisual-container .subVisual-img {
   position: absolute;
   left: 50%;
-  top: -40px;
-  content: "";
-  width: 150%;
-  height: 150%;
-  transform: translateX(-50%) scale(0.85) skew(0deg, -2deg);
+  top: -180px;
+  width: 1105px;
+  height: auto;
+  transform: translateX(-25%) scale(0.85) skew(0deg, -2deg);
   animation: ani-suvVisual 5s 0.4s forwards;
-  z-index: 1;
-  background-size: 1300px auto !important;
-  /* border: 1px solid red; */
+  z-index: 2;
 }
+@keyframes ani-suvVisual {
+  100% {
+    transform: translateX(-25%) scale(0.9) skew(0deg, 0deg);
+  }
+}
+
 .subVisual-container.sub-bg02 {
   height: 408px;
 }
-.subVisual-container.sub-bg02 .test {
-  position: absolute;
-  left: 50%;
-  top: -100px;
-  width: 1105px;
-  height: auto;
-  transform: translateX(-8%) scale(0.8) skew(0deg, -2deg);
-  animation: ani-suvVisual2 5s 0.4s forwards;
-  z-index: 1;
-}
-.subVisual-container.sub-bg02 .test::before {
+.subVisual-container.sub-bg02 .subVisual-img::before {
   position: absolute;
   left: 0;
   top: 0;
   content: "";
   width: 1200px;
   height: 100%;
-  background: linear-gradient(to right, #171717 10%, rgba(0, 0, 0, 0.1));
-}
-@keyframes ani-suvVisual2 {
-  100% {
-    transform: translateX(-25%) scale(0.9) skew(0deg, 0deg);
-  }
-}
-
-/* 
-.subVisual-container.sub-bg02:before {
-  position: absolute;
-  left: 0;
-  top: 0;
-  content: "";
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to right, #000 30%, rgba(23, 23, 23, 0.2));
-  z-index: 2;
-}
-.subVisual-container.sub-bg02:after {
-  background: url("../images/sub/sub-visual02.webp") no-repeat 77.5% 50%;
-} */
-.subVisual-container.sub-bg02_1:after {
-  background: url("../images/sub/sub-visual02.webp") no-repeat 77.5% 50%;
-}
-.subVisual-container.sub-bg03:after {
-  background: url("../images/sub/sub-visual03.png") no-repeat 77.5% 50%;
-}
-.subVisual-container.sub-bg04:after {
-  background: url("../images/sub/sub-visual04.png") no-repeat 77.5% 50%;
-}
-.subVisual-container.sub-bg05:after {
-  background: url("../images/sub/sub-visual05.png") no-repeat 77.5% 50%;
-}
-.subVisual-container.sub-bg06:after {
-  background: url("../images/sub/sub-visual06.png") no-repeat 77.5% 50%;
-}
-.subVisual-container.sub-bg07:after {
-  background: url("../images/sub/sub-visual07.png") no-repeat 77.5% 50%;
-}
-.subVisual-container.sub-bg08:after {
-  background: url("../images/sub/sub-visual08.png") no-repeat 77.5% 50%;
-}
-.subVisual-container.sub-bg09:after {
-  background: url("../images/sub/sub-visual09.png") no-repeat 77.5% 50%;
-}
-.subVisual-container.sub-bg10:after {
-  background: url("../images/sub/sub-visual10.png") no-repeat 77.5% 50%;
-}
-
-@keyframes ani-suvVisual {
-  100% {
-    transform: translateX(-50%) scale(0.9) skew(0deg, 0deg);
-  }
+  background: linear-gradient(to right, #171717 12%, rgba(0, 0, 0, 0.1));
 }
 
 .subVisual-container .subVisual-wrapper {

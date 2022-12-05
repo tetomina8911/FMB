@@ -43,7 +43,7 @@
             <li><a href="./community.html">커뮤니티</a></li>
             <li><a href="./trend.html">트랜드</a></li>
             <li><a href="./product_info.html">제품정보</a></li>
-            <li><a href="./db_approval.html">DB 등록</a></li>
+            <li class="current"><a href="./db_approval.html">DB 등록</a></li>
             <li><a href="./biz_consulting .html">BIZ 상담</a></li>
             <li><a href="./about.html">FMB 소개</a></li>
           </ul>
@@ -58,9 +58,17 @@
       <!-- sub body -->
       <section id="sub-body">
         <div class="subVisual-container">
+          <div class="subVisual-img">
+            <img src="./images/sub/sub-visual07.png" alt="" />
+          </div>
           <div class="subVisual-wrapper">
-            <h3 class="sub-title">진균류 버섯 DB검색</h3>
-            <div class="sub-introText">진균류 버섯에 관련된 각종 논문, 특허, 상품 등 다양한 정보를 검색해 보세요.</div>
+            <div>
+              <h3 class="sub-title">진균류 버섯 DB플랫폼 참여</h3>
+              <div class="sub-introText">
+                FMB 참여는 본 시스템을 통해 접수된 건에 한하여 정식으로 검토되며 관련자료는 참여 검토 목적으로만
+                이용됩니다.
+              </div>
+            </div>
           </div>
           <div class="subVisual-search">
             <div class="common-main-search">
@@ -906,7 +914,7 @@
             else if (val == "자원/진균업체") linkto = "./regist_company.html";
             else if (val == "연구R&D기관") linkto = "";
 
-            if( linkto ) window.location.replace(linkto);
+            if (linkto) window.location.replace(linkto);
             return;
           });
 
