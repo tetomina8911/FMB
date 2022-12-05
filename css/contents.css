@@ -29,6 +29,7 @@
   position: relative;
   display: block;
   height: 220px;
+  background: #171717;
   overflow: hidden;
 }
 .subVisual-container:after {
@@ -47,6 +48,32 @@
 .subVisual-container.sub-bg02 {
   height: 408px;
 }
+.subVisual-container.sub-bg02 .test {
+  position: absolute;
+  left: 50%;
+  top: -100px;
+  width: 1105px;
+  height: auto;
+  transform: translateX(-8%) scale(0.8) skew(0deg, -2deg);
+  animation: ani-suvVisual2 5s 0.4s forwards;
+  z-index: 1;
+}
+.subVisual-container.sub-bg02 .test::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  width: 1200px;
+  height: 100%;
+  background: linear-gradient(to right, #171717 10%, rgba(0, 0, 0, 0.1));
+}
+@keyframes ani-suvVisual2 {
+  100% {
+    transform: translateX(-25%) scale(0.9) skew(0deg, 0deg);
+  }
+}
+
+/* 
 .subVisual-container.sub-bg02:before {
   position: absolute;
   left: 0;
@@ -58,10 +85,10 @@
   z-index: 2;
 }
 .subVisual-container.sub-bg02:after {
-  background: url("../images/sub/sub-visual02.png") no-repeat 77.5% 50%;
-}
+  background: url("../images/sub/sub-visual02.webp") no-repeat 77.5% 50%;
+} */
 .subVisual-container.sub-bg02_1:after {
-  background: url("../images/sub/sub-visual02.png") no-repeat 77.5% 50%;
+  background: url("../images/sub/sub-visual02.webp") no-repeat 77.5% 50%;
 }
 .subVisual-container.sub-bg03:after {
   background: url("../images/sub/sub-visual03.png") no-repeat 77.5% 50%;
@@ -191,7 +218,7 @@
 #lnb .mb-lnb-bg dl dd a {
   display: block;
   line-height: 38px;
-  padding: 0 24px;
+  padding: 0 0 0 24px;
   font-size: 14px;
   font-weight: 500;
   color: #848484;
