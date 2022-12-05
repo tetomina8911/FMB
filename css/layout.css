@@ -501,11 +501,11 @@
   height: 320px;
 }
 #layerPop-container .findID-wrapper .inner {
-  padding: 0 58px;
+  padding: 40px 58px 45px;
 }
 #layerPop-container .findID-wrapper .inner .text {
   line-height: 30px;
-  padding: 41px 0 38px;
+  padding: 0 0 38px;
   font-size: 15px;
   font-weight: 500;
   text-align: center;
@@ -955,21 +955,21 @@
     팝업 : 아이디찾기 
   --------------------------------------------------------------*/
   #layerPop-container .findID-wrapper {
-    width: 389px;
-    height: 320px;
+    width: 87.778vw;
+    height: 80vw;
+    border: 1px solid #e5e5e5;
+    box-sizing: border-box;
   }
   #layerPop-container .findID-wrapper .inner {
-    padding: 0 58px;
+    padding: 11.111vw 5.278vw 11.25vw;
   }
   #layerPop-container .findID-wrapper .inner .text {
-    line-height: 30px;
-    padding: 41px 0 38px;
-    font-size: 15px;
-    font-weight: 500;
-    text-align: center;
+    line-height: 8.333vw;
+    padding: 0 0 9.722vw;
+    font-size: 3.889vw;
   }
   #layerPop-container .findID-wrapper .inner .text p {
-    font-size: 20px;
+    font-size: 4.722vw;
   }
 }
 

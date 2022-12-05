@@ -959,6 +959,25 @@
   text-align: center;
 }
 
+/*--------------------------------------------------------------
+  * 1100_web_12_01_아이디비번찾기
+--------------------------------------------------------------*/
+.find-idpw-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.find-idpw-container .login-wrapper {
+  position: relative;
+  left: auto;
+  top: auto;
+  margin: 0 12px;
+  transform: translateX(0);
+}
+
+/*--------------------------------------------------------------
+  * only pc version
+--------------------------------------------------------------*/
 .mb-only {
   display: none;
 }
@@ -1863,7 +1882,7 @@
     top: 16.667vw;
     width: 90vw;
     height: auto;
-    padding: 10.417vw 9.028vw 6.944vw;
+    padding: 10.417vw 9.028vw 11.111vw;
     border-radius: 1.389vw;
   }
   .login-wrapper dl {
@@ -1874,7 +1893,7 @@
     font-size: 5.278vw;
   }
   .login-wrapper dl dd {
-    padding: 0 10vw;
+    padding: 0;
     font-size: 3.889vw;
     word-break: keep-all;
   }
@@ -1898,5 +1917,50 @@
   }
   .login-wrapper .copy {
     font-size: 2.778vw;
+  }
+
+  /*--------------------------------------------------------------
+    * 1100_web_12_01_아이디비번찾기
+  --------------------------------------------------------------*/
+  .find-idpw-container {
+    display: block;
+  }
+  .find-idpw-container .login-wrapper {
+    position: absolute;
+    left: 50%;
+    top: 24.722vw;
+    margin: 0;
+    transform: translateX(-50%);
+  }
+  .find-idpw-container .login-wrapper:last-child {
+    display: none;
+  }
+
+  .find-idpw-container .login-tab {
+    position: absolute;
+    left: 50%;
+    top: 11.806vw;
+    display: flex;
+    align-content: center;
+    width: 90vw;
+    padding: 0 0 0 3.75vw;
+    transform: translateX(-50%);
+    box-sizing: border-box;
+  }
+  .find-idpw-container .login-tab a {
+    display: inline-block;
+    width: 27.778vw;
+    line-height: 12.917vw;
+    margin: 0 0.208vw;
+    font-size: 3.611vw;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 1.389vw 1.389vw 0 0;
+  }
+  .find-idpw-container .login-tab a.on {
+    color: #0b0b0b;
+    background: rgba(255, 255, 255, 0.9);
   }
 }

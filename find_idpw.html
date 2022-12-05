@@ -54,7 +54,11 @@
       <!-- //header -->
       <!-- sub body -->
       <section id="sub-body">
-        <article id="sub-login-container">
+        <article id="sub-login-container" class="find-idpw-container">
+          <div class="login-tab mb-only">
+            <a href="#n" class="on">아이디 찾기</a>
+            <a href="#n">비밀번호 찾기</a>
+          </div>
           <div class="login-wrapper">
             <!-- 아이디찾기 -->
             <dl>
@@ -79,8 +83,8 @@
           <div class="login-wrapper">
             <!-- 비밀번호찾기 -->
             <dl>
-              <dt>아이디 찾기</dt>
-              <dd>이름과 이메일로 아이디를 찾을 수 있습니다.</dd>
+              <dt>비밀번호 찾기</dt>
+              <dd>아이디와 이름, 이메일로 비밀번호를 찾을 수 있습니다.</dd>
             </dl>
             <ul>
               <li>
@@ -97,7 +101,7 @@
               </li>
             </ul>
             <div class="common-btn wide">
-              <button class="h46 br large">아이디 찾기</button>
+              <button class="h46 br large">비밀번호 찾기</button>
             </div>
             <!-- //비밀번호찾기 -->
           </div>
@@ -173,6 +177,16 @@
         $(".btn-findID-pop").click(function () {
           $("#layerPop-container .findID-wrapper").stop().fadeIn();
           $("#layerPop-bg").stop().fadeIn();
+        });
+
+        //login Tab
+        $(".find-idpw-container .login-tab a").click(function () {
+          const clickTab = $(".find-idpw-container .login-tab a").index(this);
+
+          $(".find-idpw-container .login-tab a").removeClass("on");
+          $(this).addClass("on");
+          $(".login-wrapper").hide();
+          $(".login-wrapper").eq(clickTab).show();
         });
       });
     </script>
